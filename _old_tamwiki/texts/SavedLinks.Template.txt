@@ -1,0 +1,18 @@
+(:if false:)
+(:title :)
+Summary:a brief description of the link
+Parent:SavedLinks(.HomePage)
+IncludeMe:[[SavedLinks.HomePage]]
+Tags:
+(:tags-hide :)
+Categories:[[!Links]]
+(:ifend:)
+
+Link:
+
+>>quote<<
+>><<
+
+Saved date:
+
+

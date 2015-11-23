@@ -1,0 +1,44 @@
+---
+layout: post
+title: "I am"
+date: 2015-05-28 21:49
+categories: ["personal", "quotes"]
+tags: ["self", "identity"]
+path: http://art.tamouse.org.s3.amazonaws.com/ink-and-paper/i-am/
+image:
+  fullsize: i-am.jpg
+  gallery: gallery/i-am.jpg
+  web: webs/i-am.jpg
+  thumb: thumbs/i-am.gif
+thumbnail: http://art.tamouse.org.s3.amazonaws.com/ink-and-paper/i-am/thumbs/i-am.gif
+---
+(a personal statement)
+
+
+[![I Am, pen and ink]({{ page.path | append: page.image.gallery }})]({{page.path | append: page.image.fullsize}})
+
+
+<p>I am not my memories...<br>
+... I am remembering</p>
+
+<p>I am not my thoughts...<br>
+... I am thinking</p>
+
+<p>I am not my emotions...<br>
+... I am feeling</p>
+
+<p>I am not my things...<br>
+... I am making</p>
+
+<p>I am living, constantly changing<br>
+Change is the lifeforce<br>
+All else flows by<br>
+From if to now to then</p>
+
+<p>I make<br>
+I feel<br>
+I think<br>
+I remember</p>
+
+<p>I am now<br>
+I am</p>

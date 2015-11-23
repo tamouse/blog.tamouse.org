@@ -1,0 +1,10 @@
+
+
+
+(:Summary:Secure Shell, part of OpenSSH package:)
+(:Parent:(Technology.)Tools:)
+(:IncludeMe:[[Technology.Tools]]:)
+(:Categories:[[!Collections]],[[!Links]]:)
+(:Tags: secure shell, remote shell, remote logins:)
+(:tags-hide secure shell, remote shell, remote logins :)
+

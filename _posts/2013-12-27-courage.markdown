@@ -1,0 +1,19 @@
+---
+# BEGIN: redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+redirect_from:
+  - /blog/2013/12/27/courage/
+# END:   redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+layout: post
+title: "Courage"
+date: 2013-12-27 20:20
+categories: [quotes]
+tags: [spirit, brigitte-nicole]
+---
+> # One of the most courageous decisions you will ever make is to  finally let go of that which is hurting your heart and soul.
+> &mdash; Brigitte Nicole
+
+
+![](/images/quotes/courageous-decision-let-go.jpg)
+
+
+

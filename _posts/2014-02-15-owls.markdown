@@ -1,0 +1,24 @@
+---
+# BEGIN: redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+redirect_from:
+  - /blog/2014/02/15/owls/
+# END:   redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+layout: post
+title: "Owls"
+date: 2014-02-15 13:18
+categories: [critters]
+tags: [owls, images]
+---
+From the [Minneapolis StarTribune](http://www.startribune.com/) Outdoor section, [owls](http://www.startribune.com/sports/outdoors/245411031.html):
+
+![](http://tt.imageshare.s3.amazonaws.com/critters/owls/1-gal-outfeat021414.jpg)
+![](http://tt.imageshare.s3.amazonaws.com/critters/owls/10-gal-outfeat021414.jpg)
+![](http://tt.imageshare.s3.amazonaws.com/critters/owls/2-gal-outfeat021414.jpg)
+![](http://tt.imageshare.s3.amazonaws.com/critters/owls/3-gal-outfeat021414.jpg)
+![](http://tt.imageshare.s3.amazonaws.com/critters/owls/4-gal-outfeat021414.jpg)
+![](http://tt.imageshare.s3.amazonaws.com/critters/owls/5-gal-outfeat021414.jpg)
+![](http://tt.imageshare.s3.amazonaws.com/critters/owls/6-gal-outfeat021414.jpg)
+![](http://tt.imageshare.s3.amazonaws.com/critters/owls/7-gal-outfeat021414.jpg)
+![](http://tt.imageshare.s3.amazonaws.com/critters/owls/8-gal-outfeat021414.jpg)
+![](http://tt.imageshare.s3.amazonaws.com/critters/owls/9-gal-outfeat021414.jpg)
+

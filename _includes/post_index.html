@@ -1,0 +1,24 @@
+<table id="posts-index">
+  <thead>
+    <tr>
+      <th width="20%">Date</th>
+      <th>Post</th>
+    </tr>
+  </thead>
+  <tfoot>
+  </tfoot>
+  <tbody>
+    {% for post in include.posts %}
+    <tr>
+      <td valign="top"><h2><span style="display:none;">{{post.date}}</span><small>{{ post.date | date: "%b %-d, %Y" }}</small></h2></td>
+      <td valign="top">
+        <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        {% if post.categories %} &bullet; <ul class="link-list"><li>Categories:</li>{% for cat in post.categories %}<li role="presentation"><a href="{{site.baseurl}}/categories/{{cat}}">{{cat}}</a></li>{% endfor %}{% endif %}</ul>
+        {% if post.tags %} &bullet; <ul class="link-list"><li>Tags: </li>{% for tag in post.tags %}<li role="presentation"><a href="{{site.baseurl}}/tags/{{tag}}">{{tag}}</a></li> {% endfor %}{% endif %}
+        {% if post.excerpt %}<p>{{ post.excerpt | markdownify }}</p>{% endif %}
+        {% if post.thumbnail %}<div class="index-thumbnail"><a href="{{ post.url }}"><img src="{{ post.thumbnail }}"></a></div>{% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

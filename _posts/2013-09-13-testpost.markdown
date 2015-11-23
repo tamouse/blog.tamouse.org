@@ -1,0 +1,16 @@
+---
+layout: post
+---
+
+# testing c highlight
+
+## a little c program
+
+{% highlight c %}
+#include <stdio.h>
+
+int main(int argc, *argv)
+{
+  puts "hello, world!"  
+}
+{% endhighlight %}

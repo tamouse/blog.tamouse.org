@@ -1,0 +1,18 @@
+(:Summary:a collection of music I'd like to listen to sometime:)
+
+!!Online
+
+* [[http://www.fromthebasement.tv/home | From The Basement]] -- videos of music
+
+!!Venues
+
+*  TheNocturnalBar - Santa Monica
+*  TheTempleBar - Santa Monica
+*  TheWorldStage - West LA
+
+!!Misc
+*  ListOfOinkAlternatives
+
+
+%lframe% '''Categories:''' [[!LifeStyle]]
+

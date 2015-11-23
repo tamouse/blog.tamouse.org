@@ -1,0 +1,3 @@
+Attach:{$BaseName}/simmering-stock-1024.jpg
+
+&larr; ''back to {$BaseName}''

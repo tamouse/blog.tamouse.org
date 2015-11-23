@@ -1,0 +1,9 @@
+(:if false:)
+Summary:Tips on Management
+Parent:(Technology.)CraftingSoftware
+Categories:[[!Collections]], [[!Links]]
+Tags: management
+(:tags-hide management:)
+(:ifend:)
+
+

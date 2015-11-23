@@ -1,0 +1,9 @@
+---
+- name: About
+  href: /about/
+- name: Pages
+  href: /pages/
+- name: Categories
+  href: /categories/
+- name: Tags
+  href: /tags/

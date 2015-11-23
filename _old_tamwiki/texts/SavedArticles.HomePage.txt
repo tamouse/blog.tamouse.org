@@ -1,0 +1,13 @@
+(:if false:)
+Summary:Articles saved from the web
+Categories: [[!GroupHomes]]
+(:ifend:)
+
+(:savethepage:)
+
+!Purpose:
+This group contains articles from around the world wide web that I wish to save for research, later reading, and archival.
+
+
+
+

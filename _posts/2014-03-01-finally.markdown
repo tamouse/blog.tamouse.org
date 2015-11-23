@@ -1,0 +1,20 @@
+---
+# BEGIN: redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+redirect_from:
+  - /blog/2014/03/01/finally/
+# END:   redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+layout: post
+title: "FINALLY!!!"
+date: 2014-03-01 14:46
+categories: [misc]
+tags: [weather, winter, polar-vortex, winter-2013]
+---
+<blockquote class="twitter-tweet" lang="en"><p>Bitter cold through Monday, but then it&#39;s goodbye, polar vortex. Your updated video forecast: <a href="http://t.co/uwtmS39M9l">http://t.co/uwtmS39M9l</a></p>&mdash; Star Tribune (@StarTribune) <a href="https://twitter.com/StarTribune/statuses/439844958007066625">March 1, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+At last, relief is in sight.
+
+This has been such a hard winter, for me and others. The past couple of weeks, since the last huge storm, the streets have been undrivable because of the "bullet-proof" ice making holes and ruts, and being slippery as glass. So many times I've been going along at about 3-5 miles per hour and just feeling out of control. It's also been this aching, aching cold that has everything hurting.
+
+I will be so glad when this is over. I hope to be gone far, far from Minnesota by next winter.
+

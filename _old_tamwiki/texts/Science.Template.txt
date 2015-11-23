@@ -1,0 +1,10 @@
+(:Summary:a brief description of the page:)
+
+
+
+%categories% '''Categories:''' [[!Science]]
+
+>>comment<<
+Uncomment this to use tags on this page
+%tags% '''Tags:''' (:tags :)
+>><<

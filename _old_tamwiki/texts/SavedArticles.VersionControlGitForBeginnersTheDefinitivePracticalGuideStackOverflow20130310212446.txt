@@ -1,0 +1,1 @@
+(:redirect Technology.VersionControlGitForBeginnersTheDefinitivePracticalGuideStackOverflow20130310212446:)

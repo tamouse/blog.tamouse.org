@@ -1,0 +1,82 @@
+// Main.scss -- imports all the other bits of sass/scss to compile to /assets/css/main.css
+// ------------------------------------------------------------------------------------------
+
+@import "my_variables";
+@import "bootstrap";
+@import "font-awesome";
+
+// Local style variations
+// ------------------------------
+
+body {
+    padding: 70px 0;
+}
+
+.index-item {
+    .post-excerpt {
+	margin: 0 0 10px 0;
+	padding: 0;
+    }
+    .panel-heading {
+	padding: 2px 5px;
+	h1, h2, h3, h4, h5, h6 {
+	    margin-top: 10px;
+	}
+    }
+}
+
+.panel-primary {
+    a {
+	color: $panel-primary-text
+    }
+}
+.panel-default {
+    a {
+	color: $panel-default-text
+    }
+}
+.panel-success {
+    a {
+	color: $panel-success-text
+    }
+}
+.panel-info {
+    a {
+	color: $panel-info-text
+    }
+}
+.panel-warning {
+    a {
+	color: $panel-warning-text
+    }
+}
+.panel-danger {
+    a {
+	color: $panel-danger-text
+    }
+}
+
+
+
+@media (min-width: $screen-md-min) {
+    .index-item {
+	.panel-heading {
+	    width: auto;
+	    height: 75px;
+	    overflow-y: hidden;
+	}
+	.post-excerpt {
+	    height: 100px;
+	    overflow-y: hidden;
+	    width: auto;
+	}
+    }
+}
+
+
+.front-page-hero {
+    background: #000 url(/images/beach-chair-painting.jpg) 50% 70%;
+    background-size: cover;
+    color: $gray-lighter;
+    text-shadow: 2px 2px 4px $gray;
+}

@@ -1,0 +1,2 @@
+{% assign gallery_path = page.gallery.path | prepend: site.images.s3path %}
+{% for image in page.gallery.images %}<a href="{{ image.web | prepend: gallery_path }}" class="fancybox" rel="gallery"><img src="{{ image.thumb | prepend: gallery_path }}"></a>{% endfor %}

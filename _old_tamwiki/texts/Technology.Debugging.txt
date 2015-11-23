@@ -1,0 +1,9 @@
+(:if false:)
+Summary:Tips on debugging
+Parent:(Technology.)CraftingSoftware
+Categories:[[!Collections]], [[!Links]]
+Tags: debugging
+(:tags-hide debugging:)
+(:ifend:)
+
+

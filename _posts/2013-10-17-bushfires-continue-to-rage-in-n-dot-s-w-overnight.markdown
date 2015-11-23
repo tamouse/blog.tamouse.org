@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Bushfires continue to rage in N.S.W. overnight"
+date: 2013-10-17 21:13
+categories: [earth]
+tags:  [australia, fires, images, brushfires]
+source: http://www.theage.com.au/photogallery/national/bushfires-continue-to-rage-in-nsw-overnight-20131018-2vr08.html?rand=1382060972861
+---
+Truly horrific images of the Sydney bushfires.
+
+<!--more-->
+
+> Bushfires continue to rage in N.S.W.
+> ====================================
+> 
+> 18 OctN.S.W. Bushfires fuelled by strong north westerly winds & high temperatures resulted in dozens of bushfires across N.S.W. in the Blue Mountains and Southern Highlands. Plumes of smoke were visible from Bondi Beach in the afternoon and Catherine Hill Bay was devastated overnight.
+> 
+> 1. [![A huge fire at Catherine Hill Bay. Shots taken from Catherine Hill Bay Bowling Club. Newcastle](http://images.theage.com.au/2013/10/18/4840505/Sydney-20Bushfires-20131018095258680346-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018095258680346-940x628.jpg)
+> 2.  [![A huge fire at Catherine Hill Bay. 17th October 2013 Newcastle](http://images.theage.com.au/2013/10/18/4840539/Sydney-20Bushfires-20131018095347993161-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018095347993161-940x628.jpg)
+> 3.  [![A huge fire at Catherine Hill Bay. 17th October 2013 Newcastle](http://images.theage.com.au/2013/10/18/4840504/Sydney-20Bushfires-20131018095441198993-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018095441198993-940x628.jpg)
+> 4.  [![A huge fire at Catherine Hill Bay. 17th October 2013 Newcastle](http://images.theage.com.au/2013/10/18/4840544/Sydney-20Bushfires-20131018095527526087-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018095527526087-940x628.jpg)
+> 5.  [![A huge fire at Catherine Hill Bay. 17th October 2013](http://images.theage.com.au/2013/10/18/4840541/Sydney-20Bushfires-20131018095653584299-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018095653584299-940x628.jpg)
+> 6.  [![A huge fire at Catherine Hill Bay. Shots taken from Catherine Hill Bay Bowling Club. 17th October 2013 Newcastle](http://images.theage.com.au/2013/10/18/4840543/Sydney-20Bushfires-20131018095753661864-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018095753661864-940x628.jpg)
+> 7.  [![A huge fire at Catherine Hill Bay. Shots taken from Catherine Hill Bay Bowling Club.17th October 2013 Newcastle](http://images.theage.com.au/2013/10/18/4840547/Sydney-20Bushfires-20131018095826969443-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018095826969443-940x628.jpg)
+> 8.  [![10.00pm. Fire crews on the ground battling several blazes at Yellow Rock near Springwood in the Blue Mountains. 17th October 2013](http://images.theage.com.au/2013/10/18/4840549/Sydney-20Bushfires-20131018095906964631-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018095906964631-940x628.jpg)
+> 9.  [![Sydney Bush Fires. Strong north westerly winds and high temperatures resulted in dozens of bush fires across greater Sydney, the Blue Mountains and the Southern Highlands today. Plumes of smoke were visible from Bondi Beach in the afternoon after the wind had changed to a more south-westerly direction. 17 October 2013.](http://images.theage.com.au/2013/10/18/4840548/Sydney-20Bushfires-20131018095952464419-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018095952464419-940x628.jpg)
+> 10. [![Sydney Bush Fires. Strong north westerly winds and high temperatures resulted in dozens of bush fires across greater Sydney, the Blue Mountains and the Southern Highlands today. Plumes of smoke were visible from Bondi Beach in the afternoon after the wind had changed to a more south-westerly direction. 17 October 2013.](http://images.theage.com.au/2013/10/18/4840551/Sydney-20Bushfires-20131018100035842362-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100035842362-940x628.jpg)
+> 11. [![Sydney Bush Fires. Strong north westerly winds and high temperatures resulted in dozens of bush fires across greater Sydney, the Blue Mountains and the Southern Highlands today. Plumes of smoke were visible from Bondi Beach in the afternoon after the wind had changed to a more south-westerly direction. 17 October 2013.](http://images.theage.com.au/2013/10/18/4840545/Sydney-20Bushfires-20131018100104144359-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100104144359-940x628.jpg)
+> 12. [![Skies of ash due to Sydney's bushfires create a dramatic sky and sunset this afternoon with high temperatures and dry winds combining to fan fires in the west.](http://images.theage.com.au/2013/10/18/4840546/Sydney-20Bushfires-20131018100153693085-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100153693085-940x628.jpg)
+> 13. [![An out of control bushfire burns cars and two homes near Newnes Junction on the Bells Line of Road. 17th October 2013](http://images.theage.com.au/2013/10/18/4840550/Sydney-20Bushfires-20131018100238443758-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100238443758-940x628.jpg)
+> 14. [![An out of control bushfire burns cars and two homes near Newnes Junction on the Bells Line of Road.17th October 2013](http://images.theage.com.au/2013/10/18/4840553/Sydney-20Bushfires-20131018100313233162-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100313233162-940x628.jpg)
+> 15. [![An out of control bushfire burns cars and two homes near Newnes Junction on the Bells Line of Road.17th October 2013](http://images.theage.com.au/2013/10/18/4840554/Sydney-20Bushfires-20131018100350593017-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100350593017-940x628.jpg)
+> 16. [![An out of control bushfire burns cars and two homes near Newnes Junction on the Bells Line of Road. 17th October 2013](http://images.theage.com.au/2013/10/18/4840559/Sydney-20Bushfires-20131018100431517631-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100431517631-940x628.jpg)
+> 17. [![An out of control bushfire burnt cars and two homes near Newnes Junction on the Bells Line of Road. This was the towns old post office. 17th October 2013](http://images.theage.com.au/2013/10/18/4840557/Sydney-20Bushfires-20131018100501399365-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100501399365-940x628.jpg)
+> 18. [![Fire pic taken at Yanderra of Frank Portelli protecting his property 17 October 2013. MERCURY NEWS.](http://images.theage.com.au/2013/10/18/4840552/Sydney-20Bushfires-20131018100622179890-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100622179890-940x628.jpg)
+> 19. [![Fire pic taken at Yanderra 17 October 2013. MERCURY NEWS.](http://images.theage.com.au/2013/10/18/4840555/Sydney-20Bushfires-20131018100847454916-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100847454916-940x628.jpg)
+> 20. [![Fire pic taken at Yanderra 17 October 2013. MERCURY NEWS.](http://images.theage.com.au/2013/10/18/4840561/Sydney-20Bushfires-20131018100958485324-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018100958485324-940x628.jpg)
+> 21. [![Picton Road overlooking the Hume Hwy at smoke from the bushfires in N.S.W.17 October 2013. MERCURY NEWS.](http://images.theage.com.au/2013/10/18/4840558/Sydney-20Bushfires-20131018101544613514-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018101544613514-940x628.jpg)
+> 22. [![Near the fire command centre at Raymond Terrace. Newcastle Herald 17th October 2013.](http://images.theage.com.au/2013/10/18/4840556/Sydney-20Bushfires-20131018101715333359-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018101715333359-940x628.jpg)
+> 23. [![Fire pic taken at Yanderra N.S.W. 17 October 2013. Mercury News](http://images.theage.com.au/2013/10/18/4840560/Sydney-20Bushfires-20131018101920321485-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires-20131018101920321485-940x628.jpg)
+> 24. [![Bellambi looking back towards the escarpment with the sun obscured by smoke from the bushfires. 17th October 2013 Mercury News](http://images.theage.com.au/2013/10/18/4840503/Sydney-20Bushfires_20131018102121873938-80x80.jpg)](/images/nsw-fires-2013/Sydney-20Bushfires_20131018102121873938-940x628.jpg)

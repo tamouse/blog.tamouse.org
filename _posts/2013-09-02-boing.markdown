@@ -1,0 +1,16 @@
+---
+# BEGIN: redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+redirect_from:
+  - /blog/2013/09/02/boing/
+# END:   redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+layout: post
+title: "Boing!"
+date: 2013-09-02 21:02
+categories: [critters]
+tags: [rabbit, bunny, silly]
+---
+Silliness abounds on the net: "Bunny with a ball rolling over"
+
+![Boing!](https://s3.amazonaws.com/tt.imageshare/critters/Boing!+-+Imgur.gif "bunny with ball rolling over") 
+
+**BOING!**

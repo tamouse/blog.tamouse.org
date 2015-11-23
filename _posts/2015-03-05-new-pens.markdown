@@ -1,0 +1,55 @@
+---
+layout: post
+title: "New Pens!!"
+date: 2015-03-05 22:37
+categories: ["tools"]
+tags: ["writing", "pens", "fountain-pens"]
+source: http://gouletpens.com
+gallery:
+  path: "blog/tools/2015-03-05-new-pens/images/"
+  images:
+    - "20150305_221152"
+    - "20150305_221210"
+    - "20150305_221253"
+    - "20150305_221313"
+    - "20150305_221333"
+    - "20150305_221429"
+    - "20150305_221617"
+    - "20150305_222013"
+    - "20150305_222118"
+    - "20150305_222203"
+    - "20150305_222232"
+    - "20150305_222249"
+    - "20150305_222318"
+    - "20150305_222323"
+    - "20150305_222349"
+    - "20150305_222357"
+    - "20150305_222452"
+    - "20150305_222529"
+    - "20150305_222719"
+    - "20150305_222845"
+    - "20150305_232209"
+thumbnail: http://tt.imageshare.s3.amazonaws.com/blog/tools/2015-03-05-new-pens/images/thumbs/20150305_232209.gif
+---
+
+My newly ordered pens arrived today! I so love writing instruments,
+and these are very fine fountain pens from [Goulet Pens][gouletpens].
+
+A few months ago, I ordered a fountain pen for sketching with, and
+I've enjoyed it so much.
+
+A blog post from the company arrived the other day which set my
+imagination going again, and I decided to splurge on a couple more
+pens.
+
+Here's what I got:
+
+1. [Monteverde Touch Screen Stylus Fountain Tool Pen - Orange](http://www.gouletpens.com/mv35290/p/MV35290)
+2. [Faber-Castell Basic Fountain Pen - Black Carbon](http://www.gouletpens.com/FB-Basic-BlackCarbon-FP/p/FB-Basic-BlackCarbon-FP)
+
+When they arrived, I was *so* *squiffed*, I took a bunch of unboxing
+pictures. Forthwith, the gallery:
+
+{% include simple_gallery.html %}
+
+[gouletpens]: {{page.source}} "PENS!!"

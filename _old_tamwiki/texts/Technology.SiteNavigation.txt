@@ -1,0 +1,8 @@
+(:Summary:more thoughts on getting around web pages and useful navigation:)
+(:Parent:(Technology.)Design:)
+(:IncludeMe:[[(Technology.)Design]]:)
+(:Categories:[[!Articles]],[[!Stub]]:)
+(:Tags: navigation:)
+(:tags-hide navigation :)
+
+

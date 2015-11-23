@@ -1,0 +1,18 @@
+---
+# BEGIN: redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+redirect_from:
+  - /blog/2014/06/19/rain/
+# END:   redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+layout: post
+title: "Rain"
+date: 2014-06-19 11:59:16 -0500
+categories: [art]
+tags: [morning-commute, rain, images]
+---
+On my morning commute, downpour outside the tram:
+
+<iframe src="//instagram.com/p/pbbuepxsqd/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+
+<iframe src="//instagram.com/p/pbbuepxsqd/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+
+

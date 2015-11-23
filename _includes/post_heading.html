@@ -1,0 +1,24 @@
+<div class="page-header">
+  <h2>
+    {% if page.source %}
+    <a href="{{page.source}}">{{page.title}}</a>
+    {% else %}
+    {{page.title}}
+    {% endif %}
+    {% if page.date %}<small>{{page.date | date_to_string }}</small>{% endif %}
+  </h2>
+
+  <ul class="nav nav-pills">
+    {% if page.categories %}
+    {% for pc in page.categories %}
+    <li><a class="category-item" href="{{ site.baseurl }}/categories/{{ pc }}/">{{pc}}</a></li>
+    {% endfor %}
+    {% endif %}
+
+    {% if page.tags %}
+    {% for pc in page.tags %}
+    <li>    <a class="category-item" href="{{ site.baseurl }}/tags/{{ pc }}/">{{pc}}</a></li>
+    {% endfor %}
+    {% endif %}
+  </ul>
+</div>

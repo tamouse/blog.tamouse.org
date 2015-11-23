@@ -1,0 +1,10 @@
+'''Links and Thoughts on Communication''' (Placeholder)
+
+* CrawfordKilianLinksOnOnlineWritingStyle
+* TheBasicLawsOfHumanStupidity
+
+(:if false:)
+Summary:Information about Communication
+Categories: [[!Uncategorized]]
+(:if:)
+

@@ -1,0 +1,24 @@
+---
+# BEGIN: redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+redirect_from:
+  - /blog/2012/01/16/mogees/
+# END:   redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
+layout: post
+title: "Mogees"
+date: 2012-01-16 20:16:33
+categories: [music]
+tags: [electronics, micro-microphones, mogee, bruno-zamborlin]
+---
+[Mogees](http://mogees.co.uk/) are tiny microphones that can attach to any surface and are used to pick up vibrations made by touching, tapping, swiping or other gestures on the surface they are attached to. The applications for this are astounding to think about.
+
+On this web site, the inventor is using the Mogee to make surfaces into percussive instruments through using audio processors to interpret what the microphone is picking up.
+
+Pretty amazing stuff.
+
+# Demo Trailer
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/GPMqAEIBfJM?rel=0" frameborder="0" allowfullscreen></iframe>
+
+# TEDxBrussels Talk
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/RGbyFxw3-pY?rel=0" frameborder="0" allowfullscreen></iframe>

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<main role="main">
+  <header class="page-header">
+    <h1><a href="{{page.link.href}}">{{ page.link.title }}</a></h1>
+    <ul>
+      <li>Author: <a href="{{page.link.author.url}}">{{page.link.author.name}}</a></li>
+      <li>Article date: {{page.link.date}}</li>
+      {% if page.categories %}<li> <ul class="link-list"><li>Categories:</li>{% for cat in page.categories %}<li role="presentation"><a href="{{site.baseurl}}/categories/{{cat}}">{{cat}}</a></li>{% endfor %}</ul></li>{% endif %}
+      {% if page.tags %}<li><ul class="link-list"><li>Tags: </li>{% for tag in page.tags %}<li role="presentation"><a href="{{site.baseurl}}/tags/{{tag}}">{{tag}}</a></li> {% endfor %}</ul></li>{% endif %}
+    </ul>
+  </header>
+  <article>
+    {{ content }}
+  </article>
+  <footer>
+    <hr>
+    {% if page.source %}<p><a href="{{ page.source }}">Source</a></p>{% endif %}
+  </footer>
+  <aside>
+    {% include discuss.html %}
+  </aside>
+</main>

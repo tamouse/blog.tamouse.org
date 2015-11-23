@@ -1,0 +1,9 @@
+<div class="index-item col-xs-12 col-md-4">
+  <div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="text-center"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h4></div>
+    <div class="panel-body">
+      <div class="post-excerpt">{{post.excerpt | markdownify }}</div>
+      <p class="text-right"><a class="btn btn-primary" href="{{site.baseurl | append: post.url }}" role="button">Read more &raquo;</a></p>
+    </div>
+  </div>
+</div>
