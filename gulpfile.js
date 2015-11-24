@@ -49,7 +49,7 @@ gulp.task('css', function() {
     style: "compressed",
     loadPath: [
       config.sassPath,
-      config.bowerDir + "/normalize.scss/",
+      config.bowerDir + "/bootstrap-sass/assets/stylesheets",
       config.bowerDir + "/fontawesome/scss"
     ],
     compass: true

@@ -1,0 +1,35 @@
+<div class="col-xs-12 col-md-4">
+  <blockquote class="quote">
+    <h2 class="quote-heading">{{quote.title}}</h2>
+    <div class="quote-body">
+      {{ content }}
+      <div class="quote-image">
+	<img src="{{ site.images.s3path | append: "blog/quotes/" | append: quote.image }}"
+	     alt="{{quote.content | strip_html}}" />
+      </div>
+    </div>
+    {% if quote.citation %}
+    <footer class="quote-citation">
+      <cite title="{{quote.citation.title}}">
+	{% if quote.citation.author %}
+	{% if quote.citation.author.href %}
+	<a href="{{ quote.citation.href}}">
+	  {{ quote.citation.text}}
+	</a>
+	{% else %}
+	{{ quote.citation.text}}
+	{% endif %}
+	{% endif %}
+	{% if quote.citation.source %}
+	in
+	{% if quote.citation.source.href %}
+	<a href="{{quote.citation.source.href}}">{{quote.citation.source.text}}</a>
+	{% else %}
+	{{quote.citation.source.text}}
+	{% endif %}
+	{% endif %}
+      </cite>
+    </footer>
+    {% endif %}
+  </blockquote>
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_narrow
 ---
 
 Empath's are unique personality types, their sensory levels are always
