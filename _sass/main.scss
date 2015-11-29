@@ -78,6 +78,11 @@ body {
     }
 }
 
+.quote-item {
+    .panel-body {
+	font-size: $font-size-large;
+    }
+}
 
 #markdown-toc {
     li {
@@ -92,16 +97,9 @@ body {
     text-shadow: 2px 2px 4px $gray;
 }
 
-.quote {
-    .quote-heading {
-
-    }
-    .quote-body {
-	.quote-image {
-
-	}
-    }
-    .quote-citation {
-
-    }
+.img-frame-center {
+    @extend .img-responsive;
+    border: 1px solid $gray-dark;
+    margin: 3px auto;
+    padding: 3px;
 }

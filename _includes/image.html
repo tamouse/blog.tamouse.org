@@ -1,0 +1,11 @@
+{% assign image = site.data.s3images[include.id] | default: include  %}
+<figure>
+  <img
+     class="img-responsive img-framed"
+     src="{{ image.src | prepend: site.images.s3path }}"
+     alt="{{ image.alt }}"
+     >
+  <figcaption>
+    {{ image.alt }}
+  </figcaption>
+</figure>
