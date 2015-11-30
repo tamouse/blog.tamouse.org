@@ -6,7 +6,7 @@ redirect_from:
 layout: post
 title: "SuperHelloKittyHeroes"
 date: 2014-08-08 23:19:52 -0500
-categories: [humor]
+categories: [humour]
 tags: [superheroes, hello-kitty, silly, humour]
 gallery:
   path: blog/humour/superhellokittyheroes/
@@ -37,4 +37,3 @@ Originally gathered at: [gamme.com.tw](http://news.gamme.com.tw/730268-%E7%95%B6
 From: [rocketnews24.com](http://en.rocketnews24.com/2014/07/04/hello-kitty-superheroes-would-make-the-world-a-safer-and-cuter-place-for-mankind/)
 
 And: [lostateminor.com](http://www.lostateminor.com/2014/07/22/superheroes-made-even-superb-hello-kitty-makeovers/)
-

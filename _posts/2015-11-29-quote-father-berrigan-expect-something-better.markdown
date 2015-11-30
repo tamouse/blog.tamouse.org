@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Things that can and cannot be said - John Cusack - Nov 16 2015 - Linkis.com"
+title: "Quote: Father Berrigan: We expect something better from the political left"
 date: 2015-11-28 16:57
 categories: ["quotes"]
 tags: ["politics", "john-cusack", "daniel-berrigan"]

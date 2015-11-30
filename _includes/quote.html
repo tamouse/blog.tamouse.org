@@ -4,12 +4,16 @@
     {{ quote.text | markdownify}}
   </div>
   {% if quote.cite %}
+  {% assign quote_source = quote.source | default: "#" %}
   <footer class="quote-citation">
-    {% if quote.source %}
-    <a href="{{quote.source}}"><cite>{{quote.cite}}</cite></a>
-    {% else %}
-    <cite>{{quote.cite}}</cite>
-    {% endif %}
+    <a href="{{quote_source}}"><cite>{{quote.cite}}</cite></a>
   </footer>
   {% endif %}
 </blockquote>
+{% if quote.img %}
+<img
+   src="{{ quote.img | prepend: "blog/quotes/" | prepend: site.images.s3path }}"
+   class="img-frame-center"
+   alt="{{ quote.text | truncate: 25 }}"
+   />
+{% endif %}

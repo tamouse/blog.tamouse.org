@@ -1,25 +1,22 @@
 ---
-# BEGIN: redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
-redirect_from:
-  - /blog/2013/09/04/picasso-on-art-and-the-establishment/
-# END:   redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
 layout: post
 title: "Picasso on Art and the Establishment"
 date: 2013-09-04 21:36
 categories: [quotes]
-tags: [art, politics]
+tags: [art, politics, picasso, freedom]
+excerpt: "The right to free expression is something one seizes"
 ---
-> # "The right to free expression is something one seizes, not something one is given."
+
+<div class="page-header">
+{% include quote.html id="the_right_to_free_expression" %}
+</div>
+
+
 
 I'm not clear on the source of this (who is the "I" in this story) but
 follows a story of Picasso's reaction to receiving a telegram
 requesting his support in an effort to stem a wave of anti-art
-sentiment from American politicos. 
-
-Picasso's reaction to this is exemplified and grounded with this
-quote:
-
-*******
+sentiment from American politicos.
 
 > One morning, soon after Miro had left, a special delivery letter
 > arrived from Kahnweiler in Paris. Enclosed with Kahnweiler's letter
@@ -43,7 +40,6 @@ quote:
 
 &nbsp;
 
-
 >> SERIOUS WAVE OF ANIMOSITY TOWARDS FREE EXPRESSION PAINTING SCULPTURE
 >> MOUNTING IN AMERICAN PRESS AND MUSEUMS STOP GRAVE RENEWED PRESSURE
 >> FAVORING MEDIOCRE AND UTILITARIAN STOP ARTISTS WRITERS REAFFIRMING
@@ -66,8 +62,6 @@ quote:
 
 &nbsp;
 
-
-> 
 > Pablo shook his head. "Kahnweiler's right," he said. "The point is,
 > art is something subversive. It's something that should not be
 > free. Art and liberty, like the fire of Prometheus, are things one
@@ -77,7 +71,7 @@ quote:
 > I support an idea like that? If art is ever given the keys to the
 > city, it will be because it's been so watered down, rendered
 > impotent, that it's not worth fighting for."
-> 
+>
 
 &nbsp;
 
@@ -111,7 +105,6 @@ quote:
 > moment, under that pressure, that he becomes one. People reach the
 > status of artist only after crossing the maximum number of
 > barriers. So the arts should be discouraged, not encouraged.
-> 
 
 &nbsp;
 
@@ -122,7 +115,6 @@ quote:
 > power is breaking down the barriers. But to do away with obstacles--
 > that serves no purpose other than to make things completely
 > wishy-washy, spineless, shapeless, meaningless-- zero."
-> 
 
 &nbsp;
 

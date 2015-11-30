@@ -1,0 +1,11 @@
+{% assign quote = site.data.quotes[include.id] | default: include %}
+<div class="side-by-side">
+<div class="left-side">
+<img src="{{ site.images.s3path | append: "blog/quotes/" | append: quote.img }}"
+class="img-frame-center"
+alt="{{ quote.text | truncate: 25 }}" />
+</div>
+
+<div class="right-side">
+<h3>{{ quote.text | markdownify }}</h3></div>
+</div>

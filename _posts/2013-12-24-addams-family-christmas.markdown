@@ -1,3 +1,4 @@
+
 ---
 # BEGIN: redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
 redirect_from:
@@ -6,7 +7,7 @@ redirect_from:
 layout: post
 title: "Addams Family Christmas"
 date: 2013-12-24 20:58
-categories: [humor]
+categories: [humour]
 tags: [charles-addams, addams-family, moritia]
 ---
 > # "Suddenly I have a dreadful urge to be merry."

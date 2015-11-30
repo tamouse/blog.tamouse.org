@@ -7,7 +7,8 @@
 
 # THANKS
 
-  <name>
+  jaybe, @parkr, gynter, osfameron, PrincessZoey, and others of the
+  #jekyll@freenode.net channel
 
 # TECHNOLOGY COLOPHON
 
@@ -15,4 +16,4 @@
   jQuery, Bootstrap, FontAwesome
   Compass, Jekyll
   Gulp
-  drink_up_doctor
+  drink_up_doctor, jekyllpress

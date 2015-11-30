@@ -2,27 +2,16 @@
   <div class="panel panel-primary">
     {% if quote.last["title"] %}
     <div class="panel-heading">
-      <h4>{{quote.last["title"]}}</h4>
+      <strong>{{quote.last["title"]}}</strong>
     </div>
     {% endif %}
     <div class="panel-body">
-      {% if quote.last["img"] %}
-      <img
-	 src="{{ quote.last["img"] | prepend: "blog/quotes/" | prepend: site.images.s3path}}"
-	 class="img-frame-center"
-	 alt="{{ quote.last["text"]}}" />
-      {% endif %}
       {{ quote.last["text"] | markdownify }}
     </div>
     {% if quote.last["cite"] %}
+    {% assign source = quote.last["source"] | default: "#" %}
     <div class="panel-footer">
-      <cite>
-	{% if quote.last["source"] %}
-	<a href="{{ quote.last["source"]}}">{{quote.last["cite"] | markdownify}}</a>
-	{% else %}
-	{{quote.last["cite"] | markdownify}}
-	{% endif %}
-      </cite>
+      <cite> <a href="{{ quote.last["source"]}}">{{quote.last["cite"]}}</a> </cite>
     </div>
     {% endif %}
   </div>

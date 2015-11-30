@@ -1,34 +1,18 @@
 ---
-# BEGIN: redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
-redirect_from:
-  - /blog/2014/04/18/shallow-acceptance-from-people-of-good-will-is-mor/
-# END:   redirect added by jekyllpress on 2014-09-29 00:34:42 -0500
 layout: post
-title: "Shallow acceptance from people of good will is more frustrating than absolute misunderstanding from people of ill will. -- MLK, Jr."
+title: "Quote: MLK, Jr.: Shallow Acceptance"
 date: 2014-04-18 13:22:20 -0500
 categories: [quotes]
 tags: [social-justice, martin-luther-king-jr, mlk]
 ---
-> # First, I must confess that over the past few years I have been gravely disappointed with the white moderate.
-> &mdash; Martin Luther King, Jr., "Letter from Birmingham Jail", Why We Can't Wait (1963)
 
-Continuing:
+{% include quote.html id="mlk_shallow_acceptance" %}
 
-> I have almost reached
-  the regrettable conclusion that the Negro's great stumbling block in
-  his stride toward freedom is not the White Citizen's Counciler or
-  the Ku Klux Klanner, but the white moderate, who is more devoted to
-  "order" than to justice; who prefers a negative peace which is the
-  absence of tension to a positive peace which is the presence of
-  justice; who constantly says: "I agree with the goal you seek, but I
-  cannot agree with your methods of direct action"; <strong>who
-  paternalistically believes he can set the timetable for another
-  man's freedom</strong>; who lives by a mythical concept of time and who
-  constantly advises the Negro to wait for a "more convenient
-  season". <strong>Shallow understanding from people of good will is more
-  frustrating than absolute misunderstanding from people of ill
-  will</strong>. Lukewarm acceptance is much more bewildering than outright
-  rejection.
+## Continuing:
+
+{% include quote.html id="mlk_shallow_acceptance_full" %}
+
+## thoughts:
 
 Of course, Dr. King's words address the plight of not just Black
 Americans, but all oppressed groups by the hegemonic majority. It is

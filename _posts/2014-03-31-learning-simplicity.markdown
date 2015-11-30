@@ -9,13 +9,12 @@ date: 2014-03-31 02:39:33 -0500
 categories: [quotes]
 tags: [simplicity]
 ---
-> # I think most programmers spend the first 5 years of their career mastering complexity, and the rest of their lives learning simplicity.
-> &mdash; Buzz Anderson (@buzz) on Twitter
+{% include quote.html id="buzz_learning_simplicity" %}
 
 <blockquote class="twitter-tweet" lang="en"><p>I think most programmers spend the first 5 years of their career mastering complexity, and the rest of their lives learning simplicity.</p>&mdash; Buzz Andersen (@buzz) <a href="https://twitter.com/buzz/statuses/7203012768">December 30, 2009</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Indeed, this is true. 
+Indeed, this is true.
 
 But it isn't just programmers.
 
@@ -24,7 +23,7 @@ But it isn't just programmers.
 
 From Thoreau:
 
-> "Our life is frittered away by detail. Simplify, simplify, simplify! I say, let your affairs be as two or three, and not a hundred or a thousand; instead of a million count half a dozen, and keep your accounts on your thumb-nail."
+{% include quote.html id="thoreau_simplify" %}
 
 In software, simplification is what several basic design principles are about:
 
@@ -38,7 +37,6 @@ In fact, almost all of various design patterns you can read about in the [patter
 
 Antoine de Saint-Exupery precedes us even here:
 
-> "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."
+{% include quote.html id="perfection" %}
 
 [buzz]: https://twitter.com/buzz @buzz
-

@@ -6,7 +6,8 @@ redirect_from:
 layout: post
 title: "The Truth About Engineers"
 date: 2014-02-07 22:59
-categories: humor
+categories:
+  - humour
 tags: [humour, comics, silly, dilbert]
 ---
 This pretty much explains engineers.

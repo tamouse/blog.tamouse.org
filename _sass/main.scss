@@ -14,7 +14,7 @@ body {
 
 @media (min-width: $screen-md-min) {
     .page-narrow {
-	width: 52em;
+	width: ($screen-md-min / 2.0);
 	margin: 0 auto;
     }
 }
@@ -102,4 +102,44 @@ body {
     border: 1px solid $gray-dark;
     margin: 3px auto;
     padding: 3px;
+}
+
+@media (min-width: $screen-md-min) {
+
+    .vertcenter-container {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 40%;
+
+	.vertcenter-wrapper {
+	    display: table-cell;
+	    vertical-align: middle;
+
+	    .vertcenter {
+		margin: auto;
+		width: 40%;
+	    }
+	}
+    }
+
+}
+
+@media (min-width: $screen-md-min) {
+    .side-by-side {
+	display: table;
+
+	.left-side {
+	    display: table-cell;
+	    vertical-align: middle;
+	    width: 49%;
+	    padding: 10px;
+	}
+	.right-side {
+	    display: table-cell;
+	    vertical-align: middle;
+	    width: 49%;
+	    padding: 10px;
+	}
+    }
 }

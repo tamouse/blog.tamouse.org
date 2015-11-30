@@ -79,6 +79,7 @@ gulp.task('serve', ['build'], function() {
     '!_sass/**',
     '!_site/**',
     '!_dist/**',
+    '!_data/**',
     '!assets/**',
     '!*.json',
     '!gulpfile.js',
@@ -94,3 +95,15 @@ gulp.task('jekyll-build-dist', ['css','icons','bower'], function () {
 gulp.task('dist', ['bower', 'icons', 'css', 'jekyll-build-dist']);
 
 gulp.task('default', ['serve']);
+
+gulp.task('syncs3', function(){
+  return cp.spawn(
+    's3cmd', [
+      '-rP',
+      'sync',
+      '_s3_uploads/',
+      's3://tt.imageshare/blog/'
+    ],
+    {stdio: 'inherit'}
+  );
+});
