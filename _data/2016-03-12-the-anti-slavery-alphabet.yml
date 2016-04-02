@@ -1,0 +1,37 @@
+s3bucket: "s3://tt-imageshare"
+s3url: "http://tt.imageshare.s3.amazonaws.com"
+images:
+  - name: cover
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-01.jpg
+  - name: title page
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-02.jpg
+  - name: forward
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-03.jpg
+  - name: A B
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-04.jpg
+  - name: C D
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-05.jpg
+  - name: E F
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-06.jpg
+  - name: G H
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-07.jpg
+  - name: I J
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-08.jpg
+  - name: K L
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-09.jpg
+  - name: M N
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-10.jpg
+  - name: O P
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-11.jpg
+  - name: Q R
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-12.jpg
+  - name: S T
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-13.jpg
+  - name: U V
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-14.jpg
+  - name: W X
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-15.jpg
+  - name: Y Z
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-16.jpg
+  - name: back cover
+    src: /blog/politics/2016-03-12-the-anti-slavery-alphabet/anti-slavery-alphabet-1846-17.jpg

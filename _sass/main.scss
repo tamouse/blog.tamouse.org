@@ -143,3 +143,7 @@ body {
 	}
     }
 }
+
+.md-img-responsive img {
+    @extend .img-responsive;
+}

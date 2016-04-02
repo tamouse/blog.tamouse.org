@@ -1,3 +1,114 @@
+the_real_violence:
+  text: |
+    The real violence,
+    the violence that is unforgivable,
+    is the violence we do to ourselves,
+    when we are too afraid
+    to be who we really are.
+  cite: "Nomi on Sense8, season 1, episode 9"
+
+
+dykstra_simiplicity:
+  title: Simplicity
+  cite: "Edsgar Dykstra"
+  text: |
+
+    Simplicity is prerequisite for relibility.
+
+herzog_adventure:
+  title: Adventure
+  cite: "Werner Herzog"
+  source: https://www.good.is/articles/herzog-inspirational-posters
+  text: |
+
+    I absolutely loathe adventures, and I particularly hate the old
+    pseudo-adventurism where the mountain climb becomes something
+    about confronting the extremes of humanity.
+
+herzog_common_denominator:
+  cite: "Werner Herzog"
+  source: "http://herzoginspirationals.tumblr.com/"
+  text: |
+
+    I believe the common denominator of the Universe is not harmony,
+    but chaos, hostility, and murder.
+
+herzog_happiness:
+  title: Happiness
+  cite: "Werner Herzog"
+  source: "http://herzoginspirationals.tumblr.com/"
+  text: |
+
+    Happiness is a strange notion.
+
+herzog_harmony:
+  title: Harmony
+  cite: "Werner Herzog"
+  source: "http://herzoginspirationals.tumblr.com/"
+  text: |
+
+    There is no harmony in the universe. We have to get acquainted
+    to this idea that there is no real harmony as we have conceived
+    it.
+
+herzog_human_life:
+  cite: "Werner Herzog"
+  source: "http://herzoginspirationals.tumblr.com/"
+  text: |
+
+    Human life is part of an endless chain of catastrophes, the demise
+    of the dinosaurs being just one of these events. We seem to be
+    next.
+
+herzog_gratitude:
+  cite: "Werner Herzog"
+  source: "http://herzoginspirationals.tumblr.com/"
+  text: |
+
+    We ought to be grateful the Universe out there knows no smile.
+
+herzog_friendship:
+  title: Friendship
+  cite: "Werner Herzog"
+  source: http://herzoginspirationals.tumblr.com/
+  text: |
+
+    I did not love him, nor did I hate him. We had a mutual respect
+    for each other, even as we both planned each other's murder.
+
+herzog_misery:
+  cite: "Werner Herzog"
+  source: "http://herzoginspirationals.tumblr.com/"
+  text: |
+
+    The trees here are in misery, and the birds are in misery.
+
+herzog_civilization:
+  title: Civilization
+  cite: "Werner Herzog"
+  source: "http://herzoginspirationals.tumblr.com/"
+  text: |
+
+    Civilization is like a thin layer of ice upon a deep ocean of
+    chaos and darkness.
+
+herzog_chicken:
+  cite: "Werner Herzog"
+  source: "http://herzoginspirationals.tumblr.com/"
+  text: |
+
+    You look into the eyes of a chicken and you lose yourself in a
+    completely flat, frightening stupidity.
+
+love_so_all_can_be_liberated:
+  cite: "Yolo Akili"
+  text: |
+    Love so all can be liberated.
+
+    The moment is now.
+
+    We need you.
+
 allow_someone_else_to_be_happy:
   cite: "Manuscript found in Accra, as posted by Paoulo Coehlo"
   source: https://www.instagram.com/p/BA0kVZ8lqEZ/
@@ -605,3 +716,22 @@ why_did_god_create_atheists:
     to you for help, you should never say 'I pray that God will help
     you.' Instead for the moment, you should become an atheist,
     imagine that there is no God who can help and say 'I will help you.'"
+
+organizational_problems:
+  cite: "William Edwards Deming, Ph. D"
+  text: |
+    99 percent of organizational problems is managerial.
+
+experience_teaches_nothing:
+  cite: "William Edwards Demin, Ph. D"
+  text: |
+
+    Experience by itself teaches nothing... Without theory, experience
+    has no meaning. Without theory, one has no questions to ask. Hence
+    without theory there is no learning.
+
+where_there_is_fear:
+  cite: "William Edwards Demin, Ph. D"
+  text: |
+
+    "... where there is fear, there will be wrong figures ..."
