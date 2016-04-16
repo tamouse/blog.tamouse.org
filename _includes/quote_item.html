@@ -7,6 +7,20 @@
     {% endif %}
     <div class="panel-body">
       {{ quote.last["text"] | markdownify }}
+      {% if quote.last["img"] %}
+      <img
+	 src="{{ quote.last["img"] | prepend: "blog/quotes/" | prepend: site.images.s3path }}"
+	 class="img-frame-center"
+	 alt="{{ quote.last["text"] | truncate: 25 }}"
+	 />
+      {% endif %}
+      {% if quote.last["image_full_path"] %}
+      <img
+	 src="{{ quote.last["image_full_path"] }}"
+	 class="img-frame-center"
+	 alt="{{ quote.last["text"] | truncate: 25 }}"
+	 />
+      {% endif %}
     </div>
     {% if quote.last["cite"] %}
     {% assign source = quote.last["source"] | default: "#" %}

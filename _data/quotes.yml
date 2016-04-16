@@ -1,3 +1,28 @@
+there_is_no_wealth:
+  text: |
+    There is no wealth on a dead planet
+  cite: Ayana Young
+  source: https://www.instagram.com/p/BEO72CZPUTT/
+  img: there-is-no-wealth.jpg
+
+the_earth_is_waiting_for_you:
+  title: "The Earth Is Waiting For You"
+  cite: "Thich Nhat Hanh, The Long Road Turn To Joy: A Guide to Walking Meditation (Parallax Press, Berkeley, California, 1996), (www.parallax.org)."
+  text: |
+
+    The Earth is always patient and open-hearted.
+    She is waiting for you.
+    She has been waiting for you for the last trillion lifetimes.
+    She can wait for any length of time.
+    She knows you will come back to her one day.
+    Fresh and green, she will welcome you exactly like the first time,
+    Because love never says:
+
+    “This is the last time"
+
+    Because Earth is a loving mother.
+    She will never stop waiting for you.
+
 the_real_violence:
   text: |
     The real violence,
@@ -6,14 +31,14 @@ the_real_violence:
     when we are too afraid
     to be who we really are.
   cite: "Nomi on Sense8, season 1, episode 9"
-
+  img: the_real_violence.jpg
 
 dykstra_simiplicity:
   title: Simplicity
   cite: "Edsgar Dykstra"
   text: |
 
-    Simplicity is prerequisite for relibility.
+    Simplicity is prerequisite for reliability.
 
 herzog_adventure:
   title: Adventure
@@ -116,7 +141,7 @@ allow_someone_else_to_be_happy:
     Let us plunge together down the dangerous path of surrender. It
     may be dangerous, but it is the only path worth following.
 
-    Let us forget all that we are taught about how it is nobel to give
+    Let us forget all that we are taught about how it is noble to give
     and humiliating to receive. Because for most people, generosity
     consists only of giving, but receiving is also an act of love.
 

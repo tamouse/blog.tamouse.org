@@ -17,3 +17,10 @@
    alt="{{ quote.text | truncate: 25 }}"
    />
 {% endif %}
+{% if quote.image_full_path %}
+<img
+   src="{{ quote.iamge_full_path }}"
+   class="img-frame-center"
+   alt="{{ quote.text | truncate: 25 }}"
+   />
+{% endif %}
