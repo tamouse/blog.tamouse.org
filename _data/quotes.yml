@@ -1,3 +1,33 @@
+we_will_not_cease_from_exploration:
+  cite: T. S. Eliot
+  text: |
+    We will not cease from exploration, and the end of
+    our exploring will be to arrive where we started
+    and know the place for the [very] first time.
+
+  note: |
+    I added the [very] since I think it needs that particular
+    emphasis, rather than making it imprecise.
+
+erat_hora:
+  cite: Ezra Pound
+  text: |
+    "Thank you, whatever comes," and then she turned
+    And, as the ray of sun on hanging flowers
+    Fades when the wind hath lifted them aside,
+    Went swiftly from me. Nay, whatever comes
+    One hour was sunlit, and the most high gods
+    May not make boast of any better thing
+    Than to have watched that hour as it passed.
+
+do_not_be_daunted:
+  text: |
+    Do not be daunted by the enormity of the world's grief.
+    Do justly now. Love mercy now. Walk humbly now.
+    You are not obligated to complete the work.
+    But neither are you free to abandon it.
+  cite: The Talmud
+
 there_is_no_wealth:
   text: |
     There is no wealth on a dead planet

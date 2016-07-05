@@ -10,15 +10,22 @@
 
 body {
     padding: 70px 0;
-}
-
-@media (min-width: $screen-md-min) {
-    .page-narrow {
-	width: ($screen-md-min / 2.0);
+    @media screen and (min-width: $screen-md-min) {
+	width: 960px;
 	margin: 0 auto;
     }
 }
 
+.container {
+    @media screen and (min-width: $screen-lg-min) {
+	width: 960px;
+	margin: 0 auto;
+    }
+    @media screen and (min-width: $screen-md-min) {
+	width: 960px;
+	margin: 0 auto;
+    }
+}
 .panel-primary .panel-heading {
     a {
 	color: $panel-primary-text
