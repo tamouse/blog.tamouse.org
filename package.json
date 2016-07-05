@@ -6,6 +6,10 @@
   "author": "Tamara Temple",
   "license": "MIT",
   "repository": "tamouse/drink_up_doctor",
+  "scripts": {
+    "start": "gulp",
+    "publish": "gulp dist && (cd _dist && git add --all && git commit -m $(date \"+%FT%T\") && git push -fu origin master)"
+  },
   "devDependencies": {
     "browser-sync": "^2.7.12",
     "gulp": "^3.9.0",
