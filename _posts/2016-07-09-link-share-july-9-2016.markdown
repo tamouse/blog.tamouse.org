@@ -1,0 +1,43 @@
+---
+layout: post
+title: "Link Share: July 9, 2016"
+date: 2016-07-09 01:41
+categories: [links]
+
+---
+
+Today's links for Sat Jul  9 01:50:49 2016.
+
+{% assign s3_path = site.images.s3path %}
+
+### **Article:** [Pilot captures incredible nighttime thunderstorm photo over the Pacific Ocean - The Washington Post](https://www.washingtonpost.com/news/capital-weather-gang/wp/2016/07/05/pilot-captures-incredible-nighttime-thunderstorm-photo-over-the-pacific-ocean/)
+
+![](https://img.washingtonpost.com/wp-apps/imrs.php?src=https://img.washingtonpost.com/blogs/capital-weather-gang/files/2016/07/ClHnIgKWYAAK0IM.jpg&w=1484)
+{:.md-img-responsive}
+
+### **Blog:** [Rails ActionMailer Asset Host Configuration](http://swaac.tamouse.org/2016/07/09/rails-action-mailer-asset-host/)
+
+### **Image:** [Space in Images - 2016 - 07 - Malaspina Glacier](http://www.esa.int/spaceinimages/Images/2016/07/Malaspina_Glacier)
+
+![](http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2016/07/malaspina_glacier/16057451-1-eng-GB/Malaspina_Glacier_node_full_image_2.jpg)
+
+### **Video:** [Space in Videos - 2016 - 07 - Earth from Space Malaspina Glacier](http://www.esa.int/spaceinvideos/Videos/2016/07/Earth_from_Space_Malaspina_Glacier)
+
+<iframe src="http://www.esa.int/spaceinvideos/content/view/embedjw/472702" width="640" height="360" frameborder="0"></iframe>
+
+### **Image:** [Wish you were here by Yuichi Sahacha - Photo 161662723 - 500px](https://500px.com/photo/161662723/wish-you-were-here-by-yuichi-sahacha?utm_campaign=wish-you-were-here-by-yuichi-sahacha&utm_medium=social&utm_source=500px)
+
+<div class='pixels-photo'>
+<p><img src='https://drscdn.500px.org/photo/161662723/m%3D900/8ac47506a91b6f181c5200a8327a9c30' alt='Wish you were here by Yuichi Sahacha on 500px.com'></p>
+<a href='https://500px.com/photo/161662723/wish-you-were-here-by-yuichi-sahacha' alt='Wish you were here by Yuichi Sahacha on 500px.com'></a>
+</div>
+<script type='text/javascript' src='https://500px.com/embed.js'></script>
+
+### **Video:** [Moment with Kate Rubins - YouTube](https://www.youtube.com/watch?v=3y6jNsuSrz4)
+
+Newest member of ISS Crew.
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/3y6jNsuSrz4?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+### **Article:** [Empathy The key to a successful software project - OReilly Media](https://www.oreilly.com/ideas/empathy-the-key-to-a-successful-software-project?imm_mid=0e59fc&cmp=em-prog-na-na-newsltr_20160709)
