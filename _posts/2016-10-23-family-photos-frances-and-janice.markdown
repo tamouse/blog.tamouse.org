@@ -4,7 +4,6 @@ title: "Family Photos: Frances and Janice"
 date: 2016-10-23 11:53
 categories: ["family"]
 tags: ["family-photos", "frances", "janice"]
-fancybox_enabled: true
 
 ---
 
