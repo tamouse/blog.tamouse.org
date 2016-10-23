@@ -1,7 +1,7 @@
 {% assign quote = site.data.quotes[include.id] | default: include %}
 <blockquote class="quote">
   <div class="quote-body">
-    {{ quote.text | markdownify}}
+    {{ quote.text}}
   </div>
   {% if quote.cite %}
   {% assign quote_source = quote.source | default: "#" %}
@@ -12,7 +12,7 @@
 </blockquote>
 {% if quote.img %}
 <img
-   src="{{ quote.img | prepend: "blog/quotes/" | prepend: site.images.s3path }}"
+   src="{{ quote.img | prepend: 'blog/quotes/' | prepend: site.images.s3path }}"
    class="img-frame-center"
    alt="{{ quote.text | truncate: 25 }}"
    />

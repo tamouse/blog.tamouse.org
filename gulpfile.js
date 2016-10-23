@@ -71,7 +71,7 @@ gulp.task('serve', ['build'], function() {
   });
 
   // Start a watch for rebuilds
-  gulp.watch(['_sass/*.scss'], ['css'])
+  gulp.watch(['_sass/**/*.scss'], ['css'])
   gulp.watch([
     '404.html',
     '_baseurl.yml',

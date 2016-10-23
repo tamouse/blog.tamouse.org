@@ -2,3 +2,5 @@
 <script>window.jQuery || document.write('<\script src="{{site.baseurl}}/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 <script src="{{site.baseurl}}/js/vendor/bootstrap.min.js"></script>
 <script src="{{site.basurl}}/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+{% if page.fancybox_enabled %}{% include fancybox-scripts.html %}{% endif %}

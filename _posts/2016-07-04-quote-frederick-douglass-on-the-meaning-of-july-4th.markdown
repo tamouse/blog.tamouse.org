@@ -11,5 +11,5 @@ This speech is still so important today. The sentiment still rings true.
 
 {% assign s3_path = site.images.s3path %}
 
-
-{% include quote.html id="frederick_douglass_july_4th" %}
+(I've moved this off to
+[here]({{'/pages/quotes/long_quotes/frederick-douglass-july-4th-to-the-negro/'|prepend:site.baseurl}}).)

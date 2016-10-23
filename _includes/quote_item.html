@@ -1,31 +1,32 @@
+{% assign quote_item = include.quote_item %}
 <div class="quote-item col-xs-12">
   <div class="panel panel-primary">
-    {% if quote.last["title"] %}
+    {% if quote_item.title %}
     <div class="panel-heading">
-      <strong>{{quote.last["title"]}}</strong>
+      <strong>{{quote_item.title | markdownify }}</strong>
     </div>
     {% endif %}
     <div class="panel-body">
-      {{ quote.last["text"] | markdownify }}
-      {% if quote.last["img"] %}
+      {{ quote_item.text | markdownify }}
+      {% if quote_item.img %}
       <img
-	 src="{{ quote.last["img"] | prepend: "blog/quotes/" | prepend: site.images.s3path }}"
+	 src="{{ quote_item.img | prepend: 'blog/quotes/' | prepend: site.images.s3path }}"
 	 class="img-frame-center"
-	 alt="{{ quote.last["text"] | truncate: 25 }}"
+	 alt="{{ quote_item.text | truncate: 25 }}"
 	 />
       {% endif %}
-      {% if quote.last["image_full_path"] %}
+      {% if quote.image_full_path %}
       <img
-	 src="{{ quote.last["image_full_path"] }}"
+	 src="{{ quote_item.image_full_path }}"
 	 class="img-frame-center"
-	 alt="{{ quote.last["text"] | truncate: 25 }}"
+	 alt="{{ quote_item.text | truncate: 25 }}"
 	 />
       {% endif %}
     </div>
-    {% if quote.last["cite"] %}
-    {% assign source = quote.last["source"] | default: "#" %}
+    {% if quote_item.cite %}
+    {% assign source = quote_item.source | default: "#" %}
     <div class="panel-footer">
-      <cite> <a href="{{ quote.last["source"]}}">{{quote.last["cite"]}}</a> </cite>
+      <cite> <a href="{{ quote_item.source}}">{{quote_item.cite}}</a> </cite>
     </div>
     {% endif %}
   </div>

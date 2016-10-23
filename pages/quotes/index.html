@@ -5,6 +5,6 @@ title: Quotations
 
 <div class="row">
   {% for quote in site.data.quotes %}
-  {% include quote_item.html %}
+  {% include quote_item.html quote_item=quote.last %}
   {% endfor %}
 </div>

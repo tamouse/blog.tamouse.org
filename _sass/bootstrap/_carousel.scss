@@ -93,8 +93,8 @@
 .carousel-control {
   position: absolute;
   top: 0;
+  bottom:0;
   left: 0;
-  bottom: 0;
   width: $carousel-control-width;
   @include opacity($carousel-control-opacity);
   font-size: $carousel-control-font-size;

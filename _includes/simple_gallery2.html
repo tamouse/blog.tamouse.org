@@ -1,0 +1,4 @@
+{% assign path = include.path %}
+{% assign images = include.images %}
+
+{% for image in images %}{% assign thumb = image.thumb %}{% assign big = image.fullsize %}<a href="{{ big | prepend: path }}" class="fancybox" rel="gallery"><img src="{{thumb | prepend: path }}" alt="" /></a>{% endfor %}
