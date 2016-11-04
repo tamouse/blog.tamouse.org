@@ -91,6 +91,30 @@ body {
     }
 }
 
+.quote-keywords {
+  padding: 10px 20px;
+  font-size: 80%;
+
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+    }
+  }
+  .quote-keyword-item {
+    padding: 0 5px;
+  }
+}
+
+
+
+.quote-notes {
+  padding: 10px 20px;
+  font-size: 90%;
+  font-style: italic;
+}
+
+
 #markdown-toc {
     li {
 	display: inline;

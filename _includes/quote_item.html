@@ -24,10 +24,24 @@
       {% endif %}
     </div>
     {% if quote_item.cite %}
-    {% assign source = quote_item.source | default: "#" %}
     <div class="panel-footer">
-      <cite> <a href="{{ quote_item.source}}">{{quote_item.cite}}</a> </cite>
+    {% assign source = quote_item.source | default: "#" %}
+    <cite> <a href="{{ quote_item.source}}">{{quote_item.cite}}</a> </cite>
+    {% endif %}
+    {% if quote_item.keywords %}
+    <div class="quote-keywords">
+      <ul>
+      {% for keyword in quote_item.keywords %}
+      <li class="quote-keyword-item">{{keyword}}</li>
+      {% endfor %}
+      </ul>
     </div>
     {% endif %}
+    {% if quote_item.note %}
+    <div class="quote-notes">
+      {{ quote_item.note | markdownify }}
+    </div>
+    {% endif %}
+    </div>
   </div>
 </div>

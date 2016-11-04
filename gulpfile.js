@@ -27,7 +27,7 @@ gulp.task('bower', function() {
          .pipe(gulp.dest(config.bowerDir))
 });
 
-gulp.task('jekyll-build', ['css','icons','bower'], function (done) {
+gulp.task('jekyll-build', ['css','icons','bower','touch'], function (done) {
   browserSync.notify(messages.jekyllBuild);
   return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
     .on('close', done);
@@ -35,6 +35,10 @@ gulp.task('jekyll-build', ['css','icons','bower'], function (done) {
 
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
   browserSync.reload();
+});
+
+gulp.task('touch', function(){
+  return cp.spawn('touch', ['index.html', 'categories/index.html', 'tags/index.html'], {stdio: 'inherit'});
 });
 
 gulp.task('icons', function() {

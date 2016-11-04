@@ -1,6 +1,8 @@
 ---
 - name: About
   href: /about/
+- name: Posts
+  href: /pages/posts/
 - name: Pages
   href: /pages/
 - name: Categories
