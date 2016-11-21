@@ -1,0 +1,302 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Developing a Ruby Gem | &#128045; the tamouse pages</title>
+  <meta name="description" content="This is a tiny guide to creating a new ruby gem. Gems in ruby are
+reusable libraries, components, packages, and/or
+applications. Consider writing gems as opposed to putting everything
+into a single application. (You can combine gems into a single
+application, but it makes sense to have separate components that do
+one thing really well.)
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/images/logo-01.png">
+  <link rel="icon" href="/images/logo-01-32x32.png" >
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form method="get" id="search" action="http://duckduckgo.com/"
+	    class="navbar-form navbar-right" role="search">
+	<input type="hidden" name="sites"value="blog.tamouse.org"/>
+	<input type="hidden" name="ka" value="h"/>
+	<input type="hidden" name="k7" value="#fafafa"/>
+	<input type="hidden" name="kj" value="#3f3f3f"/>
+	<input type="hidden" name="ky" value="#fafafa"/>
+	<input type="hidden" name="kx" value="b"/>
+	<input type="hidden" name="kt" value="Helvetica"/>
+	<input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+	<!-- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" /> -->
+        <button type="submit" class="btn btn-default">
+	  <i class="fa fa-search"></i>
+	</button>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+	
+	<li><a href="/about/">About</a></li>
+	
+	<li><a href="/pages/posts/">Posts</a></li>
+	
+	<li><a href="/pages/">Pages</a></li>
+	
+	<li><a href="/categories/">Categories</a></li>
+	
+	<li><a href="/tags/">Tags</a></li>
+	
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+
+    <main class="container">
+      <article>
+<div class="page-header">
+  <h2>
+    
+    Developing a Ruby Gem
+    
+    <small>29 Nov 2013</small>
+  </h2>
+
+  <ul class="nav nav-pills">
+    
+    
+    <li><a class="category-item" href="/categories/swaac/">swaac</a></li>
+    
+    
+
+    
+    
+    <li>    <a class="category-item" href="/tags/ruby/">ruby</a></li>
+    
+    <li>    <a class="category-item" href="/tags/gems/">gems</a></li>
+    
+    <li>    <a class="category-item" href="/tags/howtos/">howtos</a></li>
+    
+    
+  </ul>
+</div>
+
+<p>This is a tiny guide to creating a new ruby gem. Gems in ruby are
+reusable libraries, components, packages, and/or
+applications. Consider writing gems as opposed to putting everything
+into a single application. (You can combine gems into a single
+application, but it makes sense to have separate components that do
+one thing really well.)</p>
+
+<h1 id="documentation">Documentation</h1>
+
+<p>The <a href="http://guides.rubygems.org/">rubygems documentation</a> describe how
+to do all this in fairly good detail, and they are the benchmark for
+creating accurate gems. Read through the guides to learn what things
+are and how to use, create, and manage gems.</p>
+
+<h1 id="getting-started">Getting started</h1>
+
+<p>In this article, I’ll be giving a walk-through of my typical workflow
+in creating a gem.</p>
+
+<h1 id="using-bundler-to-create-a-new-gem">Using bundler to create a new gem</h1>
+
+<p>For my needs, bundler does the initial heavy-lifting to put a basic
+gem scaffolding in place:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bundle gem my_gem --test
+      create  my_gem/Gemfile
+      create  my_gem/Rakefile
+      create  my_gem/LICENSE.txt
+      create  my_gem/README.md
+      create  my_gem/.gitignore
+      create  my_gem/my_gem.gemspec
+      create  my_gem/lib/my_gem.rb
+      create  my_gem/lib/my_gem/version.rb
+      create  my_gem/.rspec
+      create  my_gem/spec/spec_helper.rb
+      create  my_gem/spec/my_gem_spec.rb
+      create  my_gem/.travis.yml
+Initializating git repo <span class="k">in</span> /Users/tamara/Documents/tamouse.github.io/source/downloads/code/2013-11-29-developing-a-ruby-gem/my_gem
+</code></pre>
+</div>
+
+<p>First thing after this is hop into the new gem’s directory, and modify
+the <code class="highlighter-rouge">.gemspec</code> file:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git diff my_gem.gemspec 
+diff --git a/my_gem.gemspec b/my_gem.gemspec
+index 62ca81d..2cd4451 100644
+--- a/my_gem.gemspec
++++ b/my_gem.gemspec
+@@ -8,9 +8,9 @@ Gem::Specification.new <span class="k">do</span> |spec|
+   spec.email         <span class="o">=</span> <span class="o">[</span><span class="s2">"tamouse@gmail.com"</span><span class="o">]</span>
+-  spec.description   <span class="o">=</span> %q<span class="o">{</span>TODO: Write a gem description<span class="o">}</span>
+-  spec.summary       <span class="o">=</span> %q<span class="o">{</span>TODO: Write a gem summary<span class="o">}</span>
+-  spec.homepage      <span class="o">=</span> <span class="s2">""</span>
++  spec.description   <span class="o">=</span> %q<span class="o">{</span>my gem description<span class="o">}</span>
++  spec.summary       <span class="o">=</span> %q<span class="o">{</span>my gem summary<span class="o">}</span>
++  spec.homepage      <span class="o">=</span> <span class="s2">"http://github.com/tamouse/my_gem"</span>
+   spec.license       <span class="o">=</span> <span class="s2">"MIT"</span>
+</code></pre>
+</div>
+
+<p>This is a good start, but there are more things I like to add.</p>
+
+<h2 id="guard----for-continuous-testing">Guard – for continuous testing</h2>
+
+<p>The [Guard gem][guard] provides a means of continuous testing by
+watching various directories in your gem’s tree and performing
+specific actions based on modifications in files. Since [RSpec][rspec]
+is my testing tool of choice for Ruby, I include the following in the
+newly-created <code class="highlighter-rouge">.gemspec</code> file:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@@ -21,4 +21,8 @@ Gem::Specification.new <span class="k">do</span> |spec|
+   spec.add_development_dependency <span class="s2">"bundler"</span>, <span class="s2">"~&gt; 1.3"</span>
+   spec.add_development_dependency <span class="s2">"rake"</span>
+   spec.add_development_dependency <span class="s2">"rspec"</span>
++
++  spec.add_development_dependency <span class="s2">"guard"</span>
++  spec.add_development_dependency <span class="s2">"guard-bundler"</span>
++  spec.add_development_dependency <span class="s2">"guard-rspec"</span>
+ end
+</code></pre>
+</div>
+
+<p>There are lots of guards available, visit the [Guard
+Organization][guard-org] to see what’s there.</p>
+
+<p>Once that’s saved, initialize guard:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bundle <span class="nb">exec </span>guard init
+16:13:24 - INFO - Writing new Guardfile to /Users/tamara/Documents/tamouse.github.io/source/downloads/code/2013-11-29-developing-a-ruby-gem/my_gem/Guardfile
+16:13:24 - INFO - bundler guard added to Guardfile, feel free to edit it
+16:13:24 - INFO - rspec guard added to Guardfile, feel free to edit it
+</code></pre>
+</div>
+
+<p>Since we’ve included Guard in the <code class="highlighter-rouge">.gemspec</code> file, we need to run it
+with <code class="highlighter-rouge">bundle exec</code>. An alternative is to leave the Guard stuff out of
+the <code class="highlighter-rouge">.gemspec</code> and use global settings. I prefer to include it.</p>
+
+<p>I always edit the resulting <code class="highlighter-rouge">Guardfile</code>, making the following changes:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git diff
+diff --git a/Guardfile b/Guardfile
+index 6b1588c..0e69679 100644
+--- a/Guardfile
++++ b/Guardfile
+@@ -1,30 +1,11 @@
+<span class="gp">-# </span>A sample Guardfile
+<span class="gp">-# </span>More info at https://github.com/guard/guard#readme
+-
+ guard :bundler <span class="k">do
+   </span>watch<span class="o">(</span><span class="s1">'Gemfile'</span><span class="o">)</span>
+-  <span class="c"># Uncomment next line if your Gemfile contains the `gemspec' command.</span>
+-  <span class="c"># watch(/^.+\.gemspec/)</span>
++  watch<span class="o">(</span>/^.+<span class="se">\.</span>gemspec/<span class="o">)</span>
+ end
+ 
+ guard :rspec <span class="k">do
+   </span>watch<span class="o">(</span>%r<span class="o">{</span>^spec/.+_spec<span class="se">\.</span>rb<span class="nv">$}</span><span class="o">)</span>
+   watch<span class="o">(</span>%r<span class="o">{</span>^lib/<span class="o">(</span>.+<span class="o">)</span><span class="se">\.</span>rb<span class="nv">$}</span><span class="o">)</span>     <span class="o">{</span> |m| <span class="s2">"spec/lib/#{m[1]}_spec.rb"</span> <span class="o">}</span>
+   watch<span class="o">(</span><span class="s1">'spec/spec_helper.rb'</span><span class="o">)</span>  <span class="o">{</span> <span class="s2">"spec"</span> <span class="o">}</span>
+-
+-  <span class="c"># Rails example</span>
+-  watch<span class="o">(</span>%r<span class="o">{</span>^app/<span class="o">(</span>.+<span class="o">)</span><span class="se">\.</span>rb<span class="nv">$}</span><span class="o">)</span>                           <span class="o">{</span> |m| <span class="s2">"spec/#{m[1]}_spec.rb"</span> <span class="o">}</span>
+-  watch<span class="o">(</span>%r<span class="o">{</span>^app/<span class="o">(</span>.<span class="k">*</span><span class="o">)(</span><span class="se">\.</span>erb|<span class="se">\.</span>haml|<span class="se">\.</span>slim<span class="o">)</span><span class="nv">$}</span><span class="o">)</span>          <span class="o">{</span> |m| <span class="s2">"spec/#{m[1]}#{m[2]}_spec.rb"</span> <span class="o">}</span>
+-  watch<span class="o">(</span>%r<span class="o">{</span>^app/controllers/<span class="o">(</span>.+<span class="o">)</span>_<span class="o">(</span>controller<span class="o">)</span><span class="se">\.</span>rb<span class="nv">$}</span><span class="o">)</span>  <span class="o">{</span> |m| <span class="o">[</span><span class="s2">"spec/routing/#{m[1]}_routing_spec.rb"</span>, <span class="s2">"spec/#{m[2]}s/#{m[1]}_#{m[2]}
+-  watch(%r{^spec/support/(.+)</span><span class="se">\.</span><span class="s2">rb</span><span class="nv">$}</span><span class="s2">)                  { "</span>spec<span class="s2">" }
+-  watch('config/routes.rb')                           { "</span>spec/routing<span class="s2">" }
+-  watch('app/controllers/application_controller.rb')  { "</span>spec/controllers<span class="s2">" }
+-
+-  # Capybara features specs
+-  watch(%r{^app/views/(.+)/.*</span><span class="se">\.</span><span class="s2">(erb|haml|slim)</span><span class="nv">$}</span><span class="s2">)     { |m| "</span>spec/features/#<span class="o">{</span>m[1]<span class="o">}</span>_spec.rb<span class="s2">" }
+-
+-  # Turnip features and steps
+-  watch(%r{^spec/acceptance/(.+)</span><span class="se">\.</span><span class="s2">feature</span><span class="nv">$}</span><span class="s2">)
+-  watch(%r{^spec/acceptance/steps/(.+)_steps</span><span class="se">\.</span><span class="s2">rb</span><span class="nv">$}</span><span class="s2">)   { |m| Dir[File.join("</span><span class="k">**</span>/#<span class="o">{</span>m[1]<span class="o">}</span>.feature<span class="s2">")][0] || 'spec/acceptance' }
+ end
+</span></code></pre>
+</div>
+
+<h1 id="initialize-rspec">Initialize RSpec</h1>
+
+<p>When using the <code class="highlighter-rouge">-t</code> option on <code class="highlighter-rouge">bundle gem</code>, a <code class="highlighter-rouge">spec</code> folder is
+automatically created, containing a dummy spec test and the RSpec
+helper file, <code class="highlighter-rouge">spec_helper.rb</code>. An <code class="highlighter-rouge">.rspec</code> rc file is also included.</p>
+
+<p>The dummy spec can be used as a template for other spec files. The
+<code class="highlighter-rouge">spec</code> directory structure should be a mirror analog of the <code class="highlighter-rouge">lib</code>
+directory, including the <code class="highlighter-rouge">lib</code> directory itself:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ mkdir -p spec/lib/my_gem
+$ tree
+   |-lib
+   |---my_gem
+   |-spec
+   |---lib
+   |-----my_gem
+</code></pre>
+</div>
+
+
+</article>
+
+
+      
+
+    </main>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&copy; 2016 Tamara Temple</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/humans.txt">Colophon</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<\script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+
+
+    
+
+  </body>
+</html>

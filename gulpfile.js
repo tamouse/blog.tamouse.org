@@ -13,7 +13,7 @@ var config = {
     bowerDir: "./bower_components",
     assetDir: "./assets",
     outputDir: "./_site",
-    distDir: "./_dist"
+    distDir: "./docs"
 }
 
 var messages = {

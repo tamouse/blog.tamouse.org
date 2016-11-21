@@ -1,0 +1,428 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Running Headless Selenium with Chrome | &#128045; the tamouse pages</title>
+  <meta name="description" content="Source http://www.chrisle.me/2013/08/running-headless-selenium-with-chrome/
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/images/logo-01.png">
+  <link rel="icon" href="/images/logo-01-32x32.png" >
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form method="get" id="search" action="http://duckduckgo.com/"
+	    class="navbar-form navbar-right" role="search">
+	<input type="hidden" name="sites"value="blog.tamouse.org"/>
+	<input type="hidden" name="ka" value="h"/>
+	<input type="hidden" name="k7" value="#fafafa"/>
+	<input type="hidden" name="kj" value="#3f3f3f"/>
+	<input type="hidden" name="ky" value="#fafafa"/>
+	<input type="hidden" name="kx" value="b"/>
+	<input type="hidden" name="kt" value="Helvetica"/>
+	<input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+	<!-- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" /> -->
+        <button type="submit" class="btn btn-default">
+	  <i class="fa fa-search"></i>
+	</button>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+	
+	<li><a href="/about/">About</a></li>
+	
+	<li><a href="/pages/posts/">Posts</a></li>
+	
+	<li><a href="/pages/">Pages</a></li>
+	
+	<li><a href="/categories/">Categories</a></li>
+	
+	<li><a href="/tags/">Tags</a></li>
+	
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+
+    <main class="container">
+      <article>
+<div class="page-header">
+  <h2>
+    
+    Running Headless Selenium with Chrome
+    
+    <small>08 Sep 2013</small>
+  </h2>
+
+  <ul class="nav nav-pills">
+    
+    
+    <li><a class="category-item" href="/categories/swaac/">swaac</a></li>
+    
+    
+
+    
+    
+    <li>    <a class="category-item" href="/tags/testing/">testing</a></li>
+    
+    <li>    <a class="category-item" href="/tags/headless/">headless</a></li>
+    
+    <li>    <a class="category-item" href="/tags/selenium/">selenium</a></li>
+    
+    <li>    <a class="category-item" href="/tags/web-development/">web-development</a></li>
+    
+    <li>    <a class="category-item" href="/tags/javascript/">javascript</a></li>
+    
+    
+  </ul>
+</div>
+
+<p>Source http://www.chrisle.me/2013/08/running-headless-selenium-with-chrome/</p>
+
+<p>Clipped on 2013-09-08 13:48:54 -0500</p>
+
+<!--more-->
+
+<blockquote>
+  <h1 id="running-headless-selenium-with-chrome">Running Headless Selenium with Chrome</h1>
+
+  <p>Scaling website automation for either testing or scraping can be a
+challenge when the site is enitrely driven by JavaScript or behaves
+differently when using specific browsers.</p>
+
+  <p>Running a headless Selenium machine with Google’s Chrome installed
+provides a scalable way to automate your tests on one of the most
+popular browsers in use.</p>
+
+  <p>Here are step by step instructions for installing a headless Selenium
+server with Chrome and Vagrant.</p>
+
+  <p><img src="http://www.chrisle.me/wp-content/uploads/2013/08/Screen-Shot-2013-08-18-at-1.02.09-PM.png" alt="Selenium with Chrome" /></p>
+
+  <p>Side note: <a href="http://www.chrisle.me/2013/08/5-reasons-i-chose-selenium-over-phantomjs/" title="5 Reasons I Chose Selenium over PhantomJS">Why use Selenium instead of PhantomJS</a>?</p>
+
+  <hr />
+
+  <h2 id="spike-goals">Spike Goals</h2>
+
+  <ul>
+    <li>Get up and running quickly</li>
+    <li>Run a sample script that demos it works</li>
+    <li>Use JavaScript only (via NodeJS)</li>
+  </ul>
+
+  <h2 id="prerequisites">Prerequisites</h2>
+
+  <p>The code you write locally should work when deployed at scale in
+production. These tools help us do that by creating identical
+environments for development and production.</p>
+
+  <p><em>Both are free downloads. Install with the default settings</em></p>
+
+  <ul>
+    <li>Download and install
+<a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a></li>
+    <li>Download and install <a href="http://www.vagrantup.com/">Vagrant</a></li>
+    <li>Download and install <a href="http://nodejs.org/download/">NodeJS</a></li>
+  </ul>
+
+  <p><em>I also assume you can use a command line and have some vague idea of
+what a virtual machine and Vagrant is.</em></p>
+
+  <hr />
+
+  <h2 id="create-a-vagrantfile">Create a “Vagrantfile”</h2>
+
+  <p>This file tells Vagrant how configure the testing environment. It
+applies universally to both development and production.</p>
+
+  <p>Create a project directory and create a file named <code class="highlighter-rouge">Vagrantfile</code>:</p>
+
+</blockquote>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="c"># encoding: utf-8</span>
+<span class="gp">&gt; </span><span class="c"># -*- mode: ruby -*-</span>
+<span class="gp">&gt; </span><span class="c"># vi: set ft=ruby :</span>
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span>Vagrant.configure<span class="o">(</span><span class="s2">"2"</span><span class="o">)</span> <span class="k">do</span> |config|
+<span class="gp">&gt;   </span>config.vm.box <span class="o">=</span> <span class="s2">"precise64"</span>
+<span class="gp">&gt;   </span>config.vm.box_url <span class="o">=</span> <span class="s2">"http://files.vagrantup.com/precise64.box"</span>
+<span class="gp">&gt;   </span>config.ssh.forward_agent <span class="o">=</span> <span class="nb">true</span>
+<span class="gp">&gt; </span>
+<span class="gp">&gt;   </span>config.vm.provider :aws <span class="k">do</span> |aws, override|
+<span class="gp">&gt;     </span>aws.access_key_id <span class="o">=</span> <span class="s1">'XXXX'</span>      <span class="c"># Replace this</span>
+<span class="gp">&gt;     </span>aws.secret_access_key <span class="o">=</span> <span class="s1">'XXXX'</span>  <span class="c"># Replace this</span>
+<span class="gp">&gt;     </span>aws.keypair_name <span class="o">=</span> <span class="s1">'XXXX'</span>       <span class="c"># Replace this</span>
+<span class="gp">&gt;     </span>aws.ami <span class="o">=</span> <span class="s1">'ami-7747d01e'</span>        <span class="c"># ubuntu 12.04</span>
+<span class="gp">&gt;     </span>override.ssh.username <span class="o">=</span> <span class="s1">'ubuntu'</span>
+<span class="gp">&gt;     </span>override.ssh.private_key_path <span class="o">=</span> <span class="s1">'~/.ssh/amazon-ubuntu.pem'</span>
+<span class="gp">&gt;   </span>end
+<span class="gp">&gt; </span>
+<span class="gp">&gt;   </span>config.vm.provision :shell, :path <span class="o">=</span>&gt; <span class="s2">"setup.sh"</span>
+<span class="gp">&gt;   </span>config.vm.network :forwarded_port, guest:4444, host:4444
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span>end
+<span class="gp">&gt; </span></code></pre></figure>
+
+<blockquote>
+
+  <hr />
+
+  <ol>
+    <li>
+      <h2 id="create-setupsh">Create “setup.sh”</h2>
+    </li>
+  </ol>
+
+  <p>The setup.sh file executes when Vagrant creates a virtual machine for
+you. In the same folder as you created your <code class="highlighter-rouge">VagrantFile</code> create a
+<code class="highlighter-rouge">setup.sh</code> file:</p>
+
+</blockquote>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="c">#!/bin/sh</span>
+<span class="gp">&gt; </span><span class="nb">set</span> -e
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span><span class="k">if</span> <span class="o">[</span> -e /.installed <span class="o">]</span>; <span class="k">then</span>
+<span class="gp">&gt;   </span><span class="nb">echo</span> <span class="s1">'Already installed.'</span>
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span><span class="k">else</span>
+<span class="gp">&gt;   </span><span class="nb">echo</span> <span class="s1">''</span>
+<span class="gp">&gt;   </span><span class="nb">echo</span> <span class="s1">'INSTALLING'</span>
+<span class="gp">&gt;   </span><span class="nb">echo</span> <span class="s1">'----------'</span>
+<span class="gp">&gt; </span>
+<span class="gp">&gt;   </span><span class="c"># Add Google public key to apt</span>
+<span class="gp">&gt;   </span>wget -q -O - <span class="s2">"https://dl-ssl.google.com/linux/linux_signing_key.pub"</span> | sudo apt-key add -
+<span class="gp">&gt; </span>
+<span class="gp">&gt;   </span><span class="c"># Add Google to the apt-get source list</span>
+<span class="gp">&gt;   </span><span class="nb">echo</span> <span class="s1">'deb http://dl.google.com/linux/chrome/deb/ stable main'</span> &gt;&gt; /etc/apt/sources.list
+<span class="gp">&gt; </span>
+<span class="gp">&gt;   </span><span class="c"># Update app-get</span>
+<span class="gp">&gt;   </span>apt-get update
+<span class="gp">&gt; </span>
+<span class="gp">&gt;   </span><span class="c"># Install Java, Chrome, Xvfb, and unzip</span>
+<span class="gp">&gt;   </span>apt-get -y install openjdk-7-jre google-chrome-stable xvfb unzip
+<span class="gp">&gt; </span>
+<span class="gp">&gt;   </span><span class="c"># Download and copy the ChromeDriver to /usr/local/bin</span>
+<span class="gp">&gt;   </span><span class="nb">cd</span> /tmp
+<span class="gp">&gt;   </span>wget <span class="s2">"https://chromedriver.googlecode.com/files/chromedriver_linux64_2.2.zip"</span>
+<span class="gp">&gt;   </span>wget <span class="s2">"https://selenium.googlecode.com/files/selenium-server-standalone-2.35.0.jar"</span>
+<span class="gp">&gt;   </span>unzip chromedriver_linux64_2.2.zip
+<span class="gp">&gt;   </span>mv chromedriver /usr/local/bin
+<span class="gp">&gt;   </span>mv selenium-server-standalone-2.35.0.jar /usr/local/bin
+<span class="gp">&gt; </span>
+<span class="gp">&gt;   </span><span class="c"># So that running `vagrant provision` doesn't redownload everything</span>
+<span class="gp">&gt;   </span>touch /.installed
+<span class="gp">&gt; </span><span class="k">fi</span>
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span><span class="c"># Start Xvfb, Chrome, and Selenium in the background</span>
+<span class="gp">&gt; </span><span class="nb">export </span><span class="nv">DISPLAY</span><span class="o">=</span>:10
+<span class="gp">&gt; </span><span class="nb">cd</span> /vagrant
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span><span class="nb">echo</span> <span class="s2">"Starting Xvfb ..."</span>
+<span class="gp">&gt; </span>Xvfb :10 -screen 0 1366x768x24 -ac &amp;
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span><span class="nb">echo</span> <span class="s2">"Starting Google Chrome ..."</span>
+<span class="gp">&gt; </span>google-chrome --remote-debugging-port<span class="o">=</span>9222 &amp;
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span><span class="nb">echo</span> <span class="s2">"Starting Selenium ..."</span>
+<span class="gp">&gt; </span><span class="nb">cd</span> /usr/local/bin
+<span class="gp">&gt; </span>nohup java -jar ./selenium-server-standalone-2.35.0.jar &amp;
+<span class="gp">&gt; </span></code></pre></figure>
+
+<blockquote>
+
+  <hr />
+
+  <ol>
+    <li>
+      <h2 id="run-vagrant-up">Run “vagrant up”</h2>
+    </li>
+  </ol>
+
+  <p>On your command line and in the directory where you created the
+<code class="highlighter-rouge">VagrantFile</code>, run the following command:</p>
+
+</blockquote>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>vagrant up
+<span class="gp">&gt; </span></code></pre></figure>
+
+<blockquote>
+
+  <p>This will kick off downloading and installing all the pieces neccessary.
+It should look like this:</p>
+
+  <p><img src="http://www.chrisle.me/wp-content/uploads/2013/08/Screen-Shot-2013-08-18-at-12.35.54-PM.png" alt="vagrant up" /></p>
+
+  <hr />
+
+  <ol>
+    <li>
+      <h2 id="make-sure-its-running">Make sure it’s running</h2>
+    </li>
+  </ol>
+
+  <p>You can check to see if everything is working by going to
+<code class="highlighter-rouge">http://localhost:4444/wd/hub</code>.</p>
+
+  <p>The <code class="highlighter-rouge">VagrantFile</code> has been configured to forward port 4444 on your
+localhost. This allows you UI control of the Selenium browser. This page
+shows you all the sessions that you’re running in your virtual machine.
+If you see this page, everything is OK.</p>
+
+  <p><img src="http://www.chrisle.me/wp-content/uploads/2013/08/Screen-Shot-2013-08-18-at-12.32.08-PM.png" alt="WebDriver UI" /></p>
+
+  <hr />
+
+  <ol>
+    <li>
+      <h2 id="install-the-selenium-webdriver">Install the selenium-webdriver</h2>
+    </li>
+  </ol>
+
+  <p>In order to write NodeJS scripts that talk to Chrome you will need the
+Selenium-Webdriver for NodeJS.</p>
+
+  <p>On your command line, install <code class="highlighter-rouge">selenium-webdriver</code> with the following
+command. This will install the modules needed for interacting with
+Selenium.</p>
+
+</blockquote>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>npm install selenium-webdriver
+<span class="gp">&gt; </span></code></pre></figure>
+
+<blockquote>
+
+  <hr />
+
+  <ol>
+    <li>
+      <h2 id="write-your-first-selenium-script">Write your first Selenium script</h2>
+    </li>
+  </ol>
+
+  <p>This first script will go to Google’s homepage, type in a query, then
+print out the HTML.</p>
+
+</blockquote>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>var webdriver <span class="o">=</span> require<span class="o">(</span><span class="s1">'selenium-webdriver'</span><span class="o">)</span>;
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span>var keyword <span class="o">=</span> <span class="s2">"chris le twitter"</span>;
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span>var driver <span class="o">=</span> new webdriver.Builder<span class="o">()</span>.
+<span class="gp">&gt;    </span>usingServer<span class="o">(</span><span class="s1">'http://localhost:4444/wd/hub'</span><span class="o">)</span>.
+<span class="gp">&gt;    </span>withCapabilities<span class="o">(</span>webdriver.Capabilities.chrome<span class="o">())</span>.
+<span class="gp">&gt;    </span>build<span class="o">()</span>;
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span>driver.get<span class="o">(</span><span class="s1">'http://www.google.com'</span><span class="o">)</span>;
+<span class="gp">&gt; </span>driver.findElement<span class="o">(</span>webdriver.By.name<span class="o">(</span><span class="s1">'q'</span><span class="o">))</span>.sendKeys<span class="o">(</span>keyword<span class="o">)</span>;
+<span class="gp">&gt; </span>driver.findElement<span class="o">(</span>webdriver.By.name<span class="o">(</span><span class="s1">'btnG'</span><span class="o">))</span>.click<span class="o">()</span>;
+<span class="gp">&gt; </span>driver.wait<span class="o">(</span><span class="k">function</span><span class="o">()</span> <span class="o">{</span>
+<span class="gp">&gt;   </span><span class="k">return </span>driver.getTitle<span class="o">()</span>.then<span class="o">(</span><span class="k">function</span><span class="o">(</span>title<span class="o">)</span> <span class="o">{</span>
+<span class="gp">&gt;     </span>driver.getPageSource<span class="o">()</span>.then<span class="o">(</span><span class="k">function</span><span class="o">(</span>html<span class="o">)</span> <span class="o">{</span>
+<span class="gp">&gt;       </span>console.log<span class="o">(</span>html<span class="o">)</span>;
+<span class="gp">&gt;       </span><span class="k">return </span><span class="nb">true</span>;
+<span class="gp">&gt;     </span><span class="o">})</span>;
+<span class="gp">&gt;   </span><span class="o">})</span>;
+<span class="gp">&gt; </span><span class="o">}</span>, 1000<span class="o">)</span>;
+<span class="gp">&gt; </span>
+<span class="gp">&gt; </span>driver.quit<span class="o">()</span>;
+<span class="gp">&gt; </span></code></pre></figure>
+
+<blockquote>
+
+  <hr />
+
+  <ol>
+    <li>
+      <h2 id="run-your-test">Run your test</h2>
+    </li>
+  </ol>
+
+  <p>Run your test with node. You should see the HTML that was rendered by
+the Chrome browser.</p>
+
+  <p><img src="http://www.chrisle.me/wp-content/uploads/2013/08/Screen-Shot-2013-08-18-at-1.07.55-PM.png" alt="HTML from NodeJs" /></p>
+
+  <hr />
+
+  <h1 id="use-cases">Use Cases</h1>
+
+  <p>So now that you have this up and running what can you use it for?</p>
+
+  <p><strong>Running your automated test suites</strong>: This is great for doing
+integration testing against Chrome browsers and probably responsive
+websites.</p>
+
+  <p><strong>Testing your Chrome Extentions</strong>: Debugging Chrome Extensions can be a
+bit of a pain. This could be your Asprin.</p>
+
+  <p><strong>Taking many screenshots</strong>: If you want to make screenshots of many
+pages at once.</p>
+
+  <p><strong>Scraping stubborn websites</strong>: I wasn’t able to scrape a website using
+PhantomJS because it fired JSONP requests long after the onLoad() event
+fired. Simply waiting for the event loop to empty itself wansn’t enough.
+A combination of debugging with a real browser and Selenium, I was more
+successful at getting the DOM after the scripts had run.</p>
+</blockquote>
+
+</article>
+
+
+      
+
+    </main>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&copy; 2016 Tamara Temple</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/humans.txt">Colophon</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<\script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>The Laws of Software Design | &#128045; the tamouse pages</title>
+  <meta name="description" content="In his book
+Code Simplicity,
+Max Kanat-Alexander lists six laws
+of software design in an appendix. These are a pretty good set of
+rules!
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/images/logo-01.png">
+  <link rel="icon" href="/images/logo-01-32x32.png" >
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form method="get" id="search" action="http://duckduckgo.com/"
+	    class="navbar-form navbar-right" role="search">
+	<input type="hidden" name="sites"value="blog.tamouse.org"/>
+	<input type="hidden" name="ka" value="h"/>
+	<input type="hidden" name="k7" value="#fafafa"/>
+	<input type="hidden" name="kj" value="#3f3f3f"/>
+	<input type="hidden" name="ky" value="#fafafa"/>
+	<input type="hidden" name="kx" value="b"/>
+	<input type="hidden" name="kt" value="Helvetica"/>
+	<input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+	<!-- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" /> -->
+        <button type="submit" class="btn btn-default">
+	  <i class="fa fa-search"></i>
+	</button>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+	
+	<li><a href="/about/">About</a></li>
+	
+	<li><a href="/pages/posts/">Posts</a></li>
+	
+	<li><a href="/pages/">Pages</a></li>
+	
+	<li><a href="/categories/">Categories</a></li>
+	
+	<li><a href="/tags/">Tags</a></li>
+	
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+
+    <main class="container">
+      <article>
+<div class="page-header">
+  <h2>
+    
+    The Laws of Software Design
+    
+    <small>14 Sep 2013</small>
+  </h2>
+
+  <ul class="nav nav-pills">
+    
+    
+    <li><a class="category-item" href="/categories/swaac/">swaac</a></li>
+    
+    
+
+    
+    
+    <li>    <a class="category-item" href="/tags/books/">books</a></li>
+    
+    <li>    <a class="category-item" href="/tags/design/">design</a></li>
+    
+    <li>    <a class="category-item" href="/tags/max-kanat-alexander/">max-kanat-alexander</a></li>
+    
+    <li>    <a class="category-item" href="/tags/code-simplicity/">code-simplicity</a></li>
+    
+    
+  </ul>
+</div>
+
+<p>In his book
+<a href="http://www.goodreads.com/book/show/13234063-code-simplicity"><em>Code Simplicity</em></a>,
+<a href="http://www.goodreads.com/mkanat">Max Kanat-Alexander</a> lists six laws
+of software design in an appendix. These are a pretty good set of
+rules!</p>
+
+<!--more-->
+
+<hr />
+
+<p>It is interesting to me to note how these 6 laws relate to other
+platitudes of software design and development, such as “Do the
+simplest thing that works”, “You ain’t gonna need it”, The Law of
+Demeter (aka Principle of Least Knowledge) and several others. They
+are saying the same sorts of things, but perhaps slightly different
+perspectives.</p>
+
+<p>There is nothing new here, really, but the collected wisdom from
+people who have slogged through software development projects and
+survived.</p>
+
+<hr />
+
+<h2 id="the-six-laws-of-software-design">The Six Laws of Software Design</h2>
+
+<ol>
+  <li>
+    <p>The purpose of software is <em>to help people</em>.</p>
+  </li>
+  <li>
+    <p>The Equation of Software Design:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> D = (Vn + Vf) / (Ei + Em)
+</code></pre>
+    </div>
+
+    <p>where:</p>
+
+    <ul>
+      <li><em>D</em>:  Stands for the desirability of the change.</li>
+      <li><em>Vn</em>: Stands for value now.</li>
+      <li><em>Vf</em>: Stands for future value.</li>
+      <li><em>Ei</em>: Stands for the effort of implementation.</li>
+      <li><em>Em</em>: Stands for the effort of maintenance.</li>
+    </ul>
+
+    <p>This is the primary law of software design. As time goes on, this
+ equation reduces to:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> D = Vf / Em 
+</code></pre>
+    </div>
+
+    <p>Which demonstrates that it is more important to reduce the effort
+ of maintenance than it is to reduce the effort of implementation.</p>
+  </li>
+  <li>
+    <p><strong>The Law of Change</strong>: The longer your program exists, the more
+probable it is that any piece of it will have to change.</p>
+  </li>
+  <li>
+    <p><strong>The Law of Defect Probability</strong>: The chance of introducing a
+defect into your program is proportional to the size of the changes
+you make to it.</p>
+  </li>
+  <li>
+    <p><strong>The Law of Simplicity</strong>: The ease of maintenance of any piece of
+software is proportional to the simplicity of its individual pieces.</p>
+  </li>
+  <li>
+    <p><strong>The Law of Testing</strong>: The degree to which you know how your
+software behaves is the degree to which you have accurately tested
+it.</p>
+  </li>
+</ol>
+
+</article>
+
+
+      
+
+    </main>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&copy; 2016 Tamara Temple</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/humans.txt">Colophon</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<\script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+
+
+    
+
+  </body>
+</html>

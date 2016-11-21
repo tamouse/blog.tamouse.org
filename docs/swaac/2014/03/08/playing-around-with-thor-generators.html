@@ -1,0 +1,377 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Playing Around with Thor Generators | &#128045; the tamouse pages</title>
+  <meta name="description" content="Automating things has been somewhat of a life goal for me. Ultimately,
+I’m a pretty lazy person, and I hate to have to do things
+repetitively, and if I can get the computer to do it for me, I’ll
+write a script. (Although I admit this sometimes devolves into
+Yak shaving.)
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/images/logo-01.png">
+  <link rel="icon" href="/images/logo-01-32x32.png" >
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form method="get" id="search" action="http://duckduckgo.com/"
+	    class="navbar-form navbar-right" role="search">
+	<input type="hidden" name="sites"value="blog.tamouse.org"/>
+	<input type="hidden" name="ka" value="h"/>
+	<input type="hidden" name="k7" value="#fafafa"/>
+	<input type="hidden" name="kj" value="#3f3f3f"/>
+	<input type="hidden" name="ky" value="#fafafa"/>
+	<input type="hidden" name="kx" value="b"/>
+	<input type="hidden" name="kt" value="Helvetica"/>
+	<input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+	<!-- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" /> -->
+        <button type="submit" class="btn btn-default">
+	  <i class="fa fa-search"></i>
+	</button>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+	
+	<li><a href="/about/">About</a></li>
+	
+	<li><a href="/pages/posts/">Posts</a></li>
+	
+	<li><a href="/pages/">Pages</a></li>
+	
+	<li><a href="/categories/">Categories</a></li>
+	
+	<li><a href="/tags/">Tags</a></li>
+	
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+
+    <main class="container">
+      <article>
+<div class="page-header">
+  <h2>
+    
+    Playing Around with Thor Generators
+    
+    <small>08 Mar 2014</small>
+  </h2>
+
+  <ul class="nav nav-pills">
+    
+    
+    <li><a class="category-item" href="/categories/swaac/">swaac</a></li>
+    
+    
+
+    
+    
+    <li>    <a class="category-item" href="/tags/automation/">automation</a></li>
+    
+    <li>    <a class="category-item" href="/tags/thor/">thor</a></li>
+    
+    <li>    <a class="category-item" href="/tags/tools/">tools</a></li>
+    
+    <li>    <a class="category-item" href="/tags/ruby/">ruby</a></li>
+    
+    <li>    <a class="category-item" href="/tags/fun-with-programming/">fun-with-programming</a></li>
+    
+    
+  </ul>
+</div>
+
+<p>Automating things has been somewhat of a life goal for me. Ultimately,
+I’m a pretty lazy person, and I hate to have to do things
+repetitively, and if I can get the computer to do it for me, I’ll
+write a script. (Although I admit this sometimes devolves into
+<a href="#">Yak shaving</a>.)</p>
+
+<h2 id="so-what-is-a-generator">so what is a generator?</h2>
+
+<p>Simply put, a generator is something that builds something else for
+further use. Sometimes this is referred to as a factory if you’re
+doing it in code. But here, I’m taking the meaning of creating files
+and directories, with possibly customized content, that will be used
+to frame in a bit of a coding project.</p>
+
+<p><a href="http://whatisthor.com">Thor</a> is a nifty tool that was extracted from
+Rails to be a stand-alone tool. Generators are tools that build other
+things, typically used in Rails for models, controllers, and so on,
+but generators can live anywhere. Thor is also a very viable
+alternative to <a href="http://davetron5000.github.com/methadone/">methadone</a>
+or <a href="http://davetron5000.github.io/gli/">GLI</a>, which are both very
+awesome and worthy starting points (and generators in their own
+right!). In fact, I owe <em>a lot</em> to Dave Copeland
+<a href="https://github.com/davetron5000">@davetron on Github</a> for
+his super awesome ideas and directions on making cli applications in
+Ruby.</p>
+
+<h2 id="generating----what">generating – what?</h2>
+
+<p>I have often started off a learning exercise by creating a gem skeleton
+with <code class="highlighter-rouge">bundler</code> :</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/9439598.js?file=bundler-gem"> </script>
+
+<p>This is itself a generator, and rather a cool way to start something
+up. However, it’s intended to create an actual gem, which I don’t
+necessarily want to do, especially if it’s something I’m trying to
+learn, or demonstrate, or somehow work out, but not something I’m
+going to publish in [rubygems][rubygems].</p>
+
+<p>So what would I generate, exactly, and how?</p>
+
+<h2 id="a-typical-project-directory">A typical project directory</h2>
+
+<p>Below is a typical project directory structure I like for starting
+out:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/9439598.js?file=directory-structure"> </script>
+
+<p>Several of these might remain empty or unused, but it’s a great
+starting point for me. If I do wish to turn it into a gem, All I need
+do is add a <code class="highlighter-rouge">.gemspec</code> file.</p>
+
+<h1 id="gems">gems</h1>
+
+<p>I also have my favourite set of gems that I like to start out with:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">rspec</code> - my testing framework of choice</li>
+  <li><code class="highlighter-rouge">guard</code> - for continuous testing</li>
+  <li><code class="highlighter-rouge">guard-rspec</code> - to watch rspec tests</li>
+  <li><code class="highlighter-rouge">guard-bundler</code> - to watch changes to Gemfile</li>
+  <li><code class="highlighter-rouge">pry</code> - my REPL of choice</li>
+  <li><code class="highlighter-rouge">pry-nav</code> - nice navigation inside pry</li>
+  <li><code class="highlighter-rouge">pry-git</code> - link to git for blaming code</li>
+  <li><code class="highlighter-rouge">pry-doc</code> - link to internal documentation</li>
+  <li><code class="highlighter-rouge">pry-remote</code> - to attach to a remote ruby process</li>
+  <li><code class="highlighter-rouge">pry-rescue</code> - to jump into the pry REPL if an exception happens</li>
+  <li><code class="highlighter-rouge">pry-byebug</code> - debugger for ruby MRI 2.x</li>
+  <li><code class="highlighter-rouge">pry-stack_explorer</code> - to jump up down or sideways in the execution stack</li>
+  <li><code class="highlighter-rouge">awesome_print</code> - really nice looking output, integrated into pry</li>
+  <li><code class="highlighter-rouge">rb-readline</code> - a necessary evil running on the Mac</li>
+  <li><code class="highlighter-rouge">coolline</code> - nice colouriser</li>
+  <li><code class="highlighter-rouge">coderay</code> - syntax highlighting on the fly in pry</li>
+</ul>
+
+<p>These are in the Gemfile in a default group. If I were to release the
+project as something, I’d move these into the <code class="highlighter-rouge">:development</code> and
+<code class="highlighter-rouge">:test</code> groups.</p>
+
+<h2 id="continuous-testing-with-guard">continuous testing with <code class="highlighter-rouge">guard</code></h2>
+
+<p><a href="https://github.com/guard/guard">Guard</a> is a fabulous system that
+builds on <em>top</em> of <a href="http://pryrepl.org">pry</a> that watches various
+directories and reruns tests (or other commands if you set it up
+to). I have the Guardfile in the generator, though, because
+out-of-the-box <code class="highlighter-rouge">guard-rspec</code> does not run <code class="highlighter-rouge">rspec</code> bundled, and I’m
+nearly <em>always</em> running under <code class="highlighter-rouge">bundler</code>.</p>
+
+<p>The modification is simple:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/9439598.js?file=Guardfile"> </script>
+
+<p>You add the <code class="highlighter-rouge">:cmd</code> to the <code class="highlighter-rouge">rspec</code> <code class="highlighter-rouge">watch</code> section. But it’s just one more thing to have
+to remember and slow me down.</p>
+
+<p>A difference between <code class="highlighter-rouge">bundle gem</code> and <code class="highlighter-rouge">guard-rspec</code> is that the former
+expects spec tests to live directly under the <code class="highlighter-rouge">spec/</code> directory, while
+the latter figures the <code class="highlighter-rouge">lib/</code> structure is mirrored under
+<code class="highlighter-rouge">spec/</code>. This isn’t such a big deal, but it is one more thing to think
+about, and I’m often puzzled why things don’t work. (Convention over
+configuration, perhaps not enough time spent together.)</p>
+
+<h2 id="so-what-about-thor-again">so what about thor, again?</h2>
+
+<p>Thor seems all about generating things. Included in
+<a href="http://rdoc.info/github/wycats/thor/master/Thor/Actions"><code class="highlighter-rouge">Thor::Actions</code></a>
+are some really useful items for copying, converting, templating, and
+so on. There are also commands for interacting with the user, should
+that prove necessary.</p>
+
+<p>Here’s the new project generator:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/9439598.js?file=new_ruby_project.thor"> </script>
+
+<p>Let’s talk a bit about this script.</p>
+
+<h3 id="thorgroup">Thor::Group</h3>
+
+<p>The first thing we make is the class declaration for our thor
+command. The class inherits from <code class="highlighter-rouge">Thor::Group</code> instead of from <code class="highlighter-rouge">Thor</code>
+proper. This causes the defined methods to be executed in order,
+rather than creating individual sub-commands, as is the case when you
+inherit from <code class="highlighter-rouge">Thor</code>. This essentially turns the command into a script,
+which is how we usually want things done in a generator.</p>
+
+<h3 id="thoractions">Thor::Actions</h3>
+
+<p>We include <code class="highlighter-rouge">Thor::Actions</code> in our class to give us the useful tools
+for interacting with the user (<code class="highlighter-rouge">say</code>, <code class="highlighter-rouge">ask</code>, etc ), as well as the
+building tools, <code class="highlighter-rouge">create_file</code>, <code class="highlighter-rouge">copy_file</code>, <code class="highlighter-rouge">template</code>, and so on.</p>
+
+<p>In this generator, I’m using <code class="highlighter-rouge">template</code> nearly everywhere, as it
+copies a source file with <code class="highlighter-rouge">ERB</code> directives in it and writes out the
+result to the destination.</p>
+
+<h3 id="argument-name">argument :name</h3>
+
+<p>This is telling thor to expect one argument upon invocation, in this
+case, the name of the new ruby project.</p>
+
+<h3 id="def-selfsourceroot">def self.source_root</h3>
+
+<p>Thor::Action arguments typically follow the convention of source,
+destination, and options, with passing a block if there are further
+things that need to be done.</p>
+
+<p>The source is determined by the class method <code class="highlighter-rouge">source_root</code>. The
+default method ends up using the current working directory as the
+source root. Redefining the class method permits the author to specify
+a completely different directory to use as the source root folder.</p>
+
+<p>In this case, I’ve specified the skeleton directory for new projects,
+which looks like that above.</p>
+
+<h3 id="def-namecomponents">def name_components</h3>
+
+<p>This is doing a bit of munging on potential input from the user. It’s
+quite possible to put pretty much anything as the first argument, but
+what we really only want are the alpha-numeric bits, which we will
+consider as project name components.</p>
+
+<p>Supplying things like <code class="highlighter-rouge">Able &amp; Louis: Go @@CRAXY@@</code> would end up as
+name components <code class="highlighter-rouge">["Able", "Louis", "Go", "CRAXY"]</code>. The components are
+used by later methods to construct useful names for things.</p>
+
+<h3 id="def-snakename">def snake_name</h3>
+
+<p>Here’s one now: out of something like <code class="highlighter-rouge">["Able", "Louis", "Go", "CRAXY"]</code>, 
+would come <code class="highlighter-rouge">able_louis_go_craxy</code>, which is a very nice name for files
+and directories, where this is usually used.</p>
+
+<h3 id="def-camelname">def camel_name</h3>
+
+<p>The other method using <code class="highlighter-rouge">name_components</code>, this will produce
+<code class="highlighter-rouge">AbleLouisGoCraxy</code> which gives us our useful module name.</p>
+
+<h3 id="def-copyfiles">def copy_files</h3>
+
+<p>This picks up the files that we want to transfer to the root directory
+of the new project, translates them, and writes them to the
+destination’s root.</p>
+
+<h3 id="def-dotfiles">def dot_files</h3>
+
+<p>These are the “hidden” files in a directory, that begin with a “.” but
+are so useful. These are picked up from the source, translated, and
+saved to the destination with a “.” pre-pended.</p>
+
+<h3 id="def-otherfile">def other_file</h3>
+
+<p>The rest of the project is translated and saved into the appropriate
+places.</p>
+
+<h2 id="what-else">what else?</h2>
+
+<p>This is still pretty blunt and could use some work to make it even
+more useful. It works for me now quite well. Here are some additional
+ideas:</p>
+
+<h3 id="use-a-manifest">use a manifest</h3>
+
+<p>Instead of hard-coding the source file names in the methods, create a
+manifest that lists what files should be moved from which locations to
+which destinations. I think a YAML file would do this quite nicely.</p>
+
+<h3 id="allow-a-different-skeleton">allow a different skeleton</h3>
+
+<p>Instead of nailing the skeleton inside the thor script, pass it in as
+a parameter.</p>
+
+<h2 id="i-am-sure-ive-reimplemented-the-wheel">I am sure I’ve reimplemented the wheel…</h2>
+
+<p>…but I am learning from doing this. There have been many ways to
+make gems, command line applications, web applications, and so on. I
+can see using this to build jekyll pages, or an entry for a new art
+project I’m working on to collect images, notes, etc.</p>
+
+<h2 id="feedback">Feedback</h2>
+
+<p>While I don’t use any sort of comment system here on the blog, feel
+free to leave comments at my
+<a href="https://www.facebook.com/pontikiweb">Facebook Page</a> or hit me up
+on <a href="http://twitter.com/tamouse">Twitter</a>. I’d love to hear from you.</p>
+
+
+</article>
+
+
+      
+
+    </main>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&copy; 2016 Tamara Temple</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/humans.txt">Colophon</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<\script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+
+
+    
+
+  </body>
+</html>

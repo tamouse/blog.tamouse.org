@@ -1,0 +1,285 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Why you should stop pirating Google's geo APIs « Pete Warden's blog | &#128045; the tamouse pages</title>
+  <meta name="description" content="Using Google’s proprietary APIs in ways that violate Google’s TOS
+prevents more open and free (libre) sources from emerging and
+evolving, as well as opening up your application to reprisal or
+failure when the APIs change or go away.
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/images/logo-01.png">
+  <link rel="icon" href="/images/logo-01-32x32.png" >
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form method="get" id="search" action="http://duckduckgo.com/"
+	    class="navbar-form navbar-right" role="search">
+	<input type="hidden" name="sites"value="blog.tamouse.org"/>
+	<input type="hidden" name="ka" value="h"/>
+	<input type="hidden" name="k7" value="#fafafa"/>
+	<input type="hidden" name="kj" value="#3f3f3f"/>
+	<input type="hidden" name="ky" value="#fafafa"/>
+	<input type="hidden" name="kx" value="b"/>
+	<input type="hidden" name="kt" value="Helvetica"/>
+	<input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+	<!-- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" /> -->
+        <button type="submit" class="btn btn-default">
+	  <i class="fa fa-search"></i>
+	</button>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+	
+	<li><a href="/about/">About</a></li>
+	
+	<li><a href="/pages/posts/">Posts</a></li>
+	
+	<li><a href="/pages/">Pages</a></li>
+	
+	<li><a href="/categories/">Categories</a></li>
+	
+	<li><a href="/tags/">Tags</a></li>
+	
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+
+    <main class="container">
+      <article>
+<div class="page-header">
+  <h2>
+    
+    <a href="http://petewarden.com/2013/09/09/why-you-should-stop-pirating-googles-geo-apis/">Why you should stop pirating Google's geo APIs « Pete Warden's blog</a>
+    
+    <small>11 Sep 2013</small>
+  </h2>
+
+  <ul class="nav nav-pills">
+    
+    
+    <li><a class="category-item" href="/categories/swaac/">swaac</a></li>
+    
+    
+
+    
+    
+    <li>    <a class="category-item" href="/tags/open-software/">open-software</a></li>
+    
+    <li>    <a class="category-item" href="/tags/gis/">gis</a></li>
+    
+    <li>    <a class="category-item" href="/tags/google/">google</a></li>
+    
+    <li>    <a class="category-item" href="/tags/apis/">apis</a></li>
+    
+    <li>    <a class="category-item" href="/tags/data-science-toolkit/">data-science-toolkit</a></li>
+    
+    
+  </ul>
+</div>
+
+<p>Using Google’s proprietary APIs in ways that violate Google’s TOS
+prevents more open and free (libre) sources from emerging and
+evolving, as well as opening up your application to reprisal or
+failure when the APIs change or go away.</p>
+
+<p>Instead, use:</p>
+
+<ul>
+  <li><a href="http://www.datasciencetoolkit.org/">Data Science Toolkit</a>, an open VM that
+wraps a lot of the geo community’s greatest open-source projects in a
+friendly and familiar interface.</li>
+</ul>
+
+<blockquote>
+  <h1 id="why-you-should-stop-pirating-googles-geoapis">Why you should stop pirating Google’s geo APIs</h1>
+
+  <p><a href="http://petewarden.com/2013/09/09/why-you-should-stop-pirating-googles-geo-apis/" title="September 9, 2013">September 9, 2013</a>
+By <a href="http://petewarden.com/author/petewarden/" title="View all posts by Pete Warden">Pete Warden</a></p>
+
+  <p>This morning I ran across a wonderful open source project called 
+“<a href="https://github.com/gwintrob/crime-doesnt-climb/blob/master/README.md">Crime  doesn’t climb</a>”,
+analyzing how crime rates vary with altitude in San Francisco. Then I
+reached this line, and honestly couldn’t decide whether to cry or
+scream: “<em>Here’s the code snippet that queries the Google Elevation API
+(careful–Google rate limits aggressively)</em>”</p>
+
+  <p>Google is very clear about 
+<a href="https://developers.google.com/maps/documentation/elevation/#Limits">the accepted usage of all their geo APIs</a>,
+here’s the quote that’s repeated in almost every page: “<em>The Elevation
+API may only be used in conjunction with displaying results on a Google
+map; using elevation data without displaying a map for which elevation
+data was requested is prohibited.</em>”</p>
+
+  <p>The crime project isn’t an exception, it’s common to see geocoding and
+other closed APIs being used in all sorts of unauthorized ways .
+<a href="http://ariya.ofilabs.com/2013/07/geolocation-and-interactive-maps.html">Even</a>
+<a href="http://peteh.me/speeding-up-geocoding-on-rails-with-geocoder/">tutorials</a>
+openly recommend going this route.</p>
+
+  <p>So what? Everyone ignores the terms, and Google doesn’t seem to enforce
+them energetically. People have projects to build, and the APIs are
+conveniently to hand, even if they’re technically breaking the terms of
+service. Here’s why I care, and why I think you should too:</p>
+
+  <p><strong>Google’s sucking up all the oxygen</strong></p>
+
+  <p>Because everyone’s using closed-source APIs from Google, there’s very
+little incentive to improve the open-source alternatives. 
+<a href="http://labnol.blogspot.com/2007/07/we-love-microsoft-software-piracy-in.html">Microsoft loved it when people in China pirated Windows</a>,
+because that removed a lot of potential users for free alternatives, and
+so hobbled their development, and something very similar is happening in
+the geo world. Open geocoding alternatives would be a lot further along
+if crowds of frustrated geeks were diving in to improve them, rather
+than ignoring them.</p>
+
+  <p><strong>You’re giving them a throat to choke</strong></p>
+
+  <p>Do you remember when the Twitter API was a wonderful open platform to
+build your business on? Do you remember how well that worked out? If
+you’re relying on Google’s geo APIs as a core part of your projects you
+already have a tricky dependency to manage even if it’s all kosher. If
+you’re not using them according to the terms of service, you’re
+completely at their mercy if it becomes successful. Sometimes the
+trade-off is going to be worth it, but you should at least be aware of
+the alternatives when you make that choice.</p>
+
+  <p><strong>A lot of doors are closed</strong></p>
+
+  <p>Google is good about rate-limiting its API usage, so you won’t be able
+to run bulk data analysis. You also can only access the data in a
+handful of ways. For example, for the crime project they were forced to
+run point sampling across the city to estimate the proportion of the
+city that was at each elevation, when having full access to the data
+would have allowed them to calculate that much more directly and
+precisely. By starting with a closed API, you’re drastically limiting
+the answers you’ll be able to pull from the data.</p>
+
+  <p><strong>You’re missing out on all the fun</strong></p>
+
+  <p>I’m not <a href="http://stallman.org/">RMS</a>, I love open-source for very
+pragmatic reasons. One of the biggest is that I hate hitting black boxes
+when I’m debugging! When I was first using Yahoo’s old Placemaker API, I
+was driven crazy by its habit of marking an references to “The New York
+Times” as being in New York. I ended up having to patch around this
+habit for all sorts of nouns, doing a massive amount of work when I knew
+that it would be far simpler to tweak the original algorithm for my use
+case. When I run across bugs or features I’d like to add to open-source
+software, I can dive in, make the changes, and anyone else who has the
+same problem also benefits. It’s not only more efficient, it’s a lot
+more satisfying too.</p>
+
+  <p><strong>So, what can you do?</strong></p>
+
+  <p>There’s a reason Google’s geo APIs are dominant – they’re
+well-documented, have broad coverage, and are easy to access. There’s
+nothing in the open world that matches them overall. There are good
+solutions out there though, so all I’d ask is that you look into what’s
+available before you default to closed data.</p>
+
+  <p>I’ve put my money where my mouth is, by pulling together the
+<a href="http://www.datasciencetoolkit.org/">Data Science Toolkit</a> as an open VM that
+wraps a lot of the geo community’s greatest open-source projects in a
+friendly and familiar interface, even
+<a href="http://www.datasciencetoolkit.org/developerdocs#googlestylegeocoder">emulating Google’s geocoder URL structure</a>.
+Instead of using Google’s elevation API, the crime project could have
+used NASA’s SRTM elevation data through the
+<a href="http://www.datasciencetoolkit.org/developerdocs#coordinates2statistics">coordinates2statistics</a> JSON
+endpoint, or even logged in to the PostGIS database that drives it to
+run bulk calculations.</p>
+
+  <p>There are a lot of other alternatives too. I have high hopes for
+<a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a>,
+OpenStreetMap’s geocoding service, though a lot of my applications
+require a more ‘permissive’ interface that accepts messier input.
+PostGIS now comes with
+ <a href="http://wiki.bitnami.com/Components/PostgreSQL/PostGIS_Quick_Start_Guide#How_can_I_install_Tiger_Geocoder.3f">a geocoder for US Census ‘Tiger’ data pre-installed too</a>.
+<a href="http://www.geonames.org/">Geonames</a> has a great set of data on places
+all around the world you can explore.</p>
+
+  <p>If you don’t see what you want, figure out if there are any similar
+projects you might be able to extend with a little effort, or that you
+can persuade the maintainers to work on for you. If you need
+neighborhood boundaries, why not take a look at building them
+in <a href="http://zetashapes.com/">Zetashapes</a> and contributing them back? If
+Nominatim doesn’t work well for your country’s postal addresses, dig
+into improving their parser. I know only a tiny percentage of people
+will have the time, skills, or inclination to get involved, but just by
+hearing about the projects, you’ve increased the odds you’ll end up
+helping.</p>
+
+  <p>I want to live in a world where basic facts about the places we live and
+work are freely available, so it’s a lot easier to build amazing
+projects like the crime analysis that triggered this rant. Please, at
+least find out a little bit about the open alternatives before you use
+Google’s geo APIs, you might be pleasantly surprised at what’s out
+there!</p>
+
+</blockquote>
+
+</article>
+
+
+      
+      <hr>
+      Source: <a href="http://petewarden.com/2013/09/09/why-you-should-stop-pirating-googles-geo-apis/">http://petewarden.com/2013/09/09/why-you-should-stop-pirating-googles-geo-apis/</a>
+      
+
+    </main>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&copy; 2016 Tamara Temple</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/humans.txt">Colophon</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<\script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+
+
+    
+
+  </body>
+</html>

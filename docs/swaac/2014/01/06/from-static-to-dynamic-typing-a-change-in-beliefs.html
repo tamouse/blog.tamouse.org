@@ -1,0 +1,244 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>From Static to Dynamic Typing: a Change In Beliefs | &#128045; the tamouse pages</title>
+  <meta name="description" content="Sandy Metz’s Book, Practical Object-Oriented Design in Ruby, she discusses the paradigm shift needed to believe that dynamically typed languages, such as Ruby, can be better than statically typed languages.
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/images/logo-01.png">
+  <link rel="icon" href="/images/logo-01-32x32.png" >
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form method="get" id="search" action="http://duckduckgo.com/"
+	    class="navbar-form navbar-right" role="search">
+	<input type="hidden" name="sites"value="blog.tamouse.org"/>
+	<input type="hidden" name="ka" value="h"/>
+	<input type="hidden" name="k7" value="#fafafa"/>
+	<input type="hidden" name="kj" value="#3f3f3f"/>
+	<input type="hidden" name="ky" value="#fafafa"/>
+	<input type="hidden" name="kx" value="b"/>
+	<input type="hidden" name="kt" value="Helvetica"/>
+	<input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+	<!-- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" /> -->
+        <button type="submit" class="btn btn-default">
+	  <i class="fa fa-search"></i>
+	</button>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+	
+	<li><a href="/about/">About</a></li>
+	
+	<li><a href="/pages/posts/">Posts</a></li>
+	
+	<li><a href="/pages/">Pages</a></li>
+	
+	<li><a href="/categories/">Categories</a></li>
+	
+	<li><a href="/tags/">Tags</a></li>
+	
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+
+    <main class="container">
+      <article>
+<div class="page-header">
+  <h2>
+    
+    From Static to Dynamic Typing: a Change In Beliefs
+    
+    <small>06 Jan 2014</small>
+  </h2>
+
+  <ul class="nav nav-pills">
+    
+    
+    <li><a class="category-item" href="/categories/swaac/">swaac</a></li>
+    
+    
+
+    
+    
+    <li>    <a class="category-item" href="/tags/howtos/">howtos</a></li>
+    
+    <li>    <a class="category-item" href="/tags/duck-typing/">duck-typing</a></li>
+    
+    
+  </ul>
+</div>
+
+<p><a href="http://sandymetz.com">Sandy Metz</a>’s Book, <a href="https://www.goodreads.com/book/show/18090276-practical-object-oriented-design-in-ruby">Practical Object-Oriented Design in Ruby</a>, she discusses the paradigm shift needed to believe that dynamically typed languages, such as Ruby, can be better than statically typed languages.</p>
+
+<p>In chapter 5, “Reducing Costs With Duck Typing”, she contrasts the beliefs about static and dynamic typing:</p>
+
+<blockquote>
+  <p>Static and dynamic typing both make promises and each has costs and benefits.</p>
+</blockquote>
+
+<blockquote>
+  <p>Static typing aficionados cite the following qualities:</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>The compiler unearths type errors at compile time.</li>
+    <li>Visible type information serves as documentation.</li>
+    <li>Compiled code is optimized to run quickly.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>These qualities represent strengths in a programming language only if you accept this set of corresponding assumptions:</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>Runtime type errors will occur unless the compiler performs type checks.</li>
+    <li>Programmers will not otherwise understand the code; they cannot infer an object’s type from its context.</li>
+    <li>The application will run too slowly without these optimizations.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>Dynamic typing proponents list these qualities:</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>Code is interpreted and can be dynamically loaded; there is no compile/make cycle.</li>
+    <li>Source code does not include explicit type information.</li>
+    <li>Metaprogramming is easier.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>These qualities are strengths if you accept this set of assumptions:</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>Overall application development is faster without a compile/make cycle.</li>
+    <li>Programmers find the code easier to understand when it does not contain type declarations; they can infer an object’s type from its context.</li>
+    <li>Metaprogramming is a desirable language feature.</li>
+  </ul>
+</blockquote>
+
+<p>(My commentary follows.)</p>
+
+<!--more-->
+
+<p>So the differences between the two views come down to this, for me:
+How confident are you in your colleagues’ coding skills? Or, from a
+management perspective, how confident are you in your developers’
+coding skills?  These may, of course, provide two different
+answers. And you really can’t address the question in terms of your
+own confidence, because that is typically an area we are blind in
+(either too high or too low).</p>
+
+<p>But there is another way to look at it: how confident can you <em>become</em>
+in your colleagues’ or contributors’ skills? If they (and so, you)
+continuously take the purportedly safer route of static typing, it
+fosters an air of non-risk-taking. Subsequently, you stifle
+creativity, innovation, and the very souls of your software
+craftspeople, and thus yourself.</p>
+
+<p>The idea of releasing code that finds type errors in runtime sends
+chills though many people’s developer bones. And so, in the
+dynamically typed development world of Ruby, the field is full of
+really great test practices. Not uniformly, of course, there are lots
+of people and organizations developing Ruby code in an unsafe manner
+by eschewing all testing, either completely, or an effort made at the
+end, where it really isn’t as effective.</p>
+
+<p>Also, it <em>does</em> require more skill and understanding of how to put in
+place runtime error recovery mechanisms, because, yes, it is pretty
+awful to throw a 500 Internal Server Error at a user in production,
+but it’s a fool who thinks that will never be needed if developing in
+an completely statically typed paradigm.</p>
+
+<p>In addition to Sandy’s <em>really</em> excellent book, <a href="http://about.avdi.org/">Avdi Grimm</a> is
+another strong proponent of writing <a href="https://www.goodreads.com/book/show/19400982-confident-ruby">Confident Ruby</a>.</p>
+
+<blockquote>
+  <p>… switching on type clutters up method
+  logic, makes testing harder, and embeds knowledge about types in
+  numerous places. As confident coders, we want to tell our ducks to
+  quack and then move on. This means first figuring out what kind of
+  messages and roles we need, and then insuring we only allow ducks
+  which are fully prepared to quack into our main method logic.</p>
+</blockquote>
+
+<p>So defensive coding is out in the dynamically-typed coding
+world. Instead, we rely on our ability to deal with runtime errors
+intelligently and gracefully, to speed up our code, our development,
+and our understanding of the application we’re developing, as a
+narrative to helping our future selves and others maintain and extend
+the code.</p>
+
+<p>This is the way of the software craftsperson.</p>
+
+</article>
+
+
+      
+
+    </main>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&copy; 2016 Tamara Temple</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/humans.txt">Colophon</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<\script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+
+
+    
+
+  </body>
+</html>

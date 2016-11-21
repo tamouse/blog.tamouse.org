@@ -1,0 +1,220 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jekyllizing My Cookbook | &#128045; the tamouse pages</title>
+  <meta name="description" content="Today’s fun was working with Jekyll, the static
+site generator that underlies Octopress and
+Github Pages. I have a cookbook online on
+my wiki. I am
+starting to look at moving off that wiki and building the information
+there as a static web site instead, as part of my migration away from
+managing a server as I said in my
+introduction.
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/images/logo-01.png">
+  <link rel="icon" href="/images/logo-01-32x32.png" >
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form method="get" id="search" action="http://duckduckgo.com/"
+	    class="navbar-form navbar-right" role="search">
+	<input type="hidden" name="sites"value="blog.tamouse.org"/>
+	<input type="hidden" name="ka" value="h"/>
+	<input type="hidden" name="k7" value="#fafafa"/>
+	<input type="hidden" name="kj" value="#3f3f3f"/>
+	<input type="hidden" name="ky" value="#fafafa"/>
+	<input type="hidden" name="kx" value="b"/>
+	<input type="hidden" name="kt" value="Helvetica"/>
+	<input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+	<!-- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" /> -->
+        <button type="submit" class="btn btn-default">
+	  <i class="fa fa-search"></i>
+	</button>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+	
+	<li><a href="/about/">About</a></li>
+	
+	<li><a href="/pages/posts/">Posts</a></li>
+	
+	<li><a href="/pages/">Pages</a></li>
+	
+	<li><a href="/categories/">Categories</a></li>
+	
+	<li><a href="/tags/">Tags</a></li>
+	
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+
+    <main class="container">
+      <article>
+<div class="page-header">
+  <h2>
+    
+    Jekyllizing My Cookbook
+    
+    <small>26 Aug 2013</small>
+  </h2>
+
+  <ul class="nav nav-pills">
+    
+    
+    <li><a class="category-item" href="/categories/swaac/">swaac</a></li>
+    
+    
+
+    
+    
+    <li>    <a class="category-item" href="/tags/howtos/">howtos</a></li>
+    
+    <li>    <a class="category-item" href="/tags/jekyll/">jekyll</a></li>
+    
+    
+  </ul>
+</div>
+
+<p>Today’s fun was working with <a href="http://jekyllrb.com">Jekyll</a>, the static
+site generator that underlies <a href="http://octopress.org">Octopress</a> and
+<a href="http://pages.github.com">Github Pages</a>. I have a cookbook online on
+my <a href="http://wiki.tamaratemple.com/Recipes/HomePage">wiki</a>. I am
+starting to look at moving off that wiki and building the information
+there as a static web site instead, as part of my migration away from
+managing a server as I said in my
+<a href="/blog/2013/05/15/introduction/">introduction</a>.</p>
+
+<p>Today was fun and interesting learning how to work with Jekyll itself
+and finding out what I might be able to do with it.</p>
+
+<!--more-->
+
+<h2 id="where-to-start">Where To Start?</h2>
+
+<p>I knew I was going to go with a static site generator, but which one?
+I have been using Octopress here on the github pages, but did I want
+to create another github pages project blog for something that didn’t
+really have a project associated with it? Plus, how to generate the
+gh-pages themselves. I know octopress can do that, but I also am
+wanting to use non-blog pages, and wanted to learn more about Jekyll
+itself.</p>
+
+<p>So Jekyll it is.</p>
+
+<h2 id="how-to-organize-things">How to Organize Things?</h2>
+
+<p>I still haven’t quite gotten this fully fleshed out, but for now, I
+have pages starting from the root directory, <code class="highlighter-rouge">recipes/</code> and
+subdirectories for the major types of food: <code class="highlighter-rouge">main-dishes</code>,
+<code class="highlighter-rouge">side-dishes</code>, <code class="highlighter-rouge">baked-goods</code>, and so on.</p>
+
+<p>I envision that under each of the directories and subdirectories, I
+will generate and index.html page containining links to the
+subdirectories and files within it. Should be interesting! I will have
+to write this by hand, obviously, as well as whatever feeds might be
+involved here, but I probably won’t do that as such. (Although feeds
+might be a reason to go back to posting recipes instead and using
+categories. Hmm.)</p>
+
+<h2 id="writing-a-liquid-tag">Writing a Liquid Tag</h2>
+
+<p>Jekyll has a liquid tag that lets you write the link to a post by just
+giving it’s slug name: <code class="highlighter-rouge">post_url</code>. There isn’t one for getting the
+page’s url given it’s slug, so I wrote one. That was fun and a good
+learning, though I had to embed lots of debug prints to see what was
+going on. I didn’t want to debug with <code class="highlighter-rouge">pry</code> as it involved too many
+loops and steps.</p>
+
+<h2 id="where-to-deploy">Where to Deploy?</h2>
+
+<p>Despite my reluctance to run a server, I still have 3 of them (!?!?)
+and so I’m putting the recipes under my server at tamouse.org on
+Gandi. I have that set up to quickly add domains and subdomains, and
+letting it serve up the static files will be neat. I’m currently
+saving the generated files in the git repo; I may change my mind later
+and remove them, and make sure the generate the pages on the remote
+site during an update, which I may automate with <code class="highlighter-rouge">chef-solo</code> which I
+am also playing with.</p>
+
+<h2 id="but-wait-theres-more">But Wait, There’s More!</h2>
+
+<p>While working on both this blog and the recipe blog at the same time,
+I found myself having to remember to shut down the preview servers
+going back and forth.</p>
+
+<p>And then <strong>POW</strong> it hit me: Use POW.</p>
+
+<h2 id="pow">POW</h2>
+
+<p><a href="http://pow.cx/">POW</a> is a powerful little gizmo for the mac that
+lets you have multiple Rack applications underway in development at
+the same time, without having the bindings collide.</p>
+
+<p>After you install it, all you have to do is symlink your application
+to the <code class="highlighter-rouge">~/.pow/</code> directory, and then you can point your browser at the
+symlink name plus <code class="highlighter-rouge">.dev</code>. So cool!</p>
+
+</article>
+
+
+      
+
+    </main>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&copy; 2016 Tamara Temple</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/humans.txt">Colophon</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<\script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Deploying a Rails app using Nginx, Unicorn, Postgres, and Capistrano to Digital Ocean | &#128045; the tamouse pages</title>
+  <meta name="description" content="A very concise tutorial on combining the given technologies to quickly deploy a Rails application.
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/images/logo-01.png">
+  <link rel="icon" href="/images/logo-01-32x32.png" >
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form method="get" id="search" action="http://duckduckgo.com/"
+	    class="navbar-form navbar-right" role="search">
+	<input type="hidden" name="sites"value="blog.tamouse.org"/>
+	<input type="hidden" name="ka" value="h"/>
+	<input type="hidden" name="k7" value="#fafafa"/>
+	<input type="hidden" name="kj" value="#3f3f3f"/>
+	<input type="hidden" name="ky" value="#fafafa"/>
+	<input type="hidden" name="kx" value="b"/>
+	<input type="hidden" name="kt" value="Helvetica"/>
+	<input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+	<!-- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" /> -->
+        <button type="submit" class="btn btn-default">
+	  <i class="fa fa-search"></i>
+	</button>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+	
+	<li><a href="/about/">About</a></li>
+	
+	<li><a href="/pages/posts/">Posts</a></li>
+	
+	<li><a href="/pages/">Pages</a></li>
+	
+	<li><a href="/categories/">Categories</a></li>
+	
+	<li><a href="/tags/">Tags</a></li>
+	
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+
+    <main class="container">
+      <article>
+<div class="page-header">
+  <h2>
+    
+    <a href="https://coderwall.com/p/yz8cha/deploying-rails-app-using-nginx-unicorn-postgres-and-capistrano-to-digital-ocean">Deploying a Rails app using Nginx, Unicorn, Postgres, and Capistrano to Digital Ocean</a>
+    
+    <small>29 Aug 2013</small>
+  </h2>
+
+  <ul class="nav nav-pills">
+    
+    
+    <li><a class="category-item" href="/categories/swaac/">swaac</a></li>
+    
+    
+
+    
+    
+    <li>    <a class="category-item" href="/tags/devops/">devops</a></li>
+    
+    <li>    <a class="category-item" href="/tags/rails/">rails</a></li>
+    
+    <li>    <a class="category-item" href="/tags/nginx/">nginx</a></li>
+    
+    <li>    <a class="category-item" href="/tags/postgres/">postgres</a></li>
+    
+    <li>    <a class="category-item" href="/tags/postgresql/">postgresql</a></li>
+    
+    <li>    <a class="category-item" href="/tags/unicorn/">unicorn</a></li>
+    
+    <li>    <a class="category-item" href="/tags/digital-ocean/">digital-ocean</a></li>
+    
+    <li>    <a class="category-item" href="/tags/ubuntu/">ubuntu</a></li>
+    
+    <li>    <a class="category-item" href="/tags/capistrano/">capistrano</a></li>
+    
+    <li>    <a class="category-item" href="/tags/deployment/">deployment</a></li>
+    
+    <li>    <a class="category-item" href="/tags/tutorials/">tutorials</a></li>
+    
+    
+  </ul>
+</div>
+
+<p>A very concise tutorial on combining the given technologies to quickly deploy a Rails application.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>The first part of the tutorial is all about setting up a deployment user and ruby / rails environment
+on a digital ocean droplet. This is good stuff, and should be useful regardless of whether you’re
+doing a rails deploy or some other sort of deployment.</p>
+
+<p>The key thing to look at here are the nginx, unicorn, and postgres configurations. These can be used
+on other servers besides digital ocean’s, and they make for good reading and understanding
+of how these technologies relate.</p>
+
+<p>Using capistrano as the standard tool for deploying rails makes sense, once you have this
+whole thing set up. There are things you can probably do to make the capistrano deploy
+simpler as well.</p>
+
+<p>Ultimately, actual deployment in a true devops sense would be done using puppet or chef, but
+for the initiate, this is a good start.</p>
+
+</article>
+
+
+      
+      <hr>
+      Source: <a href="https://coderwall.com/p/yz8cha/deploying-rails-app-using-nginx-unicorn-postgres-and-capistrano-to-digital-ocean">https://coderwall.com/p/yz8cha/deploying-rails-app-using-nginx-unicorn-postgres-and-capistrano-to-digital-ocean</a>
+      
+
+    </main>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&copy; 2016 Tamara Temple</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/humans.txt">Colophon</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<\script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+
+
+    
+
+  </body>
+</html>

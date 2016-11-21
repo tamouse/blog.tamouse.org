@@ -1,0 +1,310 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Implementing Multi-Table Full Text Search with Postgres in Rails  –   Hashdog blog | &#128045; the tamouse pages</title>
+  <meta name="description" content="Clipped on 2013-09-04 10:27:38 -0500
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/images/logo-01.png">
+  <link rel="icon" href="/images/logo-01-32x32.png" >
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form method="get" id="search" action="http://duckduckgo.com/"
+	    class="navbar-form navbar-right" role="search">
+	<input type="hidden" name="sites"value="blog.tamouse.org"/>
+	<input type="hidden" name="ka" value="h"/>
+	<input type="hidden" name="k7" value="#fafafa"/>
+	<input type="hidden" name="kj" value="#3f3f3f"/>
+	<input type="hidden" name="ky" value="#fafafa"/>
+	<input type="hidden" name="kx" value="b"/>
+	<input type="hidden" name="kt" value="Helvetica"/>
+	<input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+	<!-- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" /> -->
+        <button type="submit" class="btn btn-default">
+	  <i class="fa fa-search"></i>
+	</button>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+	
+	<li><a href="/about/">About</a></li>
+	
+	<li><a href="/pages/posts/">Posts</a></li>
+	
+	<li><a href="/pages/">Pages</a></li>
+	
+	<li><a href="/categories/">Categories</a></li>
+	
+	<li><a href="/tags/">Tags</a></li>
+	
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+
+    <main class="container">
+      <article>
+<div class="page-header">
+  <h2>
+    
+    <a href="http://www.hashdog.com/blog/implementing-multi-table-full-text-search-with-postgres-in-rails/">Implementing Multi-Table Full Text Search with Postgres in Rails  –   Hashdog blog</a>
+    
+    <small>04 Sep 2013</small>
+  </h2>
+
+  <ul class="nav nav-pills">
+    
+    
+    <li><a class="category-item" href="/categories/swaac/">swaac</a></li>
+    
+    
+
+    
+    
+    <li>    <a class="category-item" href="/tags/rails/">rails</a></li>
+    
+    <li>    <a class="category-item" href="/tags/postgresql/">postgresql</a></li>
+    
+    
+  </ul>
+</div>
+
+<p>Clipped on 2013-09-04 10:27:38 -0500</p>
+
+<!--more-->
+
+<blockquote>
+  <h1 id="hashdog-bloghttpwwwhashdogcomblogwp-contentthemesshortnoteslibraryimageslogopnghttpwwwhashdogcomblog-creativesimple"><a href="http://www.hashdog.com/blog"><img src="http://www.hashdog.com/blog/wp-content/themes/shortnotes//library/images/logo.png" alt="Hashdog blog" /></a> Creative.Simple.</h1>
+
+  <p>sep 2, 2013</p>
+
+  <h2 id="implementing-multi-table-full-text-search-with-postgres-in-railshttpwwwhashdogcomblogimplementing-multi-table-full-text-search-with-postgres-in-rails"><a href="http://www.hashdog.com/blog/implementing-multi-table-full-text-search-with-postgres-in-rails/">Implementing Multi-Table Full Text Search with Postgres in Rails</a></h2>
+
+  <p>Easily searching across an application’s data is a pervasive need. If
+you are lucky, you can get away with simple sorting or searching on a
+single column, but it is more likely that you need full text search
+across multiple models, all from a single search field.</p>
+
+  <p>There are many standalone services, some hosted and some not, offering
+full text search. We looked at a few of these, but decided that
+adding <a href="http://robots.thoughtbot.com/post/50655960596/sandi-metz-rules-for-developers">too much to our classes</a> or
+having an external service running during tests weren’t things we wanted
+for this project.</p>
+
+  <p>Thanks to the power of Postgres’ <a href="http://www.postgresql.org/docs/9.2/static/textsearch.html">full text search</a>,
+rolling your own search isn’t too difficult.</p>
+
+  <p>If all you need is to search over a few models’ text and string fields,
+this approach is probably the simplest thing you can do.</p>
+
+  <h2 id="sql-changes">SQL Changes</h2>
+
+  <p>We’ll need to construct a <a href="http://www.postgresql.org/docs/9.2/static/tutorial-views.html">database view</a> which
+presents a polymorphic relationship to the individual result and the
+text column being searched.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>CREATE VIEW searches AS
+
+  SELECT
+    statuses.id AS searchable_id,
+    'Status' AS searchable_type,
+    comments.body AS term
+  FROM statuses
+  JOIN comments ON statuses.id = comments.status_id
+
+  UNION
+
+  SELECT
+    statuses.id AS searchable_id,
+    'Status' AS searchable_type,
+    statuses.body AS term
+  FROM statuses
+
+  UNION
+
+  SELECT
+    users.id AS searchable_id,
+    'User' AS searchable_type,
+    users.name AS term
+  FROM users
+</code></pre>
+  </div>
+
+  <p>From here, we
+add <a href="http://www.postgresql.org/docs/9.2/static/textsearch-indexes.html">gin</a> indices
+to the columns on which we are searching. In our case similar indices to
+these made the difference between a 3-5 second lookup and \~100ms.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>CREATE INDEX index_statuses_on_body ON statuses USING gin(to_tsvector('english', body));
+CREATE INDEX index_comments_on_body ON comments USING gin(to_tsvector('english', body));
+CREATE INDEX index_users_on_name ON users USING gin(to_tsvector('english', name));
+</code></pre>
+  </div>
+
+  <h2 id="ruby">Ruby</h2>
+
+  <p><a href="https://twitter.com/tenderlove">Aaron Patterson</a>‘s <a href="https://github.com/textacular/textacular">Textacular</a> is
+the only non-standard dependency we’ll introduce here:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>gem 'textacular'
+</code></pre>
+  </div>
+
+  <p>Textacular will manage searching over all text and varchar columns.</p>
+
+  <p>We follow Rails’ conventions in our database view, which makes hooking a
+model up to it as simple as any table-backed model. The <strong>Search</strong> class
+below automatically hooks into the<strong>searches</strong> view we created.</p>
+
+  <p>Luckily, ActiveRecord already presents us with a solution to polymorphic
+associations in the form of the</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>&lt;ASSOCIATION&gt;_id
+</code></pre>
+  </div>
+
+  <p>and</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>&lt;ASSOCIATION&gt;_type
+</code></pre>
+  </div>
+
+  <p>columns.</p>
+
+  <p>All we have to do is tell <strong>Search</strong> about
+its <strong>searchable</strong> relationship, define the <strong>results</strong>method to perform
+the search, and extend <strong>Textacular</strong> in the model.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>class Search &lt; ActiveRecord::Base
+  extend Textacular
+
+  belongs_to :searchable, polymorphic: true
+
+  def results
+    if @query.present?
+      self.class.search(@query).preload(:searchable).map!(&amp;amp;:searchable).uniq
+    else
+      Search.none
+    end
+  end
+end
+</code></pre>
+  </div>
+
+  <p>The call to</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>preload
+</code></pre>
+  </div>
+
+  <p>is used instead of <strong>include</strong> because Rails can’t include polymorphic
+associations. Calling <strong>preload</strong> still loads the related models in as
+few SQL statements as possible, but does not allow for querying on the
+related models. This isn’t something we need since we immediately map
+to <strong>searchable</strong>.</p>
+
+  <p>Since we could potentially get a result for a model multiple times, for
+example if the same term appeared in a status and a comment, we also
+call <strong>uniq</strong>.</p>
+
+  <p>The interface for Search look like this: <strong>Search.new(query:
+‘books’).results</strong>.</p>
+
+  <h2 id="caveats">Caveats</h2>
+
+  <ul>
+    <li>
+      <p>Rails lacks any support for creating or updating database views.
+Because the view must be created by calling execute, Rails is unable
+to dump the view into <strong>db/schema.rb</strong>. Your must make the following
+change to your application configuration:</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code># config/application.rb
+config.active_record.schema_format = :sql
+</code></pre>
+      </div>
+    </li>
+    <li>If the view needs to change to include additional searchable
+content, the <strong>up</strong> method on the migration has to redefine the view
+entirely and the <strong>down</strong> method must redefine the view in its
+previous form.</li>
+    <li>Remember that creating indices blocks writes by default, which means
+that the site needs to be in maintenance mode.
+<a href="http://robots.thoughtbot.com/post/56828751507/how-to-create-postgres-indexes-concurrently-in">Create indices concurrently in Rails</a>
+to avoid this.</li>
+  </ul>
+
+  <h2 id="conclusion">Conclusion</h2>
+
+  <p>Overall, we’ve enjoyed working with this method of full text search.
+Because it’s awkward to change the view we’d recommend not approaching
+the search too iteratively; add the tables you know you’ll want to
+search up front and save yourself some headache.</p>
+</blockquote>
+
+</article>
+
+
+      
+      <hr>
+      Source: <a href="http://www.hashdog.com/blog/implementing-multi-table-full-text-search-with-postgres-in-rails/">http://www.hashdog.com/blog/implementing-multi-table-full-text-search-with-postgres-in-rails/</a>
+      
+
+    </main>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&copy; 2016 Tamara Temple</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/humans.txt">Colophon</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<\script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+
+
+    
+
+  </body>
+</html>

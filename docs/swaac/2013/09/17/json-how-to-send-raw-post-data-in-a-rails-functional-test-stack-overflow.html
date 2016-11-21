@@ -1,0 +1,330 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>json - How to send raw post data in a Rails functional test? - Stack Overflow | &#128045; the tamouse pages</title>
+  <meta name="description" content="Note: I tried playing with this in
+~/Project/rubystuff/railsstuff/my_newer_app/spec/controllers/shout_controller_spec.rb
+and could not quite get it to work.
+
+">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/images/logo-01.png">
+  <link rel="icon" href="/images/logo-01-32x32.png" >
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form method="get" id="search" action="http://duckduckgo.com/"
+	    class="navbar-form navbar-right" role="search">
+	<input type="hidden" name="sites"value="blog.tamouse.org"/>
+	<input type="hidden" name="ka" value="h"/>
+	<input type="hidden" name="k7" value="#fafafa"/>
+	<input type="hidden" name="kj" value="#3f3f3f"/>
+	<input type="hidden" name="ky" value="#fafafa"/>
+	<input type="hidden" name="kx" value="b"/>
+	<input type="hidden" name="kt" value="Helvetica"/>
+	<input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+	<!-- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" /> -->
+        <button type="submit" class="btn btn-default">
+	  <i class="fa fa-search"></i>
+	</button>
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+	
+	<li><a href="/about/">About</a></li>
+	
+	<li><a href="/pages/posts/">Posts</a></li>
+	
+	<li><a href="/pages/">Pages</a></li>
+	
+	<li><a href="/categories/">Categories</a></li>
+	
+	<li><a href="/tags/">Tags</a></li>
+	
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+
+    <main class="container">
+      <article>
+<div class="page-header">
+  <h2>
+    
+    <a href="http://stackoverflow.com/questions/2103977/how-to-send-raw-post-data-in-a-rails-functional-test">json - How to send raw post data in a Rails functional test? - Stack Overflow</a>
+    
+    <small>17 Sep 2013</small>
+  </h2>
+
+  <ul class="nav nav-pills">
+    
+    
+    <li><a class="category-item" href="/categories/swaac/">swaac</a></li>
+    
+    
+
+    
+    
+    <li>    <a class="category-item" href="/tags/testing/">testing</a></li>
+    
+    <li>    <a class="category-item" href="/tags/rails/">rails</a></li>
+    
+    <li>    <a class="category-item" href="/tags/json/">json</a></li>
+    
+    
+  </ul>
+</div>
+
+<p><strong>Note:</strong> I tried playing with this in
+<code class="highlighter-rouge">~/Project/rubystuff/railsstuff/my_newer_app/spec/controllers/shout_controller_spec.rb</code>
+and could not quite get it to work.</p>
+
+<!--more-->
+
+<blockquote>
+  <h2 id="how-to-send-raw-post-data-in-a-rails-functional-test">How to send raw post data in a Rails functional test?</h2>
+
+  <p>I’m looking to send raw post data (e.g. unparamaterized json) to one of
+my controllers for testing: ``</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>class LegacyOrderUpdateControllerTest &lt; ActionController::TestCase
+ test "sending json" do
+   post :index, '{"foo":"bar", "bool":true}'
+ end
+end
+</code></pre>
+  </div>
+
+  <p>but this gives me a
+<code class="highlighter-rouge">NoMethodError: undefined method </code>symbolize_keys’ for #<string:0x00000102cb6080>`</string:0x00000102cb6080></p>
+
+  <p>What is the correct way to send raw post data in
+ActionController::TestCase?</p>
+
+  <p>Here is some controller code</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>def index
+    post_data = request.body.read
+    req = JSON.parse(post_data)
+</code></pre>
+  </div>
+
+  <h2 id="answers">7 Answers</h2>
+
+  <p>I ran across the same issue today and found a solution.</p>
+
+  <p>In your test_helper.rb define the following method inside of
+ActiveSupport::TestCase:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>  def raw_post(action, params, body)
+    @request.env['RAW_POST_DATA'] = body
+    response = post(action, params)
+    @request.env.delete('RAW_POST_DATA')
+    response
+  end
+</code></pre>
+  </div>
+
+  <p>In your functional test, use it just like the <code class="highlighter-rouge">post</code> method but pass the
+raw post body as the third argument.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>class LegacyOrderUpdateControllerTest &lt; ActionController::TestCase
+ test "sending json" do
+   raw_post :index, {}, {:foo =&gt; "bar", :bool =&gt; true}.to_json
+ end
+end
+</code></pre>
+  </div>
+
+  <p>I tested this on Rails 2.3.4 when reading the raw post body using</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>request.raw_post
+</code></pre>
+  </div>
+
+  <p>instead of</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>request.body.read
+</code></pre>
+  </div>
+
+  <p>If you look at the <a href="http://github.com/rails/rails/blob/2-3-stable/actionpack/lib/action_controller/request.rb#L381">source code</a>
+you’ll see that raw_post just wraps request.body.read with a check for
+this RAW_POST_DATA in the request env hash.</p>
+
+  <p>This approach continues to work correctly in Rails 3.1</p>
+
+  <p>Huh, yeah And Rails 3.2 too. Thanks!</p>
+
+  <p>Make sure you’re using request.raw_post (as in this answer) instead of
+request.body when parsing the JSON in your controller, or you’ll get a
+weird error about “can’t convert StringIO into String”.</p>
+
+  <p>This doesn’t work in rails 3.2.10+</p>
+
+  <p>I actually solved the same issues just adding one line before simulating
+the rspec post request. What you do is to populate the
+“RAW_POST_DATA”. I tried to remove the attributes var on the post
+:create, but if I do so, it do not find the action.</p>
+
+  <p>Here my final solution.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>def do_create(attributes)
+  request.env['RAW_POST_DATA'] = attributes.to_json
+  post :create, attributes
+end 
+</code></pre>
+  </div>
+
+  <p>In the controller the code you need to read the JSON is something
+similar to this</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>  <span class="k">@property</span> <span class="o">=</span> <span class="n">Property</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">JSON</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">body</span><span class="p">.</span><span class="n">read</span><span class="p">))</span>
+</code></pre>
+  </div>
+
+  <p>great! Just one line, and I had it work even without the <code class="highlighter-rouge">attributes</code>
+sent in to post.</p>
+</blockquote>
+
+<blockquote>
+  <p>Looking at stack trace running a test you can acquire more control on
+request preparation: ActionDispatch::Integration::RequestHelpers.post
+=&gt;
+<a href="https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/testing/integration.rb">ActionDispatch::Integration::Session.process</a>
+=&gt;
+<a href="https://github.com/brynary/rack-test/blob/master/lib/rack/test.rb">Rack::Test::Session.env_for</a></p>
+
+  <p>You can pass json string as :params AND specify a content type
+“application/json”. In other case content type will be set to
+“application/x-www-form-urlencoded” and your json will be parsed
+properly.</p>
+
+  <p>So all you need is to specify “CONTENT_TYPE”:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>post :index, '{"foo":"bar", "bool":true}', "CONTENT_TYPE" =&gt; 'application/json'
+</code></pre>
+  </div>
+
+  <p>This does not work for me. I get an error like “undefined method
+`symbolize_keys’ for #&lt;String:0x00000102b4b0d8&gt;”</p>
+
+  <p>The <code class="highlighter-rouge">post</code> method expects a hash of name-value pairs, so you’ll need to
+do something like this:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>post :index, :data =&gt; '{"foo":"bar", "bool":true}'
+</code></pre>
+  </div>
+
+  <p>Then, in your controller, get the data to be parsed like this:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>post_data = params[:data]
+</code></pre>
+  </div>
+
+  <p>I’ve tried this, it needs to be completely raw though
+{“response”:”error”,”errors”:”can’t parse request: 598: unexpected token
+at ‘data=</p>
+
+  <p>If you are using RSpec (&gt;= 2.12.0) and writing Request specs, the
+module that is included is <code class="highlighter-rouge">ActionDispatch::Integration::Runner</code>. If you
+take a look at the source code you can notice that the
+<a href="https://github.com/rails/rails/blob/4147e0feaddac0e86c9b1f52eec4b1e33d7d6591/actionpack/lib/action_dispatch/testing/integration.rb#L39">post</a>
+method calls
+<a href="https://github.com/rails/rails/blob/4147e0feaddac0e86c9b1f52eec4b1e33d7d6591/actionpack/lib/action_dispatch/testing/integration.rb#L254">process</a>
+which accepts a <code class="highlighter-rouge">rack_env</code> parameter.</p>
+
+  <p>All this means that you can simply do the following in your spec:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>#spec/requests/articles_spec.rb
+
+post '/articles', {}, {'RAW_POST_DATA' =&gt; 'something'}
+</code></pre>
+  </div>
+
+  <p>And in the controller:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>#app/controllers/articles_controller.rb
+
+def create
+  puts request.body.read
+end
+</code></pre>
+  </div>
+
+  <p>Maybe it’s the way you’re formatting your JSON, it might need to be
+escaped some how? Try doing this:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>post :index, :data =&gt; {:foo =&gt; 'bar', :bool =&gt; true }.to_json
+</code></pre>
+  </div>
+
+  <p>This will turn the hash into json, and hopefully that should work. If
+not… well then I’m all out of ideas =)</p>
+</blockquote>
+
+
+</article>
+
+
+      
+      <hr>
+      Source: <a href="http://stackoverflow.com/questions/2103977/how-to-send-raw-post-data-in-a-rails-functional-test">http://stackoverflow.com/questions/2103977/how-to-send-raw-post-data-in-a-rails-functional-test</a>
+      
+
+    </main>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">&copy; 2016 Tamara Temple</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="/humans.txt">Colophon</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<\script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>$(function () { $('[data-toggle="tooltip"]').tooltip() });$(function () { $('[data-toggle="popover"]').popover() });</script>
+
+
+    
+
+  </body>
+</html>

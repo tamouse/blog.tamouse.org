@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Tamara Temple, creator, tamouse
+
+# THANKS
+
+  jaybe, @parkr, gynter, osfameron, PrincessZoey, and others of the
+  #jekyll@freenode.net channel
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3
+  jQuery, Bootstrap, FontAwesome
+  Compass, Jekyll
+  Gulp
+  drink_up_doctor, jekyllpress

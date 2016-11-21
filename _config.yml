@@ -28,6 +28,7 @@ exclude:
 - bower_components
 - Gemfile
 - Gemfile.lock
+- docs
 gems:
   - jekyll-gist
 jekyll-archives:

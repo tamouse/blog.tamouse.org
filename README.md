@@ -84,5 +84,5 @@ performed by the command:
 gulp dist
 ```
 
-This will put the distribution into the `_dist/` folder in the root of
+This will put the distribution into the `docs/` folder in the root of
 the site.
