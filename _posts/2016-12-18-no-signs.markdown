@@ -1,0 +1,17 @@
+---
+layout: post
+title: "no signs"
+date: 2016-12-18 14:18
+categories: ["poetry"]
+tags: ["poems", "hurt"]
+---
+
+<figure>
+<img src="{{ site.data.no-signs.web |
+prepend: site.data.no-signs.path |
+prepend: site.images.s3path }}"
+class="img-responsive" alt="no-signs - a poem" />
+<figcaption>
+"no signs"
+</figcaption>
+</figure>

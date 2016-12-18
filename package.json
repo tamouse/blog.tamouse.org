@@ -9,7 +9,8 @@
   "scripts": {
     "start": "gulp",
     "dist": "gulp dist",
-    "deploy": "npm run dist && git add --all && git commit -m deploy && git push -f deploy master"
+    "deploy": "npm run dist && git add --all && git commit -m deploy && git push -f deploy master",
+    "publish": "npm run deploy"
   },
   "devDependencies": {
     "browser-sync": "^2.7.12",
