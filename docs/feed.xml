@@ -5,9 +5,28 @@
     <description>the rumblings and ramblings of a well-traveled tech-mouse</description>
     <link>http://blog.tamouse.org/</link>
     <atom:link href="http://blog.tamouse.org/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 01 Jan 2017 19:56:46 -0600</pubDate>
-    <lastBuildDate>Sun, 01 Jan 2017 19:56:46 -0600</lastBuildDate>
+    <pubDate>Sat, 21 Jan 2017 22:59:35 -0600</pubDate>
+    <lastBuildDate>Sat, 21 Jan 2017 22:59:35 -0600</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>tweet: largest protest in US history</title>
+        <description>&lt;p&gt;The data is in: 2017 Womens March largest protest in USA history.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Via UConn prof &lt;a href=&quot;https://twitter.com/djpressman&quot;&gt;@djpressman&lt;/a&gt;, between 3.3 million to 4.2 million people marched today. Largest protests in US history &lt;a href=&quot;https://t.co/DA6gR2QFs6&quot;&gt;https://t.co/DA6gR2QFs6&lt;/a&gt; &lt;a href=&quot;https://t.co/O3PZ6O6Dim&quot;&gt;pic.twitter.com/O3PZ6O6Dim&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ari Berman (@AriBerman) &lt;a href=&quot;https://twitter.com/AriBerman/status/823001984085164032&quot;&gt;January 22, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Sat, 21 Jan 2017 22:54:00 -0600</pubDate>
+        <link>http://blog.tamouse.org/politics/2017/01/21/tweet-largest-protest-in-us-history.html</link>
+        <guid isPermaLink="true">http://blog.tamouse.org/politics/2017/01/21/tweet-largest-protest-in-us-history.html</guid>
+        
+        <category>womensmarch</category>
+        
+        
+        <category>politics</category>
+        
+      </item>
     
       <item>
         <title>List of Positive Things in 2016</title>
@@ -601,113 +620,6 @@ Right click on an image and select &quot;Save Link as...&quot; to download the f
         
         
         <category>family</category>
-        
-      </item>
-    
-      <item>
-        <title>Links for 22 October 2016</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;How to write an effective bug report that actually gets resolved (and why everyone should) - Lucidchart
-&lt;a href=&quot;https://www.lucidchart.com/blog/2016/10/18/how-to-write-an-effective-bug-report-that-actually-gets-resolved-and-why-everyone-should/&quot;&gt;https://www.lucidchart.com/blog/2016/10/18/how-to-write-an-effective-bug-report-that-actually-gets-resolved-and-why-everyone-should/&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;As you write a bug report, here are some things that will make your bug report more effective and increase the likelihood of the bug actually getting fixed.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;mjg59 | Fixing the IoT isn’t going to be easy
-&lt;a href=&quot;http://mjg59.dreamwidth.org/45098.html&quot;&gt;http://mjg59.dreamwidth.org/45098.html&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Mark Gritter on Twitter: “A good argument why solving DDoS attacks from the endpoints is never going to work. We need smarter networks, e.g. https://t.co/wk….
-&lt;a href=&quot;https://twitter.com/markgritter/status/789702951077937152&quot;&gt;https://twitter.com/markgritter/status/789702951077937152&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;APOD: 2016 October 22 - Cerro Tololo Trails
-&lt;a href=&quot;http://apod.nasa.gov/apod/ap161022.html&quot;&gt;http://apod.nasa.gov/apod/ap161022.html&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Concurrency in Ruby 3 with Guilds
-&lt;a href=&quot;http://olivierlacan.com/posts/concurrency-in-ruby-3-with-guilds/&quot;&gt;http://olivierlacan.com/posts/concurrency-in-ruby-3-with-guilds/&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;Thoughts on Ruby, Rails, open source software, programming, and life from Olivier Lacan&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Three elephants rescued from reservoir in China - BBC News
-&lt;a href=&quot;http://www.bbc.com/news/world-asia-37640944&quot;&gt;http://www.bbc.com/news/world-asia-37640944&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;Three wild elephants that were stuck in a reservoir in China’s Yunnan province for more than two days have been freed.&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Three elephants rescued from reservoir in China&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;13 October 2016 Last updated at 09:14 BST
-Three wild elephants that were stuck in a reservoir in China’s south-western Yunnan province for two days have been freed after an excavator was used to break the wall.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Footage from state broadcaster CCTV shows two adults elephants and one calf stuck in the water.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Authorities believe the calf fell into the water first and the two adults then tried to save it before getting stuck themselves, Xinhua news agency reports.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Lost Girl and Wynonna Earp: SyFy’s Queer Revolution
-&lt;a href=&quot;http://bust.com/tv/18368-lost-girl-wynnona-earp-syfy-queer.html?utm_content=buffer9ab3b&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&quot;&gt;http://bust.com/tv/18368-lost-girl-wynnona-earp-syfy-queer.html?utm_content=buffer9ab3b&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;A look at Syfy’s queer revolution in the shows Lost Girl and Wynonna Earp&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Created by Michelle Lovretta and developed by Jay Firestone, Lost Girl ran on Canada’s Showcase and SyFy for five years. It told the story of Bo Dennis, a woman who discovers that she is a succubus (in this world, a type of fae), and is drawn into a chaotic world of light and dark creatures who battle for dominion amongst our human world. What was so unique about Bo was that she was a bisexual lead from the very beginning of the series. While Clarke from The 100 has been added to the list of bisexual leading ladies, that was not really explored until the second season…and then the third season happened. While Lost Girl was not perfect, it never shamed Bo for being a sexual person and gave her male and female partners equal play in her romantic life.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Additionally, Bo was allowed to be seen as both “virtuous yet lustful” and was a paragon of goodness, love and light throughout the series. That was an unprecedented role for a bisexual woman to play in sci-fi and it solidified Bo, and her journey, as something special. For once, the queer girl was the Buffy, not just a supporting character. The show also featured multiple gay, lesbian and queer characters, and while it did not do well at handling transgender issues, the show made a lot of great attempts to move forward queer representation. Which has been continued by its spiritually sister, Wynonna Earp.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Helmed by former-Lost Girl writer, Emily Andras, Wynonna Earp is based on the comic book created by Beau Smith, which tells the story of a female descendant of legendary lawman Wyatt Earp. She returns home after years adrift only to inherit her family’s demons. Literally. Every Earp Heir is cursed to attempt to kill all the revenants that have been killed by Wyatt’s gun “Peacemaker.” If the heir is killed before they can complete this mission, the cycle beings again when the next heir comes of age.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Our heroine Wynonna is a broken young woman who hides it behind all the quips and a lot of booze. Unlike a lot of “strong female characters,” Wynonna is not a perfectly virtuous person: She is petty and insecure and persecuted for the people around her for not being sane enough for their small town standards. Yet she is determined to try and do the best she can to protect her loved ones, and even the people who hate her, because it’s the right thing to do. It’s all performed masterfully by Melanie Scrofano.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;However, what makes the show really stand out is its masterfully-written bisexual character, Waverly Earp, and her lesbian love interest, Officer Nicole Haught. Waverly’s emerging sexual identity is treated respectfully but does not consume the entirety of her story arc. Her previous interest in men is also not handwaved away, and she is allowed to be bisexual without having to “pick a team.” While Andras has never promised to keep all characters safe, she has never been one to “bury your gays,” and after the death of Lexa on The 100, fans were relieved that at least for season one, the main ladies are safe.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;When it comes to racial diversity, there is still a ways to go: Z Nation and Killjoys (also created by Michelle Lovretta) both have black female leads, but two is not enough, and there still need to be more leading ladies of color who are not black.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;In good news, I managed to ask Emily Andres a question at New York Comic Con about if we can expect any queer characters of color next season, and she had this reassuring response:&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;“Excellent question, we can always do better. I’m very, very aware of it. I think diversity in general both in front of and behind the camera is still a struggle. This sounds weak, but I’m going to try my best […] soon. Season two, how about that?”&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;It’s not easy for a showrunner or the face of a show to admit that there is this weakness in their work, as we know too well, but the fact that the conversation is happening is important. Progress is being made and even though SyFy isn’t Starz or HBO or Showtime, there is some ground being broken there that is reassuring to those queer girls out there looking to slay a vampire or fly a spaceship.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“You Girls Having Fun?” - Eater
-&lt;a href=&quot;http://www.eater.com/2016/10/20/13336760/brandy-library-date-essay&quot;&gt;http://www.eater.com/2016/10/20/13336760/brandy-library-date-essay&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;The story of a date, a creep, and a bar’s truly heroic staff&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 22 Oct 2016 00:00:00 -0500</pubDate>
-        <link>http://blog.tamouse.org/2016/10/22/links.html</link>
-        <guid isPermaLink="true">http://blog.tamouse.org/2016/10/22/links.html</guid>
-        
         
       </item>
     
