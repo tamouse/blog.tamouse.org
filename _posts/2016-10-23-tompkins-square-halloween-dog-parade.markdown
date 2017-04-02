@@ -5,7 +5,7 @@ date: 2016-10-23 16:34
 categories: ["critters"]
 tags: ["dogs", "halloween", "parade"]
 source: http://www.theverge.com/2016/10/22/13367414/tompkins-square-halloween-dog-parade-new-york-city-photos
-path: blog/critters/2016-10-23-tompkins-square-halloween-dog-parade/
+imgpath: blog/critters/2016-10-23-tompkins-square-halloween-dog-parade/
 images:
 - IMG_3882.jpg
 - IMG_4935.JPG
@@ -25,8 +25,8 @@ images:
 Pictures from this year's [Tompkins Square Halloween Dog Parade]({{page.source}}). Seriously.
 
 
-{% assign path = site.images.s3path | append: page.path %}
+{% assign s3path = site.images.s3path | append: page.imgpath %}
 
 {% for image in page.images %}
-<div><img src="{{ path}}{{ image }}" class="img-thumbnail" alt="{{image}}" /></div>
+<div><img src="{{ s3path }}{{ image }}" class="img-thumbnail" alt="{{image}}" /></div>
 {% endfor %}
