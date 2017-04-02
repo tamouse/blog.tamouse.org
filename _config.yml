@@ -5,7 +5,7 @@ title: "&#128045; the tamouse pages"
 author: Tamara Temple
 email: tamouse@gmail.com
 description: the rumblings and ramblings of a well-traveled tech-mouse
-url: http://blog.tamouse.org
+url: https://blog.tamouse.org
 twitter_username: tamouse
 github_username: tamouse
 baseurl: ''
@@ -38,4 +38,4 @@ jekyll-archives:
 
 # paginate: 15
 images:
-  s3path: 'http://tt.imageshare.s3.amazonaws.com/'
+  s3path: '//tt.imageshare.s3.amazonaws.com/'

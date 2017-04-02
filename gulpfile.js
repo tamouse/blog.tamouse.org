@@ -37,6 +37,16 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
   browserSync.reload();
 });
 
+gulp.task('jekyll-build-noinc', ['css','icons','bower','touch'], function (done) {
+  browserSync.notify(messages.jekyllBuild);
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
+    .on('close', done);
+});
+
+gulp.task('jekyll-rebuild-noinc', ['jekyll-build-noinc'], function () {
+  browserSync.reload();
+});
+
 gulp.task('touch', function(){
   return cp.spawn('touch', ['index.html', 'categories/index.html', 'tags/index.html'], {stdio: 'inherit'});
 });
@@ -66,8 +76,38 @@ gulp.task('css', function() {
 });
 
 gulp.task('build', ['bower', 'icons', 'css' ,'jekyll-build']);
+gulp.task('build:noinc', ['bower', 'icons', 'css' ,'jekyll-build-noinc']);
 
 gulp.task('serve', ['build'], function() {
+  browserSync.init({
+    server: {
+      baseDir: "./_site"
+    }
+  });
+
+  // Start a watch for rebuilds
+  gulp.watch(['_sass/**/*.scss'], ['css'])
+  gulp.watch([
+    '404.html',
+    '_baseurl.yml',
+    '_config.yml',
+    '_includes/**/*',
+    '_layouts/**/*',
+    '_plugins/**/*',
+    '_posts/**/*',
+    'about/**/*',
+    'categories/**/*',
+    'humans.txt',
+    'images/**/*',
+    'index.html',
+    'js/**/*',
+    'pages/**/*',
+    'robots.txt',
+    'tags/**/*'
+  ], ['jekyll-rebuild']);
+});
+
+gulp.task('serve:noinc', ['build:noinc'], function() {
   browserSync.init({
     server: {
       baseDir: "./_site"

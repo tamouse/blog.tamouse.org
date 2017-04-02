@@ -37,7 +37,7 @@ out this is true.
       <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <form method="get" id="search" action="http://duckduckgo.com/"
+      <form method="get" id="search" action="https://duckduckgo.com/"
 	    class="navbar-form navbar-right" role="search">
 	<input type="hidden" name="sites"value="blog.tamouse.org"/>
 	<input type="hidden" name="ka" value="h"/>
@@ -134,7 +134,7 @@ formatter, and added the duration from
 <code class="highlighter-rouge">example.execution_results[:run_time]</code> to the output. (I did add a bit
 of formatting, but that’s trivial.)</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'rspec/core/formatters/documentation_formatter'</span>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'rspec/core/formatters/documentation_formatter'</span>
 
 <span class="k">class</span> <span class="nc">StopwatchFormatter</span> <span class="o">&lt;</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">DocumentationFormatter</span>
 
@@ -205,7 +205,7 @@ the class name as the formatter:</p>
 <p>and <code class="highlighter-rouge">bundle install</code> as usual. You can specify to use the stopwatch
 formatter in a few ways:</p>
 
-<h3 id="rake-specopts"><code class="highlighter-rouge">rake</code> <code class="highlighter-rouge">SPEC_OPTS</code></h3>
+<h3 id="rake-spec_opts"><code class="highlighter-rouge">rake</code> <code class="highlighter-rouge">SPEC_OPTS</code></h3>
 
 <p>If you use rake, and run rspec from within it, you can simply add the
 <code class="highlighter-rouge">SPEC_OPTS</code> variable to your run:</p>
@@ -231,7 +231,7 @@ file:</p>
 
 <p>(assuming <code class="highlighter-rouge">spec</code> is one of you default tasks.)</p>
 
-<h3 id="specspechelper"><code class="highlighter-rouge">spec/spec_helper</code></h3>
+<h3 id="specspec_helper"><code class="highlighter-rouge">spec/spec_helper</code></h3>
 
 <p>If you want a more permanent solution, you can configure the formatter
 inside the <code class="highlighter-rouge">spec/spec_helper.rb</code> file:</p>

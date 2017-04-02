@@ -39,7 +39,7 @@ one thing really well.)
       <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <form method="get" id="search" action="http://duckduckgo.com/"
+      <form method="get" id="search" action="https://duckduckgo.com/"
 	    class="navbar-form navbar-right" role="search">
 	<input type="hidden" name="sites"value="blog.tamouse.org"/>
 	<input type="hidden" name="ka" value="h"/>
@@ -126,7 +126,7 @@ in creating a gem.</p>
 <p>For my needs, bundler does the initial heavy-lifting to put a basic
 gem scaffolding in place:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bundle gem my_gem --test
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bundle gem my_gem --test
       create  my_gem/Gemfile
       create  my_gem/Rakefile
       create  my_gem/LICENSE.txt
@@ -146,7 +146,7 @@ Initializating git repo <span class="k">in</span> /Users/tamara/Documents/tamous
 <p>First thing after this is hop into the new gem’s directory, and modify
 the <code class="highlighter-rouge">.gemspec</code> file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git diff my_gem.gemspec 
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git diff my_gem.gemspec 
 diff --git a/my_gem.gemspec b/my_gem.gemspec
 index 62ca81d..2cd4451 100644
 --- a/my_gem.gemspec
@@ -165,7 +165,7 @@ index 62ca81d..2cd4451 100644
 
 <p>This is a good start, but there are more things I like to add.</p>
 
-<h2 id="guard----for-continuous-testing">Guard – for continuous testing</h2>
+<h2 id="guard--for-continuous-testing">Guard – for continuous testing</h2>
 
 <p>The [Guard gem][guard] provides a means of continuous testing by
 watching various directories in your gem’s tree and performing
@@ -173,7 +173,7 @@ specific actions based on modifications in files. Since [RSpec][rspec]
 is my testing tool of choice for Ruby, I include the following in the
 newly-created <code class="highlighter-rouge">.gemspec</code> file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@@ -21,4 +21,8 @@ Gem::Specification.new <span class="k">do</span> |spec|
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>@@ -21,4 +21,8 @@ Gem::Specification.new <span class="k">do</span> |spec|
    spec.add_development_dependency <span class="s2">"bundler"</span>, <span class="s2">"~&gt; 1.3"</span>
    spec.add_development_dependency <span class="s2">"rake"</span>
    spec.add_development_dependency <span class="s2">"rspec"</span>
@@ -190,7 +190,7 @@ Organization][guard-org] to see what’s there.</p>
 
 <p>Once that’s saved, initialize guard:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bundle <span class="nb">exec </span>guard init
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bundle <span class="nb">exec </span>guard init
 16:13:24 - INFO - Writing new Guardfile to /Users/tamara/Documents/tamouse.github.io/source/downloads/code/2013-11-29-developing-a-ruby-gem/my_gem/Guardfile
 16:13:24 - INFO - bundler guard added to Guardfile, feel free to edit it
 16:13:24 - INFO - rspec guard added to Guardfile, feel free to edit it
@@ -203,7 +203,7 @@ the <code class="highlighter-rouge">.gemspec</code> and use global settings. I p
 
 <p>I always edit the resulting <code class="highlighter-rouge">Guardfile</code>, making the following changes:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git diff
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git diff
 diff --git a/Guardfile b/Guardfile
 index 6b1588c..0e69679 100644
 --- a/Guardfile

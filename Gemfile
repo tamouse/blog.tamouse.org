@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+gem "faraday", "~> 0.11.0"
 gem "jekyll"
 gem "compass"
 gem "jekyll-paginate"

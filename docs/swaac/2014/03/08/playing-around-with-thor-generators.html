@@ -38,7 +38,7 @@ Yak shaving.)
       <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <form method="get" id="search" action="http://duckduckgo.com/"
+      <form method="get" id="search" action="https://duckduckgo.com/"
 	    class="navbar-form navbar-right" role="search">
 	<input type="hidden" name="sites"value="blog.tamouse.org"/>
 	<input type="hidden" name="ka" value="h"/>
@@ -131,7 +131,7 @@ right!). In fact, I owe <em>a lot</em> to Dave Copeland
 his super awesome ideas and directions on making cli applications in
 Ruby.</p>
 
-<h2 id="generating----what">generating – what?</h2>
+<h2 id="generating--what">generating – what?</h2>
 
 <p>I have often started off a learning exercise by creating a gem skeleton
 with <code class="highlighter-rouge">bundler</code> :</p>
@@ -253,7 +253,7 @@ result to the destination.</p>
 <p>This is telling thor to expect one argument upon invocation, in this
 case, the name of the new ruby project.</p>
 
-<h3 id="def-selfsourceroot">def self.source_root</h3>
+<h3 id="def-selfsource_root">def self.source_root</h3>
 
 <p>Thor::Action arguments typically follow the convention of source,
 destination, and options, with passing a block if there are further
@@ -267,7 +267,7 @@ a completely different directory to use as the source root folder.</p>
 <p>In this case, I’ve specified the skeleton directory for new projects,
 which looks like that above.</p>
 
-<h3 id="def-namecomponents">def name_components</h3>
+<h3 id="def-name_components">def name_components</h3>
 
 <p>This is doing a bit of munging on potential input from the user. It’s
 quite possible to put pretty much anything as the first argument, but
@@ -278,30 +278,30 @@ consider as project name components.</p>
 name components <code class="highlighter-rouge">["Able", "Louis", "Go", "CRAXY"]</code>. The components are
 used by later methods to construct useful names for things.</p>
 
-<h3 id="def-snakename">def snake_name</h3>
+<h3 id="def-snake_name">def snake_name</h3>
 
 <p>Here’s one now: out of something like <code class="highlighter-rouge">["Able", "Louis", "Go", "CRAXY"]</code>, 
 would come <code class="highlighter-rouge">able_louis_go_craxy</code>, which is a very nice name for files
 and directories, where this is usually used.</p>
 
-<h3 id="def-camelname">def camel_name</h3>
+<h3 id="def-camel_name">def camel_name</h3>
 
 <p>The other method using <code class="highlighter-rouge">name_components</code>, this will produce
 <code class="highlighter-rouge">AbleLouisGoCraxy</code> which gives us our useful module name.</p>
 
-<h3 id="def-copyfiles">def copy_files</h3>
+<h3 id="def-copy_files">def copy_files</h3>
 
 <p>This picks up the files that we want to transfer to the root directory
 of the new project, translates them, and writes them to the
 destination’s root.</p>
 
-<h3 id="def-dotfiles">def dot_files</h3>
+<h3 id="def-dot_files">def dot_files</h3>
 
 <p>These are the “hidden” files in a directory, that begin with a “.” but
 are so useful. These are picked up from the source, translated, and
 saved to the destination with a “.” pre-pended.</p>
 
-<h3 id="def-otherfile">def other_file</h3>
+<h3 id="def-other_file">def other_file</h3>
 
 <p>The rest of the project is translated and saved into the appropriate
 places.</p>

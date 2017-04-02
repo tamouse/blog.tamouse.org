@@ -41,7 +41,7 @@ that stuff work.
       <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <form method="get" id="search" action="http://duckduckgo.com/"
+      <form method="get" id="search" action="https://duckduckgo.com/"
 	    class="navbar-form navbar-right" role="search">
 	<input type="hidden" name="sites"value="blog.tamouse.org"/>
 	<input type="hidden" name="ka" value="h"/>
@@ -131,7 +131,7 @@ details. I’m merely going to capture the bottom line here.</p>
 
 <p>In the model, you define validation contexts using the <code class="highlighter-rouge">on:</code> keyword:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
   <span class="c1"># ...</span>
   <span class="n">validates_precense_of</span> <span class="ss">:body</span><span class="p">,</span> <span class="ss">on: :publish</span>
   <span class="c1"># ...</span>
@@ -142,7 +142,7 @@ details. I’m merely going to capture the bottom line here.</p>
 <p>To use validation contexts, you pass in the context to the <code class="highlighter-rouge">.valid?</code>
 method of the model:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="vi">@post</span><span class="p">.</span><span class="nf">valid?</span><span class="p">(</span><span class="ss">:publish</span><span class="p">)</span>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="vi">@post</span><span class="p">.</span><span class="nf">valid?</span><span class="p">(</span><span class="ss">:publish</span><span class="p">)</span>
 </code></pre>
 </div>
 

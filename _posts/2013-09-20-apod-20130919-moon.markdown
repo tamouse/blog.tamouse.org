@@ -20,9 +20,9 @@ image:
 > shines through cloudy skies following sunset on the evening of
 > September 8.
 
-> 2013 September 19 
+> 2013 September 19
 
-[![{{page.title}}]({{ page.image.web "{{page.title}} Click image to embiggen."}})]({{ page.image.big}})
+[![{{page.title}}]({{ page.image.web }} "{{page.title}} Click image to embiggen.")]({{ page.image.big}})
 
 *Click image to embiggen.*
 
@@ -51,4 +51,3 @@ image:
 > [evening star, planet Venus](http://www.planetary.org/blogs/guest-blogs/bill-dunford/%0A20130819-map.html),
 > emerging from
 > [a lunar occultation](http://apod.nasa.gov/ap130913.html).
-

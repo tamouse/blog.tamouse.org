@@ -8,6 +8,7 @@
   "repository": "tamouse/drink_up_doctor",
   "scripts": {
     "start": "gulp",
+    "serve:noinc": "gulp serve:noinc",
     "dist": "gulp dist",
     "deploy": "npm run dist && git add --all && git commit -m deploy && git push -f deploy master",
     "publish": "npm run deploy"

@@ -34,7 +34,7 @@
       <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <form method="get" id="search" action="http://duckduckgo.com/"
+      <form method="get" id="search" action="https://duckduckgo.com/"
 	    class="navbar-form navbar-right" role="search">
 	<input type="hidden" name="sites"value="blog.tamouse.org"/>
 	<input type="hidden" name="ka" value="h"/>
@@ -100,11 +100,11 @@
 <!--more-->
 
 <blockquote>
-  <h1 id="hashdog-bloghttpwwwhashdogcomblogwp-contentthemesshortnoteslibraryimageslogopnghttpwwwhashdogcomblog-creativesimple"><a href="http://www.hashdog.com/blog"><img src="http://www.hashdog.com/blog/wp-content/themes/shortnotes//library/images/logo.png" alt="Hashdog blog" /></a> Creative.Simple.</h1>
+  <h1 id="-creativesimple"><a href="http://www.hashdog.com/blog"><img src="http://www.hashdog.com/blog/wp-content/themes/shortnotes//library/images/logo.png" alt="Hashdog blog" /></a> Creative.Simple.</h1>
 
   <p>sep 2, 2013</p>
 
-  <h2 id="implementing-multi-table-full-text-search-with-postgres-in-railshttpwwwhashdogcomblogimplementing-multi-table-full-text-search-with-postgres-in-rails"><a href="http://www.hashdog.com/blog/implementing-multi-table-full-text-search-with-postgres-in-rails/">Implementing Multi-Table Full Text Search with Postgres in Rails</a></h2>
+  <h2 id="implementing-multi-table-full-text-search-with-postgres-in-rails"><a href="http://www.hashdog.com/blog/implementing-multi-table-full-text-search-with-postgres-in-rails/">Implementing Multi-Table Full Text Search with Postgres in Rails</a></h2>
 
   <p>Easily searching across an application’s data is a pervasive need. If
 you are lucky, you can get away with simple sorting or searching on a
@@ -159,7 +159,7 @@ text column being searched.</p>
   <p>From here, we
 add <a href="http://www.postgresql.org/docs/9.2/static/textsearch-indexes.html">gin</a> indices
 to the columns on which we are searching. In our case similar indices to
-these made the difference between a 3-5 second lookup and \~100ms.</p>
+these made the difference between a 3-5 second lookup and ~100ms.</p>
 
   <div class="highlighter-rouge"><pre class="highlight"><code>CREATE INDEX index_statuses_on_body ON statuses USING gin(to_tsvector('english', body));
 CREATE INDEX index_comments_on_body ON comments USING gin(to_tsvector('english', body));

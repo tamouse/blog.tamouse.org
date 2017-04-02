@@ -34,7 +34,7 @@
       <a class="navbar-brand" href="/">&#128045; the tamouse pages</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <form method="get" id="search" action="http://duckduckgo.com/"
+      <form method="get" id="search" action="https://duckduckgo.com/"
 	    class="navbar-form navbar-right" role="search">
 	<input type="hidden" name="sites"value="blog.tamouse.org"/>
 	<input type="hidden" name="ka" value="h"/>
@@ -134,13 +134,15 @@ you up and running in few minutes without any fuss.</p>
   <p>Here are five scripts/gems you must install before starting work with
 Rails. You have no choice, I’m sorry! :)</p>
 
-  <p>​1. oh_my_zsh script
-2. laptop script
-3. awesome_print gem
-4. zeus gem
-5. guard-livereload gem</p>
+  <p>​1. oh_my_zsh script</p>
+  <ol>
+    <li>laptop script</li>
+    <li>awesome_print gem</li>
+    <li>zeus gem</li>
+    <li>guard-livereload gem</li>
+  </ol>
 
-  <h3 id="ohmyzshhttpsgithubcomrobbyrusselloh-my-zsh">1. <a href="https://github.com/robbyrussell/oh-my-zsh">oh_my_zsh</a></h3>
+  <h3 id="1-oh_my_zsh">1. <a href="https://github.com/robbyrussell/oh-my-zsh">oh_my_zsh</a></h3>
 
   <p>Before installing <strong>oh_my_zsh</strong> you should have
 <a href="http://www.zsh.org/">zsh</a> installed already. <strong>oh_my_zsh</strong> is
@@ -182,7 +184,7 @@ plugin name from the <code class="highlighter-rouge">plugins</code> array. Here�
 You’ll find the full source of <strong>oh-my-zsh</strong> on your machine under
 <code class="highlighter-rouge">~/.oh-my-zsh</code>.</p>
 
-  <h3 id="laptophttpsgithubcomthoughtbotlaptop">2. <a href="https://github.com/thoughtbot/laptop">laptop</a></h3>
+  <h3 id="2-laptop">2. <a href="https://github.com/thoughtbot/laptop">laptop</a></h3>
 
   <p>This script is for OS X machines only. Quoting the from
 <a href="https://github.com/thoughtbot/laptop#laptop">laptop</a> github page:</p>
@@ -202,16 +204,18 @@ shell(we’ve done that already) and then run this line:</p>
 
   <p>This <a href="https://github.com/thoughtbot/laptop#what-it-sets-up">link</a> lists
 of all the stuff that will be installed. We’ll highlight a couple of
-them:
- - <a href="https://toolbelt.heroku.com/">Heroku Toolbelt</a> which we need to work
-with apps on Heroku
- - <a href="http://mxcl.github.com/homebrew/">Homebrew</a> the beloved package
+them:</p>
+  <ul>
+    <li><a href="https://toolbelt.heroku.com/">Heroku Toolbelt</a> which we need to work
+with apps on Heroku</li>
+    <li><a href="http://mxcl.github.com/homebrew/">Homebrew</a> the beloved package
 manager. You can browse packages online through
-<a href="http://braumeister.org/">http://braumeister.org/</a>
- - <a href="http://rvm.io">RVM</a> which it will be installed already if you’ve
-used <a href="http://railsinstaller.org">railsinstaller</a></p>
+<a href="http://braumeister.org/">http://braumeister.org/</a></li>
+    <li><a href="http://rvm.io">RVM</a> which it will be installed already if you’ve
+used <a href="http://railsinstaller.org">railsinstaller</a></li>
+  </ul>
 
-  <h3 id="awesomeprinthttpsgithubcommichaeldvawesomeprint">3. <a href="https://github.com/michaeldv/awesome_print">awesome_print</a></h3>
+  <h3 id="3-awesome_print">3. <a href="https://github.com/michaeldv/awesome_print">awesome_print</a></h3>
 
   <p>The first thought that might come to you when you run any code in the
 rails console for the first time, is “How anyone can read this?!” You
@@ -279,7 +283,7 @@ could prepend the line in the console with <code class="highlighter-rouge">ap</c
 
 <blockquote>
 
-  <h3 id="zeushttpsgithubcomburkezeus">4. <a href="https://github.com/burke/zeus">zeus</a></h3>
+  <h3 id="4-zeus">4. <a href="https://github.com/burke/zeus">zeus</a></h3>
 
   <p>While you are working on a Rails project, will need to restart your
 server, run various commands like <code class="highlighter-rouge">console</code>, <code class="highlighter-rouge">rake</code>, <code class="highlighter-rouge">generate</code>, <code class="highlighter-rouge">rspec</code>
@@ -317,7 +321,7 @@ commands such as</p>
 
 <blockquote>
 
-  <h3 id="guard-livereloadhttpsgithubcomguardguard-livereload">5. <a href="https://github.com/guard/guard-livereload">guard-livereload</a></h3>
+  <h3 id="5-guard-livereload">5. <a href="https://github.com/guard/guard-livereload">guard-livereload</a></h3>
 
   <p><strong><a href="https://github.com/guard/guard">Guard</a></strong> is a tool to easily handle
 events on file system modifications. <strong>guard-livereload</strong> is one of
@@ -399,12 +403,14 @@ gem to see your changes live in the browser:</p>
 
   <h2 id="debugging">Debugging</h2>
 
-  <p>​1. better_errors gem
-2. rails_panel gem
-3. sextant gem
-4. quiet_assets gem</p>
+  <p>​1. better_errors gem</p>
+  <ol>
+    <li>rails_panel gem</li>
+    <li>sextant gem</li>
+    <li>quiet_assets gem</li>
+  </ol>
 
-  <h3 id="bettererrorshttpsgithubcomcharliesomebettererrors">1. <a href="https://github.com/charliesome/better_errors">better_errors</a></h3>
+  <h3 id="1-better_errors">1. <a href="https://github.com/charliesome/better_errors">better_errors</a></h3>
 
   <p><strong>better_errors</strong> replaces the standard Rails error page with a MUCH
 better one. It even adds the awesome feature of a live REPL in the
@@ -438,7 +444,7 @@ open the source in your editor with the
 <a href="http://rubydoc.info/github/charliesome/better_errors/master/BetterErrors.editor=">BetterErrors.editor</a>
 method.</p>
 
-  <h3 id="railspanelhttpsgithubcomdejanrailspanel">2. <a href="https://github.com/dejan/rails_panel">rails_panel</a></h3>
+  <h3 id="2-rails_panel">2. <a href="https://github.com/dejan/rails_panel">rails_panel</a></h3>
 
   <p>This gem requires a specific Google Chrome extension. The gem is
 <code class="highlighter-rouge">meta_request</code> and the Chrome extension is <code class="highlighter-rouge">rails_panel</code>.</p>
@@ -464,7 +470,7 @@ views and more.</p>
 
 <blockquote>
 
-  <h3 id="sextanthttpsgithubcomschneemssextant">3. <a href="https://github.com/schneems/sextant">sextant</a></h3>
+  <h3 id="3-sextant">3. <a href="https://github.com/schneems/sextant">sextant</a></h3>
 
   <p>This gem was merged into rails 4.0 under
 <code class="highlighter-rouge">0.0.0.0:3000/rails/info/routes</code>. However, if you are developing a rails
@@ -487,7 +493,7 @@ views and more.</p>
   <p>Navigate to <code class="highlighter-rouge">0.0.0.0:3000/rails/routes</code> and you’ll see the output of the
 command <code class="highlighter-rouge">rake routes</code> in your browser.</p>
 
-  <h3 id="quietassetshttpsgithubcomevronequietassets">4. <a href="https://github.com/evrone/quiet_assets">quiet_assets</a></h3>
+  <h3 id="4-quiet_assets">4. <a href="https://github.com/evrone/quiet_assets">quiet_assets</a></h3>
 
   <p>Tracing the server logs is a bit difficult when it logs all of the asset
 requests. Most of the time, you don’t care about these requests, so this
@@ -514,10 +520,12 @@ cover the details of each framework or how to use them or which is
 better. I want to focus on how these gems help things come together
 really fast in Rails.</p>
 
-  <p>​1. twitter_bootstrap gem
-2. backbone-rails</p>
+  <p>​1. twitter_bootstrap gem</p>
+  <ol>
+    <li>backbone-rails</li>
+  </ol>
 
-  <h3 id="twitterbootstraphttpsgithubcomseyhunaktwitter-bootstrap-rails">1. <a href="https://github.com/seyhunak/twitter-bootstrap-rails">twitter_bootstrap</a></h3>
+  <h3 id="1-twitter_bootstrap">1. <a href="https://github.com/seyhunak/twitter-bootstrap-rails">twitter_bootstrap</a></h3>
 
   <p>This is not an official gem from the twitter bootstrap maintainers, but
 it a popular one and it works great.</p>
@@ -565,7 +573,7 @@ forms, buttons, tables, grids, navigation, and more.</p>
 
 <blockquote>
 
-  <h3 id="backbone-railshttpsgithubcomcodebrewbackbone-rails">2. <a href="https://github.com/codebrew/backbone-rails">backbone-rails</a></h3>
+  <h3 id="2-backbone-rails">2. <a href="https://github.com/codebrew/backbone-rails">backbone-rails</a></h3>
 
   <p>This gem helps you setup backbone.js in your Rails projects. It creates
 the backbone.js file structure and serves the libraries via the asset
@@ -618,11 +626,13 @@ connects it all to your existing API over a RESTful JSON interface.</p>
 Administration. We all know how essential and sensitive these tasks are,
 so it’s better to use well-tested gems to handle them.</p>
 
-  <p>​1. devise gem
-2. active_admin gem
-3. Rails Composer</p>
+  <p>​1. devise gem</p>
+  <ol>
+    <li>active_admin gem</li>
+    <li>Rails Composer</li>
+  </ol>
 
-  <h3 id="devisehttpsgithubcomplataformatecdevise">1. <a href="https://github.com/plataformatec/devise">devise</a></h3>
+  <h3 id="1-devise">1. <a href="https://github.com/plataformatec/devise">devise</a></h3>
 
   <p><strong>devise</strong> is a very popular gem in the Rails community and it really
 requirees no introduction.</p>
@@ -664,7 +674,7 @@ accessed only by authenticated users, or add it to your
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">before_filter</span> <span class="ss">:authenticate_user!</span></code></pre></figure>
 
 <blockquote>
-  <h3 id="activeadminhttpsgithubcomgregbellactiveadmin">3. <a href="https://github.com/gregbell/active_admin">active_admin</a></h3>
+  <h3 id="3-active_admin">3. <a href="https://github.com/gregbell/active_admin">active_admin</a></h3>
 
   <p><strong>active_admin</strong> is one of the best administration gems with a very
 good UI and <a href="http://activeadmin.info/documentation.html">documentation</a>.
@@ -718,7 +728,7 @@ Password: password
 </code></pre>
   </div>
 
-  <h2 id="rails-composerhttpsgithubcomrailsappsrails-composer"><a href="https://github.com/RailsApps/rails-composer">rails-composer</a></h2>
+  <h2 id="rails-composer"><a href="https://github.com/RailsApps/rails-composer">rails-composer</a></h2>
 
   <p>Rails Composer is an awesome script that could bootstrap your project in
 a few seconds with minimal configuration required. Rails Composer
@@ -750,7 +760,7 @@ Rails goals more efficiently. If you are using an awesome gem that
 magically helps you finish things in a better way I’d love to hear about
 it.</p>
 
-  <h3 id="reader-comments">2 Reader comments</h3>
+  <h3 id="2-reader-comments">2 Reader comments</h3>
 
   <ol>
     <li>
