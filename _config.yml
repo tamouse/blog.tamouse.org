@@ -36,6 +36,7 @@ jekyll-archives:
   enabled:
     - categories
 
-# paginate: 15
+# Duplicated because I screwed this up and too lazy to fix
+s3path: '//s3.amazonaws.com/tt.imageshare/'
 images:
   s3path: '//s3.amazonaws.com/tt.imageshare/'
