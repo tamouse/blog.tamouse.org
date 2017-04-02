@@ -8,7 +8,7 @@ source: http://apod.nasa.gov/apod/ap141011.html
 ---
 APOD Image 2014-10-11: Lunar Eclipse at Moonrise: Zhou Yannan:
 
-[![](http://tt.imageshare.s3.amazonaws.com/earth/lunar-eclipse-2014-10-09/20141008tleZhouyannan1024.jpg)](http://tt.imageshare.s3.amazonaws.com/earth/lunar-eclipse-2014-10-09/20141008tleZhouyannan.jpg)
+[![]({{ site.s3path }}earth/lunar-eclipse-2014-10-09/20141008tleZhouyannan1024.jpg)]({{ site.s3path }}earth/lunar-eclipse-2014-10-09/20141008tleZhouyannan.jpg)
 
 > ## Eclipse at Moonrise
 
