@@ -38,4 +38,4 @@ jekyll-archives:
 
 # paginate: 15
 images:
-  s3path: '//tt.imageshare.s3.amazonaws.com/'
+  s3path: '//s3.amazonaws.com/tt.imageshare/'
