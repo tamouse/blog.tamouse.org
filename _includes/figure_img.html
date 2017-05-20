@@ -1,0 +1,6 @@
+<figure class="figure-img">
+    <img src="{{ include.image }}" class="figure-img-image" alt="{{ include.caption }}" />
+    {% if include.caption %}<figcaption>
+        <div class="figure-img-caption">{{ include.caption }}</div>
+    </figcaption>{% endif %}
+</figure>
