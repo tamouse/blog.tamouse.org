@@ -1,0 +1,6 @@
+---
+layout: default
+---
+<h1 class="page-header">{{ page.tag }}</h1>
+{% assign posts = site.tags[page.tag] %}
+{% include post_index.html posts=posts %}

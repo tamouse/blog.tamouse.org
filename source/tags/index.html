@@ -1,0 +1,16 @@
+---
+layout: page
+title: "Tags"
+navbar: true
+---
+
+{% capture tags %}{% for tag in site.tags %}
+{{tag|first}}
+{% endfor %}{% endcapture %}
+{% assign tags = tags | split:' ' | sort %}
+
+<ul>
+  {% for tag in tags %}
+  <li><a href="{{ site.baseurl }}/tags/{{ tag }}/index.html">{{ tag }}</a></li>
+  {% endfor %}
+</ul>

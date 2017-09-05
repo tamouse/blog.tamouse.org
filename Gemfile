@@ -1,12 +1,11 @@
 source "https://rubygems.org"
-gem "faraday", "~> 0.11.0"
 gem "jekyll"
-gem "compass"
-gem "jekyll-paginate"
-gem "jekyll-sitemap"
-gem "jekyll-archives"
-gem "jekyll-redirect-from"
-gem "jekyll-gist"
-gem "jekyll-import"
-gem "jemoji"
+
+group :jekyll_plugins do
+  gem "jekyll-gist"
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate"
+end
+
 gem "pry"
+gem "compass"

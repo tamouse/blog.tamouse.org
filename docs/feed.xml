@@ -5,9 +5,9 @@
     <description>the rumblings and ramblings of a well-traveled tech-mouse</description>
     <link>https://blog.tamouse.org/</link>
     <atom:link href="https://blog.tamouse.org/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 04 Jul 2017 21:08:37 -0500</pubDate>
-    <lastBuildDate>Tue, 04 Jul 2017 21:08:37 -0500</lastBuildDate>
-    <generator>Jekyll v3.4.3</generator>
+    <pubDate>Mon, 04 Sep 2017 23:01:42 -0500</pubDate>
+    <lastBuildDate>Mon, 04 Sep 2017 23:01:42 -0500</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
     
       <item>
         <title>I, Too. Langston Hughes</title>
@@ -71,7 +71,9 @@ for Black Boys&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;black-lives-matter&quot;&gt;black lives matter&lt;/h1&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ivNWzr-Zue8?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;div class=&quot;embed-responsive embed-responsive-4by3&quot;&gt;
+&lt;iframe class=&quot;embed-responsive-item&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ivNWzr-Zue8?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Sun, 02 Jul 2017 16:49:00 -0500</pubDate>
         <link>https://blog.tamouse.org/poems/2017/07/02/danez-smith-alternate-heaven-for-black-boys.html</link>

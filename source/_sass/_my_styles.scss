@@ -1,0 +1,211 @@
+// Main.scss -- imports all the other bits of sass/scss to compile to /assets/css/main.css
+// ------------------------------------------------------------------------------------------
+
+@import "my_variables";
+@import "bootstrap";
+
+// Local style variations
+// ------------------------------
+
+.full-height-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  .two-column-wrapper {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-sm-min) {
+      flex-direction: row;
+    }
+    aside {
+      order: 2;
+      @media (min-width: $screen-sm-min) {
+        flex: 1;
+        order: 1;
+      }
+
+    }
+    main {
+      order: 1;
+      @media (min-width: $screen-sm-min) {
+        flex: 3;
+        order: 2;
+      }
+      article {
+        padding-bottom: 10px;
+      }
+    }
+
+  }
+}
+
+.sidebar {
+  padding: 5px;
+}
+
+.panel-primary .panel-heading {
+  a {
+	  color: $panel-primary-text
+  }
+}
+.panel-default .panel-heading {
+  a {
+	  color: $panel-default-text
+  }
+}
+.panel-success .panel-heading {
+  a {
+	  color: $panel-success-text
+  }
+}
+.panel-info .panel-heading {
+  a {
+	  color: $panel-info-text
+  }
+}
+.panel-warning .panel-heading {
+  a {
+	  color: $panel-warning-text
+  }
+}
+.panel-danger .panel-heading {
+  a {
+	  color: $panel-danger-text
+  }
+}
+
+.index-item {
+  .post-excerpt {
+	  margin: 0 0 10px 0;
+	  padding: 0;
+  }
+  .panel-heading {
+	  padding: 2px 5px;
+	  h1, h2, h3, h4, h5, h6 {
+	    margin-top: 10px;
+	  }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .index-item {
+	  .panel-heading {
+	    width: auto;
+	    height: 75px;
+	    overflow-y: hidden;
+	  }
+	  .post-excerpt {
+	    height: 100px;
+	    overflow-y: hidden;
+	    width: auto;
+	  }
+  }
+}
+
+.quote-item {
+  .panel-body {
+	  font-size: $font-size-large;
+  }
+}
+
+.quote-keywords {
+  padding: 10px 20px;
+  font-size: 80%;
+
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+    }
+  }
+  .quote-keyword-item {
+    padding: 0 5px;
+  }
+}
+
+
+
+.quote-notes {
+  padding: 10px 20px;
+  font-size: 90%;
+  font-style: italic;
+}
+
+
+#markdown-toc {
+  li {
+	  display: inline;
+  }
+}
+
+.front-page-hero {
+  background: #000 url(/images/beach-chair-painting.jpg) 50% 70%;
+  background-size: cover;
+  color: $gray-lighter;
+  text-shadow: 2px 2px 4px $gray;
+}
+
+.img-frame-center {
+  @extend .img-responsive;
+  border: 1px solid $gray-dark;
+  margin: 3px auto;
+  padding: 3px;
+}
+
+@media (min-width: $screen-md-min) {
+
+  .vertcenter-container {
+	  display: table;
+	  position: absolute;
+	  height: 100%;
+	  width: 40%;
+
+	  .vertcenter-wrapper {
+	    display: table-cell;
+	    vertical-align: middle;
+
+	    .vertcenter {
+		    margin: auto;
+		    width: 40%;
+	    }
+	  }
+  }
+
+}
+
+@media (min-width: $screen-md-min) {
+  .side-by-side {
+	  display: table;
+
+	  .left-side {
+	    display: table-cell;
+	    vertical-align: middle;
+	    width: 49%;
+	    padding: 10px;
+	  }
+	  .right-side {
+	    display: table-cell;
+	    vertical-align: middle;
+	    width: 49%;
+	    padding: 10px;
+	  }
+  }
+}
+
+.md-img-responsive img {
+  @extend .img-responsive;
+}
+
+
+img.carousel-img-60vh {
+  width: auto;
+  margin: 0 auto;
+  height: 30vh !important; 	/* have to override the bootstrap height imposition */
+  @media screen and (min-width: $screen-sm-min) {
+    height: 60vh !important;
+  }
+}
+
+
+
+@import 'figure_img'

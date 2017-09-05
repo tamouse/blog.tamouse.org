@@ -15,26 +15,15 @@ social:
   deviantart: muridaee
   facebook: tamara.temple
   freenode: pontiki
+
+source: source
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-exclude:
-- README.md
-- bower.json
-- package.json
-- gulpfile.js
-- node_modules
-- bower_components
-- Gemfile
-- Gemfile.lock
-
-gems:
+plugins_dir:
   - jekyll-gist
-jekyll-archives:
-  layout: default
-  enabled:
-    - categories
+
 
 # Duplicated because I screwed this up and too lazy to fix
 s3path: '//s3.amazonaws.com/tt.imageshare/'

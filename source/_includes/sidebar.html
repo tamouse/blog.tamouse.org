@@ -1,0 +1,82 @@
+<aside class="sidebar">
+  <nav class="" role="navigation">
+    <div class="">
+      <div id="" class="">
+        <form method="get" id="search" action="https://duckduckgo.com/"
+	            class="form-inline" role="search">
+	        <input type="hidden" name="sites"value="blog.tamouse.org"/>
+	        <input type="hidden" name="ka" value="h"/>
+	        <input type="hidden" name="k7" value="#fafafa"/>
+	        <input type="hidden" name="kj" value="#3f3f3f"/>
+	        <input type="hidden" name="ky" value="#fafafa"/>
+	        <input type="hidden" name="kx" value="b"/>
+	        <input type="hidden" name="kt" value="Helvetica"/>
+          <div class="form-group">
+            <label class="sr-only" for="q">Search for</label>
+	          <input type="text" name="q" maxlength="255" placeholder="Search" class="form-control"/>
+            <button type="submit" class="btn btn-default">
+	            <i class="fa fa-search"></i>
+	          </button>
+          </div>
+        </form>
+        <ul class="nav nav-pills nav-stacked">
+	        {% for page in site.data.navbar %}
+	        <li><a href="{{ page.href | prepend: site.baseurl }}">{{page.name}}</a></li>
+	        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+      <div class="">
+        <h4><a class="" href="{{ site.baseurl}}/">{% if site.title %}{{site.title}}{% else %}New Site{% endif %}</a></h4>
+      </div>
+      <div class="">
+        <h4><a class="" href="{{site.baseurl}}/">&copy; {{site.time | date: "%Y"}} {% if site.author %}{{site.author}}{% else %}Site Author{% endif %}</a></h4>
+      </div>
+  <footer class="" role="navigation">
+    <div class="">
+      <div id="" class="">
+        <ul class="">
+          <li>
+            <a href="https://twitter.com/{{site.social.twitter}}">
+              <i class="fa fa-twitter"></i>
+              twitter
+              @{{site.social.twitter}}
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/{{site.social.github}}">
+              <i class="fa fa-github"></i>
+              github
+              {{site.social.github}}
+            </a>
+          </li>
+          <li>
+            <a href="https://tamouse.org">
+              <i class="fa fa-home"></i>
+              tamouse.org
+            </a>
+          </li>
+          <li>
+            <a href="https://swaac.tamouse.org">
+              <i class="fa fa-laptop"></i>
+              software as a craft
+            </a>
+          </li>
+          <li>
+            <a href="https://art.pontiki.io">
+              <i class="fa fa-paint-brush"></i>
+              art blog
+            </a>
+          </li>
+	        <li>
+            <a href="{{ site.baseurl}}/humans.txt">
+              Colophon
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</aside>
