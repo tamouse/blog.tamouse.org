@@ -17,6 +17,7 @@ social:
   freenode: pontiki
 
 source: source
+destination: docs
 markdown: kramdown
 kramdown:
   input: GFM
