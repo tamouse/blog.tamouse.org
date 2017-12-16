@@ -13,7 +13,7 @@ banned on Facebook for "Violating Community Standards". It's another
 story of colonialism and oppression of a native people in the
 pursuit of profits in palm oil. Keep it alive.
 
-{% assign img_path = "//tt.imageshare.s3.amazonaws.com/blog/politics/2017-12-15-bbc-indonesias-orang-rima-tribe-forced-to-renounce-faith/" %}
+{% assign img_path = "https://s3.amazonaws.com/tt.imageshare/blog/politics/2017-12-15-bbc-indonesias-orang-rima-tribe-forced-to-renounce-faith/" %}
 
 # [View story on the BBC site]({{page.source}})
 
