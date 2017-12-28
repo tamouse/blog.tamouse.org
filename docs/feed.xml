@@ -5,9 +5,36 @@
     <description>the rumblings and ramblings of a well-traveled tech-mouse</description>
     <link>https://blog.tamouse.org/</link>
     <atom:link href="https://blog.tamouse.org/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 Dec 2017 22:09:30 -0600</pubDate>
-    <lastBuildDate>Wed, 27 Dec 2017 22:09:30 -0600</lastBuildDate>
+    <pubDate>Thu, 28 Dec 2017 00:39:35 -0600</pubDate>
+    <lastBuildDate>Thu, 28 Dec 2017 00:39:35 -0600</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>Quote: Chekhov, No Cure</title>
+        <description>&lt;p&gt;Anton Chekhov, in &lt;em&gt;The Cherry Orchard&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If many remedies are prescribed for an illness,
+you may be certain that the illness has no cure.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;small&gt;
+(Found at
+&lt;a href=&quot;https://www.brainpickings.org/2017/09/27/having-it-out-with-melancholy-jane-kenyon-amanda-palmer/&quot;&gt;brainpickings.com&lt;/a&gt;
+with an exceptional reading of Jane Kenyon’s poem &lt;em&gt;Having It Out With
+Meloncholy&lt;/em&gt;, read by Amanda Palmer.)
+&lt;/small&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 Dec 2017 23:44:00 -0600</pubDate>
+        <link>https://blog.tamouse.org/quotes/2017/12/27/quote-chekhov-no-cure.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/quotes/2017/12/27/quote-chekhov-no-cure.html</guid>
+        
+        <category>chekhov</category>
+        
+        
+        <category>quotes</category>
+        
+      </item>
     
       <item>
         <title>Winter: A Poem (short)</title>
@@ -841,34 +868,6 @@ Siegl, based on the mighty Ducati.&lt;/p&gt;
         
         
         <category>motorsports</category>
-        
-      </item>
-    
-      <item>
-        <title>Cassini image: Saturn's Rings and Enceladus Jets</title>
-        <description>&lt;p&gt;An amazing image of Saturn’s Rings with Enceladus hovering above,
-where you can see the southern polar water jets.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;//s3.amazonaws.com/tt.imageshare/blog/space/saturn/saturns-rings-enceladus-jets-cassini-PIA18343_hires.jpg&quot; alt=&quot;&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 11 May 2017 18:55:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/space/2017/05/11/cassini-image-saturns-rings-and-enceladus-jets.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/space/2017/05/11/cassini-image-saturns-rings-and-enceladus-jets.html</guid>
-        
-        <category>space</category>
-        
-        <category>cassini</category>
-        
-        <category>saturn</category>
-        
-        <category>enceladus</category>
-        
-        <category>images</category>
-        
-        <category>awesome</category>
-        
-        
-        <category>space</category>
         
       </item>
     
