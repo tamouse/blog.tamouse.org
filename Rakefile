@@ -5,5 +5,5 @@ end
 
 desc "Build Jekyll site"
 task :build do
-  sh "bundle exec jekyll build"
+  sh "bundle exec jekyll build --config=_config.yml,_baseurl.yml"
 end
