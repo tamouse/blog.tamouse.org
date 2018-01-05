@@ -1,0 +1,558 @@
+[
+  {
+    "cite": "Anton Chekhov, _The Cherry Orchard_",
+    "text": "If many remidies are prescribed for an illness, you can be sure that the illness has no cure",
+    "node": "chekhov_no_cure"
+  },
+  {
+    "cite": "Rainer Maria Rilke",
+    "text": "Be patient with all that is unsolved in your heart. Try to love the questions themselves. Do not seek the answers, which cannot be given to you because you would not be able to live them. And the point is to live everything. Live the questions.",
+    "node": "live_the_questions"
+  },
+  {
+    "cite": "South African women's protest slogan",
+    "text": "You have tampered with women, you have struck a rock.",
+    "node": "tampered_with_women"
+  },
+  {
+    "cite": "Abraham Lincoln, written in a letter to Joshua Speed on August 24,\n1855. Speed and Lincoln had been friends since the 1830s.\n",
+    "text": "\"I now do more than oppose the extension of slavery. I am not a\nKnow-Nothing. That is certain. How could I be? How can any one who\nabhors the oppression of negroes, be in favor of degrading classes\"\n\n\"pretty rapid. As a nation, we began by declaring that \"all men are\ncreated equal.\" We now practically read it \"all men are created\nequal, except negroes.\" When the Know-Nothings get control, it\nwill read \"all men are created equal, except negroes, and\nforeigners, and catholics.\" When it comes to this I should prefer\nemigrating to some country where they make no pretence of loving\nliberty — to Russia, for instance, where despotism can be take\npure, and without the base alloy of hypocracy [sic].\"\n",
+    "title": "Lincoln on the hypocrisy of America",
+    "note": "This seems a very vital quote and sentiment. We in the US have\ncertainly gone to even further racist, misogynist, ablist, and\nclassist  extremes than even in his time.\n",
+    "keywords": [
+      "oppression",
+      "black lives matter",
+      "hypocrisy of power",
+      "liberty lip-service"
+    ],
+    "node": "lincoln_on_hypocrisy"
+  },
+  {
+    "cite": "Ludwig van Beethoven",
+    "text": "To play a wrong note is insignificant; to play without passion is inexcuseable.",
+    "note": "\nOne of the great tenents of playing jazz, performing improv, and working within a team of programmers.\n",
+    "node": "passion_Beethoven"
+  },
+  {
+    "cite": "unknown",
+    "text": "\"Between the dark of trouble and the light of disaster we pass our days. And if this is our condition, it cannot be taken away. Paradox results from artificial boundaries. Experience can't be derailed.\"",
+    "note": "\"I really wish I knew the source of this quote. Other than sounding much like something I'd say, it's a beautiful rendition of the problem with our creating artificial boundaries and labels, and the inevitability of our doing so.\"",
+    "node": "paradox"
+  },
+  {
+    "cite": "Banksy",
+    "text": "\nA lot of parents will do anything for their kids except let them be themselves.\n",
+    "note": "\nBanksy is a secretive, anonymous street artist; most of his work is social criticism.\n",
+    "node": "parents_Banksy"
+  },
+  {
+    "cite": "\nNeil deGrasse Tyson, Ph.D., Astrophysicist, this generation's best\nscience communicator and proponent, this generation's Carl Sagan.\n",
+    "source": "https://www.youtube.com/watch?feature=player_embedded&v=9D05ej8u-gU",
+    "text": "\n**What is the most astounding fact you can share with us about the Universe?**\n\nThe most astounding fact is the knowledge that the atoms that\ncomprise life on Earth, the atoms that make up the human body, are\ntraceable to the crucibles that cooked light elements into heavy\nelements in their core under extreme temperatures and\npressures. These stars, the high mass ones among them went\nunstable in their later years. They collapsed and then exploded\nscattering their enriched guts across the galaxy; guts made of\ncarbon, nitrogen, oxygen and all the fundamental ingredients of\nlife itself. These ingredients become part of gas clouds that\ncondense, collapse, form the next generation of solar systems\nstars with orbiting planets, and those planets now have the\ningredients for life itself.\n\nSo that when I look up at the night sky and I know that yes, we\nare part of this universe, we are in this universe, but perhaps\nmore important than both of those facts is that the Universe is in\nus. When I reflect on that fact, I look up – many people feel\nsmall because they’re small and the Universe is big – but I feel\nbig, because my atoms came from those stars. There’s a level of\nconnectivity. That’s really what you want in life, you want to\nfeel connected, you want to feel relevant; you want to feel like a\nparticipant in the goings on of activities and events around you.\n\nAnd that’s precisely what we are, just by being alive.\n",
+    "node": "most_astounding_fact_Tyson"
+  },
+  {
+    "cite": "Mitch Garnaat",
+    "source": "https://twitter.com/garnaat/status/224548752252346368",
+    "text": "\nI think most people thing (sic) programming is cold, precise, and\nmechanical. It's actually creative, perplexing and deeply\npersonal.\n",
+    "keywords": [
+      "programming",
+      "software",
+      "swaac",
+      "creativity"
+    ],
+    "note": "\nI've said similar things many times, not quite so eloquently\nas this, however. I do wish more people understood the quite joys\nand pains of bringing a software project to fruition.\n",
+    "node": "programming_creative_perplexing_personal"
+  },
+  {
+    "cite": "Jane Addams (The first woman to be awarded the Nobel Peace Prize in 1931 for her work in philosophy and women's rights.)",
+    "text": "\nTrue peace is not merely the absence of war, it is the presence of justice.\n",
+    "img": "jane.addams.peace.justice.jpg",
+    "keywords": [
+      "peace",
+      "justice"
+    ],
+    "node": "true_peace_Addams"
+  },
+  {
+    "text": "When one tugs at a single thing in nature, he finds it attached to the rest of the world.",
+    "cite": "John Muir",
+    "node": "connectedness_Muir"
+  },
+  {
+    "cite": "Michel Foucault, _History of Sexuality, Volume 1_, 1974",
+    "text": "\nWhere there is power, there is resistance\n",
+    "keywords": [
+      "power",
+      "resistance"
+    ],
+    "node": "power_and_resistance_Foucault"
+  },
+  {
+    "text": "The impulse to help and the impulse to control are the dearest and most inseparable of siblings",
+    "source": "http://discordianquotes.com/quote/impulse-help-impulse-control-dearest-inseparable-siblings",
+    "cite": "made-up",
+    "node": "help_and_control"
+  },
+  {
+    "cite": "Winston Churchill",
+    "source": "https://twitter.com/starstryder/status/790047885043740672",
+    "text": "Success consists of going from failure to failure without loss of enthusiasm.",
+    "node": "churchill_success"
+  },
+  {
+    "cite": "Gabriella Union",
+    "source": "http://variety.com/2016/film/news/gabrielle-union-stands-up-for-colin-kaepernick-at-birth-of-a-nation-premiere-1201857005/",
+    "text": "“If you are wondering about Colin Kaepernick and his stand for equality and if he’s on the right side of history, there’s nothing more patriotic than resistance.”\n",
+    "node": "nothing_more_patriotic"
+  },
+  {
+    "cite": "chani",
+    "text": "we must find our voice precisely at the moment that our fear tries to snatch it from our throats. snatch back.",
+    "source": "https://www.instagram.com/p/BJlHjjWhF_W/",
+    "node": "we_must_find_our_voice"
+  },
+  {
+    "cite": "T. S. Eliot",
+    "text": "We will not cease from exploration, and the end of\nour exploring will be to arrive where we started\nand know the place for the [very] first time.\n",
+    "note": "I added the [very] since I think it needs that particular\nemphasis, rather than making it imprecise.\n",
+    "node": "we_will_not_cease_from_exploration"
+  },
+  {
+    "cite": "Ezra Pound",
+    "text": "\"Thank you, whatever comes,\" and then she turned\nAnd, as the ray of sun on hanging flowers\nFades when the wind hath lifted them aside,\nWent swiftly from me. Nay, whatever comes\nOne hour was sunlit, and the most high gods\nMay not make boast of any better thing\nThan to have watched that hour as it passed.\n",
+    "node": "erat_hora"
+  },
+  {
+    "text": "Do not be daunted by the enormity of the world's grief.\nDo justly now. Love mercy now. Walk humbly now.\nYou are not obligated to complete the work.\nBut neither are you free to abandon it.\n",
+    "cite": "The Talmud",
+    "node": "do_not_be_daunted"
+  },
+  {
+    "text": "There is no wealth on a dead planet\n",
+    "cite": "Ayana Young",
+    "source": "https://www.instagram.com/p/BEO72CZPUTT/",
+    "img": "there-is-no-wealth.jpg",
+    "node": "there_is_no_wealth"
+  },
+  {
+    "title": "The Earth Is Waiting For You",
+    "cite": "Thich Nhat Hanh, The Long Road Turn To Joy: A Guide to Walking Meditation (Parallax Press, Berkeley, California, 1996), (www.parallax.org).",
+    "text": "\nThe Earth is always patient and open-hearted.\nShe is waiting for you.\nShe has been waiting for you for the last trillion lifetimes.\nShe can wait for any length of time.\nShe knows you will come back to her one day.\nFresh and green, she will welcome you exactly like the first time,\nBecause love never says:\n\n“This is the last time\"\n\nBecause Earth is a loving mother.\nShe will never stop waiting for you.\n",
+    "node": "the_earth_is_waiting_for_you"
+  },
+  {
+    "text": "The real violence,\nthe violence that is unforgivable,\nis the violence we do to ourselves,\nwhen we are too afraid\nto be who we really are.\n",
+    "cite": "Nomi on Sense8, season 1, episode 9",
+    "img": "the_real_violence.jpg",
+    "node": "the_real_violence"
+  },
+  {
+    "title": "Simplicity",
+    "cite": "Edsgar Dykstra",
+    "text": "\nSimplicity is prerequisite for reliability.\n",
+    "node": "dykstra_simiplicity"
+  },
+  {
+    "title": "Adventure",
+    "cite": "Werner Herzog",
+    "source": "https://www.good.is/articles/herzog-inspirational-posters",
+    "text": "\nI absolutely loathe adventures, and I particularly hate the old\npseudo-adventurism where the mountain climb becomes something\nabout confronting the extremes of humanity.\n",
+    "node": "herzog_adventure"
+  },
+  {
+    "cite": "Werner Herzog",
+    "source": "http://herzoginspirationals.tumblr.com/",
+    "text": "\nI believe the common denominator of the Universe is not harmony,\nbut chaos, hostility, and murder.\n",
+    "node": "herzog_common_denominator"
+  },
+  {
+    "title": "Happiness",
+    "cite": "Werner Herzog",
+    "source": "http://herzoginspirationals.tumblr.com/",
+    "text": "\nHappiness is a strange notion.\n",
+    "node": "herzog_happiness"
+  },
+  {
+    "title": "Harmony",
+    "cite": "Werner Herzog",
+    "source": "http://herzoginspirationals.tumblr.com/",
+    "text": "\nThere is no harmony in the universe. We have to get acquainted\nto this idea that there is no real harmony as we have conceived\nit.\n",
+    "node": "herzog_harmony"
+  },
+  {
+    "cite": "Werner Herzog",
+    "source": "http://herzoginspirationals.tumblr.com/",
+    "text": "\nHuman life is part of an endless chain of catastrophes, the demise\nof the dinosaurs being just one of these events. We seem to be\nnext.\n",
+    "node": "herzog_human_life"
+  },
+  {
+    "cite": "Werner Herzog",
+    "source": "http://herzoginspirationals.tumblr.com/",
+    "text": "\nWe ought to be grateful the Universe out there knows no smile.\n",
+    "node": "herzog_gratitude"
+  },
+  {
+    "title": "Friendship",
+    "cite": "Werner Herzog",
+    "source": "http://herzoginspirationals.tumblr.com/",
+    "text": "\nI did not love him, nor did I hate him. We had a mutual respect\nfor each other, even as we both planned each other's murder.\n",
+    "node": "herzog_friendship"
+  },
+  {
+    "cite": "Werner Herzog",
+    "source": "http://herzoginspirationals.tumblr.com/",
+    "text": "\nThe trees here are in misery, and the birds are in misery.\n",
+    "node": "herzog_misery"
+  },
+  {
+    "title": "Civilization",
+    "cite": "Werner Herzog",
+    "source": "http://herzoginspirationals.tumblr.com/",
+    "text": "\nCivilization is like a thin layer of ice upon a deep ocean of\nchaos and darkness.\n",
+    "node": "herzog_civilization"
+  },
+  {
+    "cite": "Werner Herzog",
+    "source": "http://herzoginspirationals.tumblr.com/",
+    "text": "\nYou look into the eyes of a chicken and you lose yourself in a\ncompletely flat, frightening stupidity.\n",
+    "node": "herzog_chicken"
+  },
+  {
+    "cite": "Yolo Akili",
+    "text": "Love so all can be liberated.\n\nThe moment is now.\n\nWe need you.\n",
+    "node": "love_so_all_can_be_liberated"
+  },
+  {
+    "cite": "Manuscript found in Accra, as posted by Paoulo Coehlo",
+    "source": "https://www.instagram.com/p/BA0kVZ8lqEZ/",
+    "text": "Let us plunge together down the dangerous path of surrender. It\nmay be dangerous, but it is the only path worth following.\n\nLet us forget all that we are taught about how it is noble to give\nand humiliating to receive. Because for most people, generosity\nconsists only of giving, but receiving is also an act of love.\n\nAllowing someone else to be happy will make them happy too.\n",
+    "node": "allow_someone_else_to_be_happy"
+  },
+  {
+    "cite": "Martin Luther King, Jr.",
+    "text": "When our days become dreary with low-hovering clouds of despair,\nand when our nights become darker than a thousand midnights, let us\nremember that there is a creative force in this universe, working to\npull down the gigantic mountains of evil, a power that is able to make\na way out of no way and transform dark yesterdays into bright\ntomorrows. Let us realize that the arc of the moral universe is long\nbut it bends toward justice.\n",
+    "node": "when_our_days_become_dreary"
+  },
+  {
+    "title": "Art is a line",
+    "cite": "Gustav Klimt",
+    "text": "Art is a line around your thoughts.",
+    "node": "art_is_a_line"
+  },
+  {
+    "title": "Silence in the face of evil",
+    "img": "deitrich_bonhoffer_quote.jpg",
+    "cite": "Deitrich Bonhoffer",
+    "source": "https://en.wikiquote.org/wiki/Dietrich_Bonhoeffer#Misattributed",
+    "text": "\nSilence in the face of evil is itself evil: God will not hold us\nguiltless.\n\nNot to speak is to speak. Not to act is to act.\n",
+    "node": "bonhoffer_silence"
+  },
+  {
+    "title": "First they came for the socialists",
+    "cite": "Martin Niemöller",
+    "source": "http://www.ushmm.org/wlc/en/article.php?ModuleId=10007392",
+    "text": "\nFirst they came for the Socialists, and I did not speak out—<br>\nBecause I was not a Socialist.\n\nThen they came for the Trade Unionists, and I did not speak out—<br>\nBecause I was not a Trade Unionist.\n\nThen they came for the Jews, and I did not speak out—<br>\nBecause I was not a Jew.\n\nThen they came for me—<br>\nand there was no one left to speak for me.\n",
+    "node": "first_they_came_for_the_socialists"
+  },
+  {
+    "title": "Delusion of Control",
+    "img": "control-is-an-illusion.jpg",
+    "cite": "Tamara Temple",
+    "text": "Control is an illusion. Giving in to chaos is the only way\nthrough. You don't surf by telling the waves what to do.\n",
+    "node": "delusion_of_control"
+  },
+  {
+    "title": "Criticizing Taste",
+    "cite": "Ray Bradbury",
+    "text": "I have never listened to anyone who criticized my taste in space\ntravel, sideshows or gorillas. When this occurs, I pack up my\ndinosaurs and leave the room.\n",
+    "node": "criticizing_taste"
+  },
+  {
+    "title": "We expect something better from the political left",
+    "cite": "Daniel Berrigan, poet, Jesuit priest",
+    "source": "https://www.goodreads.com/author/quotes/81268.Daniel_Berrigan",
+    "text": "Every nation-state tends towards the imperial -- that is the\npoint. Through banks, armies, secret police, propaganda, courts\nand jails, treaties, taxes, laws and orders, myths of civil\nobedience, assumptions of civic virtue at the top. Still it should\nbe said of the political left, we expect something better. And\ncorrectly. We put more trust in those who show a measure of\ncompassion, who denou­nce the hideous social arrangements that\nmake war inevitable and human desire omnipresent; which fosters\ncorporate selfishness, panders to appetites and disorder, waste\nthe earth.\n",
+    "node": "imperial_berrigan"
+  },
+  {
+    "title": "Have Heart",
+    "img": "everyone-is-fighting-their-own-battle.jpg",
+    "text": "Everyone is fighting their own battles to be free from the past,\nlive in their present, and to create a future for themselves.\n\nSo have heart.\n",
+    "node": "have_heart"
+  },
+  {
+    "title": "The World is Rated R",
+    "source": "https://www.goodreads.com/work/quotes/3469712",
+    "cite": "N. D. Wilson, Notes from the Tilt-A-Whirl, Wide-Eyed Wonder in God's Spoken World",
+    "text": "The world is rated R, and no one is checking IDs. Do not try to\nmake it G by imagining the shadows away. Do not try to hide your\nchildren from the world forever, but do not try to pretend there\nis no danger. Train them. Give them sharp eyes and bellies full of\nlaughter. Make them dangerous. Make them yeast, and when they've\ngrown, they will pollute the shadows.\n",
+    "node": "world_rated_r"
+  },
+  {
+    "title": "A Real Soldier",
+    "cite": "G.K. Chesterton, Illustrated London News, 1911-1-14. Found in the Collected Works of G.K. Chesterton Vol. 29",
+    "source": "http://goo.gl/XZvvIO",
+    "text": "A real soldier does not fight because he has something that he\nhates in front of him. He fights because he has something that he\nloves behind his back.\n",
+    "node": "a_real_soldier"
+  },
+  {
+    "text": "To get people to think for themselves, don\\'t give them all the answers.",
+    "cite": "Irene Nolan, editor.",
+    "node": "think_for_themselves"
+  },
+  {
+    "text": "Nothing that is worth doing can be achieved in our lifetime;\ntherefore we must be saved by hope. Nothing which is true or\nbeautiful or good makes complete sense in any immediate context of\nhistory; therefore we must be saved by faith. Nothing we do, however\nvirtuous, can be accomplished alone; therefore we are saved by\nlove. No virtuous act is quite as virtuous from the standpoint of\nour friends or foes as it is from our standpoint. Therefore we must\nbe saved by the final form of love which is forgiveness.\n",
+    "cite": "Reinhold Niebuhr (From Parabola Journal #2, 1996)",
+    "node": "nothing_worth_doing"
+  },
+  {
+    "cite": "Kurt Vonnegut",
+    "img": "vonnegut-quote-go-into-the-arts.jpg",
+    "text": "Go into the arts. I'm not kidding. The arts are not a way to make a\nliving. They are a very human way of making life more\nbearable. Practicing an art, no matter how well or badly, is a way\nto make your soul grow, for heaven's sake.\n\nSing in the shower. Dance to\nthe radio. Tell stories. Write a poem to a friend, even a lousy\npoem.\n\nDo it as well as you possibly can. You will get an enormous\nreward. You will have created something.\n",
+    "node": "go_into_the_arts"
+  },
+  {
+    "cite": "Rainer Maria Rilke",
+    "img": "quote-a-billion-stars-go-spinning-throuhg-the-night/time-lapse-night-sky.jpg",
+    "text": "# A billion stars go spinning through the night, glittering above your head, but in you is the presence that will be when all the stars are dead.\n",
+    "node": "a_billion_stars"
+  },
+  {
+    "cite": "Kenyan Proverb",
+    "img": "treat-the-earth-well/yosemite-valley-winter-jeff-lewis.jpg",
+    "text": "## Treat the Earth well. It was not given to you by your parents. It was loaned to you by your children.\n",
+    "node": "treat_the_earth_well"
+  },
+  {
+    "cite": "Albert Einstein -- To Otto Juliusburger, September 29,1942.",
+    "text": "## \"People like you and I, though mortal of course, like everyone else, do not grow old no matter how long we live. What I mean is that we never cease to stand like curious children before the great Mystery into which we were born.\"\n",
+    "node": "einstein_never_grow_old"
+  },
+  {
+    "cite": "Kim Stanley Robinson, Green Mars",
+    "text": "That's libertarians for you &mdash; anarchists who want police protection from their slaves.\n",
+    "node": "ksr_libertarians"
+  },
+  {
+    "cite": "Robert Sapolsky",
+    "source": null,
+    "text": "Science is not meant to cure us of mystery, but reinvent and reinvigorate it\n",
+    "node": "sapolsky_reinvigorate"
+  },
+  {
+    "cite": "Robert M. Sapolsky, The Trouble with Testosterone and Other Essays on the Biology of the Human Predicament",
+    "source": "https://www.goodreads.com/work/quotes/21856",
+    "text": "I am not worried if scientists go and explain everything. This is\nfor a very simple reason: an impala sprinting across the Savannah\ncan be reduced to biomechanics, and Bach can be reduced to\ncounterpoint, yet that does not decrease one iota our ability to\nshiver as we experience impalas leaping or Bach thundering. We can\nonly gain and grow with each discovery that there is structure\nunderlying the most accessible levels of things that fill us with\nawe.\n\nBut there is an even stronger reason why I am not afraid that\nscientists will inadvertently go and explain everything--it will\nnever happen. While in certain realms, it may prove to be the case\nthat science can explain anything, it will never explain\neverything. As should be obvious after all these pages, as part of\nthe scientific process, for every question answered, a dozen newer\nones are generated. And they are usually far more puzzling, more\nchallenging than than the prior problems. This was stated\nwonderfully in a quote by a geneticist named Haldane earlier in the\ncentury: \"Life is not only stranger than we imagine, it is stranger\nthan we can imagine.\" We will never have our flames extinguished by\nknowledge. The purpose of science is not to cure us of our sense of\nmystery and wonder, but to constantly reinvent and reinvigorate it.\n",
+    "node": "sapolsky_reinvigorate_full"
+  },
+  {
+    "source": "http://discordianquotes.com/quote/characteristic-human-nature-inclined-regard-disagreeable-untrue-difficulty-1",
+    "text": "It is a characteristic of human nature to be inclined to regard\nanything which is disagreeable as untrue, and then without much\ndifficulty to find arguments against it. So society pronounces the\nunacceptable as untrue, disputes the result... with logical and\nconcrete arguments, arising, however, in emotional sources, and\nclings to them with all the strength of prejudice against every\nattempt at refutation.\n",
+    "node": "human_nature"
+  },
+  {
+    "title": "Vandana Shiva: Corporations are Fictions",
+    "cite": "Vandana Shiva",
+    "source": "https://en.wikipedia.org/wiki/Vandana_Shiva",
+    "img": "vandana-shiva-defending-humans.jpg",
+    "text": "Corporations are fictions. They have been assigned a human and a\nlegal personality, and now they're trying to disposses people of\ntheir democratic rights, and they're trying to dispossess nature\nof her rights. We are at a watershed for human evolution.\n\nWe will either defend the rights of people and the earth, and for\nthat we have to dismantle the rights that corporations have\nassigned to themselves, or corporations will in the next three\ndecades destroy this planet, in terms of human possibilities.\n",
+    "node": "corporations_are_fictions"
+  },
+  {
+    "cite": "Isadora Duncan, Isadora Speaks: Writings and Speeches of Isadora Duncan, page 138",
+    "source": "https://www.goodreads.com/work/editions/1914770-isadora-speaks-writings-speeches-of-isadora-duncan",
+    "img": "isadora-duncon-you-were-wild-here-no-words.jpg",
+    "text": "### You were once wild here<br />Don't let them tame you.\n",
+    "node": "you_were_once_wild"
+  },
+  {
+    "cite": "Iain Quinn, Watercolor Artist, June 2014, p. 47",
+    "text": "In the old days, I would have cut off any\narea that was 'wrong.' But, in fact, lots of so-called\nerrors are easily removed. After all, what's a mistake? These days,\nif I think I've done something wrong, I put the painting away and go\nback to it later rather than binning it. It can be a case of coming\nto terms with something that may not be quite what was intended, but\nis perfectly OK.\n",
+    "node": "embracing_challenges"
+  },
+  {
+    "text": "\nFirst, I must confess that over the past few years I have been gravely disappointed with the white moderate.\n",
+    "cite": "Martin Luther King, Jr., Letter from Birmingham Jail, Why We Can't Wait (1963)",
+    "node": "mlk_shallow_acceptance"
+  },
+  {
+    "cite": "Martin Luther King, Jr., Letter from Birmingham Jail, Why We Can't Wait (1963)",
+    "text": "I have almost reached the regrettable conclusion that the Negro's\ngreat stumbling block in his stride toward freedom is not the\nWhite Citizen's Counciler or the Ku Klux Klanner, but the white\nmoderate, who is more devoted to \"order\" than to justice; who\nprefers a negative peace which is the absence of tension to a\npositive peace which is the presence of justice; who constantly\nsays: \"I agree with the goal you seek, but I cannot agree with\nyour methods of direct action\"; <strong>who paternalistically\nbelieves he can set the timetable for another man's\nfreedom</strong>; who lives by a mythical concept of time and who\nconstantly advises the Negro to wait for a \"more convenient\nseason\". <strong>Shallow understanding from people of good will is\nmore frustrating than absolute misunderstanding from people of ill\nwill</strong>. Lukewarm acceptance is much more bewildering than\noutright rejection.\n",
+    "node": "mlk_shallow_acceptance_full"
+  },
+  {
+    "cite": "Buzz Anderson, @buzz on Twitter",
+    "text": "I think most programmers spend the first 5 years of their career mastering complexity, and the rest of their lives learning simplicity.\n",
+    "node": "buzz_learning_simplicity"
+  },
+  {
+    "cite": "Henry David Thoreau, Where I Lived and What I Lived For, Walden",
+    "text": "Our life is frittered away by detail. Simplify, simplify,\nsimplify! I say, let your affairs be as two or three, and not a\nhundred or a thousand; instead of a million count half a dozen,\nand keep your accounts on your thumb-nail.\n",
+    "node": "thoreau_simplify"
+  },
+  {
+    "cite": "Antoine de Saint-Exupéry, Airman's Odyssey",
+    "text": "Perfection is achieved, not when there is\nnothing more to add, but when there is nothing left to take away.\n",
+    "node": "perfection"
+  },
+  {
+    "text": "Love does not consist of gazing at each other, but in looking\noutward together in the same direction.\n",
+    "cite": "Antoine de Saint-Exupéry, Airman's Odyssey",
+    "node": "looking_outward_together"
+  },
+  {
+    "cite": "Antoine de Saint-Exupéry, The Little Prince",
+    "text": "And now here is my secret, a very simple secret: It is only with\nthe heart that one can see rightly; what is essential is invisible\nto the eye.\n",
+    "node": "only_with_the_heart"
+  },
+  {
+    "cite": "Carl Sagan, Pale Blue Dot",
+    "img": "sagan/PaleBlueDotQuote.png",
+    "text": "Our planet is a lonely speck in the great enveloping cosmic dark.\nIn all our obscurity, in all this vastness, there is no hint that\nhelp will come from elsewhere to save us from ourselves.\n\nIt is up to us.\n",
+    "node": "sagan_up_to_us"
+  },
+  {
+    "cite": "Carl Sagan, Pale Blue Dot: A Vision of the Human Future in Space, 1997 reprint, pp. xv–xvi",
+    "source": "https://en.wikipedia.org/wiki/Pale_Blue_Dot",
+    "text": "From this distant vantage point, the Earth might not seem of any\nparticular interest. But for us, it's different. Consider again\nthat dot. That's here. That's home. That's us. On it everyone you\nlove, everyone you know, everyone you ever heard of, every human\nbeing who ever was, lived out their lives. The aggregate of our\njoy and suffering, thousands of confident religions, ideologies,\nand economic doctrines, every hunter and forager, every hero and\ncoward, every creator and destroyer of civilization, every king\nand peasant, every young couple in love, every mother and father,\nhopeful child, inventor and explorer, every teacher of morals,\nevery corrupt politician, every \"superstar,\" every \"supreme\nleader,\" every saint and sinner in the history of our species\nlived there – on a mote of dust suspended in a sunbeam.\n\nThe Earth is a very small stage in a vast cosmic arena. Think of\nthe rivers of blood spilled by all those generals and emperors so\nthat in glory and triumph they could become the momentary masters\nof a fraction of a dot. Think of the endless cruelties visited by\nthe inhabitants of one corner of this pixel on the scarcely\ndistinguishable inhabitants of some other corner. How frequent\ntheir misunderstandings, how eager they are to kill one another,\nhow fervent their hatreds. Our posturings, our imagined\nself-importance, the delusion that we have some privileged\nposition in the universe, are challenged by this point of pale\nlight. Our planet is a lonely speck in the great enveloping cosmic\ndark. In our obscurity – in all this vastness – there is no hint\nthat help will come from elsewhere to save us from ourselves.\n\nThe Earth is the only world known, so far, to harbor life. There\nis nowhere else, at least in the near future, to which our species\ncould migrate. Visit, yes. Settle, not yet. Like it or not, for\nthe moment, the Earth is where we make our stand. It has been said\nthat astronomy is a humbling and character-building\nexperience. There is perhaps no better demonstration of the folly\nof human conceits than this distant image of our tiny world. To\nme, it underscores our responsibility to deal more kindly with one\nanother and to preserve and cherish the pale blue dot, the only\nhome we've ever known.\n",
+    "node": "pale_blue_dot"
+  },
+  {
+    "cite": "Kahlil Gibran",
+    "text": "Your children are not your children\n\nYou may give them your love but not your thoughts,<br>For they\nhave their own thoughts.<br />You may house their bodies but not their\nsouls.\n\nFor their souls dwell in the house of tomorrow,<br />\nwhich you cannot visit, even in your dreams.\n\nYou are the bows from which your children, as living arrows,\nare sent forth.\n",
+    "node": "your_children_are_not_your_children"
+  },
+  {
+    "cite": "Lawrence Krause",
+    "text": "A universe without purpose should neither depress us nor suggest\nthat our lives are purposeless.\n\nThrough an awe-inspiring cosmic history we find ourselves on this\nremote planet in a remote corner of the universe, endowed with\nintelligence and self-awareness.\n\nWe should not despair, but should humbly rejoice in making the\nmost of these gifts, and celebrate our brief moment in the sun.\n",
+    "node": "our_brief_moment_in_the_sun"
+  },
+  {
+    "cite": "Arthur Schopenhauer, Essays and Aphorisms",
+    "img": "solitary-white-owl.jpg",
+    "text": "A man can be himself only so long as he is alone; and if he does\nnot love solitude, he will not love freedom; for it is only when\nhe is alone that he is really free.\n",
+    "node": "solitude"
+  },
+  {
+    "cite": "Jason Read, professor, University of Maine",
+    "img": "classwar-parasites-jason-read.jpg",
+    "source": "http://usm.maine.edu/phi/how-professor-jason-read-became-internet-meme",
+    "text": "People who dismiss the unemployed and dependent as 'parasites'\nfail to understand economics and parasitism.\n\nA successful parasite is one that is not recognized by its host,\none that can make its host work for it without appearing as a\nburden. Such is the ruling class in a capitalist society.\n",
+    "node": "on_parasites_and_unemployment"
+  },
+  {
+    "img": "kiss-in-the-rain.jpg",
+    "text": "# Because, ultimately, what life is all about is not waiting for the storm to pass.\n\n# It is about learning to kiss in the rain.\n",
+    "node": "kiss_in_the_rain"
+  },
+  {
+    "img": "neverwastetime.jpg",
+    "text": "Never waste your time tyring to explain who you are to people who are committed to misunderstanding you.\n",
+    "node": "never_waste_your_time"
+  },
+  {
+    "cite": "Ralph Waldo Emerson",
+    "img": "to-be-yourself.jpg",
+    "text": "\nTo be yourself, in a world constantly trying make you something\nelse, is the greatest accomplishment.\n",
+    "node": "the_greatest_accomplishment"
+  },
+  {
+    "cite": "Ralph Waldo Emerson",
+    "img": "newyears.jpg",
+    "text": "Write it on your heart  <br />\nthat every day is the best day in the year.  <br />\nHe is rich who owns the day, and no one owns the day  <br />\nwho allows it to be invaded with fret and anxiety.  <br />\nFinish every day and be done with it.  <br />\nYou have done what you could.  <br />\nSome blunders and absurdities, no doubt crept in.  <br />\nForget them as soon as you can, tomorrow is a new day;  <br />\nbegin it well and serenely, with too high a spirit  <br />\nto be cumbered with your old nonsense.  <br />\nThis new day is too dear,  <br />\nwith its hopes and invitations,  <br />\nto waste a moment on the yesterdays.\n",
+    "node": "write_it_on_your_heart"
+  },
+  {
+    "text": "One of the most courageous decisions you will ever make is to  finally let go of that which is hurting your heart and soul.\n",
+    "cite": "Brigitte Nicole",
+    "img": "courageous-decision-let-go.jpg",
+    "node": "courageous_decision"
+  },
+  {
+    "text": "May you Awaken to the Mystery of Being here<br />\nand enter the quiet immensity of your own presence.<br />\nMay you have Joy and Peace in the Temple of your Senses.<br />\nMay you receive great encouragement when new frontiers beckon.<br />\nMay you respond to the Call of your Gift and find the courage to follow its path.<br />\nMay the flame of anger free you from falsity.<br />\nMay warmth of Heart keep your presence aflame and may anxiety never linger about you.<br />\nMay your outer dignity mirror an inner dignity of Soul.<br />\nMay you take time to celebrate the quiet miracles that seek no attention.<br />\nMay you be consoled in the secret symmetry of your Soul.\n\nMay you experience each day as a Sacred Gift woven around the Heart of wonder\n",
+    "cite": "John O'Donahue",
+    "img": "blessing-donahue.jpg",
+    "node": "blessing_o_donahue"
+  },
+  {
+    "text": "Many adults are put off when youngsters pose scientific\nquestions. Children ask why the sun is yellow, or what a dream is,\nor how deep you can dig a hole, or when is the world's birthday,\nor why we have toes.\n\nToo many teachers and parents answer with irritation or ridicule, or\nquickly move on to something else. Why adults should pretend to\nomniscience before a five-year-old, I can't for the life of me\nunderstand. What's wrong with admitting that you don't know?\nChildren soon recognize that somehow this kind of question annoys\nmany adults. A few more experiences like this, and another child has\nbeen lost to science.\n\nThere are many better responses. If we have an idea of the answer,\nwe could try to explain. If we don't, we could go to the\nencyclopedia or the library. Or we might say to the child: \"I don't\nknow the answer. Maybe no one knows. Maybe when you grow up, you'll\nbe the first to find out.\"\n",
+    "cite": "Carl Sagan, The Demon-Haunted World",
+    "source": "https://www.goodreads.com/book/show/17349.The_Demon_Haunted_World",
+    "node": "kids_scientific_questions"
+  },
+  {
+    "img": "gentle-awakening-zen-to-zen.jpg",
+    "text": "Whenever you hear or read something of a spiritual nature\nthat moves you, that touches your soul,\n\nYou are not learning something new,\nYou are remembering something you have always known.\n\nIt is a gentle awakening.\n",
+    "node": "remembering_something"
+  },
+  {
+    "img": "harriet-tubman.jpg",
+    "cite": "Harriet Tubman",
+    "text": "I freed a thousand slaves. I could have freed a thousand more if only they knew they were slaves.\n",
+    "node": "i_freed_a_thousand_slaves"
+  },
+  {
+    "source": "http://www.nomorefearfoundation.org/statement-mikhail-baryshnikov/",
+    "cite": "Mikhail Baryshnikov",
+    "text": "My life has been immensely enriched by gay mentors, colleagues and\nfriends and any discrimination and persecution of gay people is\nunacceptable.\n\nEqual treatment of people is a basic right and it is sad\nthat we still have to even speak about this in [the] 21st century. I\nsalute NO MORE FEAR foundation for stepping in so quickly to provide\nthe much necessary assistance to gay and lesbian people who are\nfleeing prosecution and help them lead a proud life in their new\ncountry.\n",
+    "node": "barishnakov_no_more_fear"
+  },
+  {
+    "cite": "Carl Sagan",
+    "text": "What an astonishing thing a book is.\n\nIt is a flat object made from a tree with flexible parts on which\nare imprinted lots of funny dark squiggles. But one glance at it\nand you are inside the mind of another person, maybe somebody dead\nfor thousands of years. Across the millennia, an author is\nspeaking clearly and silently inside your head, directly to\nyou. Writing is perhaps the greatest of human inventions, binding\ntogether people who never knew each other, citizens of distant\nepochs. Books break the shackle of time. A book is proof that\nhumans are capable of working magic.\n",
+    "node": "sagan_on_books"
+  },
+  {
+    "cite": "Rumi",
+    "img": "grey-exists-between-black-and-white.jpg",
+    "text": "\nOut beyond rightdoing and wrongdoing, there is a field.\n\nI'll meet you there\n",
+    "node": "rumi_out_beyond"
+  },
+  {
+    "cite": "Richard Feynmann, volume I; lecture 3, \"The Relation of Physics to Other Sciences\"; section 3-4, \"Astronomy\"; p. 3-6",
+    "text": "\nPoets say science takes away from the beauty of the stars— mere\nglobs of gas atoms. Nothing is ‘mere’. I too can see the stars on\na desert night, and feel them. But do I see less or more? The\nvastness of the heavens stretches my imagination— stuck on this\ncarousel my little eye can catch one-million-year-old light. A\nvast pattern— of which I am a part… What is the pattern or the\nmeaning or the why? It does not do harm to the mystery to know a\nlittle more about it. For far more marvelous is the truth than any\nartists of the past imagined it. Why do the poets of the present\nnot speak of it? What men are poets who can speak of Jupiter if he\nwere a man, but if he is an immense spinning sphere of methane and\nammonia must be silent.\n",
+    "node": "nothing_mere_Feynmann"
+  },
+  {
+    "cite": "Richard Feynmann",
+    "img": "feynman-questions-that-cant-be-answered.jpg",
+    "text": "I would rather have questions that can't be answered than answers\nthat can't be questioned.\n",
+    "node": "feynmann_questions"
+  },
+  {
+    "cite": "Chuck Klosterman",
+    "text": "Art and love are the same thing: It’s the process of seeing\nyourself in things that are not you.\n",
+    "node": "art_and_love"
+  },
+  {
+    "cite": "M.F.K. Fiser",
+    "text": "## Probably one of the most private things in the world is an egg before it is broken.\n",
+    "node": "the_most_private_thing"
+  },
+  {
+    "cite": "Pablo Picasso",
+    "source": "http://boingboing.net/2013/09/04/john-cusack-in-hacker-land.html",
+    "text": "## The right to free expression is something one seizes, not something one is given.\n",
+    "node": "the_right_to_free_expression"
+  },
+  {
+    "cite": "Tales of Hasidim, Vol. 2 by Martin Buber",
+    "text": "There is a famous story told in Chassidic literature that\naddresses this very question.\n\nThe Master teaches the student that God created everything in the\nworld to be appreciated, since everything is here to teach us a\nlesson.\n\nOne clever student asks \"What lesson can we learn from atheists?\nWhy did God create them?\"\n\nThe Master responds, \"God created atheists to teach us the most\nimportant lesson of them all -- the lesson of true compassion. You\nsee, when an ahteist performs an act of charity, visits someone\nwho is sick, helps someone in need, and cares for the world, he is\nnot doing so because of some religious teaching. He does not\nbelieve that God commanded him to perform this act. In fact, he\ndoes not believe in God at all, so his acts are based on an inner\nsense of morality. And look at the kindness he can bestow upon\nothers simply because he feels it to be right.\"\n\n\"This means,\" the Master continued, \"That when someone reaches out\nto you for help, you should never say 'I pray that God will help\nyou.' Instead for the moment, you should become an atheist,\nimagine that there is no God who can help and say 'I will help you.'\"\n",
+    "node": "why_did_god_create_atheists"
+  },
+  {
+    "cite": "William Edwards Deming, Ph. D",
+    "text": "99 percent of organizational problems is managerial.\n",
+    "node": "organizational_problems"
+  },
+  {
+    "cite": "William Edwards Demin, Ph. D",
+    "text": "\nExperience by itself teaches nothing... Without theory, experience\nhas no meaning. Without theory, one has no questions to ask. Hence\nwithout theory there is no learning.\n",
+    "node": "experience_teaches_nothing"
+  },
+  {
+    "cite": "William Edwards Demin, Ph. D",
+    "text": "\n\"... where there is fear, there will be wrong figures ...\"\n",
+    "node": "where_there_is_fear"
+  }
+]

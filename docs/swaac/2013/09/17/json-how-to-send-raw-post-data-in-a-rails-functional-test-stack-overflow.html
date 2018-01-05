@@ -134,13 +134,12 @@ and could not quite get it to work.</p>
   <p>I’m looking to send raw post data (e.g. unparamaterized json) to one of
 my controllers for testing: ``</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>class LegacyOrderUpdateControllerTest &lt; ActionController::TestCase
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class LegacyOrderUpdateControllerTest &lt; ActionController::TestCase
  test "sending json" do
    post :index, '{"foo":"bar", "bool":true}'
  end
 end
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>but this gives me a
 <code class="highlighter-rouge">NoMethodError: undefined method </code>symbolize_keys’ for #<String:0x00000102cb6080>`</String:0x00000102cb6080></p>
@@ -150,11 +149,10 @@ ActionController::TestCase?</p>
 
   <p>Here is some controller code</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>def index
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def index
     post_data = request.body.read
     req = JSON.parse(post_data)
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <h2 id="7-answers">7 Answers</h2>
 
@@ -163,37 +161,33 @@ ActionController::TestCase?</p>
   <p>In your test_helper.rb define the following method inside of
 ActiveSupport::TestCase:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>  def raw_post(action, params, body)
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  def raw_post(action, params, body)
     @request.env['RAW_POST_DATA'] = body
     response = post(action, params)
     @request.env.delete('RAW_POST_DATA')
     response
   end
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>In your functional test, use it just like the <code class="highlighter-rouge">post</code> method but pass the
 raw post body as the third argument.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>class LegacyOrderUpdateControllerTest &lt; ActionController::TestCase
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class LegacyOrderUpdateControllerTest &lt; ActionController::TestCase
  test "sending json" do
    raw_post :index, {}, {:foo =&gt; "bar", :bool =&gt; true}.to_json
  end
 end
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>I tested this on Rails 2.3.4 when reading the raw post body using</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>request.raw_post
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>request.raw_post
+</code></pre></div>  </div>
 
   <p>instead of</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>request.body.read
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>request.body.read
+</code></pre></div>  </div>
 
   <p>If you look at the <a href="http://github.com/rails/rails/blob/2-3-stable/actionpack/lib/action_controller/request.rb#L381">source code</a>
 you’ll see that raw_post just wraps request.body.read with a check for
@@ -216,19 +210,17 @@ the rspec post request. What you do is to populate the
 
   <p>Here my final solution.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>def do_create(attributes)
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def do_create(attributes)
   request.env['RAW_POST_DATA'] = attributes.to_json
   post :create, attributes
 end 
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>In the controller the code you need to read the JSON is something
 similar to this</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>  <span class="k">@property</span> <span class="o">=</span> <span class="n">Property</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">JSON</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">body</span><span class="p">.</span><span class="n">read</span><span class="p">))</span>
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  @property = Property.new(JSON.parse(request.body.read))
+</code></pre></div>  </div>
 
   <p>great! Just one line, and I had it work even without the <code class="highlighter-rouge">attributes</code>
 sent in to post.</p>
@@ -249,9 +241,8 @@ properly.</p>
 
   <p>So all you need is to specify “CONTENT_TYPE”:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>post :index, '{"foo":"bar", "bool":true}', "CONTENT_TYPE" =&gt; 'application/json'
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post :index, '{"foo":"bar", "bool":true}', "CONTENT_TYPE" =&gt; 'application/json'
+</code></pre></div>  </div>
 
   <p>This does not work for me. I get an error like “undefined method
 `symbolize_keys’ for #&lt;String:0x00000102b4b0d8&gt;”</p>
@@ -259,15 +250,13 @@ properly.</p>
   <p>The <code class="highlighter-rouge">post</code> method expects a hash of name-value pairs, so you’ll need to
 do something like this:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>post :index, :data =&gt; '{"foo":"bar", "bool":true}'
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post :index, :data =&gt; '{"foo":"bar", "bool":true}'
+</code></pre></div>  </div>
 
   <p>Then, in your controller, get the data to be parsed like this:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>post_data = params[:data]
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post_data = params[:data]
+</code></pre></div>  </div>
 
   <p>I’ve tried this, it needs to be completely raw though
 {“response”:”error”,”errors”:”can’t parse request: 598: unexpected token
@@ -283,28 +272,25 @@ which accepts a <code class="highlighter-rouge">rack_env</code> parameter.</p>
 
   <p>All this means that you can simply do the following in your spec:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>#spec/requests/articles_spec.rb
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#spec/requests/articles_spec.rb
 
 post '/articles', {}, {'RAW_POST_DATA' =&gt; 'something'}
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>And in the controller:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>#app/controllers/articles_controller.rb
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/controllers/articles_controller.rb
 
 def create
   puts request.body.read
 end
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>Maybe it’s the way you’re formatting your JSON, it might need to be
 escaped some how? Try doing this:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>post :index, :data =&gt; {:foo =&gt; 'bar', :bool =&gt; true }.to_json
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post :index, :data =&gt; {:foo =&gt; 'bar', :bool =&gt; true }.to_json
+</code></pre></div>  </div>
 
   <p>This will turn the hash into json, and hopefully that should work. If
 not… well then I’m all out of ideas =)</p>

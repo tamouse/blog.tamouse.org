@@ -3,8 +3,8 @@ layout: page
 title: Quotations
 ---
 
+{% for quote in site.data.quotes_array %}
 <div class="row">
-  {% for quote in site.data.quotes %}
-  {% include quote_item.html quote_item=quote.last %}
-  {% endfor %}
+  {% include quote_item.html quote_item=quote %}
 </div>
+{% endfor %}

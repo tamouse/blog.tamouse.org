@@ -130,22 +130,21 @@ On a recent post in ruby-talk, the question was asked how to convert something t
 
 <p><code class="highlighter-rouge">desired_output.yaml</code>:</p>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="nn">---</span>
-<span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s">device-1</span>
-  <span class="s">parameters</span><span class="pi">:</span>
-    <span class="s">app_folder</span><span class="pi">:</span> <span class="s">deploy_project</span>
-    <span class="s">app_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1"</span>
-    <span class="s">tar_file</span><span class="pi">:</span> <span class="s">deploy_project.tar.gz</span>
-    <span class="s">profile_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3"</span>
-    <span class="s">version_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2"</span>
-  <span class="s">classes</span><span class="pi">:</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">device-1</span>
+  <span class="na">parameters</span><span class="pi">:</span>
+    <span class="na">app_folder</span><span class="pi">:</span> <span class="s">deploy_project</span>
+    <span class="na">app_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1"</span>
+    <span class="na">tar_file</span><span class="pi">:</span> <span class="s">deploy_project.tar.gz</span>
+    <span class="na">profile_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3"</span>
+    <span class="na">version_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2"</span>
+  <span class="na">classes</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">install</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If one were to take that and feed it back into Ruby via YAML.load, one gets the following structure:</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="p">[{</span><span class="s2">"name"</span><span class="o">=&gt;</span><span class="s2">"device-1"</span><span class="p">,</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[{</span><span class="s2">"name"</span><span class="o">=&gt;</span><span class="s2">"device-1"</span><span class="p">,</span>
   <span class="s2">"parameters"</span><span class="o">=&gt;</span>
    <span class="p">{</span><span class="s2">"app_folder"</span><span class="o">=&gt;</span><span class="s2">"deploy_project"</span><span class="p">,</span>
     <span class="s2">"app_id"</span><span class="o">=&gt;</span><span class="s2">"1"</span><span class="p">,</span>
@@ -154,8 +153,7 @@ On a recent post in ruby-talk, the question was asked how to convert something t
     <span class="s2">"version_id"</span><span class="o">=&gt;</span><span class="s2">"2"</span><span class="p">},</span>
   <span class="s2">"classes"</span><span class="o">=&gt;</span><span class="p">[</span><span class="s2">"install"</span><span class="p">]}]</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>So an obvious structure is revealed. However, simply brute-forcing this from a result seemed not quite what I would want, so I went searching.</p>
 
@@ -165,10 +163,10 @@ On a recent post in ruby-talk, the question was asked how to convert something t
 
 <p><code class="highlighter-rouge">classes.rb</code>:</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># Classes to convert to yaml</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Classes to convert to yaml</span>
 
 <span class="k">class</span> <span class="nc">Deploy</span>
-  <span class="kp">attr_accessor</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:parameters</span><span class="p">,</span> <span class="ss">:classes</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:parameters</span><span class="p">,</span> <span class="ss">:classes</span>
 
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">classes</span><span class="p">)</span>
     <span class="nb">self</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="nb">name</span>
@@ -178,7 +176,7 @@ On a recent post in ruby-talk, the question was asked how to convert something t
 <span class="k">end</span>
 
 <span class="k">class</span> <span class="nc">Params</span>
-  <span class="kp">attr_accessor</span> <span class="ss">:app_folder</span><span class="p">,</span> <span class="ss">:app_id</span><span class="p">,</span> <span class="ss">:tar_file</span><span class="p">,</span> <span class="ss">:profile_id</span><span class="p">,</span> <span class="ss">:version_id</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:app_folder</span><span class="p">,</span> <span class="ss">:app_id</span><span class="p">,</span> <span class="ss">:tar_file</span><span class="p">,</span> <span class="ss">:profile_id</span><span class="p">,</span> <span class="ss">:version_id</span>
 
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">app_folder</span><span class="p">,</span> <span class="n">app_id</span><span class="p">,</span> <span class="n">tar_file</span><span class="p">,</span> <span class="n">profile_id</span><span class="p">,</span> <span class="n">version_id</span><span class="p">)</span>
     <span class="nb">self</span><span class="p">.</span><span class="nf">app_folder</span> <span class="o">=</span> <span class="n">app_folder</span>
@@ -190,12 +188,11 @@ On a recent post in ruby-talk, the question was asked how to convert something t
 
 <span class="k">end</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If we load up an array with the above classes using the data from the original request, we can see this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ pry -r yaml -r ./classes.rb
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pry -r yaml -r ./classes.rb
 [1] pry(main)&gt; deployments = Array.new
 =&gt; []
 [2] pry(main)&gt; deployments &lt;&lt; Deploy.new("device-1",
@@ -228,19 +225,17 @@ On a recent post in ruby-talk, the question was asked how to convert something t
   - install
 =&gt; nil
 [5] pry(main)&gt; 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>While close, simply YAMLizing an Object doesn’t give us what we want – when loaded, it will look for the classes Deploy and Params to create objects from. We don’t want this, exactly, we just want it in the form originally requested. When reread by an application that does not define
 these classes, we get an error:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ pry -r yaml
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pry -r yaml
 [1] pry(main)&gt; YAML.load_file("direct_to_yaml_output.yaml")
 ArgumentError: undefined class/module Deploy
 from /opt/rubies/ruby-2.1.2/lib/ruby/2.1.0/psych/class_loader.rb:53:in `path2class'
 [2] pry(main)&gt; 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="how-to-just-get-the-instance-variables-into-a-hash">How to just get the instance variables into a Hash?</h2>
 
@@ -248,13 +243,13 @@ from /opt/rubies/ruby-2.1.2/lib/ruby/2.1.0/psych/class_loader.rb:53:in `path2cla
 
 <p><code class="highlighter-rouge">instance_valude_extension.rb</code>:</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">module</span> <span class="nn">InstanceValuesExtension</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">InstanceValuesExtension</span>
 
   <span class="k">module</span> <span class="nn">InstanceMethods</span>
     <span class="k">def</span> <span class="nf">instance_values</span>
       <span class="no">Hash</span><span class="p">[</span>
         <span class="nb">instance_variables</span><span class="p">.</span><span class="nf">map</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
-          <span class="n">key</span> <span class="o">=</span> <span class="nb">name</span><span class="p">.</span><span class="nf">to_s</span><span class="p">[</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+          <span class="n">key</span> <span class="o">=</span> <span class="nb">name</span><span class="p">.</span><span class="nf">to_s</span><span class="p">[</span><span class="mi">1</span><span class="o">..-</span><span class="mi">1</span><span class="p">]</span>
           <span class="n">value</span> <span class="o">=</span> <span class="nb">instance_variable_get</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
           <span class="k">if</span> <span class="p">(</span><span class="n">value</span><span class="p">.</span><span class="nf">instance_variables</span><span class="p">.</span><span class="nf">count</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">value</span><span class="p">.</span><span class="nf">respond_to?</span><span class="p">(</span><span class="ss">:instance_values</span><span class="p">))</span>
             <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">.</span><span class="nf">instance_values</span>
@@ -271,14 +266,13 @@ from /opt/rubies/ruby-2.1.2/lib/ruby/2.1.0/psych/class_loader.rb:53:in `path2cla
 
 <span class="k">end</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Using that same data above, we can get;</p>
 
 <p><code class="highlighter-rouge">example.rb</code>:</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="vg">$:</span><span class="p">.</span><span class="nf">unshift</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">expand_path</span><span class="p">(</span><span class="s2">"../"</span><span class="p">,</span> <span class="kp">__FILE__</span><span class="p">))</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="vg">$:</span><span class="p">.</span><span class="nf">unshift</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">expand_path</span><span class="p">(</span><span class="s2">"../"</span><span class="p">,</span> <span class="kp">__FILE__</span><span class="p">))</span>
 
 <span class="nb">require</span> <span class="s1">'yaml'</span>
 <span class="nb">require</span> <span class="s1">'classes.rb'</span>
@@ -302,25 +296,23 @@ from /opt/rubies/ruby-2.1.2/lib/ruby/2.1.0/psych/class_loader.rb:53:in `path2cla
 <span class="p">]</span>
 
 <span class="nb">puts</span> <span class="n">deployments</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:instance_values</span><span class="p">).</span><span class="nf">to_yaml</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>and Voila!</p>
 
 <p><code class="highlighter-rouge">actual_output.yaml</code>:</p>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="nn">---</span>
-<span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s">device-1</span>
-  <span class="s">parameters</span><span class="pi">:</span>
-    <span class="s">app_folder</span><span class="pi">:</span> <span class="s">deploy_project</span>
-    <span class="s">app_id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
-    <span class="s">tar_file</span><span class="pi">:</span> <span class="s">deploy_project.tar.gz</span>
-    <span class="s">profile_id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
-    <span class="s">version_id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
-  <span class="s">classes</span><span class="pi">:</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">device-1</span>
+  <span class="na">parameters</span><span class="pi">:</span>
+    <span class="na">app_folder</span><span class="pi">:</span> <span class="s">deploy_project</span>
+    <span class="na">app_id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+    <span class="na">tar_file</span><span class="pi">:</span> <span class="s">deploy_project.tar.gz</span>
+    <span class="na">profile_id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+    <span class="na">version_id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+  <span class="na">classes</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">install</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This won’t do <em>everything</em> in-and-of-itself. For instance, if any of the instance variables consists of an Array or Hash (or even a Struct), it won’t recurse into them. Refinement will be needed.</p>
 

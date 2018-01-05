@@ -149,7 +149,7 @@ in creating a gem.</p>
 <p>For my needs, bundler does the initial heavy-lifting to put a basic
 gem scaffolding in place:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bundle gem my_gem --test
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle gem my_gem <span class="nt">--test</span>
       create  my_gem/Gemfile
       create  my_gem/Rakefile
       create  my_gem/LICENSE.txt
@@ -163,18 +163,17 @@ gem scaffolding in place:</p>
       create  my_gem/spec/my_gem_spec.rb
       create  my_gem/.travis.yml
 Initializating git repo <span class="k">in</span> /Users/tamara/Documents/tamouse.github.io/source/downloads/code/2013-11-29-developing-a-ruby-gem/my_gem
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>First thing after this is hop into the new gem’s directory, and modify
 the <code class="highlighter-rouge">.gemspec</code> file:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git diff my_gem.gemspec 
-diff --git a/my_gem.gemspec b/my_gem.gemspec
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git diff my_gem.gemspec 
+diff <span class="nt">--git</span> a/my_gem.gemspec b/my_gem.gemspec
 index 62ca81d..2cd4451 100644
---- a/my_gem.gemspec
+<span class="nt">---</span> a/my_gem.gemspec
 +++ b/my_gem.gemspec
-@@ -8,9 +8,9 @@ Gem::Specification.new <span class="k">do</span> |spec|
+@@ <span class="nt">-8</span>,9 +8,9 @@ Gem::Specification.new <span class="k">do</span> |spec|
    spec.email         <span class="o">=</span> <span class="o">[</span><span class="s2">"tamouse@gmail.com"</span><span class="o">]</span>
 -  spec.description   <span class="o">=</span> %q<span class="o">{</span>TODO: Write a gem description<span class="o">}</span>
 -  spec.summary       <span class="o">=</span> %q<span class="o">{</span>TODO: Write a gem summary<span class="o">}</span>
@@ -183,8 +182,7 @@ index 62ca81d..2cd4451 100644
 +  spec.summary       <span class="o">=</span> %q<span class="o">{</span>my gem summary<span class="o">}</span>
 +  spec.homepage      <span class="o">=</span> <span class="s2">"http://github.com/tamouse/my_gem"</span>
    spec.license       <span class="o">=</span> <span class="s2">"MIT"</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This is a good start, but there are more things I like to add.</p>
 
@@ -196,7 +194,7 @@ specific actions based on modifications in files. Since [RSpec][rspec]
 is my testing tool of choice for Ruby, I include the following in the
 newly-created <code class="highlighter-rouge">.gemspec</code> file:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>@@ -21,4 +21,8 @@ Gem::Specification.new <span class="k">do</span> |spec|
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@@ <span class="nt">-21</span>,4 +21,8 @@ Gem::Specification.new <span class="k">do</span> |spec|
    spec.add_development_dependency <span class="s2">"bundler"</span>, <span class="s2">"~&gt; 1.3"</span>
    spec.add_development_dependency <span class="s2">"rake"</span>
    spec.add_development_dependency <span class="s2">"rspec"</span>
@@ -205,20 +203,18 @@ newly-created <code class="highlighter-rouge">.gemspec</code> file:</p>
 +  spec.add_development_dependency <span class="s2">"guard-bundler"</span>
 +  spec.add_development_dependency <span class="s2">"guard-rspec"</span>
  end
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>There are lots of guards available, visit the [Guard
 Organization][guard-org] to see what’s there.</p>
 
 <p>Once that’s saved, initialize guard:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bundle <span class="nb">exec </span>guard init
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle <span class="nb">exec </span>guard init
 16:13:24 - INFO - Writing new Guardfile to /Users/tamara/Documents/tamouse.github.io/source/downloads/code/2013-11-29-developing-a-ruby-gem/my_gem/Guardfile
 16:13:24 - INFO - bundler guard added to Guardfile, feel free to edit it
 16:13:24 - INFO - rspec guard added to Guardfile, feel free to edit it
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Since we’ve included Guard in the <code class="highlighter-rouge">.gemspec</code> file, we need to run it
 with <code class="highlighter-rouge">bundle exec</code>. An alternative is to leave the Guard stuff out of
@@ -226,14 +222,14 @@ the <code class="highlighter-rouge">.gemspec</code> and use global settings. I p
 
 <p>I always edit the resulting <code class="highlighter-rouge">Guardfile</code>, making the following changes:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git diff
-diff --git a/Guardfile b/Guardfile
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git diff
+diff <span class="nt">--git</span> a/Guardfile b/Guardfile
 index 6b1588c..0e69679 100644
---- a/Guardfile
+<span class="nt">---</span> a/Guardfile
 +++ b/Guardfile
-@@ -1,30 +1,11 @@
-<span class="gp">-# </span>A sample Guardfile
-<span class="gp">-# </span>More info at https://github.com/guard/guard#readme
+@@ <span class="nt">-1</span>,30 +1,11 @@
+-# A sample Guardfile
+-# More info at https://github.com/guard/guard#readme
 -
  guard :bundler <span class="k">do
    </span>watch<span class="o">(</span><span class="s1">'Gemfile'</span><span class="o">)</span>
@@ -262,8 +258,7 @@ index 6b1588c..0e69679 100644
 -  watch(%r{^spec/acceptance/(.+)</span><span class="se">\.</span><span class="s2">feature</span><span class="nv">$}</span><span class="s2">)
 -  watch(%r{^spec/acceptance/steps/(.+)_steps</span><span class="se">\.</span><span class="s2">rb</span><span class="nv">$}</span><span class="s2">)   { |m| Dir[File.join("</span><span class="k">**</span>/#<span class="o">{</span>m[1]<span class="o">}</span>.feature<span class="s2">")][0] || 'spec/acceptance' }
  end
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 <h1 id="initialize-rspec">Initialize RSpec</h1>
 
@@ -275,15 +270,14 @@ helper file, <code class="highlighter-rouge">spec_helper.rb</code>. An <code cla
 <code class="highlighter-rouge">spec</code> directory structure should be a mirror analog of the <code class="highlighter-rouge">lib</code>
 directory, including the <code class="highlighter-rouge">lib</code> directory itself:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ mkdir -p spec/lib/my_gem
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir -p spec/lib/my_gem
 $ tree
    |-lib
    |---my_gem
    |-spec
    |---lib
    |-----my_gem
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
 </article>

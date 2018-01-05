@@ -154,7 +154,7 @@ this approach is probably the simplest thing you can do.</p>
 presents a polymorphic relationship to the individual result and the
 text column being searched.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>CREATE VIEW searches AS
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE VIEW searches AS
 
   SELECT
     statuses.id AS searchable_id,
@@ -178,28 +178,25 @@ text column being searched.</p>
     'User' AS searchable_type,
     users.name AS term
   FROM users
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>From here, we
 add <a href="http://www.postgresql.org/docs/9.2/static/textsearch-indexes.html">gin</a> indices
 to the columns on which we are searching. In our case similar indices to
 these made the difference between a 3-5 second lookup and ~100ms.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>CREATE INDEX index_statuses_on_body ON statuses USING gin(to_tsvector('english', body));
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE INDEX index_statuses_on_body ON statuses USING gin(to_tsvector('english', body));
 CREATE INDEX index_comments_on_body ON comments USING gin(to_tsvector('english', body));
 CREATE INDEX index_users_on_name ON users USING gin(to_tsvector('english', name));
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <h2 id="ruby">Ruby</h2>
 
   <p><a href="https://twitter.com/tenderlove">Aaron Patterson</a>‘s <a href="https://github.com/textacular/textacular">Textacular</a> is
 the only non-standard dependency we’ll introduce here:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>gem 'textacular'
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem 'textacular'
+</code></pre></div>  </div>
 
   <p>Textacular will manage searching over all text and varchar columns.</p>
 
@@ -210,15 +207,13 @@ below automatically hooks into the<strong>searches</strong> view we created.</p>
   <p>Luckily, ActiveRecord already presents us with a solution to polymorphic
 associations in the form of the</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>&lt;ASSOCIATION&gt;_id
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ASSOCIATION&gt;_id
+</code></pre></div>  </div>
 
   <p>and</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>&lt;ASSOCIATION&gt;_type
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ASSOCIATION&gt;_type
+</code></pre></div>  </div>
 
   <p>columns.</p>
 
@@ -226,7 +221,7 @@ associations in the form of the</p>
 its <strong>searchable</strong> relationship, define the <strong>results</strong>method to perform
 the search, and extend <strong>Textacular</strong> in the model.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>class Search &lt; ActiveRecord::Base
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Search &lt; ActiveRecord::Base
   extend Textacular
 
   belongs_to :searchable, polymorphic: true
@@ -239,14 +234,12 @@ the search, and extend <strong>Textacular</strong> in the model.</p>
     end
   end
 end
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>The call to</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>preload
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>preload
+</code></pre></div>  </div>
 
   <p>is used instead of <strong>include</strong> because Rails can’t include polymorphic
 associations. Calling <strong>preload</strong> still loads the related models in as
@@ -270,10 +263,9 @@ Because the view must be created by calling execute, Rails is unable
 to dump the view into <strong>db/schema.rb</strong>. Your must make the following
 change to your application configuration:</p>
 
-      <div class="highlighter-rouge"><pre class="highlight"><code># config/application.rb
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># config/application.rb
 config.active_record.schema_format = :sql
-</code></pre>
-      </div>
+</code></pre></div>      </div>
     </li>
     <li>If the view needs to change to include additional searchable
 content, the <strong>up</strong> method on the migration has to redefine the view

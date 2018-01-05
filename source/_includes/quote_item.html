@@ -10,38 +10,43 @@
       {{ quote_item.text | markdownify }}
       {% if quote_item.img %}
       <img
-	 src="{{ quote_item.img | prepend: 'blog/quotes/' | prepend: site.images.s3path }}"
-	 class="img-frame-center"
-	 alt="{{ quote_item.text | truncate: 25 }}"
-	 />
+	      src="{{ quote_item.img | prepend: 'blog/quotes/' | prepend: site.images.s3path }}"
+	      class="img-frame-center"
+	      alt=""
+	      />
       {% endif %}
       {% if quote.image_full_path %}
       <img
-	 src="{{ quote_item.image_full_path }}"
-	 class="img-frame-center"
-	 alt="{{ quote_item.text | truncate: 25 }}"
-	 />
+	      src="{{ quote_item.image_full_path }}"
+	      class="img-frame-center"
+	      alt=""
+	      />
       {% endif %}
     </div>
-    {% if quote_item.cite %}
     <div class="panel-footer">
-    {% assign source = quote_item.source | default: "#" %}
-    <cite> <a href="{{ quote_item.source}}">{{quote_item.cite}}</a> </cite>
-    {% endif %}
-    {% if quote_item.keywords %}
-    <div class="quote-keywords">
-      <ul>
-      {% for keyword in quote_item.keywords %}
-      <li class="quote-keyword-item">{{keyword}}</li>
-      {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-    {% if quote_item.note %}
-    <div class="quote-notes">
-      {{ quote_item.note | markdownify }}
-    </div>
-    {% endif %}
+      {% if quote_item.cite %}
+      <div class="quote-citation">
+        {% if quote_item.source %}
+        <cite><a href="{{quote_item.source}}">{{quote_item.cite}}</a></cite>
+        {% else %}
+        <cite>{{quote_item.cite}}</cite>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% if quote_item.keywords %}
+      <div class="quote-keywords">
+        <ul>
+          {% for keyword in quote_item.keywords %}
+          <li class="quote-keyword-item">{{keyword}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      {% if quote_item.note %}
+      <div class="quote-notes">
+        {{ quote_item.note | markdownify }}
+      </div>
+      {% endif %}
     </div>
   </div>
 </div>

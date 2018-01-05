@@ -126,30 +126,27 @@ Dec 22, 2014
 
 <p>A deprecation warning I received after upgrading RSpec:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>`and_return { value }` is deprecated. Use `and_return(value)` or
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`and_return { value }` is deprecated. Use `and_return(value)` or
 an implementation block without `and_return` instead
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>An example of code it’s complaining about:</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="vi">@mock_thing</span><span class="p">.</span><span class="nf">should_receive</span><span class="p">(</span><span class="ss">:something</span><span class="p">).</span><span class="nf">and_return</span> <span class="k">do</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="vi">@mock_thing</span><span class="p">.</span><span class="nf">should_receive</span><span class="p">(</span><span class="ss">:something</span><span class="p">).</span><span class="nf">and_return</span> <span class="k">do</span>
   <span class="n">double</span><span class="p">(</span><span class="s2">"SomeKindOfRelationship"</span><span class="p">).</span><span class="nf">tap</span> <span class="k">do</span> <span class="o">|</span> <span class="n">mock_assoc</span> <span class="o">|</span>
     <span class="n">mock_assoc</span><span class="p">.</span><span class="nf">should_receive</span><span class="p">(</span><span class="ss">:where</span><span class="p">).</span><span class="nf">and_return</span><span class="p">([</span> <span class="vi">@mock_relationship</span> <span class="p">])</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>To fix, just remove the <code class="highlighter-rouge">.and_return</code>:</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="vi">@mock_thing</span><span class="p">.</span><span class="nf">should_receive</span><span class="p">(</span><span class="ss">:something</span><span class="p">)</span> <span class="k">do</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="vi">@mock_thing</span><span class="p">.</span><span class="nf">should_receive</span><span class="p">(</span><span class="ss">:something</span><span class="p">)</span> <span class="k">do</span>
   <span class="n">double</span><span class="p">(</span><span class="s2">"SomeKindOfRelationship"</span><span class="p">).</span><span class="nf">tap</span> <span class="k">do</span> <span class="o">|</span> <span class="n">mock_assoc</span> <span class="o">|</span>
     <span class="n">mock_assoc</span><span class="p">.</span><span class="nf">should_receive</span><span class="p">(</span><span class="ss">:where</span><span class="p">).</span><span class="nf">and_return</span><span class="p">([</span> <span class="vi">@mock_relationship</span><span class="p">])</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Of course, make sure your tests pass after the change.</p>
 

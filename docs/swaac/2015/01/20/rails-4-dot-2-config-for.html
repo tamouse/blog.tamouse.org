@@ -138,28 +138,26 @@ and save it in a constant or global:</p>
 
 <h3 id="configapp_configyml"><code class="highlighter-rouge">config/app_config.yml</code></h3>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">default</span><span class="pi">:</span> <span class="nl">&amp;default</span>
-  <span class="s">service_url</span><span class="pi">:</span> <span class="s">https://my_service.example.com</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">default</span><span class="pi">:</span> <span class="nl">&amp;default</span>
+  <span class="na">service_url</span><span class="pi">:</span> <span class="s">https://my_service.example.com</span>
 
-<span class="s">development</span><span class="pi">:</span>
+<span class="na">development</span><span class="pi">:</span>
   <span class="s">&lt;&lt;</span><span class="pi">:</span> <span class="nv">*default</span>
 
-<span class="s">test</span><span class="pi">:</span>
+<span class="na">test</span><span class="pi">:</span>
   <span class="s">&lt;&lt;</span><span class="pi">:</span> <span class="nv">*default</span>
 
-<span class="s">production</span><span class="pi">:</span>
-  <span class="s">service_url</span><span class="pi">:</span> <span class="s">&lt;%= ENV['APP_SERVICE_URL'] %&gt;</span>
-</code></pre>
-</div>
+<span class="na">production</span><span class="pi">:</span>
+  <span class="na">service_url</span><span class="pi">:</span> <span class="s">&lt;%= ENV['APP_SERVICE_URL'] %&gt;</span>
+</code></pre></div></div>
 
 <h3 id="configinitializersapp_configrb"><code class="highlighter-rouge">config/initializers/app_config.rb</code></h3>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'yaml'</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'yaml'</span>
 <span class="nb">require</span> <span class="s1">'erb'</span>
 
 <span class="no">APP_CONFIG</span> <span class="o">=</span> <span class="no">YAML</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="no">ERB</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="no">Rails</span><span class="p">.</span><span class="nf">root</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s1">'config'</span><span class="p">,</span><span class="s1">'app_config.yml'</span><span class="p">))).</span><span class="nf">result</span><span class="p">)[</span><span class="no">Rails</span><span class="p">.</span><span class="nf">env</span><span class="p">]</span> <span class="o">||</span> <span class="p">{}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="enter-config_for-at-rails-42">Enter <code class="highlighter-rouge">config_for</code> at Rails 4.2</h2>
 
@@ -185,9 +183,8 @@ variables from <code class="highlighter-rouge">config/app_config.yml</code>.</p>
 
 <h3 id="configinitializersapp_configrb-1"><code class="highlighter-rouge">config/initializers/app_config.rb</code></h3>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="no">APP_CONFIG</span> <span class="o">=</span> <span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">config_for</span><span class="p">(</span><span class="ss">:app_config</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">APP_CONFIG</span> <span class="o">=</span> <span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">config_for</span><span class="p">(</span><span class="ss">:app_config</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h2 id="example">Example</h2>
 

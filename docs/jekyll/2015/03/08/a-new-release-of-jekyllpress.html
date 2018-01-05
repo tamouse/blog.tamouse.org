@@ -131,9 +131,8 @@ create new jekyll posts and pages.</p>
 
 <p>Command line install:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install jekyllpress
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install jekyllpress
+</code></pre></div></div>
 
 <h2 id="new-features">New features</h2>
 
@@ -157,31 +156,31 @@ template. ERB variable <code class="highlighter-rouge">@url</code>.</p>
 
 <h3 id="command-line">Command line</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>jekyllpress new_post <span class="s1">'A new release of Jekyllpress'</span> -c jekyll <span class="se">\</span>
-    -t jekyllpress jekyll --layout<span class="o">=</span>link --template<span class="o">=</span>new_link.markdown <span class="se">\</span>
-    --url<span class="o">=</span>https://github.com/tamouse/jekyllpress/releases/tag/v1.0.0</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>jekyllpress new_post <span class="s1">'A new release of Jekyllpress'</span> <span class="nt">-c</span> jekyll <span class="se">\</span>
+    <span class="nt">-t</span> jekyllpress jekyll <span class="nt">--layout</span><span class="o">=</span><span class="nb">link</span> <span class="nt">--template</span><span class="o">=</span>new_link.markdown <span class="se">\</span>
+    <span class="nt">--url</span><span class="o">=</span>https://github.com/tamouse/jekyllpress/releases/tag/v1.0.0</code></pre></figure>
 
 <h3 id="new_linkmarkdown-template">new_link.markdown template</h3>
 
 <p>It’s just frontmatter.</p>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
-<span class="s">layout</span><span class="pi">:</span> <span class="s">link</span>
-<span class="s">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Link:</span><span class="nv"> </span><span class="s">&lt;%=</span><span class="nv"> </span><span class="s">@title</span><span class="nv"> </span><span class="s">%&gt;"</span>
-<span class="s">date</span><span class="pi">:</span> <span class="s">&lt;%= Time.now.strftime("%Y-%m-%d %H:%M") %&gt;</span>
-<span class="s">categories</span><span class="pi">:</span> <span class="s">&lt;%= Array(@categories) %&gt;</span>
-<span class="s">tags</span><span class="pi">:</span> <span class="s">&lt;%= Array(@tags) %&gt;</span>
-<span class="s">link</span><span class="pi">:</span>
-  <span class="s">href</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&lt;%=</span><span class="nv"> </span><span class="s">@url</span><span class="nv"> </span><span class="s">%&gt;"</span>
-  <span class="s">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
-  <span class="s">date</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> 
-  <span class="s">author</span><span class="pi">:</span>
-    <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
-    <span class="s">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
-<span class="s">attachments</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
-    <span class="s">link</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
-    <span class="s">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">link</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Link:</span><span class="nv"> </span><span class="s">&lt;%=</span><span class="nv"> </span><span class="s">@title</span><span class="nv"> </span><span class="s">%&gt;"</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">&lt;%= Time.now.strftime("%Y-%m-%d %H:%M") %&gt;</span>
+<span class="na">categories</span><span class="pi">:</span> <span class="s">&lt;%= Array(@categories) %&gt;</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="s">&lt;%= Array(@tags) %&gt;</span>
+<span class="na">link</span><span class="pi">:</span>
+  <span class="na">href</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&lt;%=</span><span class="nv"> </span><span class="s">@url</span><span class="nv"> </span><span class="s">%&gt;"</span>
+  <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+  <span class="na">date</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> 
+  <span class="na">author</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+<span class="na">attachments</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
 <span class="nn">---</span></code></pre></figure>
 
 <h3 id="link-layout">link layout</h3>

@@ -139,7 +139,7 @@
 }
 
 .front-page-hero {
-  background: #000 url(/images/beach-chair-painting.jpg) 50% 70%;
+  background: $beachChairBackground;
   background-size: cover;
   color: $gray-lighter;
   text-shadow: 2px 2px 4px $gray;

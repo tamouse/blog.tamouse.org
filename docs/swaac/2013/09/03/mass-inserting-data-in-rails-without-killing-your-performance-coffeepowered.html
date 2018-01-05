@@ -159,17 +159,15 @@ via ActiveRecord.</p>
 
   <p>Instead of</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>1000.times { Model.create(options) }
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1000.times { Model.create(options) }
+</code></pre></div>  </div>
 
   <p>You want:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>ActiveRecord::Base.transaction do
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ActiveRecord::Base.transaction do
   1000.times { Model.create(options) }
 end
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>The net effect is that the database performs all of your inserts in a
 single transaction, rather than starting and committing a new
@@ -182,19 +180,17 @@ you can save a <strong>lot</strong> of time by just jumping directly to raw SQL.
 
   <p>Imagine, for example, that you’re running the following:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>1000.times {|i| Foo.create(:counter =&gt; i) }
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1000.times {|i| Foo.create(:counter =&gt; i) }
+</code></pre></div>  </div>
 
   <p>That’s going to create 1000 ActiveRecord objects, run validations,
 generate the insert SQL, and dump it into the database. You can realize
 large performance gains by just jumping directly to the generated SQL.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>1000.times do |i|
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1000.times do |i|
   Foo.connection.execute "INSERT INTO foos (counter) values (#{i})"
 end
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>You should use <code class="highlighter-rouge">sanitize_sql</code> and such as necessary to sanitize input
 values if they are not already sanitized, but with this technique you
@@ -202,13 +198,12 @@ can realize extremely large performance gains. Of course, wrapping all
 those inserts in a single transaction, as in Option 1 gets you even more
 performance.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>Foo.transaction do
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Foo.transaction do
   1000.times do |i|
     Foo.connection.execute "INSERT INTO foos (counter) values (#{i})"
   end
 end
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <h1 id="option-3-a-single-mass-insert">Option 3: A single mass insert</h1>
 
@@ -217,13 +212,12 @@ statement. They are able to significantly optimize this operation under
 the hood, and if you’re comfortable using it, will be your fastest
 option by far.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>inserts = []
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>inserts = []
 TIMES.times do
   inserts.push "(3.0, '2009-01-23 20:21:13', 2, 1)"
 end
 sql = "INSERT INTO user_node_scores (`score`, `updated_at`, `node_id`, `user_id`) VALUES #{inserts.join(", ")}"
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>No transaction block is necessary here, since it’s just a single
 statement, and the DB will wrap it in a transaction. We build an array
@@ -244,21 +238,20 @@ much additional work, and can preserve your validations and such.</p>
   <p>There’s the obvious added benefit that you stay in pure Ruby, and don’t
 have to get into the raw SQL.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>columns = [:score, :node_id, :user_id]
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>columns = [:score, :node_id, :user_id]
 values = []
 TIMES.times do
     values.push [3, 2, 1]
 end
 
 UserNodeScore.import columns, values
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <h2 id="benchmarks">Benchmarks</h2>
 
   <p>I used a simple script to test each of the methods described here.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>require "ar-extensions"
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require "ar-extensions"
 
 CONN = ActiveRecord::Base.connection
 TIMES = 10000
@@ -317,12 +310,11 @@ puts sprintf("  %2.2fx faster than base", base.real / bench.real)
 puts "ActiveRecord::Extensions mass insert without validations:"
 puts bench = Benchmark.measure { activerecord_extensions_mass_insert(true)  }
 puts sprintf("  %2.2fx faster than base", base.real / bench.real)
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>And the results:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>Testing various insert methods for 10000 inserts
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Testing various insert methods for 10000 inserts
 ActiveRecord without transaction:
  14.930000   0.640000  15.570000 ( 18.898352)
 ActiveRecord with transaction:
@@ -343,8 +335,7 @@ ActiveRecord::Extensions mass insert:
 ActiveRecord::Extensions mass insert without validations:
   6.550000   0.240000   6.790000 (  9.446273)
   2.00x faster than base
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 
   <p>The results are fairly self-explainatory, but of particular note is the
 specific single INSERT statement. At 70x faster than the

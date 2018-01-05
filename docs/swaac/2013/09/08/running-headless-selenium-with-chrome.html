@@ -182,29 +182,29 @@ applies universally to both development and production.</p>
   <p>Create a project directory and create a file named <code class="highlighter-rouge">Vagrantfile</code>:</p>
 
 </blockquote>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="c"># encoding: utf-8</span>
-<span class="gp">&gt; </span><span class="c"># -*- mode: ruby -*-</span>
-<span class="gp">&gt; </span><span class="c"># vi: set ft=ruby :</span>
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span>Vagrant.configure<span class="o">(</span><span class="s2">"2"</span><span class="o">)</span> <span class="k">do</span> |config|
-<span class="gp">&gt;   </span>config.vm.box <span class="o">=</span> <span class="s2">"precise64"</span>
-<span class="gp">&gt;   </span>config.vm.box_url <span class="o">=</span> <span class="s2">"http://files.vagrantup.com/precise64.box"</span>
-<span class="gp">&gt;   </span>config.ssh.forward_agent <span class="o">=</span> <span class="nb">true</span>
-<span class="gp">&gt; </span>
-<span class="gp">&gt;   </span>config.vm.provider :aws <span class="k">do</span> |aws, override|
-<span class="gp">&gt;     </span>aws.access_key_id <span class="o">=</span> <span class="s1">'XXXX'</span>      <span class="c"># Replace this</span>
-<span class="gp">&gt;     </span>aws.secret_access_key <span class="o">=</span> <span class="s1">'XXXX'</span>  <span class="c"># Replace this</span>
-<span class="gp">&gt;     </span>aws.keypair_name <span class="o">=</span> <span class="s1">'XXXX'</span>       <span class="c"># Replace this</span>
-<span class="gp">&gt;     </span>aws.ami <span class="o">=</span> <span class="s1">'ami-7747d01e'</span>        <span class="c"># ubuntu 12.04</span>
-<span class="gp">&gt;     </span>override.ssh.username <span class="o">=</span> <span class="s1">'ubuntu'</span>
-<span class="gp">&gt;     </span>override.ssh.private_key_path <span class="o">=</span> <span class="s1">'~/.ssh/amazon-ubuntu.pem'</span>
-<span class="gp">&gt;   </span>end
-<span class="gp">&gt; </span>
-<span class="gp">&gt;   </span>config.vm.provision :shell, :path <span class="o">=</span>&gt; <span class="s2">"setup.sh"</span>
-<span class="gp">&gt;   </span>config.vm.network :forwarded_port, guest:4444, host:4444
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span>end
-<span class="gp">&gt; </span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span> <span class="c"># encoding: utf-8</span>
+<span class="o">&gt;</span> <span class="c"># -*- mode: ruby -*-</span>
+<span class="o">&gt;</span> <span class="c"># vi: set ft=ruby :</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> Vagrant.configure<span class="o">(</span><span class="s2">"2"</span><span class="o">)</span> <span class="k">do</span> |config|
+<span class="o">&gt;</span>   config.vm.box <span class="o">=</span> <span class="s2">"precise64"</span>
+<span class="o">&gt;</span>   config.vm.box_url <span class="o">=</span> <span class="s2">"http://files.vagrantup.com/precise64.box"</span>
+<span class="o">&gt;</span>   config.ssh.forward_agent <span class="o">=</span> <span class="nb">true</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span>   config.vm.provider :aws <span class="k">do</span> |aws, override|
+<span class="o">&gt;</span>     aws.access_key_id <span class="o">=</span> <span class="s1">'XXXX'</span>      <span class="c"># Replace this</span>
+<span class="o">&gt;</span>     aws.secret_access_key <span class="o">=</span> <span class="s1">'XXXX'</span>  <span class="c"># Replace this</span>
+<span class="o">&gt;</span>     aws.keypair_name <span class="o">=</span> <span class="s1">'XXXX'</span>       <span class="c"># Replace this</span>
+<span class="o">&gt;</span>     aws.ami <span class="o">=</span> <span class="s1">'ami-7747d01e'</span>        <span class="c"># ubuntu 12.04</span>
+<span class="o">&gt;</span>     override.ssh.username <span class="o">=</span> <span class="s1">'ubuntu'</span>
+<span class="o">&gt;</span>     override.ssh.private_key_path <span class="o">=</span> <span class="s1">'~/.ssh/amazon-ubuntu.pem'</span>
+<span class="o">&gt;</span>   end
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span>   config.vm.provision :shell, :path <span class="o">=&gt;</span> <span class="s2">"setup.sh"</span>
+<span class="o">&gt;</span>   config.vm.network :forwarded_port, guest:4444, host:4444
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> end
+<span class="o">&gt;</span> </code></pre></figure>
 
 <blockquote>
 
@@ -221,55 +221,55 @@ you. In the same folder as you created your <code class="highlighter-rouge">Vagr
 <code class="highlighter-rouge">setup.sh</code> file:</p>
 
 </blockquote>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span><span class="c">#!/bin/sh</span>
-<span class="gp">&gt; </span><span class="nb">set</span> -e
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span><span class="k">if</span> <span class="o">[</span> -e /.installed <span class="o">]</span>; <span class="k">then</span>
-<span class="gp">&gt;   </span><span class="nb">echo</span> <span class="s1">'Already installed.'</span>
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span><span class="k">else</span>
-<span class="gp">&gt;   </span><span class="nb">echo</span> <span class="s1">''</span>
-<span class="gp">&gt;   </span><span class="nb">echo</span> <span class="s1">'INSTALLING'</span>
-<span class="gp">&gt;   </span><span class="nb">echo</span> <span class="s1">'----------'</span>
-<span class="gp">&gt; </span>
-<span class="gp">&gt;   </span><span class="c"># Add Google public key to apt</span>
-<span class="gp">&gt;   </span>wget -q -O - <span class="s2">"https://dl-ssl.google.com/linux/linux_signing_key.pub"</span> | sudo apt-key add -
-<span class="gp">&gt; </span>
-<span class="gp">&gt;   </span><span class="c"># Add Google to the apt-get source list</span>
-<span class="gp">&gt;   </span><span class="nb">echo</span> <span class="s1">'deb http://dl.google.com/linux/chrome/deb/ stable main'</span> &gt;&gt; /etc/apt/sources.list
-<span class="gp">&gt; </span>
-<span class="gp">&gt;   </span><span class="c"># Update app-get</span>
-<span class="gp">&gt;   </span>apt-get update
-<span class="gp">&gt; </span>
-<span class="gp">&gt;   </span><span class="c"># Install Java, Chrome, Xvfb, and unzip</span>
-<span class="gp">&gt;   </span>apt-get -y install openjdk-7-jre google-chrome-stable xvfb unzip
-<span class="gp">&gt; </span>
-<span class="gp">&gt;   </span><span class="c"># Download and copy the ChromeDriver to /usr/local/bin</span>
-<span class="gp">&gt;   </span><span class="nb">cd</span> /tmp
-<span class="gp">&gt;   </span>wget <span class="s2">"https://chromedriver.googlecode.com/files/chromedriver_linux64_2.2.zip"</span>
-<span class="gp">&gt;   </span>wget <span class="s2">"https://selenium.googlecode.com/files/selenium-server-standalone-2.35.0.jar"</span>
-<span class="gp">&gt;   </span>unzip chromedriver_linux64_2.2.zip
-<span class="gp">&gt;   </span>mv chromedriver /usr/local/bin
-<span class="gp">&gt;   </span>mv selenium-server-standalone-2.35.0.jar /usr/local/bin
-<span class="gp">&gt; </span>
-<span class="gp">&gt;   </span><span class="c"># So that running `vagrant provision` doesn't redownload everything</span>
-<span class="gp">&gt;   </span>touch /.installed
-<span class="gp">&gt; </span><span class="k">fi</span>
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span><span class="c"># Start Xvfb, Chrome, and Selenium in the background</span>
-<span class="gp">&gt; </span><span class="nb">export </span><span class="nv">DISPLAY</span><span class="o">=</span>:10
-<span class="gp">&gt; </span><span class="nb">cd</span> /vagrant
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span><span class="nb">echo</span> <span class="s2">"Starting Xvfb ..."</span>
-<span class="gp">&gt; </span>Xvfb :10 -screen 0 1366x768x24 -ac &amp;
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span><span class="nb">echo</span> <span class="s2">"Starting Google Chrome ..."</span>
-<span class="gp">&gt; </span>google-chrome --remote-debugging-port<span class="o">=</span>9222 &amp;
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span><span class="nb">echo</span> <span class="s2">"Starting Selenium ..."</span>
-<span class="gp">&gt; </span><span class="nb">cd</span> /usr/local/bin
-<span class="gp">&gt; </span>nohup java -jar ./selenium-server-standalone-2.35.0.jar &amp;
-<span class="gp">&gt; </span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span> <span class="c">#!/bin/sh</span>
+<span class="o">&gt;</span> <span class="nb">set</span> <span class="nt">-e</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> <span class="k">if</span> <span class="o">[</span> <span class="nt">-e</span> /.installed <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="o">&gt;</span>   <span class="nb">echo</span> <span class="s1">'Already installed.'</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> <span class="k">else</span>
+<span class="o">&gt;</span>   <span class="nb">echo</span> <span class="s1">''</span>
+<span class="o">&gt;</span>   <span class="nb">echo</span> <span class="s1">'INSTALLING'</span>
+<span class="o">&gt;</span>   <span class="nb">echo</span> <span class="s1">'----------'</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span>   <span class="c"># Add Google public key to apt</span>
+<span class="o">&gt;</span>   wget <span class="nt">-q</span> <span class="nt">-O</span> - <span class="s2">"https://dl-ssl.google.com/linux/linux_signing_key.pub"</span> | <span class="nb">sudo </span>apt-key add -
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span>   <span class="c"># Add Google to the apt-get source list</span>
+<span class="o">&gt;</span>   <span class="nb">echo</span> <span class="s1">'deb http://dl.google.com/linux/chrome/deb/ stable main'</span> <span class="o">&gt;&gt;</span> /etc/apt/sources.list
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span>   <span class="c"># Update app-get</span>
+<span class="o">&gt;</span>   apt-get update
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span>   <span class="c"># Install Java, Chrome, Xvfb, and unzip</span>
+<span class="o">&gt;</span>   apt-get <span class="nt">-y</span> <span class="nb">install </span>openjdk-7-jre google-chrome-stable xvfb unzip
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span>   <span class="c"># Download and copy the ChromeDriver to /usr/local/bin</span>
+<span class="o">&gt;</span>   <span class="nb">cd</span> /tmp
+<span class="o">&gt;</span>   wget <span class="s2">"https://chromedriver.googlecode.com/files/chromedriver_linux64_2.2.zip"</span>
+<span class="o">&gt;</span>   wget <span class="s2">"https://selenium.googlecode.com/files/selenium-server-standalone-2.35.0.jar"</span>
+<span class="o">&gt;</span>   unzip chromedriver_linux64_2.2.zip
+<span class="o">&gt;</span>   <span class="nb">mv </span>chromedriver /usr/local/bin
+<span class="o">&gt;</span>   <span class="nb">mv </span>selenium-server-standalone-2.35.0.jar /usr/local/bin
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span>   <span class="c"># So that running `vagrant provision` doesn't redownload everything</span>
+<span class="o">&gt;</span>   <span class="nb">touch</span> /.installed
+<span class="o">&gt;</span> <span class="k">fi</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> <span class="c"># Start Xvfb, Chrome, and Selenium in the background</span>
+<span class="o">&gt;</span> <span class="nb">export </span><span class="nv">DISPLAY</span><span class="o">=</span>:10
+<span class="o">&gt;</span> <span class="nb">cd</span> /vagrant
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> <span class="nb">echo</span> <span class="s2">"Starting Xvfb ..."</span>
+<span class="o">&gt;</span> Xvfb :10 <span class="nt">-screen</span> 0 1366x768x24 <span class="nt">-ac</span> &amp;
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> <span class="nb">echo</span> <span class="s2">"Starting Google Chrome ..."</span>
+<span class="o">&gt;</span> google-chrome <span class="nt">--remote-debugging-port</span><span class="o">=</span>9222 &amp;
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> <span class="nb">echo</span> <span class="s2">"Starting Selenium ..."</span>
+<span class="o">&gt;</span> <span class="nb">cd</span> /usr/local/bin
+<span class="o">&gt;</span> <span class="nb">nohup </span>java <span class="nt">-jar</span> ./selenium-server-standalone-2.35.0.jar &amp;
+<span class="o">&gt;</span> </code></pre></figure>
 
 <blockquote>
 
@@ -285,8 +285,8 @@ you. In the same folder as you created your <code class="highlighter-rouge">Vagr
 <code class="highlighter-rouge">VagrantFile</code>, run the following command:</p>
 
 </blockquote>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>vagrant up
-<span class="gp">&gt; </span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span> vagrant up
+<span class="o">&gt;</span> </code></pre></figure>
 
 <blockquote>
 
@@ -329,8 +329,8 @@ command. This will install the modules needed for interacting with
 Selenium.</p>
 
 </blockquote>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>npm install selenium-webdriver
-<span class="gp">&gt; </span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span> npm <span class="nb">install </span>selenium-webdriver
+<span class="o">&gt;</span> </code></pre></figure>
 
 <blockquote>
 
@@ -346,29 +346,29 @@ Selenium.</p>
 print out the HTML.</p>
 
 </blockquote>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">&gt; </span>var webdriver <span class="o">=</span> require<span class="o">(</span><span class="s1">'selenium-webdriver'</span><span class="o">)</span>;
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span>var keyword <span class="o">=</span> <span class="s2">"chris le twitter"</span>;
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span>var driver <span class="o">=</span> new webdriver.Builder<span class="o">()</span>.
-<span class="gp">&gt;    </span>usingServer<span class="o">(</span><span class="s1">'http://localhost:4444/wd/hub'</span><span class="o">)</span>.
-<span class="gp">&gt;    </span>withCapabilities<span class="o">(</span>webdriver.Capabilities.chrome<span class="o">())</span>.
-<span class="gp">&gt;    </span>build<span class="o">()</span>;
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span>driver.get<span class="o">(</span><span class="s1">'http://www.google.com'</span><span class="o">)</span>;
-<span class="gp">&gt; </span>driver.findElement<span class="o">(</span>webdriver.By.name<span class="o">(</span><span class="s1">'q'</span><span class="o">))</span>.sendKeys<span class="o">(</span>keyword<span class="o">)</span>;
-<span class="gp">&gt; </span>driver.findElement<span class="o">(</span>webdriver.By.name<span class="o">(</span><span class="s1">'btnG'</span><span class="o">))</span>.click<span class="o">()</span>;
-<span class="gp">&gt; </span>driver.wait<span class="o">(</span><span class="k">function</span><span class="o">()</span> <span class="o">{</span>
-<span class="gp">&gt;   </span><span class="k">return </span>driver.getTitle<span class="o">()</span>.then<span class="o">(</span><span class="k">function</span><span class="o">(</span>title<span class="o">)</span> <span class="o">{</span>
-<span class="gp">&gt;     </span>driver.getPageSource<span class="o">()</span>.then<span class="o">(</span><span class="k">function</span><span class="o">(</span>html<span class="o">)</span> <span class="o">{</span>
-<span class="gp">&gt;       </span>console.log<span class="o">(</span>html<span class="o">)</span>;
-<span class="gp">&gt;       </span><span class="k">return </span><span class="nb">true</span>;
-<span class="gp">&gt;     </span><span class="o">})</span>;
-<span class="gp">&gt;   </span><span class="o">})</span>;
-<span class="gp">&gt; </span><span class="o">}</span>, 1000<span class="o">)</span>;
-<span class="gp">&gt; </span>
-<span class="gp">&gt; </span>driver.quit<span class="o">()</span>;
-<span class="gp">&gt; </span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span> var webdriver <span class="o">=</span> require<span class="o">(</span><span class="s1">'selenium-webdriver'</span><span class="o">)</span><span class="p">;</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> var keyword <span class="o">=</span> <span class="s2">"chris le twitter"</span><span class="p">;</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> var driver <span class="o">=</span> new webdriver.Builder<span class="o">()</span><span class="nb">.</span>
+<span class="o">&gt;</span>    usingServer<span class="o">(</span><span class="s1">'http://localhost:4444/wd/hub'</span><span class="o">)</span><span class="nb">.</span>
+<span class="o">&gt;</span>    withCapabilities<span class="o">(</span>webdriver.Capabilities.chrome<span class="o">())</span><span class="nb">.</span>
+<span class="o">&gt;</span>    build<span class="o">()</span><span class="p">;</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> driver.get<span class="o">(</span><span class="s1">'http://www.google.com'</span><span class="o">)</span><span class="p">;</span>
+<span class="o">&gt;</span> driver.findElement<span class="o">(</span>webdriver.By.name<span class="o">(</span><span class="s1">'q'</span><span class="o">))</span>.sendKeys<span class="o">(</span>keyword<span class="o">)</span><span class="p">;</span>
+<span class="o">&gt;</span> driver.findElement<span class="o">(</span>webdriver.By.name<span class="o">(</span><span class="s1">'btnG'</span><span class="o">))</span>.click<span class="o">()</span><span class="p">;</span>
+<span class="o">&gt;</span> driver.wait<span class="o">(</span><span class="k">function</span><span class="o">()</span> <span class="o">{</span>
+<span class="o">&gt;</span>   <span class="k">return </span>driver.getTitle<span class="o">()</span>.then<span class="o">(</span><span class="k">function</span><span class="o">(</span>title<span class="o">)</span> <span class="o">{</span>
+<span class="o">&gt;</span>     driver.getPageSource<span class="o">()</span>.then<span class="o">(</span><span class="k">function</span><span class="o">(</span>html<span class="o">)</span> <span class="o">{</span>
+<span class="o">&gt;</span>       console.log<span class="o">(</span>html<span class="o">)</span><span class="p">;</span>
+<span class="o">&gt;</span>       <span class="k">return </span><span class="nb">true</span><span class="p">;</span>
+<span class="o">&gt;</span>     <span class="o">})</span><span class="p">;</span>
+<span class="o">&gt;</span>   <span class="o">})</span><span class="p">;</span>
+<span class="o">&gt;</span> <span class="o">}</span>, 1000<span class="o">)</span><span class="p">;</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> driver.quit<span class="o">()</span><span class="p">;</span>
+<span class="o">&gt;</span> </code></pre></figure>
 
 <blockquote>
 

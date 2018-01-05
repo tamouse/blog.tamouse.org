@@ -157,7 +157,7 @@ formatter, and added the duration from
 <code class="highlighter-rouge">example.execution_results[:run_time]</code> to the output. (I did add a bit
 of formatting, but that’s trivial.)</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'rspec/core/formatters/documentation_formatter'</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'rspec/core/formatters/documentation_formatter'</span>
 
 <span class="k">class</span> <span class="nc">StopwatchFormatter</span> <span class="o">&lt;</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">DocumentationFormatter</span>
 
@@ -172,8 +172,7 @@ of formatting, but that’s trivial.)</p>
   <span class="k">end</span>
 
 <span class="k">end</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Sample output:</p>
 
@@ -207,23 +206,20 @@ rspec ./spec/lib/stopwatch_formatter_spec.rb:7 # StopwatchFormatter this will fa
 thing is to simply require it on the <code class="highlighter-rouge">rspec</code> command line, and specify
 the class name as the formatter:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    rspec -r /path/to/stopwatch_formatter.rb --format StopwatchFormatter ...
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    rspec -r /path/to/stopwatch_formatter.rb --format StopwatchFormatter ...
+</code></pre></div></div>
 
 <h2 id="getting-the-formatter">Getting the formatter</h2>
 
 <p>You can get <code class="highlighter-rouge">stopwatch_formatter</code> from rubygems:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gem install stopwatch_formatter
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install stopwatch_formatter
+</code></pre></div></div>
 
 <p>or put it in your <code class="highlighter-rouge">Gemfile</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gem 'stopwatch_formatter', :group =&gt; [:development, :test]
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem 'stopwatch_formatter', :group =&gt; [:development, :test]
+</code></pre></div></div>
 
 <p>and <code class="highlighter-rouge">bundle install</code> as usual. You can specify to use the stopwatch
 formatter in a few ways:</p>
@@ -233,24 +229,21 @@ formatter in a few ways:</p>
 <p>If you use rake, and run rspec from within it, you can simply add the
 <code class="highlighter-rouge">SPEC_OPTS</code> variable to your run:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>rake SPEC_OPTS='-f StopwatchFormatter'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake SPEC_OPTS='-f StopwatchFormatter'
+</code></pre></div></div>
 
 <h3 id="rspec"><code class="highlighter-rouge">.rspec</code></h3>
 
 <p>A more convenient method is to put the formatter inside the <code class="highlighter-rouge">.rspec</code>
 file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>--format StopwatchFormatter
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--format StopwatchFormatter
+</code></pre></div></div>
 
 <p>then you can just run:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>rake
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake
+</code></pre></div></div>
 
 <p>(assuming <code class="highlighter-rouge">spec</code> is one of you default tasks.)</p>
 
@@ -259,10 +252,9 @@ file:</p>
 <p>If you want a more permanent solution, you can configure the formatter
 inside the <code class="highlighter-rouge">spec/spec_helper.rb</code> file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>require 'stopwatch_formatter'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require 'stopwatch_formatter'
 RSpec.configure {|c| c.add_formatter StopwatchFormatter }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This last rather permanently adds the stopwatch formatter to your
 runs, so if you specify another formatter on the command line or in
