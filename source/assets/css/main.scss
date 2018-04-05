@@ -2,4 +2,7 @@
 ---
 
 $beachChairBackground: #000 url({{site.baseurl}}/images/beach-chair-painting.jpg) 50% 70%;
+$icon-font-path: "{{site.baseurl}}/assets/fonts/";
+
+
 @import 'my_styles.scss';
