@@ -5,8 +5,8 @@ subtitle: Eliciting high-fidelity information from a client
 date: 2004-12-29
 author: Tamara Temple
 email: tamouse@gmail.com
-source: http://wiki.tamouse.org/?n=Consulting.PrecisionInquiry
 ---
+
 Precision inquiry is the practice of establishing the most sensory-complete set of information the client can give you about what their [Desired State][desired-state] will be. These questions can be asked from the present or the future; often times asking from the future is more productive especially if the client does not really consciously know what they want.
 
 <a name="desired-state"></a>
@@ -125,7 +125,7 @@ It is also useful to explore this territory for awhile. Ask the question at leas
 
 This question establishes the metric or measure of achieving the outcome. This is how the client wants to receive the outcome. Press the client on this question to get them to think about business metrics, to go along with the business reasons established in [What Will That Get For You][what-will-that-get-for-you].
 
-This question is best asked from the future [Desired State][desired-state]: 
+This question is best asked from the future [Desired State][desired-state]:
 
 > "When you first had *d(n)*, how did you recognize it?"
 
@@ -153,9 +153,9 @@ A final question is to check the Ecology of what the person wants:
 > Given all *this* (backtracking), do you still want it?
 
 
-[precision-inquiry]: #precision-inquiry 
+[precision-inquiry]: #precision-inquiry
 [desired-state]: #desired-state
 [well-formed-outcomes]: #well-formed-outcomes
 [three-golden-questions]: #three-golden-questions
 [rest-of-the-questions]: #rest-of-the-questions
-[what-will-that-get-for-you]: #what-will-that-get-for-you 
+[what-will-that-get-for-you]: #what-will-that-get-for-you
