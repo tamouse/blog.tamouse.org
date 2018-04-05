@@ -5867,9 +5867,6 @@ button.close {
   font-size: 90%;
   font-style: italic; }
 
-#markdown-toc li {
-  display: inline; }
-
 .front-page-hero {
   background: #000 url(/blog/images/beach-chair-painting.jpg) 50% 70%;
   background-size: cover;

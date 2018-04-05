@@ -1,4 +1,7 @@
 <aside class="sidebar">
+  <div class="">
+    <h4><a class="" href="{{ site.baseurl}}/">{% if site.title %}{{site.title}}{% else %}New Site{% endif %}</a></h4>
+  </div>
   <nav class="" role="navigation">
     <div class="">
       <div id="" class="">
@@ -23,21 +26,19 @@
 	        {% for page in site.data.navbar %}
 	        <li><a href="{{ page.href | prepend: site.baseurl }}">{{page.name}}</a></li>
 	        {% endfor %}
+	        <li>
+            <a href="{{ site.baseurl}}/humans.txt">
+              Colophon
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-
-      <div class="">
-        <h4><a class="" href="{{ site.baseurl}}/">{% if site.title %}{{site.title}}{% else %}New Site{% endif %}</a></h4>
-      </div>
-      <div class="">
-        <h4><a class="" href="{{site.baseurl}}/">&copy; {{site.time | date: "%Y"}} {% if site.author %}{{site.author}}{% else %}Site Author{% endif %}</a></h4>
-      </div>
   <footer class="" role="navigation">
     <div class="">
       <div id="" class="">
-        <ul class="">
+        <ul class="nav nav-pills nav-stacked">
           <li>
             <a href="https://twitter.com/{{site.social.twitter}}">
               <i class="fa fa-twitter"></i>
@@ -70,13 +71,17 @@
               art blog
             </a>
           </li>
-	        <li>
-            <a href="{{ site.baseurl}}/humans.txt">
-              Colophon
+          <li>
+            <a href="mailto:tamouse@gmail.com">
+              <i class="fa fa-envelope"></i>
+              email
             </a>
           </li>
         </ul>
       </div>
+    </div>
+    <div class="">
+      <h4><a class="" href="{{site.baseurl}}/">&copy; {{site.time | date: "%Y"}} {% if site.author %}{{site.author}}{% else %}Site Author{% endif %}</a></h4>
     </div>
   </footer>
 </aside>
