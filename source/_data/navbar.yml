@@ -1,7 +1,7 @@
 ---
 - name: About
-  href: /about/
+  href: /about
 - name: Posts
-  href: /pages/posts/
+  href: /pages/posts
 - name: Pages
-  href: /pages/
+  href: /pages
