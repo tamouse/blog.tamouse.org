@@ -7,7 +7,9 @@ tags: ["race", "percival-everett", "stories"]
 source: https://www.graywolfpress.org/blogs/appropriation-cultures-percival-everett
 ---
 
-This is a short story by Percival Everett.
+This is a short story by [Percival Everett](https://en.wikipedia.org/wiki/Percival_Everett) .
+
+
 
 > Daniel Barkley had money left to him by his mother. He had a house that had been left to him by his mother. He had a degree in American Studies from Brown University that he had in some way earned, but that had not yet earned anything for him. He played a 1940 Martin guitar with a Barkus-Berry pickup and drove a 1976 Jensen Interceptor, which he had purchased after his mother’s sister had died and left him her money because she had no children of her own. Daniel Barkley didn’t work and didn’t pretend to need to, spending most of his time reading. Some nights he went to a joint near the campus of the University of South Carolina and played jazz with some old guys who all worked very hard during the day, but didn’t hold Daniel’s condition against him.
 
