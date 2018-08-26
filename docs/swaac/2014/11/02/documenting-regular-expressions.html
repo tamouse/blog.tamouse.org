@@ -177,7 +177,7 @@ Nov 2, 2014
 
 <p>In <code class="highlighter-rouge">perl</code>:</p>
 
-<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">while</span> <span class="p">(</span><span class="nv">$line</span> <span class="o">=</span> <span class="sr">&lt;STDIN&gt;</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">while</span> <span class="p">(</span><span class="nv">$line</span> <span class="o">=</span> <span class="o">&lt;</span><span class="bp">STDIN</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">next</span> <span class="k">if</span> <span class="p">(</span> <span class="nv">$line</span> <span class="o">=~</span> <span class="sr">m{$is_blank_re}</span> <span class="p">);</span>
     <span class="c1"># process the line</span>
 <span class="p">}</span></code></pre></figure>

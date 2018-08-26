@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://blog.tamouse.org/blog/poetry/2007/09/17/poem-detroit-annie-hitchhiking-by-judy-grain.html</loc>
+<loc>https://blog.tamouse.org/blog/poetry/2007/09/16/poem-detroit-annie-hitchhiking-by-judy-grain.html</loc>
 <lastmod>2007-09-16T20:32:31-05:00</lastmod>
 </url>
 <url>
@@ -29,7 +29,7 @@
 <lastmod>2011-05-13T01:26:50-05:00</lastmod>
 </url>
 <url>
-<loc>https://blog.tamouse.org/blog/travel/2011/05/14/another-glorious-day-in-new-orleans.html</loc>
+<loc>https://blog.tamouse.org/blog/travel/2011/05/13/another-glorious-day-in-new-orleans.html</loc>
 <lastmod>2011-05-13T23:32:58-05:00</lastmod>
 </url>
 <url>
@@ -37,7 +37,7 @@
 <lastmod>2011-10-12T06:12:17-05:00</lastmod>
 </url>
 <url>
-<loc>https://blog.tamouse.org/blog/swaac/2011/10/13/so-passes-a-real-hero-of-the-computing-age.html</loc>
+<loc>https://blog.tamouse.org/blog/swaac/2011/10/12/so-passes-a-real-hero-of-the-computing-age.html</loc>
 <lastmod>2011-10-12T23:00:49-05:00</lastmod>
 </url>
 <url>
@@ -57,7 +57,7 @@
 <lastmod>2012-01-03T03:06:28-06:00</lastmod>
 </url>
 <url>
-<loc>https://blog.tamouse.org/blog/space/2012/01/06/gorgeous-shot-of-comet-during-trip-to-iss.html</loc>
+<loc>https://blog.tamouse.org/blog/space/2012/01/05/gorgeous-shot-of-comet-during-trip-to-iss.html</loc>
 <lastmod>2012-01-05T21:03:39-06:00</lastmod>
 </url>
 <url>
@@ -81,7 +81,7 @@
 <lastmod>2012-01-23T03:51:34-06:00</lastmod>
 </url>
 <url>
-<loc>https://blog.tamouse.org/blog/earth/2012/01/24/january-aurora-over-norway.html</loc>
+<loc>https://blog.tamouse.org/blog/earth/2012/01/23/january-aurora-over-norway.html</loc>
 <lastmod>2012-01-23T23:35:32-06:00</lastmod>
 </url>
 <url>
@@ -89,7 +89,7 @@
 <lastmod>2012-02-25T09:25:54-06:00</lastmod>
 </url>
 <url>
-<loc>https://blog.tamouse.org/blog/swaac/2012/12/05/code-as-literature-software-dev-as-communication.html</loc>
+<loc>https://blog.tamouse.org/blog/swaac/2012/12/04/code-as-literature-software-dev-as-communication.html</loc>
 <lastmod>2012-12-04T23:02:50-06:00</lastmod>
 </url>
 <url>
@@ -277,7 +277,7 @@
 <lastmod>2013-09-04T22:19:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://blog.tamouse.org/blog/quotes/2013/09/06/the-most-private-thing-dot-dot-dot.html</loc>
+<loc>https://blog.tamouse.org/blog/quotes/2013/09/05/the-most-private-thing-dot-dot-dot.html</loc>
 <lastmod>2013-09-05T20:01:01-05:00</lastmod>
 </url>
 <url>
@@ -1885,6 +1885,10 @@
 <lastmod>2018-04-04T22:49:00-05:00</lastmod>
 </url>
 <url>
+<loc>https://blog.tamouse.org/blog/racism/2018/08/25/twitter-anitracism-101-vogelbeer.html</loc>
+<lastmod>2018-08-25T23:47:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://blog.tamouse.org/blog/pages/consulting/balancing-forces.html</loc>
 </url>
 <url>
@@ -1949,7 +1953,7 @@
 <lastmod>2013-06-14T04:12:29-05:00</lastmod>
 </url>
 <url>
-<loc>https://blog.tamouse.org/blog/js/vendor/fancybox/demo/index.html</loc>
+<loc>https://blog.tamouse.org/blog/js/vendor/fancybox/demo/</loc>
 <lastmod>2013-06-14T04:12:29-05:00</lastmod>
 </url>
 </urlset>

@@ -4,10 +4,12 @@ title: "The Appropriation of Cultures by Percival Everett"
 date: 2015-07-26 00:58
 categories: ["politics"]
 tags: ["race", "percival-everett", "stories"]
-source: https://www.graywolfpress.org/blogs/appropriation-cultures-percival-everett
+source: https://web.archive.org/web/20170322195321/https://www.graywolfpress.org/blogs/appropriation-cultures-percival-everetthttps://www.graywolfpress.org/blogs/appropriation-cultures-percival-everett
 ---
 
 This is a short story by [Percival Everett](https://en.wikipedia.org/wiki/Percival_Everett) .
+
+
 
 
 
