@@ -5,9 +5,165 @@
     <description>the rumblings and ramblings of a well-traveled tech-mouse</description>
     <link>https://blog.tamouse.org/blog/</link>
     <atom:link href="https://blog.tamouse.org/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 05 Jan 2019 17:09:20 -0600</pubDate>
-    <lastBuildDate>Sat, 05 Jan 2019 17:09:20 -0600</lastBuildDate>
-    <generator>Jekyll v3.8.3</generator>
+    <pubDate>Sun, 10 Mar 2019 15:51:08 -0500</pubDate>
+    <lastBuildDate>Sun, 10 Mar 2019 15:51:08 -0500</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Improving our communication: A Tweet Thread and Discussion</title>
+        <description>&lt;p&gt;Recently, on twitter, a question came into my feed.&lt;/p&gt;
+
+&lt;h2 id=&quot;original-tweet&quot;&gt;original tweet&lt;/h2&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;The thing that interests me most professionally is communication. It&amp;#39;s so important because none of us work in a vacuum. But there&amp;#39;s no postmortem for a disappointing conversation and no whitepaper for getting someone to challenge bad assumptions. How do people get good at this?&lt;/p&gt;&amp;mdash; A Mind Forever Voyaging (@jbeallurks) &lt;a href=&quot;https://twitter.com/jbeallurks/status/1104421281762603009?ref_src=twsrc%5Etfw&quot;&gt;March 9, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;the-rest-of-the-conversation&quot;&gt;the rest of the conversation&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@tamouse: are you trying to improve your communication or someone else’s?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@jbeallurks: Mine.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@tamouse: what’s stopping you from doing a post-mortem?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@jbeallurks: I’m really just not sure what that would look like. I don’t record or make transcripts of conversations, so going over what was said with another person would be tough. Any suggestions? It sounds like you have thoughts and I would like to hear them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@tamouse: do it immediately after when you can. as with any after analysis, it’s so easy to forget. take notes during when you can, box them on the paper to use some sort of mark to indicate something you want to review.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@tamouse: also, before the conversation, if there is time to plan, write out you desired outcomes for it. you can also do this for the impromptu, drive-by conversations by having notes about what you’d want to discuss with someone when the opportunity arises&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@tamouse: there are so many books, courses, seminars, workshops, coaches, and so on out there on how to learn to improve one’s abilities to communicate. i was fortunate enough to work at a company that valued this enough to pay for my learning&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@jbeallurks: For sure. I’m going to expense a copy of Conversations for Action today. Thanks for the ideas!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;but-wait-&quot;&gt;but wait …&lt;/h2&gt;
+
+&lt;p&gt;Another poster had some good responses too:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;You get good at it by being a human and being approachable. People only avoid “bad conversation post Mortem” if they’re scare or don’t want to bother approaching you because of the expected responses. Otherwise people aren’t typically shy about bad communication imho&lt;/p&gt;&amp;mdash; idiot_girl (@idiot_girl) &lt;a href=&quot;https://twitter.com/idiot_girl/status/1104531926067675137?ref_src=twsrc%5Etfw&quot;&gt;March 9, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;and the follow-on from that:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@jbeallurks: Have you tried to analyze a conversation where you couldn’t persuade someone to do something to figure out how you could have done better? What does that look like for you? At my job, we do this for bugs and technical issues, but not for the human side of things.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;@idiot_girl  So there’s no concept in your mind that maybe you were wrong for a reason you don’t understand which is why you couldn’t persuade someone to do the thing you wanted them to do?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;theres-more&quot;&gt;there’s more!&lt;/h2&gt;
+
+&lt;p&gt;There is so much lurking and unpacked in this brief twitalog that I thought it might be helpful (at least to me) to review my thoughts, and perhaps even model the behaviour I mentioned.&lt;/p&gt;
+
+&lt;p&gt;What I picked up on in the original tweet from @jbeallurks is the desire to improve their understanding of what happened in a “disappointing conversation” (their words).&lt;/p&gt;
+
+&lt;p&gt;My initial question was to determine who they wanted to change - themself or another person. The response back indicating they wanted to change their own ability is at the surface seemingly &lt;a href=&quot;#&quot; title=&quot;To be written&quot;&gt;ecological&lt;/a&gt;. But perhaps it wasn’t so much; poster @idiot_girl poses a question that might lead in a different direction. Holding off on that for now.&lt;/p&gt;
+
+&lt;h2 id=&quot;learning-how-to-communicate&quot;&gt;learning how to communicate&lt;/h2&gt;
+
+&lt;p&gt;This subject is older than recorded history, and is the basis of all our culture. But it still seems like many of us treat it as an unlearnable, and even unteachable, subject.&lt;/p&gt;
+
+&lt;p&gt;Not so, there are at least hundreds of books that come out every year in this topic. Nearly every self-help book, guide, seminar, workshop, has improving communication as one of its underpinnings. The problem might be not that there is nothing to find, but that there is too much to pick from.&lt;/p&gt;
+
+&lt;p&gt;Communication is a skill, therefore it can be studied, taught, learned, practiced, and improved. It contains arts and sciences, subskills, situational aspects, and lots of other things that can be broken out, broken down, learned, and practiced in the small.&lt;/p&gt;
+
+&lt;h2 id=&quot;some-suggestions&quot;&gt;some suggestions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;study it. I gave @jbeallurks the suggestion of looking up Terry Winograd and Fernando Flores’ “Conversation for Action” research. There’s a lot of it, and books published and seminars given, not just white papers. A lot of other work is based in part on this research as well. Thing is, you can even start with a google search of “how do i improve my communication” or “how do i become more persuasive” which might get to the OP’s initial desire.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;write down your outcomes. This means figuring out what you want to get better at, but also what your outcomes for any particular conversation might be. In the case of bug review meetings, there should be ample time to write out the points you wish to make, why you think they’re important, and what risk might show up if unmitigated. In the case of casual hallway or ‘drive-by’ meetings, having a list for what the outcomes for such meetings written down, perhaps a list by person you might encounter. This is something David Allen talks about in “Getting Things Done” is keeping that list written down and out of your head during non-conversation times. The act of writing it down, and reviewing it periodically, can help in the moment when those impromptu situations arise.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;take notes in meetings. most folks these days feel they need to write into a computer to keep these notes, and that’s acutally the worst thing you can do. Take a notebook, any size, or a bunch of index cards with you into meetings, with a couple of pens, and  hand-write the notes. Keep them brief, but with enough info you can recall your thoughts afterwards. This accomplishes two things:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;it keeps track of points you want to review&lt;/li&gt;
+      &lt;li&gt;it keeps your head in the meeting by getting the thoughts out of your head&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;when you’re in a space where taking notes might be impossible, use different techniques to remember, like inverting a ring, a watch, push a sleeve up, pull one down, etc. These are markers that remind your body something it up, so later you will remember.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;don’t think when you’re in an impromptu conversation you automatically can’t take notes, or make a note to remind yourself. Keep a bunch of 3x5 cards or sticky notes and a pen handy.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;as soon as you can, review the conversation, do an After Analysis, or post-mortem, on what happened, what were the outcomes, what worked, what could have gone better, what you need to do differently to prepare for the next one, and so on. Don’t just do this for the disappointing conversations, do this for all the conversations; note that conversations that you walk away from feeling satisfied have at least as much to teach as looking at disappointing ones.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;find a third party to discuss things with, one who has your improvement in communicating as their own goal might be best; it doesn’t have to be a boss, it can be a mentor, or hire a coach.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;maybe-im-wrong&quot;&gt;“maybe I’m wrong”&lt;/h2&gt;
+
+&lt;p&gt;One thing responder @idiot_girl very adoitly points out: What if you’re wrong? What if it’s your assumptions that are bad? How would you know?&lt;/p&gt;
+
+&lt;p&gt;If you can’t see this, it might mean you need to work on your listening skills. Conversations, which meetings are a special form of, are about sharing information, learning things, moreso than telling things. If your intent is the latter, probably better to send a memo email.&lt;/p&gt;
+
+&lt;p&gt;Certainly there are times when you have information to provide to a conversation and it is important to participate in that way. If at the end you feel disappointed that you weren’t heard, there are avenues to follow up in.&lt;/p&gt;
+
+&lt;p&gt;But do consider that you are as likely as anyone else attending to be holding incorrect assumptions, and the only way is to find out what the others’ assumptions might be.&lt;/p&gt;
+
+&lt;p&gt;There is a thing I noticed a lot when facilitating groups that people holding opposing viewpoints on a topic often make unstated assumptions about the time frame they are discussing the problems in. The short term effects are quite often different than the long term effects, but unless these time-frame assumptions aren’t explored, the argument is unresolved.&lt;/p&gt;
+
+&lt;h2 id=&quot;learn-how-to-be-facilitative&quot;&gt;learn how to be facilitative&lt;/h2&gt;
+
+&lt;p&gt;One of the things a lot of folks miss is that they feel it’s necessary for them to convince someone else of something, that they are wrong, making bad assumptions, etc.&lt;/p&gt;
+
+&lt;p&gt;In @jbeallurks original post, they mention “getting someone to challenge bad assumptions”. Again the lament about no white papers being available is just wrong, there are tons of such things out in the wild.&lt;/p&gt;
+
+&lt;p&gt;But the very premise might be wrong. Perhaps it’s not about convincing someone &lt;em&gt;else&lt;/em&gt; to challenge bad assumptions, but the change for you to step into helping the group understand the assumptinos it may be making, laying bare some of the areas of disagreement, understanding, or even where folks actually agree on things but don’t realize it.&lt;/p&gt;
+
+&lt;p&gt;This is not necessarily easy, especially when one has one’s own opinions that feel compelling. If your goal is have your opinions prevail, you’ll have less luck because you’ve already broken the first rule of communication, which is to listen.&lt;/p&gt;
+
+&lt;p&gt;This is where I feel the role of playing facilitator comes in best: the facilitator’s &lt;em&gt;only&lt;/em&gt; task is to listen and repeat back the group’s conversation. This helps all the members of the conversation hear what they said, and see if they can agree with it or not.&lt;/p&gt;
+
+&lt;p&gt;Master facilitators will go further than this; they are also good at asking the group open-ended questions to help the group open up conversation and information flow. Beginners should stick to listing and repeating what they heard; learning to do this in a high-fidelity fashion is a skill in and of itself.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 10 Mar 2019 14:26:00 -0500</pubDate>
+        <link>https://blog.tamouse.org/blog/communication/2019/03/10/improving-our-communication-a-tweet-thread-and-discussion.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/blog/communication/2019/03/10/improving-our-communication-a-tweet-thread-and-discussion.html</guid>
+        
+        <category>conversation-for-action</category>
+        
+        <category>communication</category>
+        
+        <category>learning</category>
+        
+        <category>post-mortem</category>
+        
+        <category>twitter</category>
+        
+        <category>thread</category>
+        
+        <category>discussion</category>
+        
+        
+        <category>communication</category>
+        
+      </item>
     
       <item>
         <title>Social Media has Eaten My Life</title>
@@ -1599,51 +1755,6 @@ tend to look a bit fake, or CGI.&lt;/p&gt;
         
         
         <category>apod</category>
-        
-      </item>
-    
-      <item>
-        <title>I, Too. Langston Hughes</title>
-        <description>&lt;p&gt;Langston Hughes, black American poet, wrote the poem “I, Too”&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I, too, sing America.&lt;/p&gt;
-
-  &lt;p&gt;I am the darker brother. &lt;br /&gt;
-They send me to eat in the kitchen &lt;br /&gt;
-When company comes, &lt;br /&gt;
-But I laugh, &lt;br /&gt;
-And eat well, &lt;br /&gt;
-And grow strong. &lt;br /&gt;&lt;/p&gt;
-
-  &lt;p&gt;Tomorrow, &lt;br /&gt;
-I’ll be at the table &lt;br /&gt;
-When company comes. &lt;br /&gt;
-Nobody’ll dare &lt;br /&gt;
-Say to me, &lt;br /&gt;
-“Eat in the kitchen,” &lt;br /&gt;
-Then. &lt;br /&gt;&lt;/p&gt;
-
-  &lt;p&gt;Besides, &lt;br /&gt;
-They’ll see how beautiful I am &lt;br /&gt;
-And be ashamed — &lt;br /&gt;&lt;/p&gt;
-
-  &lt;p&gt;I, too, am America.&lt;/p&gt;
-
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Tue, 04 Jul 2017 21:02:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/poems/2017/07/04/i-too-langston-hughes.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/poems/2017/07/04/i-too-langston-hughes.html</guid>
-        
-        <category>poems</category>
-        
-        <category>langston-hughes</category>
-        
-        <category>america</category>
-        
-        
-        <category>poems</category>
         
       </item>
     
