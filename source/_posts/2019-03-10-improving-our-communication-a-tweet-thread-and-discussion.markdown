@@ -105,3 +105,9 @@ This is not necessarily easy, especially when one has one's own opinions that fe
 This is where I feel the role of playing facilitator comes in best: the facilitator's *only* task is to listen and repeat back the group's conversation. This helps all the members of the conversation hear what they said, and see if they can agree with it or not.
 
 Master facilitators will go further than this; they are also good at asking the group open-ended questions to help the group open up conversation and information flow. Beginners should stick to listing and repeating what they heard; learning to do this in a high-fidelity fashion is a skill in and of itself.
+
+## no conclusion
+
+This conversation is far from over, I don't feel there can really ever be enough said about it.
+
+Mostly, I'd like to know what you think. [At-me on twitter](https://twitter.com/tamouse) and let's talk about it.
