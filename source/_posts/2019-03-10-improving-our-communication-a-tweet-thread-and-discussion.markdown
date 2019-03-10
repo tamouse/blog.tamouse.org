@@ -20,6 +20,8 @@ Recently, on twitter, a question came into my feed.
 
 > @tamouse: what's stopping you from doing a post-mortem?
 
+> @tamouse: for the latter, google up "conversation for action" by terry winograd and fernando flores
+
 > @jbeallurks: I'm really just not sure what that would look like. I don't record or make transcripts of conversations, so going over what was said with another person would be tough. Any suggestions? It sounds like you have thoughts and I would like to hear them.
 
 > @tamouse: do it immediately after when you can. as with any after analysis, it's so easy to forget. take notes during when you can, box them on the paper to use some sort of mark to indicate something you want to review.
