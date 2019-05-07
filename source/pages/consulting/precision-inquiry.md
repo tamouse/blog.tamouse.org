@@ -137,7 +137,7 @@ Here, *d(n)* represents the sequence of desired states. The current state is *d(
 
 The rest of the questions further specify the desired state:
 
-* Under what conditions do you want it?
+* Under what circumstances would you *not* want it?
 * When do you want it by?
 * Where do you want it; everywhere, all the time?
 * With whom do you want it?
