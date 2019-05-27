@@ -3,10 +3,10 @@
   <channel>
     <title>&amp;#128045; the tamouse pages</title>
     <description>the rumblings and ramblings of a well-traveled tech-mouse</description>
-    <link>https://blog.tamouse.org/blog/</link>
-    <atom:link href="https://blog.tamouse.org/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 27 May 2019 12:38:57 -0500</pubDate>
-    <lastBuildDate>Mon, 27 May 2019 12:38:57 -0500</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 27 May 2019 13:07:07 -0500</pubDate>
+    <lastBuildDate>Mon, 27 May 2019 13:07:07 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -29,8 +29,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Mon, 27 May 2019 11:19:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/apod/2019/05/27/from-apod-volcano-of-fire-under-the-milky-way.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/apod/2019/05/27/from-apod-volcano-of-fire-under-the-milky-way.html</guid>
+        <link>http://localhost:4000/apod/2019/05/27/from-apod-volcano-of-fire-under-the-milky-way.html</link>
+        <guid isPermaLink="true">http://localhost:4000/apod/2019/05/27/from-apod-volcano-of-fire-under-the-milky-way.html</guid>
         
         <category>apod</category>
         
@@ -51,7 +51,7 @@
         <title>What is a Full-Stack Developer? A personal experience</title>
         <description>&lt;p&gt;There’s been some controversy about the term “Full Stack Developer” recently. There was this image floating around for a while:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/5-minutes-to-go.jpg&quot; alt=&quot;drawing of a horse with a details back end and stick figure front end, labeled 'When there is 5 minutes to go on your test'. used to illustrate the dicongruity of the term 'full-stack developer'. popularized in a tweet by @holtbt&quot; title=&quot;5 minutes to go on the test&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/5-minutes-to-go.jpg&quot; alt=&quot;drawing of a horse with a details back end and stick figure front end, labeled 'When there is 5 minutes to go on your test'. used to illustrate the dicongruity of the term 'full-stack developer'. popularized in a tweet by @holtbt&quot; title=&quot;5 minutes to go on the test&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I understand the concept. No one can be an expert in everything. No one should try. It makes sense to be deep in some area, and broad overall, but to expect any developer to be able to pick up anything on any given web app, software product, infrastructure project, etc, is a real &lt;strong&gt;management&lt;/strong&gt; fallacy, and that is a problem if that’s what your organization counts on.&lt;/p&gt;
 
@@ -92,8 +92,8 @@
 &lt;p&gt;If you label yourself a “Front-end Dev”, or a “Back-end Dev”, or a “Full-Stack Dev”, that’s absolutely great. I don’t believe there’s really a specific problem with labels; I think there can be problems when expectations are assumed because of the label, which is also inevitable. How important is how you label yourself to you? How long do you think you’ll keep it?&lt;/p&gt;
 </description>
         <pubDate>Sun, 28 Apr 2019 04:18:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/programming/2019/04/28/what-is-a-full-stack-developer-a-personal-experience.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/programming/2019/04/28/what-is-a-full-stack-developer-a-personal-experience.html</guid>
+        <link>http://localhost:4000/programming/2019/04/28/what-is-a-full-stack-developer-a-personal-experience.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2019/04/28/what-is-a-full-stack-developer-a-personal-experience.html</guid>
         
         <category>full-stack</category>
         
@@ -252,8 +252,8 @@
 &lt;p&gt;Mostly, I’d like to know what you think. &lt;a href=&quot;https://twitter.com/tamouse&quot;&gt;At-me on twitter&lt;/a&gt; and let’s talk about it.&lt;/p&gt;
 </description>
         <pubDate>Sun, 10 Mar 2019 14:26:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/communication/2019/03/10/improving-our-communication-a-tweet-thread-and-discussion.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/communication/2019/03/10/improving-our-communication-a-tweet-thread-and-discussion.html</guid>
+        <link>http://localhost:4000/communication/2019/03/10/improving-our-communication-a-tweet-thread-and-discussion.html</link>
+        <guid isPermaLink="true">http://localhost:4000/communication/2019/03/10/improving-our-communication-a-tweet-thread-and-discussion.html</guid>
         
         <category>conversation-for-action</category>
         
@@ -335,8 +335,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 05 Jan 2019 16:23:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/life/2019/01/05/social-media-has-eaten-my-life.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/life/2019/01/05/social-media-has-eaten-my-life.html</guid>
+        <link>http://localhost:4000/life/2019/01/05/social-media-has-eaten-my-life.html</link>
+        <guid isPermaLink="true">http://localhost:4000/life/2019/01/05/social-media-has-eaten-my-life.html</guid>
         
         <category>Social Media</category>
         
@@ -402,8 +402,8 @@ May &amp;lt;person&amp;gt; be healthy. &lt;br /&gt;
 May &amp;lt;person&amp;gt; live with ease. &lt;br /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Jan 2019 16:04:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/sprirituality/2019/01/05/buddhist-metta-of-lovingkindness.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/sprirituality/2019/01/05/buddhist-metta-of-lovingkindness.html</guid>
+        <link>http://localhost:4000/sprirituality/2019/01/05/buddhist-metta-of-lovingkindness.html</link>
+        <guid isPermaLink="true">http://localhost:4000/sprirituality/2019/01/05/buddhist-metta-of-lovingkindness.html</guid>
         
         <category>Buddhism</category>
         
@@ -532,8 +532,8 @@ Lake Erie = Erielhonan&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         <pubDate>Sat, 25 Aug 2018 23:47:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/racism/2018/08/25/twitter-anitracism-101-vogelbeer.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/racism/2018/08/25/twitter-anitracism-101-vogelbeer.html</guid>
+        <link>http://localhost:4000/racism/2018/08/25/twitter-anitracism-101-vogelbeer.html</link>
+        <guid isPermaLink="true">http://localhost:4000/racism/2018/08/25/twitter-anitracism-101-vogelbeer.html</guid>
         
         <category>racims</category>
         
@@ -579,8 +579,8 @@ Tizzy seas on melon collie! &lt;br /&gt;
 Dibble-dabble, scribble-scrabble! Goof, Goof, Goof!&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Apr 2018 22:49:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/humour/2018/04/04/deck-us-all-with-boston-charlie.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/humour/2018/04/04/deck-us-all-with-boston-charlie.html</guid>
+        <link>http://localhost:4000/humour/2018/04/04/deck-us-all-with-boston-charlie.html</link>
+        <guid isPermaLink="true">http://localhost:4000/humour/2018/04/04/deck-us-all-with-boston-charlie.html</guid>
         
         <category>humour</category>
         
@@ -1278,8 +1278,8 @@ to leave me. Although the text remains in substance unaltered, I have
 indulged in the author’s prerogative of polishing it for publication.&lt;/p&gt;
 </description>
         <pubDate>Mon, 15 Jan 2018 13:39:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/people/2018/01/15/martin-luther-king-jrs-letter-from-a-birmingham-jail.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/people/2018/01/15/martin-luther-king-jrs-letter-from-a-birmingham-jail.html</guid>
+        <link>http://localhost:4000/people/2018/01/15/martin-luther-king-jrs-letter-from-a-birmingham-jail.html</link>
+        <guid isPermaLink="true">http://localhost:4000/people/2018/01/15/martin-luther-king-jrs-letter-from-a-birmingham-jail.html</guid>
         
         <category>people</category>
         
@@ -1319,8 +1319,8 @@ Meloncholy&lt;/em&gt;, read by Amanda Palmer.)
 &lt;/small&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 27 Dec 2017 23:44:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/quotes/2017/12/27/quote-chekhov-no-cure.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/quotes/2017/12/27/quote-chekhov-no-cure.html</guid>
+        <link>http://localhost:4000/quotes/2017/12/27/quote-chekhov-no-cure.html</link>
+        <guid isPermaLink="true">http://localhost:4000/quotes/2017/12/27/quote-chekhov-no-cure.html</guid>
         
         <category>chekhov</category>
         
@@ -1346,8 +1346,8 @@ image&lt;/a&gt; up by flickr user &lt;a href=&quot;https://www.flickr.com/people
 oldest match.&lt;/p&gt;
 </description>
         <pubDate>Wed, 27 Dec 2017 21:32:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/poetry/2017/12/27/winter-a-poem-short.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/poetry/2017/12/27/winter-a-poem-short.html</guid>
+        <link>http://localhost:4000/poetry/2017/12/27/winter-a-poem-short.html</link>
+        <guid isPermaLink="true">http://localhost:4000/poetry/2017/12/27/winter-a-poem-short.html</guid>
         
         <category>poems</category>
         
