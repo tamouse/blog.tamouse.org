@@ -252,8 +252,8 @@ th {
     border: 1px solid #ddd !important; } }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/assets/fonts/glyphicons-halflings-regular.eot");
-  src: url("/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("/blog/assets/fonts/glyphicons-halflings-regular.eot");
+  src: url("/blog/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/blog/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/blog/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/blog/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/blog/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 .glyphicon {
   position: relative;
   top: 1px;
@@ -5868,7 +5868,7 @@ button.close {
   font-style: italic; }
 
 .front-page-hero {
-  background: #000 url(/images/beach-chair-painting.jpg) 50% 70%;
+  background: #000 url(/blog/images/beach-chair-painting.jpg) 50% 70%;
   background-size: cover;
   color: #eeeeee;
   text-shadow: 2px 2px 4px #555555; }
