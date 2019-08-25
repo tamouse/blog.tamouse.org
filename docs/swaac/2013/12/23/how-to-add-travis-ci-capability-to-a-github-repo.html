@@ -232,7 +232,7 @@ a secret token, which is just a hashed string, and is quite suitable
 for the secret key base. The above setting results in travis running
 the following at the start of the build:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">SECRET_KEY_BASE</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>bundle <span class="nb">exec </span>rake secret<span class="k">)</span><span class="s2">"</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">SECRET_KEY_BASE</span><span class="o">=</span><span class="s2">"</span><span class="si">$(</span>bundle <span class="nb">exec </span>rake secret<span class="si">)</span><span class="s2">"</span>
 </code></pre></div></div>
 
 <p>which gives us exactly what we need for the run.</p>
@@ -248,7 +248,7 @@ that version. Travis by default uses Postgresql v. 9.1, so we need to
 tell it what to use. The <code class="highlighter-rouge">addons</code> section lets us specify the version:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">addons</span><span class="pi">:</span>
-  <span class="na">postgresql</span><span class="pi">:</span> <span class="s">9.2</span>
+  <span class="na">postgresql</span><span class="pi">:</span> <span class="m">9.2</span>
 </code></pre></div></div>
 
 <h3 id="prerequisite-steps">Prerequisite Steps</h3>
@@ -362,7 +362,7 @@ if this were a deployment.</p>
   <span class="s">RAILS_ENV=test</span>
   <span class="s">SECRET_KEY_BASE="$(bundle exec rake secret)"</span>
 <span class="na">addons</span><span class="pi">:</span>
-  <span class="na">postgresql</span><span class="pi">:</span> <span class="s">9.2</span>
+  <span class="na">postgresql</span><span class="pi">:</span> <span class="m">9.2</span>
 </code></pre></div></div>
 
 <h2 id="triggering-a-travis-run">Triggering a Travis Run</h2>
