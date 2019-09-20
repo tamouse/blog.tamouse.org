@@ -1,0 +1,57 @@
+
+==================================================================
+https://keybase.io/tamouse_
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://tamouse.org
+  * I am tamouse_ (https://keybase.io/tamouse_) on keybase.
+  * I have a public key ASCSPr8eBRTtlcupWed7SBx8X5H5GPMEK-flUd8b7QsjAgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d7f7ba4c40950dc901486cf83455422a2029dc4279988d0022ae952d2f7587450a",
+      "host": "keybase.io",
+      "kid": "0120923ebf1e0514ed95cba959e77b481c7c5f91f918f3042be7e551df1bed0b23020a",
+      "uid": "44a8adf33d2c7c35756db80b91d0e419",
+      "username": "tamouse_"
+    },
+    "merkle_root": {
+      "ctime": 1566772038,
+      "hash": "7dd8f4e7cfde769f58b6cb281990f49d5898210dd476274b2b4456d12c858fcc3291ab289778287d45af8670b441129751ebd3632fd19b9c9271a2828076f6d3",
+      "hash_meta": "796cb005fb33365693ee5fa774780f3f258376ae37fa7ac087569325d2f5455b",
+      "seqno": 6097184
+    },
+    "service": {
+      "entropy": "6iaf3ynKHWZd9W/SFjpLp5gK",
+      "hostname": "tamouse.org",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.3.2"
+  },
+  "ctime": 1566772062,
+  "expire_in": 504576000,
+  "prev": "771b0e7ec31553121b1df52c562c4f9d35c78e9d0522ac1612a73005a4c5c748",
+  "seqno": 66,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgkj6/HgUU7ZXLqVnne0gcfF+R+RjzBCvn5VHfG+0LIwIKp3BheWxvYWTESpcCQsQgdxsOfsMVUxIbHfUsVixPnTXHjp0FIqwWEqcwBaTFx0jEIE14Y4jpc2vxbMitV5IyaPMsVySpUMse1QCOW44DKHpuAgHCo3NpZ8RAO2XsEJc/eYlJw6vb1NHKDDeGR4d3Tm+3Hra1M/WuegXfhko18kkAonWxo72+nlOrLh+K5aBi7es0W2edvClXCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIH2d3MS/yM8Tw/AlH4l530idYpaQd6HWZgpENGSTr+x+o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tamouse_
+
+==================================================================

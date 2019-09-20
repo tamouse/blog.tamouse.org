@@ -5922,3 +5922,18 @@ figure.figure-img {
   figure.figure-img figcaption .figure-img-caption {
     font-size: 0.85em;
     font-style: italic; }
+
+#pinboard-feed {
+  border: 1px solid #7833B7;
+  font-size: 12px; }
+  #pinboard-feed h3 {
+    font-size: 14px; }
+  #pinboard-feed h4 {
+    font-size: 12px; }
+  #pinboard-feed ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    #pinboard-feed ul li {
+      margin: 0;
+      padding: 0; }
