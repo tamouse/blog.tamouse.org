@@ -146,6 +146,12 @@
   padding: 3px;
 }
 
+.bordered-img img {
+  border: 1px solid $gray-dark;
+  padding: 3px;
+  box-shadow: 5px 5px 5px $gray;
+}
+
 @media (min-width: $screen-md-min) {
 
   .vertcenter-container {

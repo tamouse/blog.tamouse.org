@@ -5878,6 +5878,11 @@ button.close {
   margin: 3px auto;
   padding: 3px; }
 
+.bordered-img img {
+  border: 1px solid #333333;
+  padding: 3px;
+  box-shadow: 5px 5px 5px #555555; }
+
 @media (min-width: 992px) {
   .vertcenter-container {
     display: table;
