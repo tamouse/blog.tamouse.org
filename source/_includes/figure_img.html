@@ -1,6 +1,15 @@
+<div class="figure-card">
 <figure class="figure-img">
     <img src="{{ include.image }}" class="figure-img-image" alt="{{ include.caption }}" />
-    {% if include.caption %}<figcaption>
-        <div class="figure-img-caption">{{ include.caption }}</div>
-    </figcaption>{% endif %}
+    <figcaption>
+      <div class="figure-img-caption">
+        {% if include.caption %}
+        {{ include.caption }}
+        {% endif %}
+        {% if include.href %}
+        <div class="small pull-right"><a class="btn btn-secondary" href="{{ include.href }}" target="_blank" rel="noopener noreferrer">{{ include.text }}</a></div>
+        {% endif %}
+      </div>
+    </figcaption>
 </figure>
+</div>

@@ -5917,6 +5917,9 @@ img.carousel-img-60vh {
     img.carousel-img-60vh {
       height: 60vh !important; } }
 
+.figure-card {
+  margin-bottom: 3em; }
+
 figure.figure-img {
   text-align: center;
   width: 100%;
