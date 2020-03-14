@@ -5,9 +5,30 @@
     <description>the rumblings and ramblings of a well-traveled tech-mouse</description>
     <link>https://blog.tamouse.org/blog/</link>
     <atom:link href="https://blog.tamouse.org/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 27 Feb 2020 09:31:06 -0600</pubDate>
-    <lastBuildDate>Thu, 27 Feb 2020 09:31:06 -0600</lastBuildDate>
+    <pubDate>Fri, 13 Mar 2020 21:48:46 -0500</pubDate>
+    <lastBuildDate>Fri, 13 Mar 2020 21:48:46 -0500</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Link: Amamzing Invisible Glass Rube Goldberg Machine (Laughing Squid)</title>
+        <description>&lt;p&gt;From &lt;a href=&quot;https://laughingsquid.com/&quot;&gt;Laughing Squid&lt;/a&gt; comes a report of an invention of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Rube_Goldberg_machine&quot;&gt;Rube Goldberg-type machine&lt;/a&gt; with “invisible glass”. Coolest thing I’ve seen today.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/C4i7qu7JFMk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Link: &lt;a href=&quot;https://laughingsquid.com/invisible-glass-rube-goldberg-machine/&quot;&gt;https://laughingsquid.com/invisible-glass-rube-goldberg-machine/&lt;/a&gt;&lt;br /&gt;
+Youtube Video: &lt;a href=&quot;https://youtu.be/C4i7qu7JFMk&quot;&gt;https://youtu.be/C4i7qu7JFMk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;TL;DR: (spoiler): they use an oil that has the same refractive properties as glass to make the glass inserted in the oil to “disapear” – since they are the same refractive index, light does not bend around the glass, so no edges become visible. Pretty cool!&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 13 Mar 2020 21:41:00 -0500</pubDate>
+        <link>https://blog.tamouse.org/blog/cool-things/2020/03/13/link-amamzing-invisible-glass-rube-goldberg-machine-laughing-squid.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/blog/cool-things/2020/03/13/link-amamzing-invisible-glass-rube-goldberg-machine-laughing-squid.html</guid>
+        
+        
+        <category>cool-things</category>
+        
+      </item>
     
       <item>
         <title>Link: Thoughts on Leonard Peltier's 44th year of imprisonment</title>
@@ -674,34 +695,6 @@ get free&lt;/p&gt;
         
         
         <category>links</category>
-        
-      </item>
-    
-      <item>
-        <title>Link: Amazing Art of Diana Smith</title>
-        <description>&lt;p&gt;Incredible art by &lt;a href=&quot;https://diana-adrianne.com&quot;&gt;Diana Smith&lt;/a&gt; made using only HTML and CSS:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/cyanharlow/purecss-lace&quot;&gt;&lt;img src=&quot;/blog/images/diana-smith-art.jpg&quot; alt=&quot;Paining in HTML &amp;amp; CSS inspired by Flemish baroque artists&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 20 Nov 2019 00:00:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/art/2019/11/20/link-amazing-art-of-diana-smith.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/art/2019/11/20/link-amazing-art-of-diana-smith.html</guid>
-        
-        <category>art</category>
-        
-        <category>artists</category>
-        
-        <category>code</category>
-        
-        <category>html</category>
-        
-        <category>css</category>
-        
-        <category>link</category>
-        
-        
-        <category>art</category>
         
       </item>
     
