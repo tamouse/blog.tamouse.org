@@ -5924,6 +5924,9 @@ figure.figure-img {
   text-align: center;
   width: 100%;
   margin: 10px auto; }
+  @media (min-width: 700px) {
+    figure.figure-img {
+      max-width: 50%; } }
   figure.figure-img img.figure-img-image {
     width: 95%;
     min-width: 95%; }
