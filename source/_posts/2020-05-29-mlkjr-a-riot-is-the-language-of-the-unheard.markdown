@@ -15,6 +15,7 @@ Tag line: a riot is the language of the unheard
 Tags: racism  
 Topic: Liberation  
 URL: https://youtu.be/_K0BWXjJv5s?t=100  
+Source: "The Other America" speech given at Stanford in 1967
 
 [https://www.youtube.com/watch?v=_K0BWXjJv5s](https://www.youtube.com/watch?v=_K0BWXjJv5s)
 
@@ -37,3 +38,9 @@ URL: https://youtu.be/_K0BWXjJv5s?t=100
 > No other American group has been a slave on American soil.
 
 > Another thing is the American Negro has high visibility, and because of the prejudices existing in the country, his color has been against him. It's been against him and they've used this to keep him from moving up. In the final analysis, when you say to a man that you are in this position because of your race or because of your color, you say to that man that he can never get out of it. Other racial groups have been able to change their accent or change their names, but the Negro can't.
+
+More:
+
+- ["The Other America" speech transcript](https://www.crmvet.org/docs/otheram.htm)
+- [Video of "The Other America" speech delivered at Stanford](https://youtu.be/dOWDtDUKz-U)
+
