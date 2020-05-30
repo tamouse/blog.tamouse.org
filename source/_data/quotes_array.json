@@ -55,12 +55,7 @@
     "cite": "Mitch Garnaat",
     "source": "https://twitter.com/garnaat/status/224548752252346368",
     "text": "\nI think most people thing (sic) programming is cold, precise, and\nmechanical. It's actually creative, perplexing and deeply\npersonal.\n",
-    "keywords": [
-      "programming",
-      "software",
-      "swaac",
-      "creativity"
-    ],
+    "keywords": ["programming", "software", "swaac", "creativity"],
     "note": "\nI've said similar things many times, not quite so eloquently\nas this, however. I do wish more people understood the quite joys\nand pains of bringing a software project to fruition.\n",
     "node": "programming_creative_perplexing_personal"
   },
@@ -68,10 +63,7 @@
     "cite": "Jane Addams (The first woman to be awarded the Nobel Peace Prize in 1931 for her work in philosophy and women's rights.)",
     "text": "\nTrue peace is not merely the absence of war, it is the presence of justice.\n",
     "img": "jane.addams.peace.justice.jpg",
-    "keywords": [
-      "peace",
-      "justice"
-    ],
+    "keywords": ["peace", "justice"],
     "node": "true_peace_Addams"
   },
   {
@@ -82,10 +74,7 @@
   {
     "cite": "Michel Foucault, _History of Sexuality, Volume 1_, 1974",
     "text": "\nWhere there is power, there is resistance\n",
-    "keywords": [
-      "power",
-      "resistance"
-    ],
+    "keywords": ["power", "resistance"],
     "node": "power_and_resistance_Foucault"
   },
   {
@@ -369,6 +358,13 @@
     "cite": "Iain Quinn, Watercolor Artist, June 2014, p. 47",
     "text": "In the old days, I would have cut off any\narea that was 'wrong.' But, in fact, lots of so-called\nerrors are easily removed. After all, what's a mistake? These days,\nif I think I've done something wrong, I put the painting away and go\nback to it later rather than binning it. It can be a case of coming\nto terms with something that may not be quite what was intended, but\nis perfectly OK.\n",
     "node": "embracing_challenges"
+  },
+  {
+    "node": "mlk_riot_language_unheard",
+    "text": "A riot is the language of the unheard",
+    "cite": "Dr. Martin Luther King, Jr., 'The Other America' speech, Stanford, September 1967",
+    "source": "https://www.crmvet.org/docs/otheram.htm",
+    "video": "https://www.youtube.com/watch?v=dOWDtDUKz-U&feature=youtu.be"
   },
   {
     "text": "\nFirst, I must confess that over the past few years I have been gravely disappointed with the white moderate.\n",
