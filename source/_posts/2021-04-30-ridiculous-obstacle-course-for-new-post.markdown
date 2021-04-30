@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ridiculous Obastacle Course for new Post"
+title: "Ridiculous Obstacle Course for new Post"
 date: 2021-04-30 07:31
 categories: [misc]
 tags: [writing, jekyll, git, time]

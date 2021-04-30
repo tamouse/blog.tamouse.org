@@ -84,7 +84,7 @@ td, th { padding: 0; }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print { *, *:before, *:after { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; } a, a:visited { text-decoration: underline; } a[href]:after { content: " (" attr(href) ")"; } abbr[title]:after { content: " (" attr(title) ")"; } a[href^="#"]:after, a[href^="javascript:"]:after { content: ""; } pre, blockquote { border: 1px solid #999; page-break-inside: avoid; } thead { display: table-header-group; } tr, img { page-break-inside: avoid; } img { max-width: 100% !important; } p, h2, h3 { orphans: 3; widows: 3; } h2, h3 { page-break-after: avoid; } .navbar { display: none; } .btn > .caret, .dropup > .btn > .caret { border-top-color: #000 !important; } .label { border: 1px solid #000; } .table { border-collapse: collapse !important; } .table td, .table th { background-color: #fff !important; } .table-bordered th, .table-bordered td { border: 1px solid #ddd !important; } }
 
-@font-face { font-family: 'Glyphicons Halflings'; src: url("/blog/assets/fonts/glyphicons-halflings-regular.eot"); src: url("/blog/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/blog/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/blog/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/blog/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/blog/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+@font-face { font-family: 'Glyphicons Halflings'; src: url("/assets/fonts/glyphicons-halflings-regular.eot"); src: url("/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
 .glyphicon { position: relative; top: 1px; display: inline-block; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
@@ -2470,7 +2470,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .quote-notes { padding: 10px 20px; font-size: 90%; font-style: italic; }
 
-.front-page-hero { background: #000 url(/blog/images/beach-chair-painting.jpg) 50% 70%; background-size: cover; color: #eeeeee; text-shadow: 2px 2px 4px #555555; }
+.front-page-hero { background: #000 url(/images/beach-chair-painting.jpg) 50% 70%; background-size: cover; color: #eeeeee; text-shadow: 2px 2px 4px #555555; }
 
 .img-frame-center { border: 1px solid #333333; margin: 3px auto; padding: 3px; }
 

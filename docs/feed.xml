@@ -3,14 +3,14 @@
   <channel>
     <title>&amp;#128045; the tamouse pages</title>
     <description>the rumblings and ramblings of a well-traveled tech-mouse</description>
-    <link>https://blog.tamouse.org/blog/</link>
-    <atom:link href="https://blog.tamouse.org/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 30 Apr 2021 07:56:04 -0500</pubDate>
-    <lastBuildDate>Fri, 30 Apr 2021 07:56:04 -0500</lastBuildDate>
+    <link>https://blog.tamouse.org/</link>
+    <atom:link href="https://blog.tamouse.org/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 30 Apr 2021 08:20:35 -0500</pubDate>
+    <lastBuildDate>Fri, 30 Apr 2021 08:20:35 -0500</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
-        <title>Ridiculous Obastacle Course for new Post</title>
+        <title>Ridiculous Obstacle Course for new Post</title>
         <description>&lt;p&gt;It takes too long to get the point of writing something, that I’ve forgotten what I want to write.&lt;/p&gt;
 
 &lt;p&gt;I seem to have built myself a ridiculously long process to write a blog post, where my blog repo is not on the machine.&lt;/p&gt;
@@ -24,8 +24,8 @@
 &lt;p&gt;It could also be said I have too many computers I do personal stuff on. I need to sort that out, too.&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Apr 2021 07:31:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/misc/2021/04/30/ridiculous-obastacle-course-for-new-post.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/misc/2021/04/30/ridiculous-obastacle-course-for-new-post.html</guid>
+        <link>https://blog.tamouse.org/misc/2021/04/30/ridiculous-obstacle-course-for-new-post.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/misc/2021/04/30/ridiculous-obstacle-course-for-new-post.html</guid>
         
         <category>writing</category>
         
@@ -104,8 +104,8 @@ Source: “The Other America” speech given at Stanford in 1967&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 29 May 2020 01:18:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/politics/2020/05/29/mlkjr-a-riot-is-the-language-of-the-unheard.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/politics/2020/05/29/mlkjr-a-riot-is-the-language-of-the-unheard.html</guid>
+        <link>https://blog.tamouse.org/politics/2020/05/29/mlkjr-a-riot-is-the-language-of-the-unheard.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/politics/2020/05/29/mlkjr-a-riot-is-the-language-of-the-unheard.html</guid>
         
         <category>racism</category>
         
@@ -118,7 +118,7 @@ Source: “The Other America” speech given at Stanford in 1967&lt;/p&gt;
         <title>New Stamps: Voices of the Harlem Renaissance</title>
         <description>&lt;p&gt;The 2020 Blacks in History commemorative stamp series is “Voices of the Harlem Renaissance” and it is &lt;strong&gt;gorgeous!&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-05-27/stamp-block-voices-of-the-harlem-renaissance.jpg&quot; alt=&quot;Stamp block of Voices of the Harlem Renaissance&quot; title=&quot;2020 commemorative stamp collection for Black History Month: Voices of the Harlem Renaissance&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2020-05-27/stamp-block-voices-of-the-harlem-renaissance.jpg&quot; alt=&quot;Stamp block of Voices of the Harlem Renaissance&quot; title=&quot;2020 commemorative stamp collection for Black History Month: Voices of the Harlem Renaissance&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There are four distinct stamps in this set:&lt;/p&gt;
 
@@ -128,7 +128,7 @@ Source: “The Other America” speech given at Stanford in 1967&lt;/p&gt;
 
 &lt;div class=&quot;figure-card&quot;&gt;
 &lt;figure class=&quot;figure-img&quot;&gt;
-    &lt;img src=&quot;/blog/images/2020-05-27/NellaLarsen.jpg&quot; class=&quot;figure-img-image&quot; alt=&quot;Nella Larsen&quot; /&gt;
+    &lt;img src=&quot;/images/2020-05-27/NellaLarsen.jpg&quot; class=&quot;figure-img-image&quot; alt=&quot;Nella Larsen&quot; /&gt;
     &lt;figcaption&gt;
       &lt;div class=&quot;figure-img-caption&quot;&gt;
         
@@ -146,7 +146,7 @@ Source: “The Other America” speech given at Stanford in 1967&lt;/p&gt;
 
 &lt;div class=&quot;figure-card&quot;&gt;
 &lt;figure class=&quot;figure-img&quot;&gt;
-    &lt;img src=&quot;/blog/images/2020-05-27/ArturoSchomburg.jpg&quot; class=&quot;figure-img-image&quot; alt=&quot;Arturo Schomburg&quot; /&gt;
+    &lt;img src=&quot;/images/2020-05-27/ArturoSchomburg.jpg&quot; class=&quot;figure-img-image&quot; alt=&quot;Arturo Schomburg&quot; /&gt;
     &lt;figcaption&gt;
       &lt;div class=&quot;figure-img-caption&quot;&gt;
         
@@ -164,7 +164,7 @@ Source: “The Other America” speech given at Stanford in 1967&lt;/p&gt;
 
 &lt;div class=&quot;figure-card&quot;&gt;
 &lt;figure class=&quot;figure-img&quot;&gt;
-    &lt;img src=&quot;/blog/images/2020-05-27/AnneSpencer.jpg&quot; class=&quot;figure-img-image&quot; alt=&quot;Anne Spencer&quot; /&gt;
+    &lt;img src=&quot;/images/2020-05-27/AnneSpencer.jpg&quot; class=&quot;figure-img-image&quot; alt=&quot;Anne Spencer&quot; /&gt;
     &lt;figcaption&gt;
       &lt;div class=&quot;figure-img-caption&quot;&gt;
         
@@ -182,7 +182,7 @@ Source: “The Other America” speech given at Stanford in 1967&lt;/p&gt;
 
 &lt;div class=&quot;figure-card&quot;&gt;
 &lt;figure class=&quot;figure-img&quot;&gt;
-    &lt;img src=&quot;/blog/images/2020-05-27/AlainLocke.jpg&quot; class=&quot;figure-img-image&quot; alt=&quot;Alain Locke&quot; /&gt;
+    &lt;img src=&quot;/images/2020-05-27/AlainLocke.jpg&quot; class=&quot;figure-img-image&quot; alt=&quot;Alain Locke&quot; /&gt;
     &lt;figcaption&gt;
       &lt;div class=&quot;figure-img-caption&quot;&gt;
         
@@ -197,8 +197,8 @@ Source: “The Other America” speech given at Stanford in 1967&lt;/p&gt;
 &lt;p&gt;The stamps are available through the &lt;a href=&quot;https://store.usps.com/store/results?Ntt=Voices+of+the+Harlem+Renaissance&amp;amp;_requestid=888758&quot; target=&quot;_blank&quot;&gt;USPS Store&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 27 May 2020 10:46:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/history/2020/05/27/new-stamps-voices-of-the-harlem-renaissance.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/history/2020/05/27/new-stamps-voices-of-the-harlem-renaissance.html</guid>
+        <link>https://blog.tamouse.org/history/2020/05/27/new-stamps-voices-of-the-harlem-renaissance.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/history/2020/05/27/new-stamps-voices-of-the-harlem-renaissance.html</guid>
         
         <category>stamps</category>
         
@@ -290,8 +290,8 @@ Source: “The Other America” speech given at Stanford in 1967&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 14 May 2020 07:57:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/travel/2020/05/14/things-to-do-in-minneapolis.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/travel/2020/05/14/things-to-do-in-minneapolis.html</guid>
+        <link>https://blog.tamouse.org/travel/2020/05/14/things-to-do-in-minneapolis.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/travel/2020/05/14/things-to-do-in-minneapolis.html</guid>
         
         <category>minneapolis</category>
         
@@ -323,8 +323,8 @@ Youtube Video: &lt;a href=&quot;https://youtu.be/C4i7qu7JFMk&quot;&gt;https://yo
 
 </description>
         <pubDate>Fri, 13 Mar 2020 21:41:00 -0500</pubDate>
-        <link>https://blog.tamouse.org/blog/cool-things/2020/03/13/link-amamzing-invisible-glass-rube-goldberg-machine-laughing-squid.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/cool-things/2020/03/13/link-amamzing-invisible-glass-rube-goldberg-machine-laughing-squid.html</guid>
+        <link>https://blog.tamouse.org/cool-things/2020/03/13/link-amamzing-invisible-glass-rube-goldberg-machine-laughing-squid.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/cool-things/2020/03/13/link-amamzing-invisible-glass-rube-goldberg-machine-laughing-squid.html</guid>
         
         
         <category>cool-things</category>
@@ -347,7 +347,7 @@ Youtube Video: &lt;a href=&quot;https://youtu.be/C4i7qu7JFMk&quot;&gt;https://yo
 
 &lt;p&gt;In 2015, then President Obama granted clemency to nearly 50 federal prisoners serving sentences for drug-related crimes. Yet Leonard Peltier has never been convicted for the crimes he is accused of, having had no trial, instead he is being held in custody without trial or sentencing. In other words, &lt;strong&gt;he is a political prisoner&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/Leonard-Peltier.jpg&quot; alt=&quot;Leonard Peltier, Native American Indian, Political Prisoner&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Leonard-Peltier.jpg&quot; alt=&quot;Leonard Peltier, Native American Indian, Political Prisoner&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;History may look on Leonard as a radical Native extremist who shot two law enforcement officers. But after speaking with those who knew him, I’ll always see Leonard as a genuinely nice guy, with a good sense of humor, who stood up for his people and protected them.&lt;/p&gt;
@@ -362,8 +362,8 @@ Youtube Video: &lt;a href=&quot;https://youtu.be/C4i7qu7JFMk&quot;&gt;https://yo
 &lt;p&gt;Source: &lt;a href=&quot;https://lastrealindians.com/news/2020/2/7/thoughts-on-leonard-peltiers-44th-year-of-imprisonment-by-people-who-know-him-by-frank-hopper&quot;&gt;https://lastrealindians.com/news/2020/2/7/thoughts-on-leonard-peltiers-44th-year-of-imprisonment-by-people-who-know-him-by-frank-hopper&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 26 Feb 2020 18:38:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/politics/2020/02/26/link-thoughts-on-leonard-peltiers-s44th-year-of-imprisonment.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/politics/2020/02/26/link-thoughts-on-leonard-peltiers-s44th-year-of-imprisonment.html</guid>
+        <link>https://blog.tamouse.org/politics/2020/02/26/link-thoughts-on-leonard-peltiers-s44th-year-of-imprisonment.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/politics/2020/02/26/link-thoughts-on-leonard-peltiers-s44th-year-of-imprisonment.html</guid>
         
         <category>injustice</category>
         
@@ -389,8 +389,8 @@ Youtube Video: &lt;a href=&quot;https://youtu.be/C4i7qu7JFMk&quot;&gt;https://yo
 
 </description>
         <pubDate>Wed, 26 Feb 2020 18:26:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/critters/2020/02/26/video-sugar-glider-leap.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/critters/2020/02/26/video-sugar-glider-leap.html</guid>
+        <link>https://blog.tamouse.org/critters/2020/02/26/video-sugar-glider-leap.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/critters/2020/02/26/video-sugar-glider-leap.html</guid>
         
         <category>sugar-glider</category>
         
@@ -685,8 +685,8 @@ Youtube Video: &lt;a href=&quot;https://youtu.be/C4i7qu7JFMk&quot;&gt;https://yo
 
 </description>
         <pubDate>Tue, 31 Dec 2019 00:00:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/photography/2019/12/31/link-usatoday-2019-in-pictures.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/photography/2019/12/31/link-usatoday-2019-in-pictures.html</guid>
+        <link>https://blog.tamouse.org/photography/2019/12/31/link-usatoday-2019-in-pictures.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/photography/2019/12/31/link-usatoday-2019-in-pictures.html</guid>
         
         <category>usatoday</category>
         
@@ -705,13 +705,13 @@ Youtube Video: &lt;a href=&quot;https://youtu.be/C4i7qu7JFMk&quot;&gt;https://yo
         <title>Tweet: Nativity Scene at Claremont UMC</title>
         <description>&lt;p&gt;Suitable Nativity Scene given the current climate for how we treat immigrants in the U.S. in 2019.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/mattrindge/status/1203556607033929729&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/blog/images/tweet-nativity-at-claremont-umc.jpg&quot; alt=&quot;mary, joseph, and baby jesus held in separate cages as nativity scened outside Claremont United Methodist Church&quot; title=&quot;The nativity scene at Claremont United Methodist church.&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/mattrindge/status/1203556607033929729&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/images/tweet-nativity-at-claremont-umc.jpg&quot; alt=&quot;mary, joseph, and baby jesus held in separate cages as nativity scened outside Claremont United Methodist Church&quot; title=&quot;The nativity scene at Claremont United Methodist church.&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Link: &lt;a href=&quot;https://twitter.com/mattrindge/status/1203556607033929729&quot;&gt;https://twitter.com/mattrindge/status/1203556607033929729&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 Dec 2019 16:31:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/politics/2019/12/08/tweet-nativity-scene-at-claremont-umc.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/politics/2019/12/08/tweet-nativity-scene-at-claremont-umc.html</guid>
+        <link>https://blog.tamouse.org/politics/2019/12/08/tweet-nativity-scene-at-claremont-umc.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/politics/2019/12/08/tweet-nativity-scene-at-claremont-umc.html</guid>
         
         <category>immigration</category>
         
@@ -728,13 +728,13 @@ Youtube Video: &lt;a href=&quot;https://youtu.be/C4i7qu7JFMk&quot;&gt;https://yo
         <title>Link: APOD: Electric Night</title>
         <description>&lt;p&gt;The APOD image “Electric Night” captures my imagination in so many ways.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://apod.nasa.gov/apod/ap191204.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/blog/images/apod191204-electric-night.jpg&quot; alt=&quot;Electric Night @ APOD&quot; title=&quot;Electric Night on APOD, 2019-12-04&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://apod.nasa.gov/apod/ap191204.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;img src=&quot;/images/apod191204-electric-night.jpg&quot; alt=&quot;Electric Night @ APOD&quot; title=&quot;Electric Night on APOD, 2019-12-04&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Link: &lt;a href=&quot;https://apod.nasa.gov/apod/ap191204.html&quot;&gt;https://apod.nasa.gov/apod/ap191204.html&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 Dec 2019 16:11:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/apod/2019/12/08/link-apod-electric-night.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/apod/2019/12/08/link-apod-electric-night.html</guid>
+        <link>https://blog.tamouse.org/apod/2019/12/08/link-apod-electric-night.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/apod/2019/12/08/link-apod-electric-night.html</guid>
         
         <category>lightning</category>
         
