@@ -5,9 +5,40 @@
     <description>the rumblings and ramblings of a well-traveled tech-mouse</description>
     <link>https://blog.tamouse.org/blog/</link>
     <atom:link href="https://blog.tamouse.org/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 05 Apr 2021 09:23:32 -0500</pubDate>
-    <lastBuildDate>Mon, 05 Apr 2021 09:23:32 -0500</lastBuildDate>
-    <generator>Jekyll v3.8.6</generator>
+    <pubDate>Fri, 30 Apr 2021 07:56:04 -0500</pubDate>
+    <lastBuildDate>Fri, 30 Apr 2021 07:56:04 -0500</lastBuildDate>
+    <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Ridiculous Obastacle Course for new Post</title>
+        <description>&lt;p&gt;It takes too long to get the point of writing something, that I’ve forgotten what I want to write.&lt;/p&gt;
+
+&lt;p&gt;I seem to have built myself a ridiculously long process to write a blog post, where my blog repo is not on the machine.&lt;/p&gt;
+
+&lt;p&gt;I’m writing this entry in Notion [and subsequently copy/pasted into emacs], which isn’t really how I want to make blog posts, but at least I can get something out of my head while I wait for bundler to finish.&lt;/p&gt;
+
+&lt;p&gt;I need to fix this.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/doctorow&quot; title=&quot;writer, speaker, thinker, freedom figher&quot;&gt;Cory Doctorow&lt;/a&gt; has talked about a process he uses to source his work and then push it out to the various places he posts, i.e. twitter, others, and his blog(s).&lt;/p&gt;
+
+&lt;p&gt;It could also be said I have too many computers I do personal stuff on. I need to sort that out, too.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Apr 2021 07:31:00 -0500</pubDate>
+        <link>https://blog.tamouse.org/blog/misc/2021/04/30/ridiculous-obastacle-course-for-new-post.html</link>
+        <guid isPermaLink="true">https://blog.tamouse.org/blog/misc/2021/04/30/ridiculous-obastacle-course-for-new-post.html</guid>
+        
+        <category>writing</category>
+        
+        <category>jekyll</category>
+        
+        <category>git</category>
+        
+        <category>time</category>
+        
+        
+        <category>misc</category>
+        
+      </item>
     
       <item>
         <title>MLKJr: A riot is the language of the unheard</title>
@@ -713,69 +744,6 @@ Youtube Video: &lt;a href=&quot;https://youtu.be/C4i7qu7JFMk&quot;&gt;https://yo
         
         
         <category>apod</category>
-        
-      </item>
-    
-      <item>
-        <title>@salesses on twitter: white people, get free</title>
-        <description>&lt;p&gt;A poignant plea, from a father, to his mother on behalf of his child, and for all white people to become free of racism, fear, and colonialism.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;This country keeps white people so untrue to and unaware of themselves by tying their sense of inherent worth to their race. White people, get free.&lt;/p&gt;&amp;mdash; Matthew Salesses (@salesses) &lt;a href=&quot;https://twitter.com/salesses/status/1203464245402308608?ref_src=twsrc%5Etfw&quot;&gt;December 8, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;h2 id=&quot;unfurled-thread&quot;&gt;Unfurled thread:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;My mom just cried and said she doesn’t know what to do anymore because I asked her to please this time read my daughter a book about a person of color.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is ofc bec she isn’t ready to admit to herself her own racial bias, so every time she starts to feel it she has to reinterpret it as an attack in order to protect herself from her guilt. And it takes time &amp;amp; work, but either way the person who loses is my own kid. Sigh.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Tho if you can’t do this when you have raised three adopted kids of color and now have grandkids of color then what hope is there&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This country keeps white people so untrue to and unaware of themselves by tying their sense of inherent worth to their race. White people, get free.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Dear white people, you are holding yourselves captive to your fear of being no better than an Asian man or Black woman.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;You are holding yourselves captive to your fear of being as little in control and as much a subject of institutionalized hatred as the people you won’t admit you feel better than.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;We have been trying to save you your whole lives, but we can’t, and many of us have died and will die trying to save you whether we are willing to die for that or not, because you won’t save yourselves.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Good God&lt;br /&gt;
-get free&lt;br /&gt;
-get free&lt;br /&gt;
-get free&lt;/p&gt;
-
-  &lt;p&gt;#racism&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Sat, 07 Dec 2019 12:00:00 -0600</pubDate>
-        <link>https://blog.tamouse.org/blog/racism/2019/12/07/at-salesses-on-twitter-white-people-get-free.html</link>
-        <guid isPermaLink="true">https://blog.tamouse.org/blog/racism/2019/12/07/at-salesses-on-twitter-white-people-get-free.html</guid>
-        
-        <category>racism</category>
-        
-        <category>family</category>
-        
-        <category>parents</category>
-        
-        <category>children</category>
-        
-        
-        <category>racism</category>
         
       </item>
     

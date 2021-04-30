@@ -8,7 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>"Tail recursion is it's own reward" -- xkcd.com/1270 | &#128045; the tamouse pages</title>
   <meta name="description" content="Thanks again, Randall, for a stunningly amusing comic:
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -181,13 +180,13 @@ number, which is the formula:</p>
 
 <p>And below is how it is implemented in Common Lisp:</p>
 
-<pre><code class="language-lisp">(defun factorial (n)
-  (if (= n 0)
-      1
-      (* n (factorial (- n 1)))
-  )
-)
-</code></pre>
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">factorial</span> <span class="p">(</span><span class="nv">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">=</span> <span class="nv">n</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="mi">1</span>
+      <span class="p">(</span><span class="nb">*</span> <span class="nv">n</span> <span class="p">(</span><span class="nv">factorial</span> <span class="p">(</span><span class="nb">-</span> <span class="nv">n</span> <span class="mi">1</span><span class="p">)))</span>
+  <span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div></div>
 
 
 </article>

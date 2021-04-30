@@ -10,7 +10,6 @@
   <meta name="description" content="Note: I tried playing with this in
 ~/Project/rubystuff/railsstuff/my_newer_app/spec/controllers/shout_controller_spec.rb
 and could not quite get it to work.
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -153,7 +152,7 @@ Sep 17, 2013
 </header>
 
 <p><strong>Note:</strong> I tried playing with this in
-<code class="highlighter-rouge">~/Project/rubystuff/railsstuff/my_newer_app/spec/controllers/shout_controller_spec.rb</code>
+<code class="language-plaintext highlighter-rouge">~/Project/rubystuff/railsstuff/my_newer_app/spec/controllers/shout_controller_spec.rb</code>
 and could not quite get it to work.</p>
 
 <!--more-->
@@ -164,7 +163,7 @@ and could not quite get it to work.</p>
   <p>I’m looking to send raw post data (e.g. unparamaterized json) to one of
 my controllers for testing: ``</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class LegacyOrderUpdateControllerTest &lt; ActionController::TestCase
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class LegacyOrderUpdateControllerTest &lt; ActionController::TestCase
  test "sending json" do
    post :index, '{"foo":"bar", "bool":true}'
  end
@@ -172,14 +171,14 @@ end
 </code></pre></div>  </div>
 
   <p>but this gives me a
-<code class="highlighter-rouge">NoMethodError: undefined method </code>symbolize_keys’ for #<String:0x00000102cb6080>`</String:0x00000102cb6080></p>
+<code class="language-plaintext highlighter-rouge">NoMethodError: undefined method </code>symbolize_keys’ for #&lt;String:0x00000102cb6080&gt;`</p>
 
   <p>What is the correct way to send raw post data in
 ActionController::TestCase?</p>
 
   <p>Here is some controller code</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def index
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def index
     post_data = request.body.read
     req = JSON.parse(post_data)
 </code></pre></div>  </div>
@@ -191,7 +190,7 @@ ActionController::TestCase?</p>
   <p>In your test_helper.rb define the following method inside of
 ActiveSupport::TestCase:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  def raw_post(action, params, body)
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  def raw_post(action, params, body)
     @request.env['RAW_POST_DATA'] = body
     response = post(action, params)
     @request.env.delete('RAW_POST_DATA')
@@ -199,10 +198,10 @@ ActiveSupport::TestCase:</p>
   end
 </code></pre></div>  </div>
 
-  <p>In your functional test, use it just like the <code class="highlighter-rouge">post</code> method but pass the
+  <p>In your functional test, use it just like the <code class="language-plaintext highlighter-rouge">post</code> method but pass the
 raw post body as the third argument.</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class LegacyOrderUpdateControllerTest &lt; ActionController::TestCase
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class LegacyOrderUpdateControllerTest &lt; ActionController::TestCase
  test "sending json" do
    raw_post :index, {}, {:foo =&gt; "bar", :bool =&gt; true}.to_json
  end
@@ -211,12 +210,12 @@ end
 
   <p>I tested this on Rails 2.3.4 when reading the raw post body using</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>request.raw_post
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>request.raw_post
 </code></pre></div>  </div>
 
   <p>instead of</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>request.body.read
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>request.body.read
 </code></pre></div>  </div>
 
   <p>If you look at the <a href="http://github.com/rails/rails/blob/2-3-stable/actionpack/lib/action_controller/request.rb#L381">source code</a>
@@ -240,7 +239,7 @@ the rspec post request. What you do is to populate the
 
   <p>Here my final solution.</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def do_create(attributes)
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def do_create(attributes)
   request.env['RAW_POST_DATA'] = attributes.to_json
   post :create, attributes
 end 
@@ -249,10 +248,10 @@ end
   <p>In the controller the code you need to read the JSON is something
 similar to this</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  @property = Property.new(JSON.parse(request.body.read))
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  @property = Property.new(JSON.parse(request.body.read))
 </code></pre></div>  </div>
 
-  <p>great! Just one line, and I had it work even without the <code class="highlighter-rouge">attributes</code>
+  <p>great! Just one line, and I had it work even without the <code class="language-plaintext highlighter-rouge">attributes</code>
 sent in to post.</p>
 </blockquote>
 
@@ -271,21 +270,21 @@ properly.</p>
 
   <p>So all you need is to specify “CONTENT_TYPE”:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post :index, '{"foo":"bar", "bool":true}', "CONTENT_TYPE" =&gt; 'application/json'
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post :index, '{"foo":"bar", "bool":true}', "CONTENT_TYPE" =&gt; 'application/json'
 </code></pre></div>  </div>
 
   <p>This does not work for me. I get an error like “undefined method
 `symbolize_keys’ for #&lt;String:0x00000102b4b0d8&gt;”</p>
 
-  <p>The <code class="highlighter-rouge">post</code> method expects a hash of name-value pairs, so you’ll need to
+  <p>The <code class="language-plaintext highlighter-rouge">post</code> method expects a hash of name-value pairs, so you’ll need to
 do something like this:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post :index, :data =&gt; '{"foo":"bar", "bool":true}'
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post :index, :data =&gt; '{"foo":"bar", "bool":true}'
 </code></pre></div>  </div>
 
   <p>Then, in your controller, get the data to be parsed like this:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post_data = params[:data]
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post_data = params[:data]
 </code></pre></div>  </div>
 
   <p>I’ve tried this, it needs to be completely raw though
@@ -293,23 +292,23 @@ do something like this:</p>
 at ‘data=</p>
 
   <p>If you are using RSpec (&gt;= 2.12.0) and writing Request specs, the
-module that is included is <code class="highlighter-rouge">ActionDispatch::Integration::Runner</code>. If you
+module that is included is <code class="language-plaintext highlighter-rouge">ActionDispatch::Integration::Runner</code>. If you
 take a look at the source code you can notice that the
 <a href="https://github.com/rails/rails/blob/4147e0feaddac0e86c9b1f52eec4b1e33d7d6591/actionpack/lib/action_dispatch/testing/integration.rb#L39">post</a>
 method calls
 <a href="https://github.com/rails/rails/blob/4147e0feaddac0e86c9b1f52eec4b1e33d7d6591/actionpack/lib/action_dispatch/testing/integration.rb#L254">process</a>
-which accepts a <code class="highlighter-rouge">rack_env</code> parameter.</p>
+which accepts a <code class="language-plaintext highlighter-rouge">rack_env</code> parameter.</p>
 
   <p>All this means that you can simply do the following in your spec:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#spec/requests/articles_spec.rb
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#spec/requests/articles_spec.rb
 
 post '/articles', {}, {'RAW_POST_DATA' =&gt; 'something'}
 </code></pre></div>  </div>
 
   <p>And in the controller:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/controllers/articles_controller.rb
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#app/controllers/articles_controller.rb
 
 def create
   puts request.body.read
@@ -319,7 +318,7 @@ end
   <p>Maybe it’s the way you’re formatting your JSON, it might need to be
 escaped some how? Try doing this:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post :index, :data =&gt; {:foo =&gt; 'bar', :bool =&gt; true }.to_json
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post :index, :data =&gt; {:foo =&gt; 'bar', :bool =&gt; true }.to_json
 </code></pre></div>  </div>
 
   <p>This will turn the hash into json, and hopefully that should work. If

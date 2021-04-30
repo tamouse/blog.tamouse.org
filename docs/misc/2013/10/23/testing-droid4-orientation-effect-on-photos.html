@@ -10,7 +10,6 @@
   <meta name="description" content="A correspondent was showing a picture they had posted from their phone
 (running iOS7) that was in the wrong orientation (was showing
 landscape instead of portrait). Delving deeper, some findings…
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -156,7 +155,7 @@ Oct 23, 2013
 (running iOS7) that was in the wrong orientation (was showing
 landscape instead of portrait). Delving deeper, some findings…</p>
 
-<p>Apparently, iOS7 uses the exif tag <code class="highlighter-rouge">Orientation</code> to tell when the
+<p>Apparently, iOS7 uses the exif tag <code class="language-plaintext highlighter-rouge">Orientation</code> to tell when the
 phone is in something other than horizontal. This seems logical, but
 it does not work with some programs. In particular, it seems web
 browsers don’t have any clue about this field or it’s setting. This
@@ -168,7 +167,7 @@ the photo renders upside down as well.</p>
 <p>So I wondered what happens on the Droid4.</p>
 
 <p>The android phone camera software seems to be doing it right. The
-<code class="highlighter-rouge">Orientation</code> tag is <strong>always</strong> set to <code class="highlighter-rouge">Horizontal</code>, and the image
+<code class="language-plaintext highlighter-rouge">Orientation</code> tag is <strong>always</strong> set to <code class="language-plaintext highlighter-rouge">Horizontal</code>, and the image
 orientation is actually processed in the phone to the way the phone is
 held.</p>
 

@@ -12,7 +12,6 @@ I’m a pretty lazy person, and I hate to have to do things
 repetitively, and if I can get the computer to do it for me, I’ll
 write a script. (Although I admit this sometimes devolves into
 Yak shaving.)
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -183,7 +182,7 @@ Ruby.</p>
 <h2 id="generating--what">generating – what?</h2>
 
 <p>I have often started off a learning exercise by creating a gem skeleton
-with <code class="highlighter-rouge">bundler</code> :</p>
+with <code class="language-plaintext highlighter-rouge">bundler</code> :</p>
 
 <noscript><pre>400: Invalid request</pre></noscript>
 <script src="https://gist.github.com/9439598.js?file=bundler-gem"> </script>
@@ -206,63 +205,63 @@ out:</p>
 
 <p>Several of these might remain empty or unused, but it’s a great
 starting point for me. If I do wish to turn it into a gem, All I need
-do is add a <code class="highlighter-rouge">.gemspec</code> file.</p>
+do is add a <code class="language-plaintext highlighter-rouge">.gemspec</code> file.</p>
 
 <h1 id="gems">gems</h1>
 
 <p>I also have my favourite set of gems that I like to start out with:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">rspec</code> - my testing framework of choice</li>
-  <li><code class="highlighter-rouge">guard</code> - for continuous testing</li>
-  <li><code class="highlighter-rouge">guard-rspec</code> - to watch rspec tests</li>
-  <li><code class="highlighter-rouge">guard-bundler</code> - to watch changes to Gemfile</li>
-  <li><code class="highlighter-rouge">pry</code> - my REPL of choice</li>
-  <li><code class="highlighter-rouge">pry-nav</code> - nice navigation inside pry</li>
-  <li><code class="highlighter-rouge">pry-git</code> - link to git for blaming code</li>
-  <li><code class="highlighter-rouge">pry-doc</code> - link to internal documentation</li>
-  <li><code class="highlighter-rouge">pry-remote</code> - to attach to a remote ruby process</li>
-  <li><code class="highlighter-rouge">pry-rescue</code> - to jump into the pry REPL if an exception happens</li>
-  <li><code class="highlighter-rouge">pry-byebug</code> - debugger for ruby MRI 2.x</li>
-  <li><code class="highlighter-rouge">pry-stack_explorer</code> - to jump up down or sideways in the execution stack</li>
-  <li><code class="highlighter-rouge">awesome_print</code> - really nice looking output, integrated into pry</li>
-  <li><code class="highlighter-rouge">rb-readline</code> - a necessary evil running on the Mac</li>
-  <li><code class="highlighter-rouge">coolline</code> - nice colouriser</li>
-  <li><code class="highlighter-rouge">coderay</code> - syntax highlighting on the fly in pry</li>
+  <li><code class="language-plaintext highlighter-rouge">rspec</code> - my testing framework of choice</li>
+  <li><code class="language-plaintext highlighter-rouge">guard</code> - for continuous testing</li>
+  <li><code class="language-plaintext highlighter-rouge">guard-rspec</code> - to watch rspec tests</li>
+  <li><code class="language-plaintext highlighter-rouge">guard-bundler</code> - to watch changes to Gemfile</li>
+  <li><code class="language-plaintext highlighter-rouge">pry</code> - my REPL of choice</li>
+  <li><code class="language-plaintext highlighter-rouge">pry-nav</code> - nice navigation inside pry</li>
+  <li><code class="language-plaintext highlighter-rouge">pry-git</code> - link to git for blaming code</li>
+  <li><code class="language-plaintext highlighter-rouge">pry-doc</code> - link to internal documentation</li>
+  <li><code class="language-plaintext highlighter-rouge">pry-remote</code> - to attach to a remote ruby process</li>
+  <li><code class="language-plaintext highlighter-rouge">pry-rescue</code> - to jump into the pry REPL if an exception happens</li>
+  <li><code class="language-plaintext highlighter-rouge">pry-byebug</code> - debugger for ruby MRI 2.x</li>
+  <li><code class="language-plaintext highlighter-rouge">pry-stack_explorer</code> - to jump up down or sideways in the execution stack</li>
+  <li><code class="language-plaintext highlighter-rouge">awesome_print</code> - really nice looking output, integrated into pry</li>
+  <li><code class="language-plaintext highlighter-rouge">rb-readline</code> - a necessary evil running on the Mac</li>
+  <li><code class="language-plaintext highlighter-rouge">coolline</code> - nice colouriser</li>
+  <li><code class="language-plaintext highlighter-rouge">coderay</code> - syntax highlighting on the fly in pry</li>
 </ul>
 
 <p>These are in the Gemfile in a default group. If I were to release the
-project as something, I’d move these into the <code class="highlighter-rouge">:development</code> and
-<code class="highlighter-rouge">:test</code> groups.</p>
+project as something, I’d move these into the <code class="language-plaintext highlighter-rouge">:development</code> and
+<code class="language-plaintext highlighter-rouge">:test</code> groups.</p>
 
-<h2 id="continuous-testing-with-guard">continuous testing with <code class="highlighter-rouge">guard</code></h2>
+<h2 id="continuous-testing-with-guard">continuous testing with <code class="language-plaintext highlighter-rouge">guard</code></h2>
 
 <p><a href="https://github.com/guard/guard">Guard</a> is a fabulous system that
 builds on <em>top</em> of <a href="http://pryrepl.org">pry</a> that watches various
 directories and reruns tests (or other commands if you set it up
 to). I have the Guardfile in the generator, though, because
-out-of-the-box <code class="highlighter-rouge">guard-rspec</code> does not run <code class="highlighter-rouge">rspec</code> bundled, and I’m
-nearly <em>always</em> running under <code class="highlighter-rouge">bundler</code>.</p>
+out-of-the-box <code class="language-plaintext highlighter-rouge">guard-rspec</code> does not run <code class="language-plaintext highlighter-rouge">rspec</code> bundled, and I’m
+nearly <em>always</em> running under <code class="language-plaintext highlighter-rouge">bundler</code>.</p>
 
 <p>The modification is simple:</p>
 
 <noscript><pre>400: Invalid request</pre></noscript>
 <script src="https://gist.github.com/9439598.js?file=Guardfile"> </script>
 
-<p>You add the <code class="highlighter-rouge">:cmd</code> to the <code class="highlighter-rouge">rspec</code> <code class="highlighter-rouge">watch</code> section. But it’s just one more thing to have
+<p>You add the <code class="language-plaintext highlighter-rouge">:cmd</code> to the <code class="language-plaintext highlighter-rouge">rspec</code> <code class="language-plaintext highlighter-rouge">watch</code> section. But it’s just one more thing to have
 to remember and slow me down.</p>
 
-<p>A difference between <code class="highlighter-rouge">bundle gem</code> and <code class="highlighter-rouge">guard-rspec</code> is that the former
-expects spec tests to live directly under the <code class="highlighter-rouge">spec/</code> directory, while
-the latter figures the <code class="highlighter-rouge">lib/</code> structure is mirrored under
-<code class="highlighter-rouge">spec/</code>. This isn’t such a big deal, but it is one more thing to think
+<p>A difference between <code class="language-plaintext highlighter-rouge">bundle gem</code> and <code class="language-plaintext highlighter-rouge">guard-rspec</code> is that the former
+expects spec tests to live directly under the <code class="language-plaintext highlighter-rouge">spec/</code> directory, while
+the latter figures the <code class="language-plaintext highlighter-rouge">lib/</code> structure is mirrored under
+<code class="language-plaintext highlighter-rouge">spec/</code>. This isn’t such a big deal, but it is one more thing to think
 about, and I’m often puzzled why things don’t work. (Convention over
 configuration, perhaps not enough time spent together.)</p>
 
 <h2 id="so-what-about-thor-again">so what about thor, again?</h2>
 
 <p>Thor seems all about generating things. Included in
-<a href="http://rdoc.info/github/wycats/thor/master/Thor/Actions"><code class="highlighter-rouge">Thor::Actions</code></a>
+<a href="http://rdoc.info/github/wycats/thor/master/Thor/Actions"><code class="language-plaintext highlighter-rouge">Thor::Actions</code></a>
 are some really useful items for copying, converting, templating, and
 so on. There are also commands for interacting with the user, should
 that prove necessary.</p>
@@ -277,20 +276,20 @@ that prove necessary.</p>
 <h3 id="thorgroup">Thor::Group</h3>
 
 <p>The first thing we make is the class declaration for our thor
-command. The class inherits from <code class="highlighter-rouge">Thor::Group</code> instead of from <code class="highlighter-rouge">Thor</code>
+command. The class inherits from <code class="language-plaintext highlighter-rouge">Thor::Group</code> instead of from <code class="language-plaintext highlighter-rouge">Thor</code>
 proper. This causes the defined methods to be executed in order,
 rather than creating individual sub-commands, as is the case when you
-inherit from <code class="highlighter-rouge">Thor</code>. This essentially turns the command into a script,
+inherit from <code class="language-plaintext highlighter-rouge">Thor</code>. This essentially turns the command into a script,
 which is how we usually want things done in a generator.</p>
 
 <h3 id="thoractions">Thor::Actions</h3>
 
-<p>We include <code class="highlighter-rouge">Thor::Actions</code> in our class to give us the useful tools
-for interacting with the user (<code class="highlighter-rouge">say</code>, <code class="highlighter-rouge">ask</code>, etc ), as well as the
-building tools, <code class="highlighter-rouge">create_file</code>, <code class="highlighter-rouge">copy_file</code>, <code class="highlighter-rouge">template</code>, and so on.</p>
+<p>We include <code class="language-plaintext highlighter-rouge">Thor::Actions</code> in our class to give us the useful tools
+for interacting with the user (<code class="language-plaintext highlighter-rouge">say</code>, <code class="language-plaintext highlighter-rouge">ask</code>, etc ), as well as the
+building tools, <code class="language-plaintext highlighter-rouge">create_file</code>, <code class="language-plaintext highlighter-rouge">copy_file</code>, <code class="language-plaintext highlighter-rouge">template</code>, and so on.</p>
 
-<p>In this generator, I’m using <code class="highlighter-rouge">template</code> nearly everywhere, as it
-copies a source file with <code class="highlighter-rouge">ERB</code> directives in it and writes out the
+<p>In this generator, I’m using <code class="language-plaintext highlighter-rouge">template</code> nearly everywhere, as it
+copies a source file with <code class="language-plaintext highlighter-rouge">ERB</code> directives in it and writes out the
 result to the destination.</p>
 
 <h3 id="argument-name">argument :name</h3>
@@ -304,7 +303,7 @@ case, the name of the new ruby project.</p>
 destination, and options, with passing a block if there are further
 things that need to be done.</p>
 
-<p>The source is determined by the class method <code class="highlighter-rouge">source_root</code>. The
+<p>The source is determined by the class method <code class="language-plaintext highlighter-rouge">source_root</code>. The
 default method ends up using the current working directory as the
 source root. Redefining the class method permits the author to specify
 a completely different directory to use as the source root folder.</p>
@@ -319,20 +318,20 @@ quite possible to put pretty much anything as the first argument, but
 what we really only want are the alpha-numeric bits, which we will
 consider as project name components.</p>
 
-<p>Supplying things like <code class="highlighter-rouge">Able &amp; Louis: Go @@CRAXY@@</code> would end up as
-name components <code class="highlighter-rouge">["Able", "Louis", "Go", "CRAXY"]</code>. The components are
+<p>Supplying things like <code class="language-plaintext highlighter-rouge">Able &amp; Louis: Go @@CRAXY@@</code> would end up as
+name components <code class="language-plaintext highlighter-rouge">["Able", "Louis", "Go", "CRAXY"]</code>. The components are
 used by later methods to construct useful names for things.</p>
 
 <h3 id="def-snake_name">def snake_name</h3>
 
-<p>Here’s one now: out of something like <code class="highlighter-rouge">["Able", "Louis", "Go", "CRAXY"]</code>, 
-would come <code class="highlighter-rouge">able_louis_go_craxy</code>, which is a very nice name for files
+<p>Here’s one now: out of something like <code class="language-plaintext highlighter-rouge">["Able", "Louis", "Go", "CRAXY"]</code>, 
+would come <code class="language-plaintext highlighter-rouge">able_louis_go_craxy</code>, which is a very nice name for files
 and directories, where this is usually used.</p>
 
 <h3 id="def-camel_name">def camel_name</h3>
 
-<p>The other method using <code class="highlighter-rouge">name_components</code>, this will produce
-<code class="highlighter-rouge">AbleLouisGoCraxy</code> which gives us our useful module name.</p>
+<p>The other method using <code class="language-plaintext highlighter-rouge">name_components</code>, this will produce
+<code class="language-plaintext highlighter-rouge">AbleLouisGoCraxy</code> which gives us our useful module name.</p>
 
 <h3 id="def-copy_files">def copy_files</h3>
 

@@ -152,13 +152,13 @@ Nov 2, 2014
 </header>
 
 <p>(Reposting from my old <a href="http://wiki.tamouse.org/n=Technology.ConvertingInstanceVariablesToAHashInRuby">wiki</a>):
-On a recent post in ruby-talk, the question was asked how to convert something to <code class="highlighter-rouge">YAML</code>. Extending this generally to ruby objects, I went searching for something that would work besides a brute-force creation of a Hash.</p>
+On a recent post in ruby-talk, the question was asked how to convert something to <code class="language-plaintext highlighter-rouge">YAML</code>. Extending this generally to ruby objects, I went searching for something that would work besides a brute-force creation of a Hash.</p>
 
 <h2 id="introduction">Introduction</h2>
 
 <p>The original request was to be able to generate the following YAML from a result:</p>
 
-<p><code class="highlighter-rouge">desired_output.yaml</code>:</p>
+<p><code class="language-plaintext highlighter-rouge">desired_output.yaml</code>:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
 <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">device-1</span>
@@ -191,7 +191,7 @@ On a recent post in ruby-talk, the question was asked how to convert something t
 
 <p>Let’s say we build a couple of classes that can be used with the above information (ignoring that it may have come from a database for the non).</p>
 
-<p><code class="highlighter-rouge">classes.rb</code>:</p>
+<p><code class="language-plaintext highlighter-rouge">classes.rb</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Classes to convert to yaml</span>
 
@@ -222,7 +222,7 @@ On a recent post in ruby-talk, the question was asked how to convert something t
 
 <p>If we load up an array with the above classes using the data from the original request, we can see this:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pry -r yaml -r ./classes.rb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pry -r yaml -r ./classes.rb
 [1] pry(main)&gt; deployments = Array.new
 =&gt; []
 [2] pry(main)&gt; deployments &lt;&lt; Deploy.new("device-1",
@@ -260,7 +260,7 @@ On a recent post in ruby-talk, the question was asked how to convert something t
 <p>While close, simply YAMLizing an Object doesn’t give us what we want – when loaded, it will look for the classes Deploy and Params to create objects from. We don’t want this, exactly, we just want it in the form originally requested. When reread by an application that does not define
 these classes, we get an error:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pry -r yaml
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pry -r yaml
 [1] pry(main)&gt; YAML.load_file("direct_to_yaml_output.yaml")
 ArgumentError: undefined class/module Deploy
 from /opt/rubies/ruby-2.1.2/lib/ruby/2.1.0/psych/class_loader.rb:53:in `path2class'
@@ -269,9 +269,9 @@ from /opt/rubies/ruby-2.1.2/lib/ruby/2.1.0/psych/class_loader.rb:53:in `path2cla
 
 <h2 id="how-to-just-get-the-instance-variables-into-a-hash">How to just get the instance variables into a Hash?</h2>
 
-<p>In <a href="http://stackoverflow.com/questions/7638982/better-way-to-convert-several-instance-variables-into-hash-with-ruby">this question</a> on stackoverflow, one of the respondents points to the <a href="http://www.rubydoc.info/stdlib/core/Object:instance_variables"><code class="highlighter-rouge">instance_variables</code></a> method on <code class="highlighter-rouge">Object</code> in ruby. This is pretty simple, and could be more helpful in a non-Rails environment. I decided to write a recursive version that can be mixed into a class:</p>
+<p>In <a href="http://stackoverflow.com/questions/7638982/better-way-to-convert-several-instance-variables-into-hash-with-ruby">this question</a> on stackoverflow, one of the respondents points to the <a href="http://www.rubydoc.info/stdlib/core/Object:instance_variables"><code class="language-plaintext highlighter-rouge">instance_variables</code></a> method on <code class="language-plaintext highlighter-rouge">Object</code> in ruby. This is pretty simple, and could be more helpful in a non-Rails environment. I decided to write a recursive version that can be mixed into a class:</p>
 
-<p><code class="highlighter-rouge">instance_valude_extension.rb</code>:</p>
+<p><code class="language-plaintext highlighter-rouge">instance_valude_extension.rb</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">InstanceValuesExtension</span>
 
@@ -300,7 +300,7 @@ from /opt/rubies/ruby-2.1.2/lib/ruby/2.1.0/psych/class_loader.rb:53:in `path2cla
 
 <p>Using that same data above, we can get;</p>
 
-<p><code class="highlighter-rouge">example.rb</code>:</p>
+<p><code class="language-plaintext highlighter-rouge">example.rb</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="vg">$:</span><span class="p">.</span><span class="nf">unshift</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">expand_path</span><span class="p">(</span><span class="s2">"../"</span><span class="p">,</span> <span class="kp">__FILE__</span><span class="p">))</span>
 
@@ -330,7 +330,7 @@ from /opt/rubies/ruby-2.1.2/lib/ruby/2.1.0/psych/class_loader.rb:53:in `path2cla
 
 <p>and Voila!</p>
 
-<p><code class="highlighter-rouge">actual_output.yaml</code>:</p>
+<p><code class="language-plaintext highlighter-rouge">actual_output.yaml</code>:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
 <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">device-1</span>
@@ -348,7 +348,7 @@ from /opt/rubies/ruby-2.1.2/lib/ruby/2.1.0/psych/class_loader.rb:53:in `path2cla
 
 <p>Still, an interesting exercise!</p>
 
-<p>Note, also, this is <em>no</em> substitute for using <code class="highlighter-rouge">ActiveModel::Serializers</code> in Rails.</p>
+<p>Note, also, this is <em>no</em> substitute for using <code class="language-plaintext highlighter-rouge">ActiveModel::Serializers</code> in Rails.</p>
 
 <p>(Source in <a href="">github</a>.)</p>
 

@@ -8,7 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Boosting Your Rails Development Workflow - SitePoint | &#128045; the tamouse pages</title>
   <meta name="description" content="Clipped on 2013-09-04 10:47:19 -0500
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -204,7 +203,7 @@ thing.</p>
   <h4 id="installing">Installing</h4>
 
   <p>As I’ve mentioned, you should have zsh shell already installed. Then,
-run this command to make it the default shell: <code class="highlighter-rouge">chsh -s /bin/zsh</code></p>
+run this command to make it the default shell: <code class="language-plaintext highlighter-rouge">chsh -s /bin/zsh</code></p>
 
   <p>And run this line to download it install it:</p>
 
@@ -216,18 +215,18 @@ run this command to make it the default shell: <code class="highlighter-rouge">c
 
   <h4 id="using">Using</h4>
 
-  <p>To change the theme, open up the <code class="highlighter-rouge">~/.zshrc</code> in a text editor and set the
-value of <code class="highlighter-rouge">ZSH_THEME</code> to the name of the theme. Here’s the list of
+  <p>To change the theme, open up the <code class="language-plaintext highlighter-rouge">~/.zshrc</code> in a text editor and set the
+value of <code class="language-plaintext highlighter-rouge">ZSH_THEME</code> to the name of the theme. Here’s the list of
 <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes">all available themes</a>. You
 should test drive a few and find one that works. Also, if you do
 presentations, you may want to find one that looks good on a projector
 (hint: white on black is bad…)</p>
 
-  <p>To add/remove plug-ins, open the <code class="highlighter-rouge">~/.zshrc</code> file and add/remove the
-plugin name from the <code class="highlighter-rouge">plugins</code> array. Here’s the list of
+  <p>To add/remove plug-ins, open the <code class="language-plaintext highlighter-rouge">~/.zshrc</code> file and add/remove the
+plugin name from the <code class="language-plaintext highlighter-rouge">plugins</code> array. Here’s the list of
 <a href="https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins">all available plugins</a>.
 You’ll find the full source of <strong>oh-my-zsh</strong> on your machine under
-<code class="highlighter-rouge">~/.oh-my-zsh</code>.</p>
+<code class="language-plaintext highlighter-rouge">~/.oh-my-zsh</code>.</p>
 
   <h3 id="2-laptop">2. <a href="https://github.com/thoughtbot/laptop">laptop</a></h3>
 
@@ -278,7 +277,7 @@ you’ve retrieved a large number of objects. Here comes
 
 <blockquote>
 
-  <p>To use it with rails you’ll have to add it your Gemfile, and <code class="highlighter-rouge">bundle</code></p>
+  <p>To use it with rails you’ll have to add it your Gemfile, and <code class="language-plaintext highlighter-rouge">bundle</code></p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
@@ -291,9 +290,9 @@ you’ve retrieved a large number of objects. Here comes
   <h4 id="using-1">Using</h4>
 
   <p>If you want <strong>awesome_print</strong> to be running by default in irb or the
-console, add the two lines to your <code class="highlighter-rouge">.irbrc</code> shown
+console, add the two lines to your <code class="language-plaintext highlighter-rouge">.irbrc</code> shown
 <a href="https://github.com/michaeldv/awesome_print#usage">here</a>. Otherwise, you
-could prepend the line in the console with <code class="highlighter-rouge">ap</code></p>
+could prepend the line in the console with <code class="language-plaintext highlighter-rouge">ap</code></p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span> require <span class="s2">"awesome_print"</span>
@@ -331,8 +330,8 @@ could prepend the line in the console with <code class="highlighter-rouge">ap</c
   <h3 id="4-zeus">4. <a href="https://github.com/burke/zeus">zeus</a></h3>
 
   <p>While you are working on a Rails project, will need to restart your
-server, run various commands like <code class="highlighter-rouge">console</code>, <code class="highlighter-rouge">rake</code>, <code class="highlighter-rouge">generate</code>, <code class="highlighter-rouge">rspec</code>
-and <code class="highlighter-rouge">test</code>. This can take a bit of time, especially when your project
+server, run various commands like <code class="language-plaintext highlighter-rouge">console</code>, <code class="language-plaintext highlighter-rouge">rake</code>, <code class="language-plaintext highlighter-rouge">generate</code>, <code class="language-plaintext highlighter-rouge">rspec</code>
+and <code class="language-plaintext highlighter-rouge">test</code>. This can take a bit of time, especially when your project
 grows and the number of classes and tests increase. That’s why you need
 <strong>zeus</strong>, which preloads your Rails app so all your tasks will run much
 more quickly.</p>
@@ -340,7 +339,7 @@ more quickly.</p>
   <h4 id="installing-2">Installing</h4>
 
   <p>To install <strong>zeus</strong> run this command, or you could add it to your
-Gemfile, and <code class="highlighter-rouge">bundle</code></p>
+Gemfile, and <code class="language-plaintext highlighter-rouge">bundle</code></p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span> gem <span class="nb">install </span>zeus
@@ -351,7 +350,7 @@ Gemfile, and <code class="highlighter-rouge">bundle</code></p>
   <h4 id="using-2">Using</h4>
 
   <p>All you have to do is navigate to your Rails project and run
-<code class="highlighter-rouge">zeus start</code></p>
+<code class="language-plaintext highlighter-rouge">zeus start</code></p>
 
   <p><strong>zeus</strong> will take few seconds to start and then it will list all
 available commands. You’ll need to open a new shell window and run other
@@ -402,7 +401,7 @@ gem <span class="nb">install </span>guard-livereload</code></pre></figure>
 
 <blockquote>
 
-  <p>and then run this, which will create the <code class="highlighter-rouge">Guardfile</code> that will contain
+  <p>and then run this, which will create the <code class="language-plaintext highlighter-rouge">Guardfile</code> that will contain
 the configuration for guard:</p>
 
 </blockquote>
@@ -436,7 +435,7 @@ gem to see your changes live in the browser:</p>
 
 <blockquote>
 
-  <p>and add this line to <code class="highlighter-rouge">config/environments/development.rb</code></p>
+  <p>and add this line to <code class="language-plaintext highlighter-rouge">config/environments/development.rb</code></p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="no">MyApp</span><span class="o">::</span><span class="no">Application</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span>
@@ -467,7 +466,7 @@ between default error page and the better_errors is huge.</p>
   <h4 id="install-1">Install</h4>
 
   <p>Add the gem to your Gemfile. If you want to use the live REPL, you need
-to add the <strong>binding_of_caller</strong> gem also and then <code class="highlighter-rouge">bundle</code></p>
+to add the <strong>binding_of_caller</strong> gem also and then <code class="language-plaintext highlighter-rouge">bundle</code></p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
@@ -492,7 +491,7 @@ method.</p>
   <h3 id="2-rails_panel">2. <a href="https://github.com/dejan/rails_panel">rails_panel</a></h3>
 
   <p>This gem requires a specific Google Chrome extension. The gem is
-<code class="highlighter-rouge">meta_request</code> and the Chrome extension is <code class="highlighter-rouge">rails_panel</code>.</p>
+<code class="language-plaintext highlighter-rouge">meta_request</code> and the Chrome extension is <code class="language-plaintext highlighter-rouge">rails_panel</code>.</p>
 
   <blockquote>
     <p>RailsPanel is a Chrome extension for Rails development that will end
@@ -504,7 +503,7 @@ views and more.</p>
 
   <h4 id="install-2">Install</h4>
 
-  <p>Add the gem to your Gemfile and <code class="highlighter-rouge">bundle</code>. Also, here’s the
+  <p>Add the gem to your Gemfile and <code class="language-plaintext highlighter-rouge">bundle</code>. Also, here’s the
 <a href="https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg">Google Chrome extension</a></p>
 
 </blockquote>
@@ -518,12 +517,12 @@ views and more.</p>
   <h3 id="3-sextant">3. <a href="https://github.com/schneems/sextant">sextant</a></h3>
 
   <p>This gem was merged into rails 4.0 under
-<code class="highlighter-rouge">0.0.0.0:3000/rails/info/routes</code>. However, if you are developing a rails
+<code class="language-plaintext highlighter-rouge">0.0.0.0:3000/rails/info/routes</code>. However, if you are developing a rails
 3.2+ app, you’ll have to install the gem.</p>
 
   <h4 id="install-3">Install</h4>
 
-  <p>Add the gem to your Gemfile and <code class="highlighter-rouge">bundle</code></p>
+  <p>Add the gem to your Gemfile and <code class="language-plaintext highlighter-rouge">bundle</code></p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
@@ -535,8 +534,8 @@ views and more.</p>
 
   <h4 id="using-4">Using</h4>
 
-  <p>Navigate to <code class="highlighter-rouge">0.0.0.0:3000/rails/routes</code> and you’ll see the output of the
-command <code class="highlighter-rouge">rake routes</code> in your browser.</p>
+  <p>Navigate to <code class="language-plaintext highlighter-rouge">0.0.0.0:3000/rails/routes</code> and you’ll see the output of the
+command <code class="language-plaintext highlighter-rouge">rake routes</code> in your browser.</p>
 
   <h3 id="4-quiet_assets">4. <a href="https://github.com/evrone/quiet_assets">quiet_assets</a></h3>
 
@@ -547,7 +546,7 @@ you focus on the requests that are important.</p>
 
   <h4 id="install-4">Install</h4>
 
-  <p>Add the gem to your Gemfile and <code class="highlighter-rouge">bundle</code></p>
+  <p>Add the gem to your Gemfile and <code class="language-plaintext highlighter-rouge">bundle</code></p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
@@ -583,7 +582,7 @@ forms, buttons, tables, grids, navigation, and more.</p>
 
   <h4 id="install-5">Install</h4>
 
-  <p>Add the gems to your Gemfile and <code class="highlighter-rouge">bundle</code></p>
+  <p>Add the gems to your Gemfile and <code class="language-plaintext highlighter-rouge">bundle</code></p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
@@ -633,7 +632,7 @@ connects it all to your existing API over a RESTful JSON interface.</p>
 
   <h4 id="install-6">Install</h4>
 
-  <p>Add the gems to your Gemfile and <code class="highlighter-rouge">bundle</code></p>
+  <p>Add the gems to your Gemfile and <code class="language-plaintext highlighter-rouge">bundle</code></p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
@@ -655,15 +654,15 @@ connects it all to your existing API over a RESTful JSON interface.</p>
 
   <h5 id="model-generator">Model Generator</h5>
 
-  <p><code class="highlighter-rouge">rails g backbone:model</code></p>
+  <p><code class="language-plaintext highlighter-rouge">rails g backbone:model</code></p>
 
   <h5 id="routers-generator">Routers Generator</h5>
 
-  <p><code class="highlighter-rouge">rails g backbone:router</code></p>
+  <p><code class="language-plaintext highlighter-rouge">rails g backbone:router</code></p>
 
   <h5 id="scaffolding-generator">Scaffolding Generator</h5>
 
-  <p><code class="highlighter-rouge">rails g backbone:scaffold</code></p>
+  <p><code class="language-plaintext highlighter-rouge">rails g backbone:scaffold</code></p>
 
   <h2 id="authentication-and-administration">Authentication and Administration</h2>
 
@@ -684,7 +683,7 @@ requirees no introduction.</p>
 
   <h4 id="install-7">Install</h4>
 
-  <p>Add the gem to your Gemfile and <code class="highlighter-rouge">bundle</code></p>
+  <p>Add the gem to your Gemfile and <code class="language-plaintext highlighter-rouge">bundle</code></p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
@@ -713,7 +712,7 @@ devise provides.</p>
 <blockquote>
   <p>You should add this line inside any controller that you want to be
 accessed only by authenticated users, or add it to your
-<code class="highlighter-rouge">ApplicationContrller</code> to require authentication throughout your app:</p>
+<code class="language-plaintext highlighter-rouge">ApplicationContrller</code> to require authentication throughout your app:</p>
 </blockquote>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">before_filter</span> <span class="ss">:authenticate_user!</span></code></pre></figure>
@@ -735,7 +734,7 @@ with very little effort.</p>
 
   <h4 id="install-8">Install</h4>
 
-  <p>Add the gem to your Gemfile and <code class="highlighter-rouge">bundle</code>. You need to add a couple of
+  <p>Add the gem to your Gemfile and <code class="language-plaintext highlighter-rouge">bundle</code>. You need to add a couple of
 other gems if you are running Rails 3.1 or higher:</p>
 
 </blockquote>
@@ -760,15 +759,15 @@ other gems if you are running Rails 3.1 or higher:</p>
 
   <h4 id="using-8">Using</h4>
 
-  <p>Navigate to <code class="highlighter-rouge">0.0.0.0:3000/admin</code> and login using</p>
+  <p>Navigate to <code class="language-plaintext highlighter-rouge">0.0.0.0:3000/admin</code> and login using</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User: admin@example.com
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User: admin@example.com
 Password: password
 </code></pre></div>  </div>
 
   <p>To register a model, run:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rails generate active_admin:resource [MyModelName]
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rails generate active_admin:resource [MyModelName]
 </code></pre></div>  </div>
 
   <h2 id="rails-composer"><a href="https://github.com/RailsApps/rails-composer">rails-composer</a></h2>
@@ -779,8 +778,8 @@ definitely uses most of the gems that we’ve mentioned above, so if you
 want the fast way you can use the script and if you want a specific gem
 you can pick up whatever helps you.</p>
 
-  <p>To create a project with Rails Composer, run the the <code class="highlighter-rouge">rails new</code> command
-as usual with your project name and pass the the <code class="highlighter-rouge">-m</code> parameter as
+  <p>To create a project with Rails Composer, run the the <code class="language-plaintext highlighter-rouge">rails new</code> command
+as usual with your project name and pass the the <code class="language-plaintext highlighter-rouge">-m</code> parameter as
 following</p>
 
 </blockquote>

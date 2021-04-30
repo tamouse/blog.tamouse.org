@@ -13,7 +13,6 @@ applications. Consider writing gems as opposed to putting everything
 into a single application. (You can combine gems into a single
 application, but it makes sense to have separate components that do
 one thing really well.)
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -196,7 +195,7 @@ Initializating git repo <span class="k">in</span> /Users/tamara/Documents/tamous
 </code></pre></div></div>
 
 <p>First thing after this is hop into the new gem’s directory, and modify
-the <code class="highlighter-rouge">.gemspec</code> file:</p>
+the <code class="language-plaintext highlighter-rouge">.gemspec</code> file:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git diff my_gem.gemspec 
 diff <span class="nt">--git</span> a/my_gem.gemspec b/my_gem.gemspec
@@ -222,7 +221,7 @@ index 62ca81d..2cd4451 100644
 watching various directories in your gem’s tree and performing
 specific actions based on modifications in files. Since [RSpec][rspec]
 is my testing tool of choice for Ruby, I include the following in the
-newly-created <code class="highlighter-rouge">.gemspec</code> file:</p>
+newly-created <code class="language-plaintext highlighter-rouge">.gemspec</code> file:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@@ <span class="nt">-21</span>,4 +21,8 @@ Gem::Specification.new <span class="k">do</span> |spec|
    spec.add_development_dependency <span class="s2">"bundler"</span>, <span class="s2">"~&gt; 1.3"</span>
@@ -246,11 +245,11 @@ Organization][guard-org] to see what’s there.</p>
 16:13:24 - INFO - rspec guard added to Guardfile, feel free to edit it
 </code></pre></div></div>
 
-<p>Since we’ve included Guard in the <code class="highlighter-rouge">.gemspec</code> file, we need to run it
-with <code class="highlighter-rouge">bundle exec</code>. An alternative is to leave the Guard stuff out of
-the <code class="highlighter-rouge">.gemspec</code> and use global settings. I prefer to include it.</p>
+<p>Since we’ve included Guard in the <code class="language-plaintext highlighter-rouge">.gemspec</code> file, we need to run it
+with <code class="language-plaintext highlighter-rouge">bundle exec</code>. An alternative is to leave the Guard stuff out of
+the <code class="language-plaintext highlighter-rouge">.gemspec</code> and use global settings. I prefer to include it.</p>
 
-<p>I always edit the resulting <code class="highlighter-rouge">Guardfile</code>, making the following changes:</p>
+<p>I always edit the resulting <code class="language-plaintext highlighter-rouge">Guardfile</code>, making the following changes:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git diff
 diff <span class="nt">--git</span> a/Guardfile b/Guardfile
@@ -292,15 +291,15 @@ index 6b1588c..0e69679 100644
 
 <h1 id="initialize-rspec">Initialize RSpec</h1>
 
-<p>When using the <code class="highlighter-rouge">-t</code> option on <code class="highlighter-rouge">bundle gem</code>, a <code class="highlighter-rouge">spec</code> folder is
+<p>When using the <code class="language-plaintext highlighter-rouge">-t</code> option on <code class="language-plaintext highlighter-rouge">bundle gem</code>, a <code class="language-plaintext highlighter-rouge">spec</code> folder is
 automatically created, containing a dummy spec test and the RSpec
-helper file, <code class="highlighter-rouge">spec_helper.rb</code>. An <code class="highlighter-rouge">.rspec</code> rc file is also included.</p>
+helper file, <code class="language-plaintext highlighter-rouge">spec_helper.rb</code>. An <code class="language-plaintext highlighter-rouge">.rspec</code> rc file is also included.</p>
 
 <p>The dummy spec can be used as a template for other spec files. The
-<code class="highlighter-rouge">spec</code> directory structure should be a mirror analog of the <code class="highlighter-rouge">lib</code>
-directory, including the <code class="highlighter-rouge">lib</code> directory itself:</p>
+<code class="language-plaintext highlighter-rouge">spec</code> directory structure should be a mirror analog of the <code class="language-plaintext highlighter-rouge">lib</code>
+directory, including the <code class="language-plaintext highlighter-rouge">lib</code> directory itself:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir -p spec/lib/my_gem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir -p spec/lib/my_gem
 $ tree
    |-lib
    |---my_gem

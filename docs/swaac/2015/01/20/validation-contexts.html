@@ -15,7 +15,6 @@ wish I had written, and I am thoroughly indebted to Justin for
 writing. The book is exactly the way I go about learning how
 programming concepts, language features, framework features, and all
 that stuff work.
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -178,7 +177,7 @@ which goes even further into the topic.</p>
 <p>You can read (and you <em>should</em> read) those other articles for more
 details. I’m merely going to capture the bottom line here.</p>
 
-<p>In the model, you define validation contexts using the <code class="highlighter-rouge">on:</code> keyword:</p>
+<p>In the model, you define validation contexts using the <code class="language-plaintext highlighter-rouge">on:</code> keyword:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
   <span class="c1"># ...</span>
@@ -187,13 +186,13 @@ details. I’m merely going to capture the bottom line here.</p>
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>To use validation contexts, you pass in the context to the <code class="highlighter-rouge">.valid?</code>
+<p>To use validation contexts, you pass in the context to the <code class="language-plaintext highlighter-rouge">.valid?</code>
 method of the model:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="vi">@post</span><span class="p">.</span><span class="nf">valid?</span><span class="p">(</span><span class="ss">:publish</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>The examples indicate this is can be used in the <code class="highlighter-rouge">PostsController</code> for
+<p>The examples indicate this is can be used in the <code class="language-plaintext highlighter-rouge">PostsController</code> for
 example, but Justin’s book goes even a bit further in explaining how
 they’re really useful in testing, and in the Rails console (i.e. REPL
 driven development).</p>

@@ -15,7 +15,6 @@ starting to look at moving off that wiki and building the information
 there as a static web site instead, as part of my migration away from
 managing a server as I said in my
 introduction.
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -186,9 +185,9 @@ itself.</p>
 <h2 id="how-to-organize-things">How to Organize Things?</h2>
 
 <p>I still haven’t quite gotten this fully fleshed out, but for now, I
-have pages starting from the root directory, <code class="highlighter-rouge">recipes/</code> and
-subdirectories for the major types of food: <code class="highlighter-rouge">main-dishes</code>,
-<code class="highlighter-rouge">side-dishes</code>, <code class="highlighter-rouge">baked-goods</code>, and so on.</p>
+have pages starting from the root directory, <code class="language-plaintext highlighter-rouge">recipes/</code> and
+subdirectories for the major types of food: <code class="language-plaintext highlighter-rouge">main-dishes</code>,
+<code class="language-plaintext highlighter-rouge">side-dishes</code>, <code class="language-plaintext highlighter-rouge">baked-goods</code>, and so on.</p>
 
 <p>I envision that under each of the directories and subdirectories, I
 will generate and index.html page containining links to the
@@ -201,10 +200,10 @@ categories. Hmm.)</p>
 <h2 id="writing-a-liquid-tag">Writing a Liquid Tag</h2>
 
 <p>Jekyll has a liquid tag that lets you write the link to a post by just
-giving it’s slug name: <code class="highlighter-rouge">post_url</code>. There isn’t one for getting the
+giving it’s slug name: <code class="language-plaintext highlighter-rouge">post_url</code>. There isn’t one for getting the
 page’s url given it’s slug, so I wrote one. That was fun and a good
 learning, though I had to embed lots of debug prints to see what was
-going on. I didn’t want to debug with <code class="highlighter-rouge">pry</code> as it involved too many
+going on. I didn’t want to debug with <code class="language-plaintext highlighter-rouge">pry</code> as it involved too many
 loops and steps.</p>
 
 <h2 id="where-to-deploy">Where to Deploy?</h2>
@@ -215,7 +214,7 @@ Gandi. I have that set up to quickly add domains and subdomains, and
 letting it serve up the static files will be neat. I’m currently
 saving the generated files in the git repo; I may change my mind later
 and remove them, and make sure the generate the pages on the remote
-site during an update, which I may automate with <code class="highlighter-rouge">chef-solo</code> which I
+site during an update, which I may automate with <code class="language-plaintext highlighter-rouge">chef-solo</code> which I
 am also playing with.</p>
 
 <h2 id="but-wait-theres-more">But Wait, There’s More!</h2>
@@ -233,8 +232,8 @@ lets you have multiple Rack applications underway in development at
 the same time, without having the bindings collide.</p>
 
 <p>After you install it, all you have to do is symlink your application
-to the <code class="highlighter-rouge">~/.pow/</code> directory, and then you can point your browser at the
-symlink name plus <code class="highlighter-rouge">.dev</code>. So cool!</p>
+to the <code class="language-plaintext highlighter-rouge">~/.pow/</code> directory, and then you can point your browser at the
+symlink name plus <code class="language-plaintext highlighter-rouge">.dev</code>. So cool!</p>
 
 </article>
 

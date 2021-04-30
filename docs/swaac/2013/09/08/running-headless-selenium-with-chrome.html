@@ -8,7 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Running Headless Selenium with Chrome | &#128045; the tamouse pages</title>
   <meta name="description" content="Source http://www.chrisle.me/2013/08/running-headless-selenium-with-chrome/
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -209,7 +208,7 @@ what a virtual machine and Vagrant is.</em></p>
   <p>This file tells Vagrant how configure the testing environment. It
 applies universally to both development and production.</p>
 
-  <p>Create a project directory and create a file named <code class="highlighter-rouge">Vagrantfile</code>:</p>
+  <p>Create a project directory and create a file named <code class="language-plaintext highlighter-rouge">Vagrantfile</code>:</p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span> <span class="c"># encoding: utf-8</span>
@@ -247,8 +246,8 @@ applies universally to both development and production.</p>
   </ol>
 
   <p>The setup.sh file executes when Vagrant creates a virtual machine for
-you. In the same folder as you created your <code class="highlighter-rouge">VagrantFile</code> create a
-<code class="highlighter-rouge">setup.sh</code> file:</p>
+you. In the same folder as you created your <code class="language-plaintext highlighter-rouge">VagrantFile</code> create a
+<code class="language-plaintext highlighter-rouge">setup.sh</code> file:</p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span> <span class="c">#!/bin/sh</span>
@@ -312,7 +311,7 @@ you. In the same folder as you created your <code class="highlighter-rouge">Vagr
   </ol>
 
   <p>On your command line and in the directory where you created the
-<code class="highlighter-rouge">VagrantFile</code>, run the following command:</p>
+<code class="language-plaintext highlighter-rouge">VagrantFile</code>, run the following command:</p>
 
 </blockquote>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span> vagrant up
@@ -334,9 +333,9 @@ It should look like this:</p>
   </ol>
 
   <p>You can check to see if everything is working by going to
-<code class="highlighter-rouge">http://localhost:4444/wd/hub</code>.</p>
+<code class="language-plaintext highlighter-rouge">http://localhost:4444/wd/hub</code>.</p>
 
-  <p>The <code class="highlighter-rouge">VagrantFile</code> has been configured to forward port 4444 on your
+  <p>The <code class="language-plaintext highlighter-rouge">VagrantFile</code> has been configured to forward port 4444 on your
 localhost. This allows you UI control of the Selenium browser. This page
 shows you all the sessions that you’re running in your virtual machine.
 If you see this page, everything is OK.</p>
@@ -354,7 +353,7 @@ If you see this page, everything is OK.</p>
   <p>In order to write NodeJS scripts that talk to Chrome you will need the
 Selenium-Webdriver for NodeJS.</p>
 
-  <p>On your command line, install <code class="highlighter-rouge">selenium-webdriver</code> with the following
+  <p>On your command line, install <code class="language-plaintext highlighter-rouge">selenium-webdriver</code> with the following
 command. This will install the modules needed for interacting with
 Selenium.</p>
 

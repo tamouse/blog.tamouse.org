@@ -11,7 +11,6 @@
 things you can do with layouts and elements on a web page. Here we
 look at bringing an old typography trick for books to the modern web:
 Drop Caps.
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -167,7 +166,7 @@ a web page to give it a bit of elegance.</p>
 <h2 id="cross-browser-method">Cross-browser method</h2>
 
 <p>This is the not-a-trick method that will work in all browsers. Create
-a <code class="highlighter-rouge">span</code> with a class that denotes the letter to be drop-capped.</p>
+a <code class="language-plaintext highlighter-rouge">span</code> with a class that denotes the letter to be drop-capped.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dropcap"</span><span class="nt">&gt;</span>L<span class="nt">&lt;/span&gt;</span>orem ipsum dolor sit amet,
 consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -181,7 +180,7 @@ id est laborum.<span class="nt">&lt;/p&gt;</span>
 
 <h2 id="first-letter-pseudo-class">:first-letter pseudo-class</h2>
 
-<p>The trick is to use the pseudo-class <code class="highlighter-rouge">:first-letter</code> on the paragraph
+<p>The trick is to use the pseudo-class <code class="language-plaintext highlighter-rouge">:first-letter</code> on the paragraph
 you are styling. This selector allows you to just pick the first
 letter off a paragraph without the need for spans. The HTML is almost
 identical:</p>

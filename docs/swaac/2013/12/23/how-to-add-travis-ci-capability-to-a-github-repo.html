@@ -166,10 +166,10 @@ this together.</p>
 
 <!--more-->
 
-<h2 id="configuring-travisyml">Configuring <code class="highlighter-rouge">.travis.yml</code></h2>
+<h2 id="configuring-travisyml">Configuring <code class="language-plaintext highlighter-rouge">.travis.yml</code></h2>
 
 <p>The first part of getting a repository ready to run under Travis is to
-create a <code class="highlighter-rouge">.travis.yml</code> file to tell Travis how to build and test your
+create a <code class="language-plaintext highlighter-rouge">.travis.yml</code> file to tell Travis how to build and test your
 repository.</p>
 
 <p>The Travis documentation is fairly easy to understand, but no set of
@@ -188,14 +188,14 @@ application needs in order to run (e.g. Postgresql)</li>
   <li>Travis behavioural elements, such as caching, building, and so on</li>
 </ol>
 
-<p><code class="highlighter-rouge">.travis.yml</code> is (obviously) a YAML file, which is the standard for
+<p><code class="language-plaintext highlighter-rouge">.travis.yml</code> is (obviously) a YAML file, which is the standard for
 ruby applications.</p>
 
 <h3 id="setting-the-language">Setting the language</h3>
 
 <p>Since we’re testing a Rails application here, ruby is our
 language. The version we’re using is 2.0.0 (with no particular build
-set at this point). The two sections we need in the <code class="highlighter-rouge">.travis.yml</code> file
+set at this point). The two sections we need in the <code class="language-plaintext highlighter-rouge">.travis.yml</code> file
 are:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">language</span><span class="pi">:</span> <span class="s">ruby</span>
@@ -203,10 +203,10 @@ are:</p>
   <span class="pi">-</span> <span class="s">2.0.0</span>
 </code></pre></div></div>
 
-<p>You can set multiple values in the <code class="highlighter-rouge">rvm</code> section, to tell travis to
+<p>You can set multiple values in the <code class="language-plaintext highlighter-rouge">rvm</code> section, to tell travis to
 run a build on each version. This can explode into a large build
 matrix, though, so be circumspect. This repo contains a
-<code class="highlighter-rouge">.ruby-version</code> file so it was easy to limit the versions to build
+<code class="language-plaintext highlighter-rouge">.ruby-version</code> file so it was easy to limit the versions to build
 with.</p>
 
 <p>This would be the minimum required to get any Rails app running, but
@@ -216,20 +216,20 @@ ours has a few more requirements.</p>
 
 <p><em>$repo</em> has some values it needs to pick up from the
 environment to run correctly. With the current set of tests, the
-Devise configuration parameter <code class="highlighter-rouge">secret_key_base</code> must be set. The
-<code class="highlighter-rouge">env_vars-sample.rb</code> file is used as a template for the <code class="highlighter-rouge">env_vars.rb</code>
+Devise configuration parameter <code class="language-plaintext highlighter-rouge">secret_key_base</code> must be set. The
+<code class="language-plaintext highlighter-rouge">env_vars-sample.rb</code> file is used as a template for the <code class="language-plaintext highlighter-rouge">env_vars.rb</code>
 file that is used to set defaults if the values aren’t set explicitly
 in the environment.</p>
 
 <p>For the current set of tests, the only env_var needed is
-<code class="highlighter-rouge">SECRET_KEY_BASE</code> to make the Devise gem happy. Environment variables
-are set in the <code class="highlighter-rouge">env</code> section of the <code class="highlighter-rouge">.travis.yml</code> file:</p>
+<code class="language-plaintext highlighter-rouge">SECRET_KEY_BASE</code> to make the Devise gem happy. Environment variables
+are set in the <code class="language-plaintext highlighter-rouge">env</code> section of the <code class="language-plaintext highlighter-rouge">.travis.yml</code> file:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">env</span><span class="pi">:</span>
   <span class="s">SECRET_KEY_BASE="$(bundle exec rake secret)"</span>
 </code></pre></div></div>
 
-<p>There is some secret sauce going on here. The <code class="highlighter-rouge">rake secret</code> task is
+<p>There is some secret sauce going on here. The <code class="language-plaintext highlighter-rouge">rake secret</code> task is
 one provided by the standard Rails installation that will re-generate
 a secret token, which is just a hashed string, and is quite suitable
 for the secret key base. The above setting results in travis running
@@ -240,15 +240,15 @@ the following at the start of the build:</p>
 
 <p>which gives us exactly what we need for the run.</p>
 
-<p>Although it is a travis default, I’ve also set the <code class="highlighter-rouge">RAILS_ENV</code> envar
-to <code class="highlighter-rouge">'test'</code> to ensure we’re running in a test situation.</p>
+<p>Although it is a travis default, I’ve also set the <code class="language-plaintext highlighter-rouge">RAILS_ENV</code> envar
+to <code class="language-plaintext highlighter-rouge">'test'</code> to ensure we’re running in a test situation.</p>
 
 <h3 id="additional-software">Additional Software</h3>
 
 <p>The database used in <em>$repo</em> is Postgresql version 9.2,
 because it makes use of the JSON variable type that was introduced at
 that version. Travis by default uses Postgresql v. 9.1, so we need to
-tell it what to use. The <code class="highlighter-rouge">addons</code> section lets us specify the version:</p>
+tell it what to use. The <code class="language-plaintext highlighter-rouge">addons</code> section lets us specify the version:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">addons</span><span class="pi">:</span>
   <span class="na">postgresql</span><span class="pi">:</span> <span class="m">9.2</span>
@@ -260,12 +260,12 @@ tell it what to use. The <code class="highlighter-rouge">addons</code> section l
 build. We need to make sure we have the right configuration files
 created and the database created that will work for our repo.</p>
 
-<p>The <code class="highlighter-rouge">before_script</code> section lets us give bash commands that will run
+<p>The <code class="language-plaintext highlighter-rouge">before_script</code> section lets us give bash commands that will run
 just before the test script starts.</p>
 
 <h4 id="configuration-files">Configuration Files</h4>
 
-<p>Every Rails app needs a <code class="highlighter-rouge">config/database.yml</code> file which must be
+<p>Every Rails app needs a <code class="language-plaintext highlighter-rouge">config/database.yml</code> file which must be
 modified by the user when starting up the application. However, a good
 rails practice is to make a sample configuration file which can be
 included in the repository, but not the specific configuration file
@@ -275,7 +275,7 @@ to put out in public or even semi-public.</p>
 <p>In addition, <em>$repo</em> has an environment variable
 initialization file, that has similar credential secrets that we don’t
 want explicitly in the repository, so there is a
-<code class="highlighter-rouge">config/env_vars.sample.rb</code> file that is copied and modified if
+<code class="language-plaintext highlighter-rouge">config/env_vars.sample.rb</code> file that is copied and modified if
 necessary.</p>
 
 <p>Since the sample defaults will work for our needs in the Travis CI
@@ -286,7 +286,7 @@ appropriate edits.</p>
 
 <p>We want to make sure we’re putting our work in the proper
 directory. Travis provides a few environment variables to us, one of
-which is the <code class="highlighter-rouge">TRAVIS_BUILD_DIR</code> envar, that points to the directory of
+which is the <code class="language-plaintext highlighter-rouge">TRAVIS_BUILD_DIR</code> envar, that points to the directory of
 the current build.</p>
 
 <p>(Note these might be done quite differently when creating the
@@ -302,15 +302,15 @@ production environment.)</p>
 <p>For each travis run, we must create the testing database anew (travis
 does not persist databases across runs). Since we’re using Postgresql,
 we simply run the client and create the database with the default
-user, <code class="highlighter-rouge">postgres</code> as specified by travis.</p>
+user, <code class="language-plaintext highlighter-rouge">postgres</code> as specified by travis.</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">before_script</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">psql -c 'create database howto_repo_test;' -U postgres</span>
 </code></pre></div></div>
 
-<h4 id="the-before_script-section">The <code class="highlighter-rouge">before_script</code> Section</h4>
+<h4 id="the-before_script-section">The <code class="language-plaintext highlighter-rouge">before_script</code> Section</h4>
 
-<p>Combining the previous two subsections, the resultant <code class="highlighter-rouge">before_script</code>
+<p>Combining the previous two subsections, the resultant <code class="language-plaintext highlighter-rouge">before_script</code>
 section that runs all these is:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">before_script</span><span class="pi">:</span>
@@ -329,26 +329,26 @@ environment. For this repo, there is a huge time savings from having
 to recompile local versions of native code (Nokogiri in particular
 takes a long time to build the native version).</p>
 
-<p>We can tell Travis to cache the bundle within the <code class="highlighter-rouge">cache</code> section:</p>
+<p>We can tell Travis to cache the bundle within the <code class="language-plaintext highlighter-rouge">cache</code> section:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">cache</span><span class="pi">:</span> <span class="s">bundler</span>
 </code></pre></div></div>
 
 <h3 id="bundler-options">Bundler Options</h3>
 
-<p>Normally, Travis runs bundler with just the <code class="highlighter-rouge">--deployment</code> option, but
-I’ve added <code class="highlighter-rouge">guard</code> and <code class="highlighter-rouge">pry</code> to the Gemfile to enable me to run
+<p>Normally, Travis runs bundler with just the <code class="language-plaintext highlighter-rouge">--deployment</code> option, but
+I’ve added <code class="language-plaintext highlighter-rouge">guard</code> and <code class="language-plaintext highlighter-rouge">pry</code> to the Gemfile to enable me to run
 continuous testing and debugging locally. We don’t want these in the
-CI run, however, so I’ve put all the local stuff inside a <code class="highlighter-rouge">guard</code>
+CI run, however, so I’ve put all the local stuff inside a <code class="language-plaintext highlighter-rouge">guard</code>
 group within the Gemfile. We need to tell Travis not to include it:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">bundler_args</span><span class="pi">:</span> <span class="s">--without guard --deployment</span>
 </code></pre></div></div>
 
-<p>which tells bundler to omit the <code class="highlighter-rouge">guard</code> section, and install things as
+<p>which tells bundler to omit the <code class="language-plaintext highlighter-rouge">guard</code> section, and install things as
 if this were a deployment.</p>
 
-<h2 id="final-travisyml-contents">Final <code class="highlighter-rouge">.travis.yml</code> Contents</h2>
+<h2 id="final-travisyml-contents">Final <code class="language-plaintext highlighter-rouge">.travis.yml</code> Contents</h2>
 
 <p>Putting the whole thing together:</p>
 
@@ -371,7 +371,7 @@ if this were a deployment.</p>
 <h2 id="triggering-a-travis-run">Triggering a Travis Run</h2>
 
 <p>Normally, Travis will begin a build whenever code is pushed to the
-repository if the repository contains a <code class="highlighter-rouge">.travis.yml</code> file. The thing
+repository if the repository contains a <code class="language-plaintext highlighter-rouge">.travis.yml</code> file. The thing
 you also need to do is turn on the service hooks for the repository to
 interact with TravisCI. To do this, you need to be able to change the
 settings of the repo on Github. Since I didn’t have such permissions,

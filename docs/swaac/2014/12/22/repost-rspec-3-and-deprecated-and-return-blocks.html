@@ -8,7 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Repost: RSpec 3 and deprecated .and_return blocks | &#128045; the tamouse pages</title>
   <meta name="description" content="Over at the owowthathurts blog, a nice little tidbit of information on a difference between RSpec version 2 and version 3:
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -156,7 +155,7 @@ Dec 22, 2014
 
 <p>A deprecation warning I received after upgrading RSpec:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`and_return { value }` is deprecated. Use `and_return(value)` or
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`and_return { value }` is deprecated. Use `and_return(value)` or
 an implementation block without `and_return` instead
 </code></pre></div></div>
 
@@ -169,7 +168,7 @@ an implementation block without `and_return` instead
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>To fix, just remove the <code class="highlighter-rouge">.and_return</code>:</p>
+<p>To fix, just remove the <code class="language-plaintext highlighter-rouge">.and_return</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="vi">@mock_thing</span><span class="p">.</span><span class="nf">should_receive</span><span class="p">(</span><span class="ss">:something</span><span class="p">)</span> <span class="k">do</span>
   <span class="n">double</span><span class="p">(</span><span class="s2">"SomeKindOfRelationship"</span><span class="p">).</span><span class="nf">tap</span> <span class="k">do</span> <span class="o">|</span> <span class="n">mock_assoc</span> <span class="o">|</span>

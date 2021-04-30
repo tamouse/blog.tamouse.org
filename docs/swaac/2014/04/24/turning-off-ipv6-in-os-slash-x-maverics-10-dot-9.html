@@ -8,7 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Turning off IPv6 in OS/X Maverics 10.9 | &#128045; the tamouse pages</title>
   <meta name="description" content="I recently had a problem connecting via wi-fi at a local restaurant. This is how I solved it.
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -186,12 +185,12 @@ the System Preferences Network Pane anymore.</p>
 
 <p>A quick search of the web provided an answer:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://discussions.apple.com/message/25125051#25125051
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://discussions.apple.com/message/25125051#25125051
 </code></pre></div></div>
 
 <p>The thing to do is to use command line to turn it off:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>networksetup -setv6off wi-fi
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>networksetup -setv6off wi-fi
 </code></pre></div></div>
 
 <h2 id="turning-ipv6-back-on">Turning IPv6 back on</h2>
@@ -199,7 +198,7 @@ the System Preferences Network Pane anymore.</p>
 <p>It is probably <em>not</em> a good idea to leave IPv6 off for any particular
 interface, so turning it back on is another command line:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>networksetup -setv6on wi-fi
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>networksetup -setv6on wi-fi
 </code></pre></div></div>
 
 

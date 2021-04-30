@@ -8,7 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Mass inserting data in Rails without killing your performance – Coffeepowered | &#128045; the tamouse pages</title>
   <meta name="description" content="Clipped on 2013-09-03 10:22:52 -0500
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -189,12 +188,12 @@ via ActiveRecord.</p>
 
   <p>Instead of</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1000.times { Model.create(options) }
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1000.times { Model.create(options) }
 </code></pre></div>  </div>
 
   <p>You want:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ActiveRecord::Base.transaction do
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ActiveRecord::Base.transaction do
   1000.times { Model.create(options) }
 end
 </code></pre></div>  </div>
@@ -210,25 +209,25 @@ you can save a <strong>lot</strong> of time by just jumping directly to raw SQL.
 
   <p>Imagine, for example, that you’re running the following:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1000.times {|i| Foo.create(:counter =&gt; i) }
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1000.times {|i| Foo.create(:counter =&gt; i) }
 </code></pre></div>  </div>
 
   <p>That’s going to create 1000 ActiveRecord objects, run validations,
 generate the insert SQL, and dump it into the database. You can realize
 large performance gains by just jumping directly to the generated SQL.</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1000.times do |i|
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1000.times do |i|
   Foo.connection.execute "INSERT INTO foos (counter) values (#{i})"
 end
 </code></pre></div>  </div>
 
-  <p>You should use <code class="highlighter-rouge">sanitize_sql</code> and such as necessary to sanitize input
+  <p>You should use <code class="language-plaintext highlighter-rouge">sanitize_sql</code> and such as necessary to sanitize input
 values if they are not already sanitized, but with this technique you
 can realize extremely large performance gains. Of course, wrapping all
 those inserts in a single transaction, as in Option 1 gets you even more
 performance.</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Foo.transaction do
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Foo.transaction do
   1000.times do |i|
     Foo.connection.execute "INSERT INTO foos (counter) values (#{i})"
   end
@@ -242,7 +241,7 @@ statement. They are able to significantly optimize this operation under
 the hood, and if you’re comfortable using it, will be your fastest
 option by far.</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>inserts = []
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>inserts = []
 TIMES.times do
   inserts.push "(3.0, '2009-01-23 20:21:13', 2, 1)"
 end
@@ -251,7 +250,7 @@ sql = "INSERT INTO user_node_scores (`score`, `updated_at`, `node_id`, `user_id`
 
   <p>No transaction block is necessary here, since it’s just a single
 statement, and the DB will wrap it in a transaction. We build an array
-of value sets to include, then just join them into the <code class="highlighter-rouge">INSERT</code>
+of value sets to include, then just join them into the <code class="language-plaintext highlighter-rouge">INSERT</code>
 statement. We don’t use string concatenation, since it will result in
 significantly more string garbage generated, which could potentially get
 us into the GC, which we’re trying to avoid (and hey, memory savings are
@@ -259,7 +258,7 @@ always good).</p>
 
   <h2 id="option-4-activerecordextensions">Option 4: ActiveRecord::Extensions</h2>
 
-  <p>njero in <code class="highlighter-rouge">#rubyonrails</code> pointed me at <a href="http://www.continuousthinking.com/tags/arext/rdoc/index.html">this nifty little gem</a> and I
+  <p>njero in <code class="language-plaintext highlighter-rouge">#rubyonrails</code> pointed me at <a href="http://www.continuousthinking.com/tags/arext/rdoc/index.html">this nifty little gem</a> and I
 decided to include it. It seems to try to intelligently do mass inserts
 of data. I wasn’t able to get it to emulate the single mass insert for a
 MySQL database, but it does provide a significant speed increase without
@@ -268,7 +267,7 @@ much additional work, and can preserve your validations and such.</p>
   <p>There’s the obvious added benefit that you stay in pure Ruby, and don’t
 have to get into the raw SQL.</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>columns = [:score, :node_id, :user_id]
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>columns = [:score, :node_id, :user_id]
 values = []
 TIMES.times do
     values.push [3, 2, 1]
@@ -281,7 +280,7 @@ UserNodeScore.import columns, values
 
   <p>I used a simple script to test each of the methods described here.</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require "ar-extensions"
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require "ar-extensions"
 
 CONN = ActiveRecord::Base.connection
 TIMES = 10000
@@ -344,7 +343,7 @@ puts sprintf("  %2.2fx faster than base", base.real / bench.real)
 
   <p>And the results:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Testing various insert methods for 10000 inserts
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Testing various insert methods for 10000 inserts
 ActiveRecord without transaction:
  14.930000   0.640000  15.570000 ( 18.898352)
 ActiveRecord with transaction:

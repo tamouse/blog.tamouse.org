@@ -11,7 +11,6 @@
 each test executes. This information is available in the HTML
 formatter, though, so I thought it could be available in others. Turns
 out this is true.
-
 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="/blog/images/logo-01.png">
@@ -158,25 +157,25 @@ each test executes. This information is available in the HTML
 formatter, though, so I thought it could be available in others. Turns
 out this is true.</p>
 
-<p>Inside the formatter, the <code class="highlighter-rouge">example</code> variable has a method called
-<code class="highlighter-rouge">execution_result</code> that is a Hash. One of the hash keys is
-<code class="highlighter-rouge">:run_time</code>, which is the milliseconds the test took to run, just what
+<p>Inside the formatter, the <code class="language-plaintext highlighter-rouge">example</code> variable has a method called
+<code class="language-plaintext highlighter-rouge">execution_result</code> that is a Hash. One of the hash keys is
+<code class="language-plaintext highlighter-rouge">:run_time</code>, which is the milliseconds the test took to run, just what
 we wanted.</p>
 
 <h2 id="creating-the-custom-formatter">Creating the custom formatter</h2>
 
 <p>The simplest thing in our case is to subclass the documentation formatter,
-and replace the reporting functions. <code class="highlighter-rouge">stopwatch_formatter.rb</code> does
+and replace the reporting functions. <code class="language-plaintext highlighter-rouge">stopwatch_formatter.rb</code> does
 this.</p>
 
 <h3 id="changing-the-output">Changing the output</h3>
 
-<p>The only two methods of <code class="highlighter-rouge">DocumentationFormatter</code> we need to look at
+<p>The only two methods of <code class="language-plaintext highlighter-rouge">DocumentationFormatter</code> we need to look at
 are:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">failure_output</code></li>
-  <li><code class="highlighter-rouge">passed_output</code></li>
+  <li><code class="language-plaintext highlighter-rouge">failure_output</code></li>
+  <li><code class="language-plaintext highlighter-rouge">passed_output</code></li>
 </ul>
 
 <p>since these are the only ones that reporting duration on makes
@@ -184,7 +183,7 @@ sense. (Pending tests don’t take any time.)</p>
 
 <p>In this case, I merely copied the methods from the documentation
 formatter, and added the duration from
-<code class="highlighter-rouge">example.execution_results[:run_time]</code> to the output. (I did add a bit
+<code class="language-plaintext highlighter-rouge">example.execution_results[:run_time]</code> to the output. (I did add a bit
 of formatting, but that’s trivial.)</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'rspec/core/formatters/documentation_formatter'</span>
@@ -232,63 +231,63 @@ rspec ./spec/lib/stopwatch_formatter_spec.rb:7 # StopwatchFormatter this will fa
 
 <h2 id="using-the-custom-formatter">Using the custom formatter</h2>
 
-<p><code class="highlighter-rouge">rspec</code> needs to load the code for your custom formatter. The easiest
-thing is to simply require it on the <code class="highlighter-rouge">rspec</code> command line, and specify
+<p><code class="language-plaintext highlighter-rouge">rspec</code> needs to load the code for your custom formatter. The easiest
+thing is to simply require it on the <code class="language-plaintext highlighter-rouge">rspec</code> command line, and specify
 the class name as the formatter:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    rspec -r /path/to/stopwatch_formatter.rb --format StopwatchFormatter ...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    rspec -r /path/to/stopwatch_formatter.rb --format StopwatchFormatter ...
 </code></pre></div></div>
 
 <h2 id="getting-the-formatter">Getting the formatter</h2>
 
-<p>You can get <code class="highlighter-rouge">stopwatch_formatter</code> from rubygems:</p>
+<p>You can get <code class="language-plaintext highlighter-rouge">stopwatch_formatter</code> from rubygems:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install stopwatch_formatter
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install stopwatch_formatter
 </code></pre></div></div>
 
-<p>or put it in your <code class="highlighter-rouge">Gemfile</code>:</p>
+<p>or put it in your <code class="language-plaintext highlighter-rouge">Gemfile</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem 'stopwatch_formatter', :group =&gt; [:development, :test]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem 'stopwatch_formatter', :group =&gt; [:development, :test]
 </code></pre></div></div>
 
-<p>and <code class="highlighter-rouge">bundle install</code> as usual. You can specify to use the stopwatch
+<p>and <code class="language-plaintext highlighter-rouge">bundle install</code> as usual. You can specify to use the stopwatch
 formatter in a few ways:</p>
 
-<h3 id="rake-spec_opts"><code class="highlighter-rouge">rake</code> <code class="highlighter-rouge">SPEC_OPTS</code></h3>
+<h3 id="rake-spec_opts"><code class="language-plaintext highlighter-rouge">rake</code> <code class="language-plaintext highlighter-rouge">SPEC_OPTS</code></h3>
 
 <p>If you use rake, and run rspec from within it, you can simply add the
-<code class="highlighter-rouge">SPEC_OPTS</code> variable to your run:</p>
+<code class="language-plaintext highlighter-rouge">SPEC_OPTS</code> variable to your run:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake SPEC_OPTS='-f StopwatchFormatter'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake SPEC_OPTS='-f StopwatchFormatter'
 </code></pre></div></div>
 
-<h3 id="rspec"><code class="highlighter-rouge">.rspec</code></h3>
+<h3 id="rspec"><code class="language-plaintext highlighter-rouge">.rspec</code></h3>
 
-<p>A more convenient method is to put the formatter inside the <code class="highlighter-rouge">.rspec</code>
+<p>A more convenient method is to put the formatter inside the <code class="language-plaintext highlighter-rouge">.rspec</code>
 file:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--format StopwatchFormatter
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--format StopwatchFormatter
 </code></pre></div></div>
 
 <p>then you can just run:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake
 </code></pre></div></div>
 
-<p>(assuming <code class="highlighter-rouge">spec</code> is one of you default tasks.)</p>
+<p>(assuming <code class="language-plaintext highlighter-rouge">spec</code> is one of you default tasks.)</p>
 
-<h3 id="specspec_helper"><code class="highlighter-rouge">spec/spec_helper</code></h3>
+<h3 id="specspec_helper"><code class="language-plaintext highlighter-rouge">spec/spec_helper</code></h3>
 
 <p>If you want a more permanent solution, you can configure the formatter
-inside the <code class="highlighter-rouge">spec/spec_helper.rb</code> file:</p>
+inside the <code class="language-plaintext highlighter-rouge">spec/spec_helper.rb</code> file:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require 'stopwatch_formatter'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require 'stopwatch_formatter'
 RSpec.configure {|c| c.add_formatter StopwatchFormatter }
 </code></pre></div></div>
 
 <p>This last rather permanently adds the stopwatch formatter to your
 runs, so if you specify another formatter on the command line or in
-<code class="highlighter-rouge">.rspec</code>, you’ll end up with that output <em>and</em> the stopwatch output,
+<code class="language-plaintext highlighter-rouge">.rspec</code>, you’ll end up with that output <em>and</em> the stopwatch output,
 so this isn’t really recommended.</p>
 
 <h2 id="getting-the-formatter-contributing-and-all-that">Getting the formatter, contributing, and all that</h2>
