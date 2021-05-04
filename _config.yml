@@ -22,7 +22,7 @@ kramdown:
 plugins_dir:
   - jekyll-gist
 
-corsProxy: "http://127.0.0.1:8080/"
+# corsProxy: "http://127.0.0.1:8080/"
 # Duplicated because I screwed this up and too lazy to fix
 s3path: '//s3.amazonaws.com/tt.imageshare/'
 images:
